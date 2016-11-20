@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="object" type="sObject"/>
+    
+    <div>
+        <div id="image">
+            <aura:unescapedHtml value="{!v.object.Image_Source__c}"/>
+        </div>
+        <div id="nameContainer">
+            <h1 id="name">
+                <ui:outputText value="{!v.object.Name}"/>
+            </h1>
+            	<ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">Header</div>
+                        <div class="collapsible-body">Body Description bla bla bla</div>        
+                    </li>
+    			</ul>
+        </div>
+    </div>
+
+        
+    
+    
+    
+	<br></br>    
+</aura:component>

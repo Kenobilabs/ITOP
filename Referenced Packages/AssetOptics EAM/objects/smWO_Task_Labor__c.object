@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Task Labor object contains the Actual Labor Entries recorded against a Work Order Task</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Labor_Cost_Doubletime__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Labor Cost Doubletime Hours. System populated via workflow. Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Labor Cost Doubletime Hours. System populated via workflow. Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Actual Labor Cost Doubletime</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Labor_Cost_Overtime__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Labor Cost Overtime Hours.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Labor Cost Overtime Hours.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Actual Labor Cost Overtime</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Labor_Cost_Regular__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Labor Cost Regular Hours.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Labor Cost Regular Hours.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Actual Labor Cost Regular</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Resource__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Labor Resource for which you are reporting time.  The Labor Resource is a &quot;Contact&quot; with the &quot;Work Order Resource&quot; checkbox set to &quot;True&quot;.  The regular time and overtime hourly rates are specified at the &quot;Contact&quot; level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Labor Resource to Charge time.  Lookup to Contact with &quot;Work Order Resource&quot; = True.</inlineHelpText>
+        <label>Contact Resource</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Work_Order_Resource__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>The selected contact must have the &quot;Work Order Resource&quot; checkbox set to &quot;True&quot;.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>WO_Task_Labor</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Doubletime_Hours__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Doubletime Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Doubletime Hours</inlineHelpText>
+        <label>Doubletime Hours</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overtime_Hours__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Overtime Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overtime Hours</inlineHelpText>
+        <label>Overtime Hours</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Regular_Hours__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Regular Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Regular Hours</inlineHelpText>
+        <label>Regular Hours</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Labor Cost = Actual Labor Cost Regular + Actual Labor Cost Overtime + Actual Labor Cost Doubletime</description>
+        <externalId>false</externalId>
+        <formula>Actual_Labor_Cost_Regular__c +  Actual_Labor_Cost_Overtime__c +  Actual_Labor_Cost_Doubletime__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Labor Cost = Actual Labor Cost Regular + Actual Labor Cost Overtime + Actual Labor Cost Doubletime</inlineHelpText>
+        <label>Total Labor Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Labor Hours</description>
+        <externalId>false</externalId>
+        <formula>Regular_Hours__c  +  Overtime_Hours__c +   Doubletime_Hours__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Labor Hours</inlineHelpText>
+        <label>Total Labor Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Resource__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Labor Resource - Lookup from User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Labor Resource - Lookup from User.</inlineHelpText>
+        <label>User Resource</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>WO_Task_Labor</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WO_Task__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task</inlineHelpText>
+        <label>WO Task</label>
+        <referenceTo>smWO_Task__c</referenceTo>
+        <relationshipName>WO_Task_Labor</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Work_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Work Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Date</inlineHelpText>
+        <label>Work Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Work Order from Work Order Task</description>
+        <externalId>false</externalId>
+        <formula>WO_Task__r.Work_Order__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Work Order from Work Order Task</inlineHelpText>
+        <label>Work Order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Task Labor</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Contact_Resource__c</columns>
+        <columns>Work_Date__c</columns>
+        <columns>Regular_Hours__c</columns>
+        <columns>WO_Task__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>TL-{00000000}</displayFormat>
+        <label>Task Labor ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Task Labor</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>WO_Task__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Work_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Work_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User_Resource__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Regular_Hours__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Overtime_Hours__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>WO_Task__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>User_Resource__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Regular_Hours__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Overtime_Hours__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>WO_Task__c</searchFilterFields>
+        <searchFilterFields>Work_Order__c</searchFilterFields>
+        <searchFilterFields>Work_Date__c</searchFilterFields>
+        <searchFilterFields>User_Resource__c</searchFilterFields>
+        <searchFilterFields>Regular_Hours__c</searchFilterFields>
+        <searchFilterFields>Overtime_Hours__c</searchFilterFields>
+        <searchResultsAdditionalFields>WO_Task__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User_Resource__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Regular_Hours__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Overtime_Hours__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Dual_Labor_Resource_Not_Allowed</fullName>
+        <active>true</active>
+        <description>Ensures that only an Assigned User or an Assigned Contact is Specified -- not both</description>
+        <errorConditionFormula>NOT(ISBLANK( Contact_Resource__c ))   &amp;&amp;   NOT(ISBLANK( User_Resource__c ))</errorConditionFormula>
+        <errorMessage>You may not specify BOTH a Contact Resource and a User Resource.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Labor_Resource_Required</fullName>
+        <active>true</active>
+        <description>Ensures that either an Assigned User or an Assigned Contact is Specified</description>
+        <errorConditionFormula>ISBLANK( Contact_Resource__c )  &amp;&amp;  ISBLANK( User_Resource__c )</errorConditionFormula>
+        <errorMessage>You must specify either a User or Contact to record the Work Order Task Labor Hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WO_Status_Valid_for_Labor_Entry</fullName>
+        <active>true</active>
+        <description>Ensures that Work Order Task Labor can only be recorded to Work Orders that are in &quot;Ready to Schedule&quot;, &quot;Scheduled&quot;, &quot;In Progress&quot; or &quot;Completed&quot; status.</description>
+        <errorConditionFormula>WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  4   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  6   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  9   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  12</errorConditionFormula>
+        <errorMessage>Labor can only be recorded to Work Orders that are in Ready to Schedule, Scheduled, In Progress or Completed status.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WO_Status_Valid_for_Labor_Entry_IP</fullName>
+        <active>false</active>
+        <description>Ensures that Work Order Task Labor can only be booked when a Work Order is &quot;In Planning&quot;, &quot;Ready to Schedule&quot;, &quot;Scheduled&quot;, &quot;In Progress&quot; or &quot;Completed&quot; status.</description>
+        <errorConditionFormula>WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  4   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  6   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  9   &amp;&amp;   WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  12 &amp;&amp;
+WO_Task__r.Work_Order__r.Status_Num__c   &lt;&gt;  5</errorConditionFormula>
+        <errorMessage>Labor can only be recorded to Work Orders that are in In Planning, Ready to Schedule, Scheduled, In Progress or Completed status.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_DT_Hrs_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Doubletime Hrs is a Non-Negative Value</description>
+        <errorConditionFormula>Doubletime_Hours__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Doubletime_Hours__c</errorDisplayField>
+        <errorMessage>Doubletime Hours must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_OT_Hrs_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Work Order Task Labor Overtime Hours is a non-Negative Value</description>
+        <errorConditionFormula>Overtime_Hours__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Overtime_Hours__c</errorDisplayField>
+        <errorMessage>Overtime Hours must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_RT_Hrs_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Work Order Task Regular Hours is a non-Negative Value</description>
+        <errorConditionFormula>Regular_Hours__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Regular_Hours__c</errorDisplayField>
+        <errorMessage>Regular Hours must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_Recordtype_WO</fullName>
+        <active>true</active>
+        <description>Ensures that the Work Order recordtype is NOT a Model Work Order</description>
+        <errorConditionFormula>TEXT(WO_Task__r.Work_Order__r.Work_Order_Record_Type__c  ) = &quot;Model Work Order&quot;</errorConditionFormula>
+        <errorMessage>You cannot record labor against a Model Work Order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_TotalHrs_LE24</fullName>
+        <active>true</active>
+        <description>Ensures that the Total Work Order Task Labor Hours does not exceed 24 hours</description>
+        <errorConditionFormula>Total_Labor_Hours__c  &gt; 24</errorConditionFormula>
+        <errorMessage>The Total Work Order Task Labor Hours must be less than or equal to 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWOTL_TotalHrs_Positive</fullName>
+        <active>true</active>
+        <description>Ensures that a non-zero value is entered into either Regular, Overtime or Doubletime Hours</description>
+        <errorConditionFormula>Total_Labor_Hours__c  = 0</errorConditionFormula>
+        <errorMessage>You must enter a non-zero value in either Regular, Overtime Hours or Doubletime Hours</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Work Order Parts List</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Part_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Part Cost.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Part Cost.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Actual Part Cost</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bin_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Part Primary Bin Location</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Primary_Bin_Location__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Part Primary Bin Location</inlineHelpText>
+        <label>Primary Bin Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment</inlineHelpText>
+        <label>Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commit_Inventory__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Commit Inventory flag is used to determine if the Open Qty amount of the WO Part places a demand on inventory and subsequently reduces the &quot;Available Qty&quot; for the Part.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Commit Inventory flag is used to determine if the Open Qty amount of the WO Part places a demand on inventory and subsequently reduces the &quot;Available Qty&quot; for the Part.</inlineHelpText>
+        <label>Commit Inventory</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Commit_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Commit Qty is the Open Qty if the Commit Flag on the WO Part line is checked and if the Work Order has been released but is not yet complete.  Otherwise, the Commit Qty is equal to zero.</description>
+        <externalId>false</externalId>
+        <formula>IF( Commit_Inventory__c = True, IF( (WO_Status_Num__c = 12)  ||  (WO_Status_Num__c =9)  ||  (WO_Status_Num__c =6),   IF( Planned_Qty__c  &gt;=  Issued_Qty__c ,  Planned_Qty__c  -  Issued_Qty__c , 0), 0), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The Commit Qty is the Open Qty if the Commit Flag on the WO Part line is checked and if the Work Order has been released but is not yet complete.  Otherwise, the Commit Qty is equal to zero.</inlineHelpText>
+        <label>Commit Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issued_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Qty of the part issued to the work order.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Qty of the part issued to the work order.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Issued Qty</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Hand_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Part On Hand Qty</description>
+        <externalId>false</externalId>
+        <formula>Part__r.On_Hand_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Part On Hand Qty</inlineHelpText>
+        <label>On Hand Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Commit_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Commit Qty = Open Qty when Work Order Status = Ready to Schedule, Schedule, In Progress; Else Zero (0).  System populated value via workflow.  Field security should be set to read only for all profiles.  Value written from WO Part Commit Qty.  This is used as a workaround since the Commit Qty is a cross object formula field and not able to be used in the Rollup on the Part Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Open Commit Qty = Open Qty when Work Order Status = Ready to Schedule, Schedule, In Progress; Else Zero (0). System populated value via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Open Commit Qty</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Qty = Planned Qty - Issued Qty</description>
+        <externalId>false</externalId>
+        <formula>IF( Planned_Qty__c  &gt;=  Issued_Qty__c ,  Planned_Qty__c  -  Issued_Qty__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Open Qty = Planned Qty - Issued Qty</inlineHelpText>
+        <label>Open Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Part_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Part Description</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Part Description</inlineHelpText>
+        <label>Part Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Part__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Part ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Part ID</inlineHelpText>
+        <label>Part</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>smPart__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Stock Item</value>
+            </filterItems>
+            <infoMessage>The Stock Item Record Type is filtered by Default.  Clear the filter to view other Record Types</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>smPart__c</referenceTo>
+        <relationshipLabel>Work Order Parts</relationshipLabel>
+        <relationshipName>Work_Order_Parts</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Planned_Part_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Planned Part Cost.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned Part Cost.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Planned Part Cost</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The &quot;Planned Qty&quot; represents the total number of units of the part that are estimated to be used to perform the work.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The &quot;Planned Qty&quot; represents the total number of units of the part that are estimated to be used to perform the work.</inlineHelpText>
+        <label>Planned Qty</label>
+        <precision>7</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qty_to_Issue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>&quot;Qty to Issue&quot; is used for batch issuing parts from the Work Order Parts Tab.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Qty to Issue&quot; is used for batch issuing parts from the Work Order Parts Tab.</inlineHelpText>
+        <label>Qty to Issue</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storeroom_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storeroom Description</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Storeroom__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Storeroom Description</inlineHelpText>
+        <label>Storeroom Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storeroom__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Part Storeroom</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Storeroom__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Part Storeroom</inlineHelpText>
+        <label>Storeroom</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WO_Schedule_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Work Order Scheduled Start Date</description>
+        <externalId>false</externalId>
+        <formula>Work_Order__r.Scheduled_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Work Order Scheduled Start Date</inlineHelpText>
+        <label>WO Schedule Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WO_Status_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Work Order Status Num (a numerical cross reference to Work Order Status).</description>
+        <externalId>false</externalId>
+        <formula>Work_Order__r.Status_Num__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Work Order Status Num (a numerical cross reference to Work Order Status).</inlineHelpText>
+        <label>WO Status Num</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WO_Task_Schedule_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Work Order Task Schedule Date</description>
+        <externalId>false</externalId>
+        <formula>WO_Task__r.Schedule_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Work Order Task Schedule Date</inlineHelpText>
+        <label>WO Task Schedule Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WO_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>WO Task for which this part is being planned.  Use when you schedule parts picking to individually scheduled Work Order Tasks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>WO Task for which this part is being planned.  Use when you schedule parts picking to individually scheduled Work Order Tasks.</inlineHelpText>
+        <label>WO Task</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The Part and Task must be related to the same Work Order</errorMessage>
+            <filterItems>
+                <field>smWO_Task__c.Work_Order__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Work_Order__c</valueField>
+            </filterItems>
+            <infoMessage>Select a Work Order Task to relate the Part</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWO_Task__c</referenceTo>
+        <relationshipLabel>WO Parts</relationshipLabel>
+        <relationshipName>WO_Parts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order #</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order #</inlineHelpText>
+        <label>Work Order</label>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>Work Order Parts</relationshipLabel>
+        <relationshipName>Work_Order_Parts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>WO Part</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Work_Order__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>Planned_Qty__c</columns>
+        <columns>Qty_to_Issue__c</columns>
+        <columns>On_Hand_Qty__c</columns>
+        <columns>Issued_Qty__c</columns>
+        <columns>Open_Qty__c</columns>
+        <columns>Open_Commit_Qty__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WP-{0000000}</displayFormat>
+        <label>Work Order Parts</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>WO Parts</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Work_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Part__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Part_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Planned_Qty__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Issued_Qty__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Part__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Part_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Planned_Qty__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Issued_Qty__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Work_Order__c</lookupFilterFields>
+        <lookupFilterFields>Part__c</lookupFilterFields>
+        <lookupFilterFields>Part_Description__c</lookupFilterFields>
+        <lookupFilterFields>Planned_Qty__c</lookupFilterFields>
+        <lookupFilterFields>Issued_Qty__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Work_Order__c</searchFilterFields>
+        <searchFilterFields>Part__c</searchFilterFields>
+        <searchFilterFields>Part_Description__c</searchFilterFields>
+        <searchFilterFields>Planned_Qty__c</searchFilterFields>
+        <searchFilterFields>Issued_Qty__c</searchFilterFields>
+        <searchResultsAdditionalFields>Work_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Part__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Part_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Planned_Qty__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Issued_Qty__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>smWO_Part_Planned_Qty_Positive</fullName>
+        <active>true</active>
+        <description>Enforces the rule that the planned qty must be greater than or equal to zero.</description>
+        <errorConditionFormula>Planned_Qty__c   &lt; 0</errorConditionFormula>
+        <errorDisplayField>Planned_Qty__c</errorDisplayField>
+        <errorMessage>The Planned Qty must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_SIR</fullName>
+        <availability>online</availability>
+        <description>This button will create Stock Issue Request object and corresponding SIR Detail objects with open commit quantity from WO Parts.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate SIR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)} 
+
+// Get the List of Schedule Ids selected by the User. 
+var records= {!GETRECORDIDS($ObjectType.smWO_Part__c)}; 
+var len=records.length; 
+
+// Call the method if User has selected any record. 
+if (len!= 0){ 
+var res=sforce.apex.execute(&quot;sm1e.GenerateSIRFromWOPartList&quot;,&quot;GenerateSIRWithSIRDetail&quot;,{woPartId:records}); 
+ 
+alert(res); 
+// refresh the work order part list page 
+parent.window.location.reload();
+} 
+else{ 
+window.alert(&quot;Atleast one record should be selected before clicking the &apos;Create SIR&apos; Button.&quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Issue</fullName>
+        <availability>online</availability>
+        <description>Button to create Part Tranctions of type &apos;Issue&apos;.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Issue Parts</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Get the List of Schedule Ids selected by the User.
+var records= {!GETRECORDIDS($ObjectType.smWO_Part__c)};
+var len=records.length;
+
+//  Call the method if User has selected any record.
+if (len!= 0){
+                          var res=sforce.apex.execute(&quot;sm1e.WorkOrderPart&quot;,&quot;IssueWorkOrderPart&quot;,{woPartId:records});
+                          alert(res);
+               }    
+      else{
+              window.alert(&quot;Atleast one record should be selected before clicking the &apos;Issue&apos; Button......&quot;);
+     }
+
+// refresh the work order part list page
+parent.window.location.reload();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Issue_Open_Commit_Quantity</fullName>
+        <availability>online</availability>
+        <description>Button creates Part_Transaction with Issue Qty as Open Commit Qty.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Issue Open Commit Quantity</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Get the List of Schedule Ids selected by the User.
+var records= {!GETRECORDIDS($ObjectType.smWO_Part__c)};
+var len=records.length;
+
+// Call the method if User has selecetd any record.
+if (len!= 0){
+var res=sforce.apex.execute(&quot;sm1e.WorkOrderPart&quot;,&quot;IssueOpenCommitQuantity&quot;,{woPartId:records});
+alert(res);
+}
+else{
+window.alert(&quot;Atleast one record should be selected before clicking the &apos;Issue&apos; Button......&quot;);
+}
+
+// refresh the work order part list page
+//parent.window.location.reload();
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

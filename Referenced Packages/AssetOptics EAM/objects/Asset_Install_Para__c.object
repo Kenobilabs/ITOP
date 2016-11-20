@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Asset Tag Install Parameters</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Auto_ID_Maintenance_Asset__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check the Auto ID Asset Tag install parameter to enable the Workflow to assign the Asset ID equal to the Asset Tag Number during initial record creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the Auto ID Asset Tag install parameter to enable the Workflow to assign the Asset ID equal to the Asset Tag Number during initial record creation</inlineHelpText>
+        <label>Auto ID Asset Tags</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Asset Install Parameters</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Meeting_MERC__c.Date_of_Event_MERC__c</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Meeting_End_Date_MERC__c</field>
+    </columns>
+    <columns>
+        <field>Meeting_MERC__c.Business_Unit_MERC__c</field>
+    </columns>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Record_Type_Name_MERC__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Services_Rendered_MERC__c</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Types_of_Service_MERC__c</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Description_of_Service_MERC__c</field>
+    </columns>
+    <columns>
+        <field>Meeting_Participant_MERC__c.Final_Fee_MERC__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>ITALY-Report for for global metrics reports</description>
+    <format>Tabular</format>
+    <name>IT-Report for for global metrics reports</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Meeting_MERC__c$Meeting_Participant_MERC__c@Meeting_Participant_MERC__c.Account_MERC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Meeting_MERC__c.Budget_Final_Date_Time_MERC__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

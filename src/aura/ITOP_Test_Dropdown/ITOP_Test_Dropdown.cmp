@@ -1,0 +1,75 @@
+<aura:component controller="ITOP_Controller">
+ <!-- Attributes -->
+    <aura:attribute name="primaryOptions" type="ITOP_Request_Primary_Option__c[]"/>
+    <aura:attribute name="secondaryOptions" type="ITOP_Request_Secondary_Option__c[]"/>
+    <aura:attribute name="deviceTypes" type="String[]"/>
+    <aura:attribute name="deviceManufacturers" type="String[]"/>
+    <aura:attribute name="deviceNames" type="String[]"/>
+    <aura:attribute name="deviceModels" type="String[]"/>
+    <aura:attribute name="test" type="String" default="Default Value"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInitDeviceTypes}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInitTestDevice}"/>
+    
+
+    
+    
+    
+    <div>
+        
+        <ui:outputRichText value="{!v.test}"/>
+<!--Problem Dropdowns -->
+        <ui:inputSelect aura:id="primary" label="Primary Problem Type:" change="{!c.onPrimaryChange}">
+            <aura:iteration items="{!v.primaryOptions}" var="value">
+                <ui:inputSelectOption class="dropdowns" label="{!value.Name}" text="{!value.Name}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+        <ui:inputSelect aura:id="secondary" label="Secondary Problem Type:">
+            <aura:iteration items="{!v.secondaryOptions}" var="value">
+                <ui:inputSelectOption label="{!value.Name}" text="{!value.Name}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+    <!--Device Dropdowns -->
+    
+        <ui:inputSelect aura:id="deviceTypeSelection" label="Device Type"  change="{!c.onDeviceTypeChange}">
+            <aura:iteration items="{!v.deviceTypes}" var="value">
+                <ui:inputSelectOption label="{!value}" text="{!value}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+        <ui:inputSelect aura:id="deviceManufacturerSelection" label="Device Manufacturer" change="{!c.onDeviceManufacturerChange}">
+            <aura:iteration items="{!v.deviceManufacturers}" var="value">
+                <ui:inputSelectOption label="{!value}" text="{!value}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+        <ui:inputSelect aura:id="deviceNameSelection" label="Device" change="{!c.onDeviceNameChange}" click="{!c.onDeviceNameChange}">
+            <aura:iteration items="{!v.deviceNames}" var="value">
+                <ui:inputSelectOption label="{!value}" text="{!value}" value="{!value}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+        <ui:inputSelect aura:id="deviceModelSelection" label="Device Model" >
+            <aura:iteration items="{!v.deviceModels}" var="value">
+                <ui:inputSelectOption label="{!value}" text="{!value}" value="{!value}"/>
+            </aura:iteration>
+        </ui:inputSelect>
+        
+        
+    </div>
+    
+    <ul id="dropdown2" class="dropdown-content">
+    	<li>Option One</li>
+        <li>Option Two</li>
+    </ul>
+    
+    
+    
+    
+    
+                                                                 
+</aura:component>

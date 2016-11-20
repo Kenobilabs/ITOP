@@ -1,0 +1,77 @@
+<apex:page id="thePage" standardController="sm1e__smEquipment__c" tabStyle="sm1e__smEquipment__c"  extensions="sm1e.AssetStructure" readOnly="true">
+
+     <div style="background-color:#F3F3EC;" onclick="resizeFrame();">
+     <!--  Added to make the hierarchy page viewable to users with 'Read-Only' access also -->  
+         <div class="treeNode" >
+         
+            <apex:repeat value="{!ObjectStructure}" var="pos" >
+                <apex:repeat value="{!pos.levelFlag}" var="flag" first="0">
+                    <apex:image url="/img/tree/empty.gif" height="16" width="20" rendered="{!IF(flag,false,true)}"/>
+                    <apex:image url="/s.gif" alt="" width="3" height="16" rendered="{!IF(flag,true,false)}"/>
+                    <apex:image url="/img/tree/chain.gif" height="16" width="20" rendered="{!IF(flag,true,false)}"/>
+                </apex:repeat>
+                
+                <span height="16" v="top">
+                    <apex:outputText rendered="{!IF(pos.nodeType=='start',true,false)}">
+                        <apex:image id="tree_start" url="/img/tree/minusStart.gif" height="16" width="20" title="Click to expand/collapse nested items." onClick="TreeNodeElement.prototype.toggle(this,'{!pos.nodeId}')"/>
+                        <apex:image id="Icon_start_current" url="/img/icon/star16.png" width="16" height="16" rendered="{!IF(pos.currentNode,true,false)}"/>
+                       </apex:outputText>
+                     <apex:outputText rendered="{!IF(OR(pos.nodeType=='parent',pos.nodeType=='parent_end'),true,false)}">
+                        <apex:image id="Tree_parent" url="/img/tree/minus.gif" rendered="{!IF(pos.nodeType=='parent',true,false)}" height="16" width="20" title="Click to expand/collapse nested items." onClick="TreeNodeElement.prototype.toggle(this,'{!pos.nodeId}')"/>
+                        <apex:image id="Tree_parent_end" url="/img/tree/minusEnd.gif" rendered="{!IF(pos.nodeType=='parent_end',true,false)}" height="16" width="20" title="Click to expand/collapse nested items." onClick="TreeNodeElement.prototype.toggle(this,'{!pos.nodeId}')"/>                
+                        <apex:image id="Icon_parent_current" url="/img/icon/star16.png" width="16" height="16" rendered="{!IF(pos.currentNode,true,false)}"/>
+                        </apex:outputText>
+                    <apex:outputText rendered="{!IF(OR(pos.nodeType=='child',pos.nodeType=='child_end'),true,false)}">
+                        <apex:image id="Tree_child" url="/img/tree/node.gif" rendered="{!IF(pos.nodeType=='child',true,false)}" height="16" width="20" title="Click to expand/collapse nested items." onClick="TreeNodeElement.prototype.toggle(this,'{!pos.nodeId}')"/>
+                        <apex:image id="Tree_child_current" url="/img/tree/nodeEnd.gif" rendered="{!IF(pos.nodeType=='child_end',true,false)}" height="16" width="20" title="Click to expand/collapse nested items." onClick="TreeNodeElement.prototype.toggle(this,'{!pos.nodeId}')"/>
+                        <apex:image id="Icon_child_current" url="/img/icon/star16.png" width="16" height="16" rendered="{!IF(pos.currentNode,true,false)}"/> 
+                        </apex:outputText>
+                    <apex:outputText rendered="{!IF(pos.nodeType=='end',true,false)}">
+                        <apex:image id="Tree_end" url="/img/tree/nodeEnd.gif" height="16" width="20"/>&nbsp;
+                        <apex:image id="Icon_end_current" url="/img/icon/star16.png" width="16" height="16" rendered="{!IF(pos.currentNode,true,false)}"/>
+                        </apex:outputText>
+                    <apex:outputLink id="theLink" value="/{!pos.asset.id}" style="{!IF(pos.currentNode,'font-weight: bold;','')}" styleClass="columnHeadActiveBlack" target="_top">{!pos.asset.name}</apex:outputLink>
+                    <apex:outputText style="{!IF(pos.currentNode,'font-weight: bold;','')}" value=", {!pos.asset.sm1e__Description__c}"/>
+                    <apex:outputText style="{!IF(pos.currentNode,'font-weight: bold;','')}" value=", {!pos.asset.sm1e__Hierarchy_Display__c}"/>&nbsp;                    
+                    </span>
+                <div> </div>
+                <apex:outputText rendered="{!IF(OR(pos.nodeType=='child_end',pos.nodeType=='child'),false,true)}">
+                    <div id='{!pos.nodeId}'>
+                </apex:outputText>
+                <apex:outputText rendered="{!IF(OR(pos.nodeType=='child_end',pos.nodeType=='child'),true,false)}">
+                    <div id='{!pos.nodeId}'><apex:image url="/s.gif" alt="" width="1" height="1"/></div>
+                </apex:outputText>
+                <apex:repeat value="{!pos.closeFlag}" var="close">
+                    </div>
+                </apex:repeat>            
+        </apex:repeat>
+    </div>
+    <script type="text/javascript">>
+    //resizes the frame holding the sControl to make up for odd dimensions
+    function resizeFrame() {
+    
+    <!-- Remove comment area only if VF pages are served from the same domain as normal salesforce objects.
+     Otherwise Cross site scripting errors will occure
+     
+        var x=parent.document.getElementsByTagName("iframe");
+        for (var i = 0;i < x.length;i++){
+            if (x[i].title == "AssetHierarchyPage"){  // Change this to the name of this page
+                    var sframe = parent.document.getElementById(x[i].id); //get id of iframe from parent
+            }
+        }
+        if (navigator.userAgent.indexOf("Firefox/3.0") != -1) { //if Firefox
+            var nHeight = document.body.scrollHeight; //add ten pixels to height of sControl frame
+        } else if (navigator.userAgent.indexOf("Firefox") != -1) { //if Firefox
+            var nHeight = document.body.scrollHeight+10; //add ten pixels to height of sControl frame
+        } else { //otherwise
+            var nHeight = document.body.scrollHeight; //use the returned height of sControl frame
+        }
+        sframe.style.height = nHeight+"px"; //set the frame height to correspond to the content
+    -->
+    }
+    </script>
+    <script type="text/javascript">
+         resizeFrame(); //calls function from above
+    </script>
+   </div>  
+</apex:page>

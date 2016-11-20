@@ -1,0 +1,6 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font class="Apple-style-span" face="arial">{!smWork_Order__c.RequesterEmail__c},</font><div><font class="Apple-style-span" face="arial"><br></font></div><div><font class="Apple-style-span" face="arial">Work Request #&nbsp;{!smWork_Order__c.Name} was received by Email.</font></div><div><font class="Apple-style-span" face="arial"><br></font></div><div><font class="Apple-style-span" face="arial">Description: &nbsp;{!smWork_Order__c.Description__c}</font></div><div><font class="Apple-style-span" face="arial"><br></font></div><div><font class="Apple-style-span" face="arial">The Work Request will be reviewed for approval. &nbsp;Should additional information be required, you will be contact you by email or phone.</font></div><div><font class="Apple-style-span" face="arial"><br></font></div><div><font class="Apple-style-span" face="arial">Thank you.</font></div>]]></td>
+</tr>
+</table>

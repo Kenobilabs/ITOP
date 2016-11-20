@@ -1,0 +1,2480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label>DocuSign For Salesforce</label>
+        <name>DocuSign_For_Salesforce</name>
+    </customApplications>
+    <customLabels>
+        <label>액세스 코드</label>
+        <name>AccessCode</name>
+    </customLabels>
+    <customLabels>
+        <label>계정</label>
+        <name>Account</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 ID</label>
+        <name>AccountID</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 이름</label>
+        <name>AccountInfoAccountName</name>
+    </customLabels>
+    <customLabels>
+        <label>이 계정에는 DocuSign이 아직 구성되지 않았습니다.</label>
+        <name>AccountInfoNotConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정을 구성해야 합니다.</label>
+        <name>AccountMustBeConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정이 아직 구성되지 않았습니다.</label>
+        <name>AccountNotConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>계정이 보류되었습니다.</label>
+        <name>AccountSuspended</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 설정에는 수신자는 한 명의 활성 DocuSign 사용자여야 한다고 명시되어 있습니다.</label>
+        <name>Account_settings_indicate_the_recipient_must_be_an_active_DocuSign_user</name>
+    </customLabels>
+    <customLabels>
+        <label>동작</label>
+        <name>Action</name>
+    </customLabels>
+    <customLabels>
+        <label>추가하려는 사용자가 DocuSign for Salesforce에 액세스하기에 권한이 충분하지 않은 라이센스를 가지고 있습니다. 이 사용자를 추가하려면 적절한 사용자 라이센스를 할당하십시오.</label>
+        <name>ActivateMembersError</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 액세스 권한이 있는지, 계정 설정이 올바른지, 모든 활성화 이메일에 회신했는지 확인하십시오.</label>
+        <name>ActivationMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>추가</label>
+        <name>Add</name>
+    </customLabels>
+    <customLabels>
+        <label>동작 또는 버튼 추가</label>
+        <name>AddActionOrButton</name>
+    </customLabels>
+    <customLabels>
+        <label>관리 권한 사용자 추가</label>
+        <name>AddAdminUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>관리 권한 사용자 추가 = 선택한
+			사용자에 대한 DocuSign 패키지를 추가하고 이 사용자들을 DocuSign 계정 관리자로 지정합니다.</label>
+        <name>AddAdminUsersAddTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>첨부파일 추가</label>
+        <name>AddAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label>버튼 추가</label>
+        <name>AddButton</name>
+    </customLabels>
+    <customLabels>
+        <label>버튼 추가</label>
+        <name>AddButtons</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 레이아웃에 DocuSign 버튼 추가</label>
+        <name>AddDSButtonsToSF</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign을 Salesforce에서 신뢰할 수 있는 네트워크로 추가</label>
+        <name>AddDSTrusted</name>
+    </customLabels>
+    <customLabels>
+        <label>문서 추가</label>
+        <name>AddDoc</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 기능을 Salesforce 레이아웃에 추가</label>
+        <name>AddDocuSignButtonsToSalesforceLayout</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 사용자에 대한 DocuSign 패키지를 추가합니다.</label>
+        <name>AddDocuSignPackageForSelectedUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>본인 추가</label>
+        <name>AddMe</name>
+    </customLabels>
+    <customLabels>
+        <label>받는 사람 추가</label>
+        <name>AddRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>원격 사이트 추가</label>
+        <name>AddRemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 &apos;사용 가능한 필드&apos;를 &apos;선택한 필드&apos; 목록에 추가</label>
+        <name>AddSelectedAvailableFields</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 추가</label>
+        <name>AddUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 추가 = 선택한 사용자에 대한 DocuSign 패키지를 추가합니다.</label>
+        <name>AddUsersAddTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>기회 및 계정 레이아웃에서 &apos;D&amp;B로 확인&apos; 버튼을 추가합니다.</label>
+        <name>AddVerifyWithDNButton</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 사용자에 대한 DocuSign 패키지를 추가하고 이 사용자들을 DocuSign 계정 관리자로 지정합니다.</label>
+        <name>AdddocuSignPackageMakeUsersAdministrators</name>
+    </customLabels>
+    <customLabels>
+        <label>번지 1, 구/군/시, 시/도 및 우편 번호가 필요합니다.</label>
+        <name>Address1citystateandZip</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인 주소 지정</label>
+        <name>AddressRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>고급</label>
+        <name>Advanced</name>
+    </customLabels>
+    <customLabels>
+        <label>모두</label>
+        <name>All</name>
+    </customLabels>
+    <customLabels>
+        <label>발송인이 사용자 지정 필드를 편집하도록 허용</label>
+        <name>AllowSenderToEditCustomFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce에 답장 허용</label>
+        <name>AllowWritebackToSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>이 이메일/이름에 대한 계정이 이미 있습니다.</label>
+        <name>AnAccountAlreadyExists</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign에 연결하는 중에 오류가 발생했습니다.  DocuSign 회원 자격이 제대로 구성되어 있는지 확인해 주십시오.</label>
+        <name>AnErrorOccurredConnectingToDocusign</name>
+    </customLabels>
+    <customLabels>
+        <label>앵커</label>
+        <name>Anchor</name>
+    </customLabels>
+    <customLabels>
+        <label>앵커 텍스트</label>
+        <name>AnchorText</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 동작을 선택한 사용자에게 적용</label>
+        <name>ApplySelectedActionToSelectedUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>승인</label>
+        <name>Approve</name>
+    </customLabels>
+    <customLabels>
+        <label>이 봉투를 무효화하시겠습니까?</label>
+        <name>AreYouSureVoidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>1개 이상의 문서가 필요합니다.</label>
+        <name>AtLeastOneDocumentIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>1명 이상의 수신인에 오류가 있습니다.</label>
+        <name>AtLeastOneRecipientHasError</name>
+    </customLabels>
+    <customLabels>
+        <label>1명 이상의 수신인이 필요합니다.</label>
+        <name>AtLeastOneRecipientRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>첨부파일</label>
+        <name>Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 1 추가</label>
+        <name>AutoSetupStep1</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 10 추가</label>
+        <name>AutoSetupStep10</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 11 추가</label>
+        <name>AutoSetupStep11</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 12 추가</label>
+        <name>AutoSetupStep12</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 13 추가</label>
+        <name>AutoSetupStep13</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 14 추가</label>
+        <name>AutoSetupStep14</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 2 추가</label>
+        <name>AutoSetupStep2</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 3 추가</label>
+        <name>AutoSetupStep3</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 4 추가</label>
+        <name>AutoSetupStep4</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 5 추가</label>
+        <name>AutoSetupStep5</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 6 추가</label>
+        <name>AutoSetupStep6</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 7 추가</label>
+        <name>AutoSetupStep7</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 8 추가</label>
+        <name>AutoSetupStep8</name>
+    </customLabels>
+    <customLabels>
+        <label>IP 범위 9 추가</label>
+        <name>AutoSetupStep9</name>
+    </customLabels>
+    <customLabels>
+        <label>자동 앵커 텍스트 및 태그</label>
+        <name>AutomaticAnchorTextandTags</name>
+    </customLabels>
+    <customLabels>
+        <label>사용 가능한 필드</label>
+        <name>AvailableFields</name>
+    </customLabels>
+    <customLabels>
+        <label>뒤로</label>
+        <name>Back</name>
+    </customLabels>
+    <customLabels>
+        <label>검정</label>
+        <name>Black</name>
+    </customLabels>
+    <customLabels>
+        <label>밝은 파랑</label>
+        <name>BrightBlue</name>
+    </customLabels>
+    <customLabels>
+        <label>밝은 빨강</label>
+        <name>BrightRed</name>
+    </customLabels>
+    <customLabels>
+        <label>취소</label>
+        <name>Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>활성 DocuSign 사용자에서 본인은 제거할 수 없습니다. 이렇게 하면 Salesforce용 DocuSign 관리 권한도 제거됩니다.</label>
+        <name>CannotRemoveYourselfFromActiveDocuSignUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>참조</label>
+        <name>CarbonCopy</name>
+    </customLabels>
+    <customLabels>
+        <label>전송 보장</label>
+        <name>CertifiedDelivery</name>
+    </customLabels>
+    <customLabels>
+        <label>변경</label>
+        <name>ChangeRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>줄당 문자 수</label>
+        <name>CharactersPerLine</name>
+    </customLabels>
+    <customLabels>
+        <label>남은 글자 수: 200</label>
+        <name>CharactersRemaining200</name>
+    </customLabels>
+    <customLabels>
+        <label>이러한 봉투 이벤트에 대한 Chatter</label>
+        <name>ChatterOnTheseEnvelopeEvents</name>
+    </customLabels>
+    <customLabels>
+        <label>이러한 수신인 이벤트에 대한 Chatter</label>
+        <name>ChatterOnTheseRecipientEvents</name>
+    </customLabels>
+    <customLabels>
+        <label>Chatter 설정</label>
+        <name>ChatterSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign IP 범위를 확인하고 DocuSign IP를 신뢰할 수 있는 네트워크 목록에 추가하십시오.</label>
+        <name>CheckIPRanges</name>
+    </customLabels>
+    <customLabels>
+        <label>확인란</label>
+        <name>Checkbox</name>
+    </customLabels>
+    <customLabels>
+        <label>중국어(간체)</label>
+        <name>ChineseSimplified</name>
+    </customLabels>
+    <customLabels>
+        <label>필드 선택</label>
+        <name>ChooseFields</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 항목에 대한 필터 옵션 선택</label>
+        <name>ChooseFilterOption</name>
+    </customLabels>
+    <customLabels>
+        <label>페이지당 표시할 행 수 선택</label>
+        <name>ChooseNumberOfRows</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 사용자 테이블에 표시할 필드 선택</label>
+        <name>ChooseTheFieldsToDisplay</name>
+    </customLabels>
+    <customLabels>
+        <label>구/군/시</label>
+        <name>City</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 버튼을 클릭하여 모든 IP 범위를 추가하십시오. IP 범위가 구성되면 각 창을 저장한 후 닫아야 합니다.</label>
+        <name>ClickButtonsToAddIPRanges</name>
+    </customLabels>
+    <customLabels>
+        <label>여기를 클릭</label>
+        <name>ClickHere2</name>
+    </customLabels>
+    <customLabels>
+        <label>다시 연결하려면 여기를 클릭</label>
+        <name>ClickHereToReconnect</name>
+    </customLabels>
+    <customLabels>
+        <label>(완료 후 팝업 닫기)</label>
+        <name>ClosePopUpAfterComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>이 창 닫기</label>
+        <name>CloseWindow</name>
+    </customLabels>
+    <customLabels>
+        <label>회사</label>
+        <name>Company</name>
+    </customLabels>
+    <customLabels>
+        <label>회사 이름</label>
+        <name>CompanyName</name>
+    </customLabels>
+    <customLabels>
+        <label>완료됨</label>
+        <name>Completed</name>
+    </customLabels>
+    <customLabels>
+        <label>태거 구성 중...</label>
+        <name>ConfigTagger</name>
+    </customLabels>
+    <customLabels>
+        <label>연결</label>
+        <name>Connect</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce에 DocuSign 연결</label>
+        <name>ConnectDSToSF</name>
+    </customLabels>
+    <customLabels>
+        <label>연락처</label>
+        <name>Contact</name>
+    </customLabels>
+    <customLabels>
+        <label>계정이 여전히 올바르게 구성되지 않으면 시스템 관리자에게 문의하십시오.</label>
+        <name>ContactAdminForConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>다음과 같은 DocuSign 지원 센터에 문의해 주십시오.</label>
+        <name>ContactSupport</name>
+    </customLabels>
+    <customLabels>
+        <label>연락처</label>
+        <name>Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label>포함</label>
+        <name>Contains</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 간격으로 알림 계속 전송</label>
+        <name>ContinueToSendRemindersEvery</name>
+    </customLabels>
+    <customLabels>
+        <label>계약</label>
+        <name>Contract</name>
+    </customLabels>
+    <customLabels>
+        <label>수정을 허용하려면 수정 권한을 설정하고 봉투가 \&apos;Sent\&apos; 또는 \&apos;Delivered\&apos; 상태여야 합니다.</label>
+        <name>CorrectionPermissionMustBe</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign으로 발송하는 사용자를 인증할 수 없습니다.</label>
+        <name>CouldNotAuthenticateUser</name>
+    </customLabels>
+    <customLabels>
+        <label>활성화할 수 없습니다. -</label>
+        <name>CoultNotBeActivatedDash</name>
+    </customLabels>
+    <customLabels>
+        <label>국가</label>
+        <name>Country</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자 프로필의 국가 필드가 올바르지 않습니다. Salesforce 개인 정보 설정으로 이동하여 국가 필드 항목을 지우십시오.</label>
+        <name>CountryFieldNotCorrect</name>
+    </customLabels>
+    <customLabels>
+        <label>새 사용자 보기 생성</label>
+        <name>CreateANewUserView</name>
+    </customLabels>
+    <customLabels>
+        <label>등록</label>
+        <name>CreateAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그 생성</label>
+        <name>CreateCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>무료 평가판 계정이 거의 준비되었습니다. 이메일을 확인하여 활성화 링크를 클릭하십시오. 그런 다음 여기로 돌아와 로그인하십시오.</label>
+        <name>CreateMemberStatusMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>새 보기 생성</label>
+        <name>CreateNewView</name>
+    </customLabels>
+    <customLabels>
+        <label>현재 비용청구 기간 종료일</label>
+        <name>CurrentBillingPeriodEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label>현재 비용청구 기간 시작일</label>
+        <name>CurrentBillingPeriodStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label>--- 현재 설정 ---</label>
+        <name>CurrentChatterLanguageSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>현재 Salesforce 사용자</label>
+        <name>CurrentSalesforceUser</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정</label>
+        <name>Custom</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그 이름</label>
+        <name>CustomTagName</name>
+    </customLabels>
+    <customLabels>
+        <label>도구 설명</label>
+        <name>CustomTagToolTip</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그</label>
+        <name>CustomTags</name>
+    </customLabels>
+    <customLabels>
+        <label>확인</label>
+        <name>CustomTagsValidation</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 구성</label>
+        <name>DSAccountConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>USER_AUTHENTICATION_FAILED: 사용자 이름과 비밀번호 중 하나 이상이 잘못되었습니다.</label>
+        <name>DSClientAuthenticationException</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign API에서 수신인 목록을 가져오는 도중 오류 발생</label>
+        <name>DSClientGetRecipientListError</name>
+    </customLabels>
+    <customLabels>
+        <label>USER_AUTHENTICATION_FAILED</label>
+        <name>DSClient_USER_AUTHENTICATION_FAILED</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투</label>
+        <name>DSEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 수신인 이메일</label>
+        <name>DSRecipientEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 수신인 이름</label>
+        <name>DSRecipientName</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 재발송 결과</label>
+        <name>DSResendResult</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 상태 결과</label>
+        <name>DSStatusResult</name>
+    </customLabels>
+    <customLabels>
+        <label>동의합니다.</label>
+        <name>DSTermsConditions</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce에 DocuSign 완료</label>
+        <name>DSToSFComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>진한 녹색</label>
+        <name>DarkGreen</name>
+    </customLabels>
+    <customLabels>
+        <label>진한 빨강</label>
+        <name>DarkRed</name>
+    </customLabels>
+    <customLabels>
+        <label>날짜</label>
+        <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label>서명 날짜</label>
+        <name>DateSigned</name>
+    </customLabels>
+    <customLabels>
+        <label>수신 후 지난 일수</label>
+        <name>DaysAfterReceipt</name>
+    </customLabels>
+    <customLabels>
+        <label>만료까지 남은 일수</label>
+        <name>DaysBeforeExpiration</name>
+    </customLabels>
+    <customLabels>
+        <label>요청 만료까지 남은 일수</label>
+        <name>DaysBeforeRequestExpires</name>
+    </customLabels>
+    <customLabels>
+        <label>거부</label>
+        <name>Decline</name>
+    </customLabels>
+    <customLabels>
+        <label>거부됨</label>
+        <name>Declined</name>
+    </customLabels>
+    <customLabels>
+        <label>기본</label>
+        <name>Default</name>
+    </customLabels>
+    <customLabels>
+        <label>기본 이메일 메시지</label>
+        <name>DefaultEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>기본 이메일 제목</label>
+        <name>DefaultEmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>이 사용자 지정 태그를 삭제하시겠습니까?</label>
+        <name>DeleteConfirmationMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>삭제</label>
+        <name>DeleteUppercase</name>
+    </customLabels>
+    <customLabels>
+        <label>배달됨</label>
+        <name>Delivered</name>
+    </customLabels>
+    <customLabels>
+        <label>데모</label>
+        <name>Demo</name>
+    </customLabels>
+    <customLabels>
+        <label>데스크톱 버튼</label>
+        <name>Desktop</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 이메일 메시지 편집 비활성화</label>
+        <name>DisableUserEmailMessageEditing</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 이메일 제목 편집 비활성화</label>
+        <name>DisableUserEmailSubjectEditing</name>
+    </customLabels>
+    <customLabels>
+        <label>비활성됨</label>
+        <name>Disabled</name>
+    </customLabels>
+    <customLabels>
+        <label>&apos;선택한 필드&apos; 목록의 변경 내용을 취소합니다.</label>
+        <name>DiscardTheChangesToSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 위치에 행 표시:</label>
+        <name>DisplayRowsWhere</name>
+    </customLabels>
+    <customLabels>
+        <label>새 창에서 DocuSign 직접 서명 페이지를 표시합니다.</label>
+        <name>DisplayTheDocuSignInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>새 창에서 DocuSign 태거 페이지를 표시합니다.</label>
+        <name>DisplayTheDocuSignTaggerPage</name>
+    </customLabels>
+    <customLabels>
+        <label>페이지 표시</label>
+        <name>DisplayingPage</name>
+    </customLabels>
+    <customLabels>
+        <label>첨부파일</label>
+        <name>DocTypeAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label>문서</label>
+        <name>DocTypeDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>피드 항목</label>
+        <name>DocTypeFeedItems</name>
+    </customLabels>
+    <customLabels>
+        <label>라이브러리</label>
+        <name>DocTypeLibraryItems</name>
+    </customLabels>
+    <customLabels>
+        <label>템플릿</label>
+        <name>DocTypeTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign </label>
+        <name>DocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign API 오류</label>
+        <name>DocuSignAPIGetRecipientViewError</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 정보가 이미 구성되었습니다.</label>
+        <name>DocuSignAccountAlreadyConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 정보</label>
+        <name>DocuSignAccountInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정이 이미 있지만 활성화해야 합니다. 활성화 링크가 포함된 이메일 메시지가 사용자에게 전달되었습니다. 활성화가 완료되면 사용자는 DocuSign 관리 탭을 클릭하고 비밀번호를 입력해야 합니다.</label>
+        <name>DocuSignAccountRequiresActivation</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 관리</label>
+        <name>DocuSignAdmin</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign이 이 봉투의 재발송 작업 상태를 반환하지 않았습니다.</label>
+        <name>DocuSignDidNotReturnStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>전자 서명을 위해 귀하에게 이 요청을 전송합니다. 아래 링크를 따라 이동하여 검토한 후 전자 서명해 주십시오.</label>
+        <name>DocuSignEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 서명을 위한 문서</label>
+        <name>DocuSignEmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투 취소됨</label>
+        <name>DocuSignEnvelopeCancelled</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투가 \&apos;발송됨\&apos; 또는 \&apos;배달됨\&apos; 상태가 아니거나 DocuSign 계정에 \&apos;봉투 수정\&apos;이 사용되지 않았습니다.  발송한 이메일이 없습니다.</label>
+        <name>DocuSignEnvelopeNotSentOrDeilivered</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투 저장됨</label>
+        <name>DocuSignEnvelopeSaved</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign, Inc.</label>
+        <name>DocuSignInc</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 수신인 상태 관련 목록</label>
+        <name>DocuSignRecipientStatusRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label>문서 발송됨</label>
+        <name>DocuSignSendingCompleted</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 상태 관련 목록</label>
+        <name>DocuSignStatusRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 시스템 발송인 사용자 ID</label>
+        <name>DocuSignSystemSenderUserId</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 시스템 발송인 사용자 정보</label>
+        <name>DocuSignSystemSenderUserInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 템플릿</label>
+        <name>DocuSignTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign과 Salesforce의 사용자 이름과 이메일은 동일해야 합니다.</label>
+        <name>DocuSignandSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>문서</label>
+        <name>Document</name>
+    </customLabels>
+    <customLabels>
+        <label>문서에 이름이 누락됨</label>
+        <name>DocumentIsMissingName</name>
+    </customLabels>
+    <customLabels>
+        <label>문서</label>
+        <name>Documents</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 로그인 성공</label>
+        <name>DocusignAccountLoginSuccessful</name>
+    </customLabels>
+    <customLabels>
+        <label>DfS(DocuSign for Salesforce)가 DocuSign 계정에 있는 하나 이상의 설정에서 문제를 감지했습니다.  DfS 및 DocuSign 간의 통합을 활성화하기 위해 자격 증명을 사용한 사용자(때로 SOBO 사용자로 통칭)의 경우 &apos;계정을 관리할 수 있음&apos;, &apos;봉투를 전송할 수 있음&apos;, &apos;대신 전송을 허용함&apos; 및 &apos;API 계정 전반 액세스&apos;와 같은 권한 및 플래그가 모두 선택되어 있어야 합니다.  DocuSign에 직접 로그인하고, 기본 설정을 클릭한 다음, 관리 콘솔의 권한 영역을 선택하면 이러한 설정 모두에 액세스할 수 있습니다.  이 설정을 모두 활성화하지 않으면 통합이 제대로 작동하지 않습니다.  문제가 이 설정과 관련되지 않을 수도 있지만, 먼저 이 설정을 확인해야 합니다. DocuSign 관리자에게 문의하여 DocuSign에서 최근 변경된 설정이 있는지 확인해 주십시오.</label>
+        <name>DocusignForSalesforceHasDetected</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign for Salesforce가 구성되지 않았습니다.  Salesforce 관리자에게 문의하여 DocuSign for Salesforce 구성을 완료해 주십시오.  오류:</label>
+        <name>DocusignForSalesforceHasNot</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign이 새 창에서 성공적으로 실행되었습니다.</label>
+        <name>DocusignLaunchedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label>완료</label>
+        <name>Done</name>
+    </customLabels>
+    <customLabels>
+        <label>드롭다운</label>
+        <name>DropDown</name>
+    </customLabels>
+    <customLabels>
+        <label>LIST_MISSING_ITEMS: LIST_FIELD 유형의 DSCustomField에는 컬렉션의 목록 항목이 하나 이상 필요합니다.</label>
+        <name>DscustomfieldOfTypeListField</name>
+    </customLabels>
+    <customLabels>
+        <label>docSource=DOCUMENT일 경우 DSSignatureRequest에 하나 이상의 문서가 필요합니다.</label>
+        <name>DssignaturerequestRequires</name>
+    </customLabels>
+    <customLabels>
+        <label>네덜란드어</label>
+        <name>Dutch</name>
+    </customLabels>
+    <customLabels>
+        <label>편집</label>
+        <name>Edit</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그 편집</label>
+        <name>EditCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인 편집</label>
+        <name>EditRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 보기를 편집합니다.</label>
+        <name>EditTheUserView</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일</label>
+        <name>Email</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 주소</label>
+        <name>EmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 주소는 필수입니다.</label>
+        <name>EmailAddressIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 주소가 없습니다.</label>
+        <name>EmailAddressMissing</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 본문은 2000자까지 입력 가능합니다.</label>
+        <name>EmailBodyLimitedTwoThousand</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일이 발송되지 않았습니다.</label>
+        <name>EmailNotSent</name>
+    </customLabels>
+    <customLabels>
+        <label>전송된 이메일</label>
+        <name>EmailSent</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 설정</label>
+        <name>EmailSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>메시지 제목이 필요합니다.</label>
+        <name>EmailSubjectNotBeBlank</name>
+    </customLabels>
+    <customLabels>
+        <label>Chatter 상태 업데이트 사용</label>
+        <name>EnableChatterUpdates</name>
+    </customLabels>
+    <customLabels>
+        <label> Salesforce1(베타)에서 DocuSign 모바일 앱 태그 지정 활성화</label>
+        <name>EnableNewMobileTaggingUI</name>
+    </customLabels>
+    <customLabels>
+        <label>미리 알림 및 만료 설정 사용</label>
+        <name>EnableReminderExpiration</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 호출 제한 보정 사용</label>
+        <name>EnableSalesforceCalloutLimit</name>
+    </customLabels>
+    <customLabels>
+        <label>설정됨 - 항상 설정</label>
+        <name>EnabledAlwaysOn</name>
+    </customLabels>
+    <customLabels>
+        <label>설정됨 - 기본적으로 해제</label>
+        <name>EnabledOffByDefault</name>
+    </customLabels>
+    <customLabels>
+        <label>설정됨 - 기본적으로 설정</label>
+        <name>EnabledOnByDefault</name>
+    </customLabels>
+    <customLabels>
+        <label>다음으로 끝남</label>
+        <name>EndsWith</name>
+    </customLabels>
+    <customLabels>
+        <label>영어</label>
+        <name>English</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정에 세션 내 서명이 설정되어 있는지 확인하십시오.</label>
+        <name>EnsureDocuSignAccountHasSession</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투</label>
+        <name>Envelope</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투를 재발송할 수 없습니다. \&apos;발송됨\&apos; 또는 \&apos;배달됨\&apos; 상태가 아닙니다.</label>
+        <name>EnvelopeCannotBeResent</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투를 생성하지 못했습니다.</label>
+        <name>EnvelopeCouldNotBeCreated</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 필드</label>
+        <name>EnvelopeCustomFields</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 이메일을 재발송할 수 없습니다. 이 봉투의 수신인이 선택되지 않았습니다.</label>
+        <name>EnvelopeEmaillCannotBeResent</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 이메일이 재발송되지 않았습니다. \&apos;발송됨\&apos; 또는 \&apos;배달됨\&apos; 상태의 수신인이 선택되지 않았습니다.</label>
+        <name>EnvelopeEmailsNotResent</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 ID</label>
+        <name>EnvelopeID</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 ID:</label>
+        <name>EnvelopeIDColon</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투 정보</label>
+        <name>EnvelopeInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투를 성공적으로 전송했습니다.</label>
+        <name>EnvelopeSent</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 서명을 위한 Chatter 동작 활성화</label>
+        <name>EnvelopeSigning</name>
+    </customLabels>
+    <customLabels>
+        <label>환경</label>
+        <name>Environment</name>
+    </customLabels>
+    <customLabels>
+        <label>동일함</label>
+        <name>Equals</name>
+    </customLabels>
+    <customLabels>
+        <label>멤버를 계정에 추가하는 중 오류 발생:</label>
+        <name>ErrorAddingMembersToAccountColon</name>
+    </customLabels>
+    <customLabels>
+        <label>오류:</label>
+        <name>ErrorColon</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정을 비활성화하는 중 오류가 발생했습니다.</label>
+        <name>ErrorDeactivatingDocuSignAccounts</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정을 비활성화하는 중 오류 발생:</label>
+        <name>ErrorDeactivingDocuSignAccountColon</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그를 삭제할 수 없습니다. 다시 시도해 주십시오.</label>
+        <name>ErrorDeletingCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>오류 =</label>
+        <name>ErrorEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>D&amp;B에서 요청하는 정보를 수집하는 도중 오류가 발생했습니다. 다시 시도해 주십시오.</label>
+        <name>ErrorGatheringDnBInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>오류 - 사용자 개체에 대한 액세스 권한 부족</label>
+        <name>ErrorInsufficientAccessToUserObject</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign에서 암호화된 비밀번호를 가져오는 중에 오류 발생</label>
+        <name>ErrorObtainingEncryptedPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 수신인 목록을 처리하는 중에 오류 발생</label>
+        <name>ErrorProcessingCustomRecipientList</name>
+    </customLabels>
+    <customLabels>
+        <label>웹 호출 응답을 처리하는 중에 오류 발생.</label>
+        <name>ErrorProcessingWebCalloutResponse</name>
+    </customLabels>
+    <customLabels>
+        <label>레이아웃을 읽는 중에 오류가 발생했습니다.</label>
+        <name>ErrorReadingLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>활성화를 요청하는 중 오류가 발생했습니다.</label>
+        <name>ErrorRequestingActivation</name>
+    </customLabels>
+    <customLabels>
+        <label>활성화를 요청하는 중에 오류가 발생했습니다. 사용자 기록을 선택할 수 있는 권한이 충분하지 않습니다.</label>
+        <name>ErrorRequestingActivationInsufficient</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 설정을 검색하는 중에 오류가 발생했습니다.</label>
+        <name>ErrorRetrievingAccountSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 태그를 저장하지 못했습니다. 다시 시도해 주십시오.</label>
+        <name>ErrorSavingCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>발송 오류</label>
+        <name>ErrorSending</name>
+    </customLabels>
+    <customLabels>
+        <label>오류: 봉투를 발송할 수 없습니다. 봉투가 없습니다.</label>
+        <name>ErrorUnableToSendEvenlopeNotExist</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정을 프로비정닝하는 중에 오류 발생</label>
+        <name>ErrorWhileProvisioningDocusign</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 만료</label>
+        <name>ExpireEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 만료</label>
+        <name>ExpireRequestIn</name>
+    </customLabels>
+    <customLabels>
+        <label>레이아웃을 업데이트하지 못했습니다. 다시 시도해 주십시오.</label>
+        <name>FailedToUpdateLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>팩스</label>
+        <name>Fax</name>
+    </customLabels>
+    <customLabels>
+        <label>첨부파일 제공</label>
+        <name>FeedAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label>필수 필드</label>
+        <name>FieldRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 목록에 표시될 필드</label>
+        <name>FieldsThatWillBeDisplayed</name>
+    </customLabels>
+    <customLabels>
+        <label>최종 단계</label>
+        <name>FinalSteps</name>
+    </customLabels>
+    <customLabels>
+        <label>이름</label>
+        <name>FirstName</name>
+    </customLabels>
+    <customLabels>
+        <label>고정 크기</label>
+        <name>FixedSize</name>
+    </customLabels>
+    <customLabels>
+        <label>비밀번호를 잊으셨나요?</label>
+        <name>ForgotPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>서식</label>
+        <name>Formatting</name>
+    </customLabels>
+    <customLabels>
+        <label>수식</label>
+        <name>Formula</name>
+    </customLabels>
+    <customLabels>
+        <label>프랑스어</label>
+        <name>French</name>
+    </customLabels>
+    <customLabels>
+        <label>전체 이름</label>
+        <name>FullName</name>
+    </customLabels>
+    <customLabels>
+        <label>독일어</label>
+        <name>German</name>
+    </customLabels>
+    <customLabels>
+        <label>본인이 이 서명 세션의 올바른 호스트인지 확인하려면 Salesforce에서 사용하는 사용자 이름과 이메일이 DocuSign에서 사용하는 사용자 이름과 이메일이 일치하는지 확인하면 됩니다.  관리자에게 귀하의 DocuSign 자격 증명을 Salesforce 자격 증명과 일치하도록 변경을 요청하거나 Salesforce 자격 증명을 DocuSign 자격 증명과 일치하도록 변경을 요청하십시오.</label>
+        <name>GetSigningURLRedirectErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>금색</label>
+        <name>Gold</name>
+    </customLabels>
+    <customLabels>
+        <label>녹색</label>
+        <name>Green</name>
+    </customLabels>
+    <customLabels>
+        <label>높이</label>
+        <name>Height</name>
+    </customLabels>
+    <customLabels>
+        <label>별표로 텍스트 숨기기</label>
+        <name>HideTextWithAsterisks</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 버튼 숨기기</label>
+        <name>HideTheNextButton</name>
+    </customLabels>
+    <customLabels>
+        <label>미리 알림 및 만료 설정 숨기기</label>
+        <name>HideTheRemindAndExpireSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>지금 전송 버튼 숨기기</label>
+        <name>HideTheSendNowButton</name>
+    </customLabels>
+    <customLabels>
+        <label>자택</label>
+        <name>Home</name>
+    </customLabels>
+    <customLabels>
+        <label>직접 호스트</label>
+        <name>HostInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>직접 호스트 - 지금 서명</label>
+        <name>HostInPersonDashSignNow</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign과의 통신에 필요한 원격 사이트 및 네트워크 액세스 권한을 추가하는 데 동의합니다.</label>
+        <name>IAgreeAddRemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 약관에</label>
+        <name>IAgreeToThe</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 로그인 화면이 표시되면</label>
+        <name>IfYouSeeTheDocuSignLoginScreen</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일에 메모 포함</label>
+        <name>IncludeNoteInEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>여기에 약자 입력</label>
+        <name>InitialHere</name>
+    </customLabels>
+    <customLabels>
+        <label>여기에 약자 입력(선택 사항)</label>
+        <name>InitialHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label>초기 값</label>
+        <name>InitialValue</name>
+    </customLabels>
+    <customLabels>
+        <label>입력 제한</label>
+        <name>InputLimit</name>
+    </customLabels>
+    <customLabels>
+        <label>설치가 완료되었습니다. DocuSign for Salesforce 버튼 및 목록을 페이지 레이아웃에 추가하려면 layoutsLink를 선택하십시오. DocuSign에 액세스 권한을 부여하려면 usersLink를 선택하십시오.</label>
+        <name>InstallationComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>액세스 정보 부족</label>
+        <name>InsufficientAccessInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>다음에 대한 액세스 권한이 충분하지 않음</label>
+        <name>InsufficientAccessTo</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSignAccountConfiguration 개체에 액세스할 권한이 없습니다.</label>
+        <name>InsufficientAccessToConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>연락처 정보를 가져올 수 없습니다. 연락처 개체에 액세스할 권한이 없습니다.</label>
+        <name>InsufficientAccessToContact</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSignAccountConfiguration 개체에 대한 액세스 권한이 충분하지 않습니다. Salesforce 관리자에게 문의하여 DocuSign for Salesforce 패키지에 대한 액세스 권한을 부여받으십시오.</label>
+        <name>InsufficientAccessToDocusignaccountconfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label>연락처 정보를 가져올 수 없습니다. 책임자 개체에 액세스할 권한이 없습니다.</label>
+        <name>InsufficientAccessToLead</name>
+    </customLabels>
+    <customLabels>
+        <label>연락처 정보를 가져올 수 없습니다. 사용자 개체에 액세스할 권한이 없습니다.</label>
+        <name>InsufficientAccessToUser</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign_Envelope_Recipient__c 개체에 액세스할 권한이 없습니다.</label>
+        <name>InsufficientDocuSignEnvelopeRecipientc</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 기록을 선택할 권한이 없습니다.</label>
+        <name>InsufficientPriviliegesSelectUserRecords</name>
+    </customLabels>
+    <customLabels>
+        <label>읽기 권한 없음</label>
+        <name>InsufficientReadPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label>유효하지 않은 DocuSign 이메일 주소 또는 비밀번호</label>
+        <name>InvalidDocuSignEmailPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 ID가 유효하지 않습니다.</label>
+        <name>InvalidDocusignAccountId</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자 이름 또는 비밀번호가 유효하지 않습니다.</label>
+        <name>InvalidSalesforceusername</name>
+    </customLabels>
+    <customLabels>
+        <label>이 DocuSign 사용자 지정 버튼의 SourceID 값이 유효하지 않습니다. Salesforce 관리자에게 문의하여 사용자 지정 버튼 구성을 수정해 주십시오. 자세한 내용은 DocuSign for Salesforce 관리자 설명서를 참조하십시오.</label>
+        <name>InvalidSourceId</name>
+    </customLabels>
+    <customLabels>
+        <label>유효하지 않은 템플릿 ID -</label>
+        <name>InvalidTemplateIdDash</name>
+    </customLabels>
+    <customLabels>
+        <label>이탈리아어</label>
+        <name>Italian</name>
+    </customLabels>
+    <customLabels>
+        <label>일본어</label>
+        <name>Japanese</name>
+    </customLabels>
+    <customLabels>
+        <label>한국어</label>
+        <name>Korean</name>
+    </customLabels>
+    <customLabels>
+        <label>Language</label>
+        <name>Language</name>
+    </customLabels>
+    <customLabels>
+        <label>마지막 수정 날짜</label>
+        <name>LastModified</name>
+    </customLabels>
+    <customLabels>
+        <label>성</label>
+        <name>LastName</name>
+    </customLabels>
+    <customLabels>
+        <label>레이아웃</label>
+        <name>Layouts</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 빠른 링크를 사용하여 Salesforce 레이아웃에 DocuSign 버튼을 추가하거나 Salesforce1 모바일 레이아웃에 DocuSign 동작을 추가하십시오.</label>
+        <name>LayoutsQuickLinks</name>
+    </customLabels>
+    <customLabels>
+        <label>레이아웃 탭을 사용하여 관리자는 DocuSign 기능을 이 조직의 레이아웃에 추가할 수 있습니다. 이 탭에서는 Salesforce 메타데이터 API를 사용하여 아래 표시된 원격 사이트가 필요한 레이아웃을 읽고 업데이트합니다. 이 탭을 활성화하려면 원격 사이트 추가 버튼을 클릭하십시오.</label>
+        <name>LayoutsTabAllowsAdmin</name>
+    </customLabels>
+    <customLabels>
+        <label>레이아웃이 업데이트되었습니다.</label>
+        <name>LayoutsUpdated</name>
+    </customLabels>
+    <customLabels>
+        <label>책임자</label>
+        <name>Lead</name>
+    </customLabels>
+    <customLabels>
+        <label>책임자</label>
+        <name>Leads</name>
+    </customLabels>
+    <customLabels>
+        <label>라이브러리</label>
+        <name>Libraries</name>
+    </customLabels>
+    <customLabels>
+        <label>제출된 파일에 파일 확장자가 없거나 확장자 유형이 DocuSign이 인식하지 못하는 것일 수 있습니다.</label>
+        <name>LikelyFileMissingFileExtension</name>
+    </customLabels>
+    <customLabels>
+        <label>줄 수</label>
+        <name>Lines</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 연결</label>
+        <name>LinkDSAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>로그인</label>
+        <name>LogIn</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정에 로그인</label>
+        <name>LogInToYourDocuSignAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>우편 구/군/시</label>
+        <name>MailingCity</name>
+    </customLabels>
+    <customLabels>
+        <label>우편 번지</label>
+        <name>MailingStreet</name>
+    </customLabels>
+    <customLabels>
+        <label>&gt;DocuSign 사용자 관리 도움말</label>
+        <name>ManageDocuSignUsersHelp</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 관리</label>
+        <name>ManageEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>최대 문자 수</label>
+        <name>MaxCharacters</name>
+    </customLabels>
+    <customLabels>
+        <label>회원 이메일이 허용되지 않습니다. 이메일이 제한된 도메인의 일부입니다.</label>
+        <name>MemberEmailNotAllowed</name>
+    </customLabels>
+    <customLabels>
+        <label>회원이 비밀번호를 잊은 경우의 답변은 필수입니다.</label>
+        <name>MemberForgottenPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign에서 반환된 멤버 목록이 발송된 목록과 길이가 다릅니다.</label>
+        <name>MemberListFromDocuSignNotSameLengthList</name>
+    </customLabels>
+    <customLabels>
+        <label>메시지</label>
+        <name>Message</name>
+    </customLabels>
+    <customLabels>
+        <label>메시지 내용</label>
+        <name>MessageContent</name>
+    </customLabels>
+    <customLabels>
+        <label>메시지 =</label>
+        <name>MessageEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>메시지 제목</label>
+        <name>MessageSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>모든 수신인에게 전송되는 메시지</label>
+        <name>MessagetoAllRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>DSDocument 누락</label>
+        <name>MissingADsdocument</name>
+    </customLabels>
+    <customLabels>
+        <label>DSRecipient 누락</label>
+        <name>MissingADsrecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>DSTemplateRole 누락</label>
+        <name>MissingADstemplaterole</name>
+    </customLabels>
+    <customLabels>
+        <label>emailBlurb 누락</label>
+        <name>MissingEmailblurb</name>
+    </customLabels>
+    <customLabels>
+        <label>emailSubject 누락</label>
+        <name>MissingEmailsubject</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정 설정에 문제가 있습니다. 다음 권한을 모두 활성화해야 합니다. &apos;계정 관리&apos;, &apos;봉투 전송&apos;, &apos;대리 발송&apos; 및 &apos;API 계정 전체 액세스&apos; 이 설정을 업데이트하려면 DocuSign에 로그인하고 기본 설정을 선택한 다음 권한을 선택합니다.</label>
+        <name>MissingSettingToBePrimaryAccountSFDC</name>
+    </customLabels>
+    <customLabels>
+        <label>설정 누락</label>
+        <name>MissingSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>templateId 누락</label>
+        <name>MissingTemplateid</name>
+    </customLabels>
+    <customLabels>
+        <label>모바일 작업</label>
+        <name>Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 구성 수정</label>
+        <name>ModifyAccountConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>아래로 이동</label>
+        <name>MoveDown</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 필드를 한 단계 아래로 내립니다.</label>
+        <name>MoveTheSelectedFieldDown</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 필드를 한 단계 위로 올립니다.</label>
+        <name>MoveTheSelectedFieldUp</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 &apos;선택한 필드&apos;를 &apos;사용 가능한
+			필드&apos; 목록으로 이동합니다.</label>
+        <name>MoveTheSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>위로 이동</label>
+        <name>MoveUp</name>
+    </customLabels>
+    <customLabels>
+        <label>이 작업을 수행하려면 관리 권한이 있어야 합니다.</label>
+        <name>MustHaveAdminPermissionsPerformOperation</name>
+    </customLabels>
+    <customLabels>
+        <label>이 작업을 수행하려면 DocuSign 관리 권한이 있어야 합니다.</label>
+        <name>MustHaveDocuSignAdminPermissionsPerformOperation</name>
+    </customLabels>
+    <customLabels>
+        <label>이 작업을 수행하려면 관리 권한이 있어야 합니다.</label>
+        <name>MustHavePermissionsToPerformOperations</name>
+    </customLabels>
+    <customLabels>
+        <label>회사 이름을 입력해야 합니다.</label>
+        <name>MustSpecifyCompanyName</name>
+    </customLabels>
+    <customLabels>
+        <label>전체 이름을 입력해야 합니다.</label>
+        <name>MustSpecifyName</name>
+    </customLabels>
+    <customLabels>
+        <label>내 개인 콘텐츠</label>
+        <name>MyPersonalContent</name>
+    </customLabels>
+    <customLabels>
+        <label>내 개인 문서</label>
+        <name>MyPersonalDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>이름</label>
+        <name>Name</name>
+    </customLabels>
+    <customLabels>
+        <label>군청</label>
+        <name>NavyBlue</name>
+    </customLabels>
+    <customLabels>
+        <label>신규</label>
+        <name>New</name>
+    </customLabels>
+    <customLabels>
+        <label>다음</label>
+        <name>Next</name>
+    </customLabels>
+    <customLabels>
+        <label>아니요</label>
+        <name>No</name>
+    </customLabels>
+    <customLabels>
+        <label>죄송하지만 이 페이지에 대한 액세스 권한이 없습니다.</label>
+        <name>NoAccessToPage</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 작업은 메모와 첨부파일 및 채팅 문서의 파일을 사용하도록 설계되어 있습니다.  이 기록에는 첨부된 문서가 없기 때문에 DocuSign 작업이 작동하지 않습니다.  이 개체에 문서를 추가하고 다시 시도하십시오.</label>
+        <name>NoDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>전송을 시작하려고 하는 Salesforce 기록에 첨부파일이 없습니다. 기록에 하나 이상의 첨부파일을 추가하고 다시 시도하십시오.</label>
+        <name>NoDocumentsDesktop</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일이 없거나, 이메일이 수정된 경우 편집을 통해 서명 이름을 확인해야 합니다.</label>
+        <name>NoEmailAndorOnce</name>
+    </customLabels>
+    <customLabels>
+        <label>일치하는 항목을 찾을 수 없음</label>
+        <name>NoMatchFound</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 사용자 지정 개체에 액세스할 권한이 없습니다.</label>
+        <name>NoPermissionCustomObj</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 작업은 연락처의 수신인을 사용하여 작업하도록 설계되어 있습니다. 이 기록에는 첨부된 연락처가 없으므로 DocuSign 작업이 작동하지 않습니다. 이 개체에 연락처를 추가하고 다시 시도하십시오.</label>
+        <name>NoRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>전송을 시작하려고 하는 Salesforce 기록에 첨부파일이 없습니다. 하나 이상의 연락처를 기록에 추가하고 다시 시도하십시오.</label>
+        <name>NoRecipientsDesktop</name>
+    </customLabels>
+    <customLabels>
+        <label>반환된 응답이 없습니다.</label>
+        <name>NoResponseWasReturned</name>
+    </customLabels>
+    <customLabels>
+        <label>표시할 행이 없습니다.</label>
+        <name>NoRowsToDisplay</name>
+    </customLabels>
+    <customLabels>
+        <label>이 조직에서 Salesforce 메타데이터 API가 지원되지 않습니다. 아래 빠른 링크를 사용하여 Salesforce 레이아웃 수정자로 DocuSign 기능을 추가하십시오.</label>
+        <name>NoSupportToMetadataAPI</name>
+    </customLabels>
+    <customLabels>
+        <label>유효성 검사 안 함</label>
+        <name>NoValidation</name>
+    </customLabels>
+    <customLabels>
+        <label>--없음--</label>
+        <name>None</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 소유자가 아닙니다.</label>
+        <name>NotEnvelopeOwner</name>
+    </customLabels>
+    <customLabels>
+        <label>다음과 동일함</label>
+        <name>NotEqualTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자 기록에 DocuSign 사용자 정보를
+			업데이트할 권한이 없습니다.</label>
+        <name>NotHavePermissionsToUpdateSalesforceUserRecords</name>
+    </customLabels>
+    <customLabels>
+        <label>이 봉투를 재발송할 권한이 없습니다. 발송한 이메일이 없습니다.</label>
+        <name>NotHaveSufficientPermissionResend</name>
+    </customLabels>
+    <customLabels>
+        <label>이 DocuSign for Salesforce 페이지는 시스템 전용이며 표시용이 아닙니다. Salesforce 관리자에게 문의하여 이 페이지를 제거하십시오. Salesforce로 돌아가려면 브라우저에서 뒤로 버튼을 클릭하십시오.</label>
+        <name>NotSupposedToBeShown</name>
+    </customLabels>
+    <customLabels>
+        <label>메모</label>
+        <name>Note</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인용 메모</label>
+        <name>NoteForRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Number</label>
+        <name>Number</name>
+    </customLabels>
+    <customLabels>
+        <label>개체</label>
+        <name>Object</name>
+    </customLabels>
+    <customLabels>
+        <label>/</label>
+        <name>Of</name>
+    </customLabels>
+    <customLabels>
+        <label>\&apos;발송됨\&apos; 또는 \&apos;배달됨\&apos; 상태의 봉투만 수정할 수 있습니다.</label>
+        <name>OnlyEnvelopeInSentOrDelivered</name>
+    </customLabels>
+    <customLabels>
+        <label>기회</label>
+        <name>Opportunity</name>
+    </customLabels>
+    <customLabels>
+        <label>옵션(세미콜론으로 항목 구분된 목록)</label>
+        <name>Options</name>
+    </customLabels>
+    <customLabels>
+        <label>또는</label>
+        <name>Or</name>
+    </customLabels>
+    <customLabels>
+        <label>순서</label>
+        <name>Order</name>
+    </customLabels>
+    <customLabels>
+        <label>이 조직에서 Salesforce 메타데이터 API가 지원되지 않습니다. DocuSign IP를 신뢰할 수 있는 네트워크 목록에 추가하십시오.</label>
+        <name>OrgDoesNotSupportMetadataAPI</name>
+    </customLabels>
+    <customLabels>
+        <label>OrgId가 설정되지 않았습니다.</label>
+        <name>OrgidIsNotSet</name>
+    </customLabels>
+    <customLabels>
+        <label>기타</label>
+        <name>Other</name>
+    </customLabels>
+    <customLabels>
+        <label>기타 환경</label>
+        <name>OtherEnvironment</name>
+    </customLabels>
+    <customLabels>
+        <label>페이지</label>
+        <name>Page</name>
+    </customLabels>
+    <customLabels>
+        <label>비밀번호</label>
+        <name>Password</name>
+    </customLabels>
+    <customLabels>
+        <label>비밀번호 및 비밀번호 확인을 모두 입력해야 하고 두 항목이 일치해야 합니다.</label>
+        <name>PasswordAndPasswordConfirmation</name>
+    </customLabels>
+    <customLabels>
+        <label>개인 메시지</label>
+        <name>PersonalMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>전화</label>
+        <name>Phone</name>
+    </customLabels>
+    <customLabels>
+        <label>전화번호</label>
+        <name>PhoneNumber</name>
+    </customLabels>
+    <customLabels>
+        <label>플랜 종료일</label>
+        <name>PlanEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label>플랜 ID</label>
+        <name>PlanID</name>
+    </customLabels>
+    <customLabels>
+        <label>플랜 이름</label>
+        <name>PlanName</name>
+    </customLabels>
+    <customLabels>
+        <label>플랜 시작일</label>
+        <name>PlanStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 지원 센터에 문의하십시오. 이메일: service@docusign.com</label>
+        <name>PleaseContactDocuSignSupportTo</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 고객 지원 센터에 문의하여 계정 설정을 업데이트해 주십시오.</label>
+        <name>PleaseContactDocusignCustomerSupport</name>
+    </customLabels>
+    <customLabels>
+        <label>&quot;Salesforce 관리자에게 문의하여
+			다음 사용자 개체 필드에 대한 업데이트 권한을 요청하십시오.&quot;</label>
+        <name>PleaseContactYourSalesforceAdministratorToBeGranted</name>
+    </customLabels>
+    <customLabels>
+        <label>검색 키워드를 입력하십시오.</label>
+        <name>PleaseEnterSearchKeyword</name>
+    </customLabels>
+    <customLabels>
+        <label>이유를 200자로 제한하십시오.</label>
+        <name>PleaseLimitYourReason</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투를 무효화하는 이유를 입력하십시오.</label>
+        <name>PleaseProvideAReason</name>
+    </customLabels>
+    <customLabels>
+        <label>포르투갈어(브라질)</label>
+        <name>PortugueseBrazilian</name>
+    </customLabels>
+    <customLabels>
+        <label>가능한 오류 조건</label>
+        <name>PossibleErrorConditions</name>
+    </customLabels>
+    <customLabels>
+        <label>우편번호</label>
+        <name>PostCode</name>
+    </customLabels>
+    <customLabels>
+        <label>이전</label>
+        <name>Previous</name>
+    </customLabels>
+    <customLabels>
+        <label>트랜잭션에 문제가 있습니다.</label>
+        <name>ProblemWithTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label>프로덕션</label>
+        <name>Production</name>
+    </customLabels>
+    <customLabels>
+        <label>자주</label>
+        <name>Purple</name>
+    </customLabels>
+    <customLabels>
+        <label>빠른 추가</label>
+        <name>QuickAdd</name>
+    </customLabels>
+    <customLabels>
+        <label>라디오 버튼</label>
+        <name>RadioButton</name>
+    </customLabels>
+    <customLabels>
+        <label>당사 평가</label>
+        <name>RateUs</name>
+    </customLabels>
+    <customLabels>
+        <label>읽기 전용</label>
+        <name>ReadOnly</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인</label>
+        <name>Recipient</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인은 이메일 주소가 있어야 합니다.</label>
+        <name>RecipientMustHaveEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인 이름</label>
+        <name>RecipientName</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인 직책 설정</label>
+        <name>RecipientRoleSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인 유형</label>
+        <name>RecipientType</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인</label>
+        <name>Recipients</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인에게 무효화된 봉투에 관한 이메일 알림을 발송했습니다.</label>
+        <name>RecipientsHaveNeenNotifiedEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>서명하지 않은 수신인은 보기 액세스 권한이
+			없습니다.</label>
+        <name>RecipientsWhoHaveNotSigned</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인에게 봉투 서명할 액세스 권한이 없습니다.</label>
+        <name>RecipientsWillNoLongerAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>RegEx 패턴</label>
+        <name>RegExPattern</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce와 필드 연계</label>
+        <name>RelateFieldToSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일로 서명인에게 알림</label>
+        <name>RemindSignersviaEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>미리 알림과 만료는 숫자여야 합니다.</label>
+        <name>ReminderExpirationsMustBeNumbers</name>
+    </customLabels>
+    <customLabels>
+        <label>원격 사이트:</label>
+        <name>RemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>제거</label>
+        <name>Remove</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 제거 및 해지</label>
+        <name>RemoveAndCloseUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 제거 및 해지 = 선택한 사용자의 DocuSign 패키지를 제거하고
+			해당 사용자의 DocuSign 계정을 해지합니다.</label>
+        <name>RemoveAndCloseUsersDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 사용자의 DocuSign 패키지는 제거하지만 해당 사용자의 DocuSign 계정은 그대로 유지합니다.</label>
+        <name>RemoveDocuSignPackageSelectedUsersKeepAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 사용자의 DocuSign 패키지를 제거하고 해당 사용자의 DocuSign 계정을 기본 DocuSign 계정에서 해지합니다.</label>
+        <name>RemoveDocuSignPackageSelectedUsrsClose</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 제거</label>
+        <name>RemoveUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 제거 = 선택한 사용자의 DocuSign 패키지를
+			제거합니다.</label>
+        <name>RemoveUsersRemoveTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>필수 필드</label>
+        <name>RequiredField</name>
+    </customLabels>
+    <customLabels>
+        <label>계정에 사용자 지정 필드가 적절하게 구성되지 않았습니다. 필수 목록 필드에 선택 사항이 없습니다. 사용자 지정 필드를 수정하려면 DocuSign 관리자에게 문의하십시오.</label>
+        <name>Required_Empty_List</name>
+    </customLabels>
+    <customLabels>
+        <label>필수 사용자 지정 필드가 제공되지 않습니다.</label>
+        <name>Required_custom_label_is_not_provided</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투에 대한 이메일 재발송</label>
+        <name>ResendEmails</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 이메일 재발송 완료</label>
+        <name>ResendEmailsComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>돌아가기</label>
+        <name>Return</name>
+    </customLabels>
+    <customLabels>
+        <label>다음으로 돌아가기</label>
+        <name>ReturnTo</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투로 돌아가기</label>
+        <name>ReturnToEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>직책</label>
+        <name>Role</name>
+    </customLabels>
+    <customLabels>
+        <label>직책 이름</label>
+        <name>RoleNames</name>
+    </customLabels>
+    <customLabels>
+        <label>직책 또는 수신인 이름이 필요합니다.</label>
+        <name>RoleOrRecipientNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>직책은 DocuSign으로 전송할 때 문서 내 기본 앵커 태그를		수신인에게 매핑하는 데 사용됩니다. 각 직책은 별도의 줄에 입력해야 합니다. 직책 순서는 매핑되도록 설정할 앵커 탭을 결정합니다. 목록의 첫 번째 직책은 문서 내 &apos;1&apos; 태그에 매핑되고, 두 번째 직책은 &apos;2&apos; 태그에 매핑되는 식입니다. 예를 들어 첫 번째 직책이 &apos;고객&apos;이면 이 직책에 연결된 수신인이 문서의 \s1\, \i1\ 태그에 매핑됩니다. 자세히 알아보기:</label>
+        <name>Rolesareusedto</name>
+    </customLabels>
+    <customLabels>
+        <label>페이지당 표시할 행 수</label>
+        <name>RowsDisplayedPerPage</name>
+    </customLabels>
+    <customLabels>
+        <label>러시아어</label>
+        <name>Russian</name>
+    </customLabels>
+    <customLabels>
+        <label>SSN</label>
+        <name>SSN</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 환경</label>
+        <name>SalesforceEnv</name>
+    </customLabels>
+    <customLabels>
+        <label>이 Salesforce 조직의 저장 한도를 초과했습니다. 시스템 관리자에게 문의하십시오.</label>
+        <name>SalesforceOrgStorageLimitExceeded</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 비밀번호</label>
+        <name>SalesforcePass</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 비밀번호</label>
+        <name>SalesforcePassword</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 토큰</label>
+        <name>SalesforceToken</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자</label>
+        <name>SalesforceUser</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인이 아니므로 봉투에 서명할 수 없습니다.</label>
+        <name>SalesforceUserSigningPageErrorWrongIdentity</name>
+    </customLabels>
+    <customLabels>
+        <label>페이지 URL 내 유효하지 않은 매개 변수</label>
+        <name>SalesforceUserSigningPageErrorWrongParameter</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 예외가 발생함: </label>
+        <name>SalesforceUserSigningPageException</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자 이름</label>
+        <name>SalesforceUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>샌드박스</label>
+        <name>Sandbox</name>
+    </customLabels>
+    <customLabels>
+        <label>저장</label>
+        <name>Save</name>
+    </customLabels>
+    <customLabels>
+        <label>&apos;선택한 필드&apos; 목록의 변경 내용을 저장합니다.</label>
+        <name>SaveTheChangesToTheSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>검색</label>
+        <name>Search</name>
+    </customLabels>
+    <customLabels>
+        <label>이 페이지의 모든 사용자를 선택해 활성화 또는 비활성화합니다.
+			DocuSign</label>
+        <name>SelectAllUsersOnThisPage</name>
+    </customLabels>
+    <customLabels>
+        <label>이를 수행하려면 DocuSign에 대해 활성화된(DSProSF사용자 이름이 설정된) 한 명 이상의 사용자를 선택해야 합니다.</label>
+        <name>SelectAtLeastOneUserActivatedDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>이를 수행하려면 DocuSign에 대해 아직 활성화되지 않은(DSProSF사용자 이름이 설정되지 않은) 한 명 이상의 사용자를 선택해야 합니다.</label>
+        <name>SelectAtLeastOneUserDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>열 머리글을 선택하여 테이블 내용을 정렬합니다.</label>
+        <name>SelectColumnHeaderToSort</name>
+    </customLabels>
+    <customLabels>
+        <label>- 선택 -</label>
+        <name>SelectDashed</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 목록에 표시할 필드를 선택합니다.</label>
+        <name>SelectFieldsToDisplayInList</name>
+    </customLabels>
+    <customLabels>
+        <label>아래 사용자 목록에 적용할 필터를 선택합니다.</label>
+        <name>SelectFilterToApply</name>
+    </customLabels>
+    <customLabels>
+        <label>이 이메일에 연결된 DocuSign 계정이 여러 개 있습니다. Salesforce와 함께 사용할 계정을 선택하십시오.</label>
+        <name>SelectOneEmailForSFDC</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce에 사용자 관리 권한이 있고 DocuSign에 대해 활성화되지 않은(DSProSFUsername이 설정되지 않은) 사용자만 선택할 수 있습니다.</label>
+        <name>SelectOnlyUsersHavePermissionDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>선택</label>
+        <name>SelectRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 패키지에 추가하거나 이 패키지에서 삭제할 사용자를 선택합니다.</label>
+        <name>SelectUserToBeAdded</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 기능을 추가할 위치를 선택하십시오.</label>
+        <name>SelectWhereDocuSignButtonsAdded</name>
+    </customLabels>
+    <customLabels>
+        <label>선택한 필드</label>
+        <name>SelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 네트워크 액세스 설정을 필수 DocuSign IP 범위로 자동 업데이트하려면 확인란을 선택하십시오.</label>
+        <name>Selectthecheckbox</name>
+    </customLabels>
+    <customLabels>
+        <label>발송 실패</label>
+        <name>SendFailed</name>
+    </customLabels>
+    <customLabels>
+        <label>지금 전송</label>
+        <name>SendNow</name>
+    </customLabels>
+    <customLabels>
+        <label>발송 설정</label>
+        <name>SendSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign으로 발송</label>
+        <name>SendWithDS</name>
+    </customLabels>
+    <customLabels>
+        <label>자동 알림 전송</label>
+        <name>Sendautomaticreminders</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 발송 중</label>
+        <name>SendingEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>보냄</label>
+        <name>Sent</name>
+    </customLabels>
+    <customLabels>
+        <label>설정</label>
+        <name>Settings</name>
+    </customLabels>
+    <customLabels>
+        <label>설정이 저장되었습니다.</label>
+        <name>SettingsSavedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label>설정이 완료되지 않았습니다.</label>
+        <name>SetupNotComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>AppExchange 커뮤니티에서 귀하의 경험을 공유하십시오.</label>
+        <name>ShareExperienceWithCommunity</name>
+    </customLabels>
+    <customLabels>
+        <label>공유</label>
+        <name>Shared</name>
+    </customLabels>
+    <customLabels>
+        <label>첫 페이지 표시</label>
+        <name>ShowTheFirstPage</name>
+    </customLabels>
+    <customLabels>
+        <label>마지막 페이지 표시</label>
+        <name>ShowTheLastPage</name>
+    </customLabels>
+    <customLabels>
+        <label>다음 페이지 표시</label>
+        <name>ShowTheNextPage</name>
+    </customLabels>
+    <customLabels>
+        <label>이전 페이지 표시</label>
+        <name>ShowThePreviousPage</name>
+    </customLabels>
+    <customLabels>
+        <label>여기에 서명</label>
+        <name>SignHere</name>
+    </customLabels>
+    <customLabels>
+        <label>여기에 서명(선택 사항)</label>
+        <name>SignHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label>직접 서명</label>
+        <name>SignInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>지금 서명 과정은 봉투 수신인이 확인한 이메일 주소로 로그인하여 완료할 수 있습니다.</label>
+        <name>SignNowProcess</name>
+    </customLabels>
+    <customLabels>
+        <label>무료 DocuSign 평가판 계정 등록</label>
+        <name>SignUpFreeDSTrial</name>
+    </customLabels>
+    <customLabels>
+        <label>서명</label>
+        <name>Signature</name>
+    </customLabels>
+    <customLabels>
+        <label>서명됨</label>
+        <name>Signed</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인</label>
+        <name>Signer</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인 첨부파일</label>
+        <name>SignerAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인 - 지금 서명</label>
+        <name>SignerDashSignNow</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인 이름</label>
+        <name>SignerName</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인 직책</label>
+        <name>SignerRole</name>
+    </customLabels>
+    <customLabels>
+        <label>21 CFR Part 11을 준수해야 하는 서명자에게는 하나 이상의 필수 비조건부 서명 또는 이니셜 탭이 있어야 합니다.</label>
+        <name>Signers_that_are_required_to_meet_21_CFR_part_11</name>
+    </customLabels>
+    <customLabels>
+        <label>스페인어</label>
+        <name>Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label>오류: 지정된 봉투를 DocuSign에서 찾을 수 없습니다.</label>
+        <name>SpecifiedEnvelopeNoLonerExist</name>
+    </customLabels>
+    <customLabels>
+        <label>지정된 사용자가 지정된 봉투의 수신인이 아닙니다.</label>
+        <name>SpecifiedUserNotRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>다음으로 시작</label>
+        <name>StartsWith</name>
+    </customLabels>
+    <customLabels>
+        <label>시/도</label>
+        <name>StateOrProvince</name>
+    </customLabels>
+    <customLabels>
+        <label>시/도</label>
+        <name>StateProvince</name>
+    </customLabels>
+    <customLabels>
+        <label>상태</label>
+        <name>Status</name>
+    </customLabels>
+    <customLabels>
+        <label>수정은 봉투가 &apos;발송됨&apos; 또는 &apos;배달됨&apos; 상태인 경우에만 가능합니다.</label>
+        <name>StatusCorrectInDocuSignErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 이메일 재발송은 봉투가 &apos;발송됨&apos; 또는 &apos;배달됨&apos; 상태인 경우에만 가능합니다.</label>
+        <name>StatusVoidEnvelopeError</name>
+    </customLabels>
+    <customLabels>
+        <label>무효화는 봉투가 &apos;발송됨&apos; 또는 &apos;배달됨&apos; 상태인 경우에만 가능합니다.</label>
+        <name>StatusVoidEnvelopeErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>1단계</label>
+        <name>Step1</name>
+    </customLabels>
+    <customLabels>
+        <label>주소</label>
+        <name>StreetAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>제목</label>
+        <name>Subject</name>
+    </customLabels>
+    <customLabels>
+        <label>직함</label>
+        <name>TagTitle</name>
+    </customLabels>
+    <customLabels>
+        <label>종류</label>
+        <name>TagType</name>
+    </customLabels>
+    <customLabels>
+        <label>텍스트 필드</label>
+        <name>TextField</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 주소가 유효하지 않습니다.</label>
+        <name>TheEmailAddressIsInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label>지정된 봉투가 없거나 봉투에 대한 권한이 없습니다.</label>
+        <name>TheEnvelopeSpecifiedEither</name>
+    </customLabels>
+    <customLabels>
+        <label>계정 설정을 업데이트하는 중에 오류가 발생했습니다.</label>
+        <name>ThereWasAnErrorWhenUpdating</name>
+    </customLabels>
+    <customLabels>
+        <label>이 사용자는 봉투의 발송인이 아닙니다. 봉투의 발송인만 요청한 작업을 수행할 수 있습니다.</label>
+        <name>ThisUserIsNotTheSender</name>
+    </customLabels>
+    <customLabels>
+        <label>계정을 연결하려면 뒤로를 선택하고 &apos;DocuSign에 로그인&apos;을 사용해 주십시오.</label>
+        <name>ToLinkTheAccountPleaseSelect</name>
+    </customLabels>
+    <customLabels>
+        <label>계정을 연결하려면 &apos;DocuSign에 로그인&apos;을 사용해 주십시오.</label>
+        <name>ToLinkTheAccountPleaseUse</name>
+    </customLabels>
+    <customLabels>
+        <label>이 봉투를 무효화하려면 아래에 무효화 사유를 입력하고
+			&apos;봉투 무효화&apos;를 누르십시오. 이미 서명한 수신인에게
+			귀하가 작성한 코멘트와 함께 이 봉투가 무효화되었음을
+			알리는 이메일이 발송됩니다.</label>
+        <name>ToVoidThisEnvelopeProvideReason</name>
+    </customLabels>
+    <customLabels>
+        <label>요약 행</label>
+        <name>TotalRow</name>
+    </customLabels>
+    <customLabels>
+        <label>트랜잭션에 문제가 있습니다.</label>
+        <name>TransactionProblem</name>
+    </customLabels>
+    <customLabels>
+        <label>트랜잭션 정보</label>
+        <name>TransctionInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>신뢰할 수 있는 네트워크</label>
+        <name>TrustedNetwork</name>
+    </customLabels>
+    <customLabels>
+        <label>첨부파일을 추가할 수 없습니다.  첨부파일 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableAddAttachmentInsufficientAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>관련 콘텐츠를 추가할 수 없습니다.  ContentVersion 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableAddContentInsufficientAccessContentVersion</name>
+    </customLabels>
+    <customLabels>
+        <label>문서를 추가/업데이트할 수 없습니다.</label>
+        <name>UnableAddUpdateDocument</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 봉투를 추가/업데이트할 수 없습니다.</label>
+        <name>UnableAddUpdateEnvelopes</name>
+    </customLabels>
+    <customLabels>
+        <label>수신인을 추가/업데이트할 수 없습니다.</label>
+        <name>UnableAddUpdateRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>해당 ID의 봉투를 찾을 수 없음 =</label>
+        <name>UnableFindEvenlopeWithIdEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>콘텐츠 정보를 가져올 수 없습니다.  ContentWorkspace 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableGetContentInformationInsufficientContentWorkspace</name>
+    </customLabels>
+    <customLabels>
+        <label>문서 정보를 가져올 수 없습니다.  첨부파일 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableGetDocumentInformationInsufficientAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>문서 정보를 가져올 수 없습니다.  ContentVersion 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableGetDocumentInformationInsufficientAccessContentVersion</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 구성을 초기화할 수 없습니다.  DocuSignAccountConfiguration 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnableInitializeDocuSignAccountConfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign에서 프로비저닝 정보를 로드할 수 없습니다. 유효하지 않은 사용자 이름, 비밀번호 또는 IntegratorKey가 있는지 확인하십시오.</label>
+        <name>UnableLoadProvisioningInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>폴더 목록을 채울 수 없습니다.  폴더 개체에 액세스할 권한이 없습니다.</label>
+        <name>UnablePopulateFolderList</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자에게 액세스할 권한이 없거나 봉투가 없으므로 이 봉투를 표시할 수 없습니다.</label>
+        <name>UnableSendEvelopeNotExist</name>
+    </customLabels>
+    <customLabels>
+        <label>문서를 추가할 수 없음</label>
+        <name>UnableToAddDocument</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign으로 사용자를 인증할 수 없음</label>
+        <name>UnableToAuthenticateTheUser</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 지정 개체를 가져올 수 없음</label>
+        <name>UnableToGetCustomObjects</name>
+    </customLabels>
+    <customLabels>
+        <label>무효 및 재전송을 위한 Chatter 동작 활성화</label>
+        <name>UndoAndSend</name>
+    </customLabels>
+    <customLabels>
+        <label>알 수 없음</label>
+        <name>Unknown</name>
+    </customLabels>
+    <customLabels>
+        <label>확인한 수신인이 지정한 봉투의 유효한 수신인이 아닙니다.</label>
+        <name>UnknownEnvelopeRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>인식할 수 없는 언어 코드.</label>
+        <name>UnrecognizedLangaugeCode</name>
+    </customLabels>
+    <customLabels>
+        <label>저장</label>
+        <name>UpdateLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자</label>
+        <name>User</name>
+    </customLabels>
+    <customLabels>
+        <label>이 사용자에게는 충분한 권한이 없습니다.</label>
+        <name>UserLacksSufficientPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label>Salesforce 사용자를 제공해야 합니다.</label>
+        <name>UserMustBeProvided</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자 이름은 필수입니다.</label>
+        <name>UserNameIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자</label>
+        <name>Users</name>
+    </customLabels>
+    <customLabels>
+        <label>사용자</label>
+        <name>UsersPeriod</name>
+    </customLabels>
+    <customLabels>
+        <label>확인</label>
+        <name>Validation</name>
+    </customLabels>
+    <customLabels>
+        <label>오류 메시지</label>
+        <name>ValidationErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>D&amp;B로 확인</label>
+        <name>VerifyWithDNB</name>
+    </customLabels>
+    <customLabels>
+        <label>Dun &amp; Bradstreet의 사전 계약 위험도 검사 앱에 대한 통합 접근 권한을 얻어 비즈니스 ID를 확인하고 재무적 경영위기 요인을 확인하십시오.</label>
+        <name>VerifyWithDNBDescription</name>
+    </customLabels>
+    <customLabels>
+        <label>보기:</label>
+        <name>ViewColon</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 상태 보기</label>
+        <name>ViewDocuSignStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 무효화</label>
+        <name>VoidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투 무효화 완료</label>
+        <name>VoidEnvelopeComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>무효화됨</label>
+        <name>Voided</name>
+    </customLabels>
+    <customLabels>
+        <label>봉투를 무효화하면 수신인의 봉투에 대한 액세스 권한이
+			제거됩니다. 무효화된 후에는 이 봉투를 보거나 서명할 수
+			없습니다.</label>
+        <name>VoidingEnvelopeWillRemoveAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인에게 경고</label>
+        <name>WarnSigners</name>
+    </customLabels>
+    <customLabels>
+        <label>무엇입니까?</label>
+        <name>Whatisthis</name>
+    </customLabels>
+    <customLabels>
+        <label>흰색</label>
+        <name>White</name>
+    </customLabels>
+    <customLabels>
+        <label>너비(픽셀)</label>
+        <name>WidthInPixels</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 창이 브라우저에 의해 차단되었습니다. 팝업으로 새 창을 보도록 허용합니다.</label>
+        <name>WindowBlockedByBrowser</name>
+    </customLabels>
+    <customLabels>
+        <label>검토 작성</label>
+        <name>WriteAReview</name>
+    </customLabels>
+    <customLabels>
+        <label>예</label>
+        <name>Yes</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign for Salesforce의 페이지에 액세스를 시도하고 있지만, 사용자에게 DSProSFUsername__c에 대한 액세스 권한이 없기 때문에 액세스할 수 없습니다.  이 설정은 DocuSign의 설정이 아니라 Salesforce의 설정입니다. Salesforce 관리자에게 문의하여 사용자에게 읽기 액세스 권한을 부여했는지 확인해야 합니다.</label>
+        <name>YouAreAttemptingToAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>선택 가능한 최대 개수:</label>
+        <name>YouCannotSelectMoreThan</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 약관에 동의해야 합니다.</label>
+        <name>YouMustAgreeToTheDocusignTerms</name>
+    </customLabels>
+    <customLabels>
+        <label>완료한 문서의 사본을 이메일로 수신하게 됩니다.</label>
+        <name>YourDocEmailedInPdf</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정이 활성화되지 않았거나 제대로 구성되지 않았습니다.</label>
+        <name>YourDocusignAccountHasNotBeen</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 계정이 활성화되지 않았거나 제대로 구성되지 않았습니다.</label>
+        <name>YourDocusignAccountHasNotBeenActivated</name>
+    </customLabels>
+    <customLabels>
+        <label>우편번호</label>
+        <name>Zip</name>
+    </customLabels>
+    <customLabels>
+        <label>우편 번호</label>
+        <name>ZipPostalCode</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인 추가</label>
+        <name>m_Add_Signer</name>
+    </customLabels>
+    <customLabels>
+        <label>취소</label>
+        <name>m_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>문서</label>
+        <name>m_DOCUMENTS</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign </label>
+        <name>m_DocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label>완료</label>
+        <name>m_Done</name>
+    </customLabels>
+    <customLabels>
+        <label>http://goo.gl/ji8PzU</label>
+        <name>m_Download_DocuSign_Android_Url</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 모바일 다운로드</label>
+        <name>m_Download_DocuSign_Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>https://itunes.apple.com/us/app/docusign-ink/id474990205?mt=8</label>
+        <name>m_Download_DocuSign_iOS_Url</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 모바일 앱을 다운로드한 다음 문서 전송을 다시 시도하십시오.</label>
+        <name>m_Download_the_DocuSign_mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 주소</label>
+        <name>m_EmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>처음 선택한 서명인만 &apos;직접&apos; 서명인으로 선택할 수 있습니다.</label>
+        <name>m_Error_InPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>전체 이름</label>
+        <name>m_FullName</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign 모바일 가져오기</label>
+        <name>m_Get_DocuSign_Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>직접</label>
+        <name>m_InPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>유효하지 않은 이메일</label>
+        <name>m_InvalidEmailError</name>
+    </customLabels>
+    <customLabels>
+        <label>순서 바꾸기</label>
+        <name>m_Reorder</name>
+    </customLabels>
+    <customLabels>
+        <label>서명인</label>
+        <name>m_SIGNERS</name>
+    </customLabels>
+    <customLabels>
+        <label>이메일 사용</label>
+        <name>m_ViaEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>정규식</label>
+        <name>regex</name>
+    </customLabels>
+    <customLabels>
+        <label>우편번호 5-4</label>
+        <name>zip5dash4</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label>DocuSign 관리</label>
+        <name>DocuSignAdminLink</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label>DocuSign 관리</label>
+        <name>DocuSign_Admin</name>
+    </customTabs>
+    <customTabs>
+        <label>DocuSign 데모&lt;</label>
+        <name>DocuSign_Partner_Demo</name>
+    </customTabs>
+</Translations>

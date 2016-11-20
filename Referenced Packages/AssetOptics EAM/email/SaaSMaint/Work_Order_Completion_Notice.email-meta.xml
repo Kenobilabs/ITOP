@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Work Order Completion Notice</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>smWO_Letterhead</letterhead>
+    <name>Work Order Completion Notice</name>
+    <style>freeForm</style>
+    <subject>The status of Work Order {!smWork_Order__c.Name} has been updated to Completed</subject>
+    <textOnly>Work Order Completion Notice
+
+Work Order:  {!smWork_Order__c.Name}
+Description:  {!smWork_Order__c.Description__c}
+
+Asset ID:       {!smWork_Order__c.Equipment__c}
+Description:  {!smWork_Order__c.Equip_Description__c}
+
+Completion Date:  {!smWork_Order__c.Completion_Date__c}
+
+Please inspect the final work to ensure that it meets with your original requests.
+ 
+Thank you. </textOnly>
+    <type>html</type>
+</EmailTemplate>

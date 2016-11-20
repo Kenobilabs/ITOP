@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Purchase Order Misc Cost Line</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Misc Cost Description - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Misc Cost Description - User Defined</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extended_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Extended Amount</description>
+        <externalId>false</externalId>
+        <formula>Unit_Cost__c *   Order_Qty_v2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Extended Amount = Qty * Unit Cost</inlineHelpText>
+        <label>Extended Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Open_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Amount = Unit Cost * Open Qty</description>
+        <externalId>false</externalId>
+        <formula>Unit_Cost__c  *  Open_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Open Amount = Unit Cost * Open Qty</inlineHelpText>
+        <label>Open Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Open_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Misc Cost Qty</description>
+        <externalId>false</externalId>
+        <formula>IF(  Received_Qty__c  &gt;  Order_Qty_v2__c  , 0,  Order_Qty_v2__c  -   Received_Qty_v2__c   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Open Misc Cost Qty</inlineHelpText>
+        <label>Open Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Obsolete/Deprecated Misc Cost Order Qty</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Obsolete/Deprecated Misc Cost Order Qty</inlineHelpText>
+        <label>Obsolete</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Qty_v2__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Misc Cost Order Qty</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Misc Cost Order Qty</inlineHelpText>
+        <label>Order Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PO Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Purchase_Order__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>PO Status</inlineHelpText>
+        <label>PO Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order</inlineHelpText>
+        <label>Purchase Order</label>
+        <referenceTo>smPurchase_Order__c</referenceTo>
+        <relationshipLabel>PO Misc Cost</relationshipLabel>
+        <relationshipName>PO_Misc_Cost</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Received_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Received Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Received Amount</inlineHelpText>
+        <label>Received Amt</label>
+        <summarizedField>smPO_Misc_Cost_Transaction__c.Transaction_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>smPO_Misc_Cost_Transaction__c.Transaction_Type__c</field>
+            <operation>equals</operation>
+            <value>Receipt</value>
+        </summaryFilterItems>
+        <summaryForeignKey>smPO_Misc_Cost_Transaction__c.PO_Misc_Cost__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Received_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete/Deprecated - Summary of Transaction Qty from PO Misc Cost Transaction where Transaction Type = Receipt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Obsolete/Deprecated - Summary of Transaction Qty from PO Misc Cost Transaction where Transaction Type = Receipt</inlineHelpText>
+        <label>Obsolete</label>
+        <summarizedField>smPO_Misc_Cost_Transaction__c.Transaction_Qty__c</summarizedField>
+        <summaryFilterItems>
+            <field>smPO_Misc_Cost_Transaction__c.Transaction_Type__c</field>
+            <operation>equals</operation>
+            <value>Receipt</value>
+        </summaryFilterItems>
+        <summaryForeignKey>smPO_Misc_Cost_Transaction__c.PO_Misc_Cost__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Received_Qty_v2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Summary of Transaction Qty from PO Misc Cost Transaction where Transaction Type = Receipt</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Summary of Transaction Qty from PO Misc Cost Transaction where Transaction Type = Receipt</inlineHelpText>
+        <label>Received Qty</label>
+        <summarizedField>smPO_Misc_Cost_Transaction__c.Transaction_Qty_v2__c</summarizedField>
+        <summaryFilterItems>
+            <field>smPO_Misc_Cost_Transaction__c.Transaction_Type__c</field>
+            <operation>equals</operation>
+            <value>Receipt</value>
+        </summaryFilterItems>
+        <summaryForeignKey>smPO_Misc_Cost_Transaction__c.PO_Misc_Cost__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Required_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PO Misc Cost Item Required Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Misc Cost Item Required Date</inlineHelpText>
+        <label>Required Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Unit Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit Cost</inlineHelpText>
+        <label>Unit Cost</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>WO_Misc_Cost__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Work Order Miscellaneous Cost ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By entering a Work Order Misc Cost ID, any receipt transactions for this PO Misc Cost line will be recorded against the Work Order Misc Cost.</inlineHelpText>
+        <label>WO Misc Cost</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The Work Order Misc Cost ID selected must be part of the previously selected Work Order</errorMessage>
+            <filterItems>
+                <field>smWO_Misc_Cost__c.Work_Order__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Work_Order__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWO_Misc_Cost__c</referenceTo>
+        <relationshipLabel>PO Misc Cost</relationshipLabel>
+        <relationshipName>PO_Misc_Cost</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Related Work Order for Purchase Order Miscellaneous Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Work Order for Purchase Order Miscellaneous Cost</inlineHelpText>
+        <label>Work Order</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>A Purchase Order Miscellaneous Cost cannot be related to a Model Work Order</errorMessage>
+            <filterItems>
+                <field>smWork_Order__c.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>Model Work Order</value>
+            </filterItems>
+            <infoMessage>Select the Work Request or Work Order to relate this Purchase Order Miscellaneous Cost</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>PO Misc Cost</relationshipLabel>
+        <relationshipName>PO_Misc_Cost</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>PO Misc Cost</label>
+    <nameField>
+        <displayFormat>PML-{0000000}</displayFormat>
+        <label>PO Misc Cost</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>PO Misc Cost</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>PO_Misc_Cost_Order_Qty_Non_Negative</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Misc Cost Order Qty is Not Negative or Null</description>
+        <errorConditionFormula>Order_Qty_v2__c  &lt; 0 ||  ISNULL( Order_Qty_v2__c )</errorConditionFormula>
+        <errorDisplayField>Order_Qty_v2__c</errorDisplayField>
+        <errorMessage>The PO Misc Cost Order Qty cannot be Negative or Null.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Misc_Cost_Unit_Cost_GE_Zero</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Misc Cost Unit Cost is Greater Than or Equal to Zero or is Not a Null Value</description>
+        <errorConditionFormula>Unit_Cost__c  &lt; 0 ||  ISNULL( Unit_Cost__c )</errorConditionFormula>
+        <errorDisplayField>Unit_Cost__c</errorDisplayField>
+        <errorMessage>The PO Misc Cost Unit Cost cannot be a Negative or a Null Value.</errorMessage>
+    </validationRules>
+</CustomObject>

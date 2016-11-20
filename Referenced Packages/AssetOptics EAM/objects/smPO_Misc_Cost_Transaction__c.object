@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>PO Misc Cost Line Transactions</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment</inlineHelpText>
+        <label>Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Misc_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Miscellaneous Cost Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Miscellaneous Cost Line</inlineHelpText>
+        <label>PO Misc Cost</label>
+        <referenceTo>smPO_Misc_Cost__c</referenceTo>
+        <relationshipLabel>PO Misc Cost Transactions</relationshipLabel>
+        <relationshipName>PO_Misc_Cost_Transactions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Transaction_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transaction Amount = Unit Cost * Transaction Qty</description>
+        <externalId>false</externalId>
+        <formula>Unit_Cost__c  *   Transaction_Qty_v2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Transaction Amount = Unit Cost * Transaction Qty</inlineHelpText>
+        <label>Transaction Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Date</inlineHelpText>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Obsolete/Deprecated Field Transaction Qty</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Obsolete/Deprecated Field Transaction Qty</inlineHelpText>
+        <label>Obsolete</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Qty_v2__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Qty (replaces deprecated field - Transaction Qty)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Qty</inlineHelpText>
+        <label>Transaction Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PO Misc Cost Line Transaction Type.  NO NOT EDIT THE AVAILABLE VALUES IN THIS LIST!  Unexpected results will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Misc Cost Line Transaction Type.  NO NOT EDIT THE AVAILABLE VALUES IN THIS LIST!  Unexpected results will occur.</inlineHelpText>
+        <label>Transaction Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Receipt</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Unit Cost from PO Misc Cost at the time of the PO Misc Cost Transaction record creation.  Updated via Workflow process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit Cost from PO Misc Cost at the time of the PO Misc Cost Transaction record creation.  Updated via Workflow process.</inlineHelpText>
+        <label>Unit Cost</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>PO Misc Cost Transaction</label>
+    <nameField>
+        <displayFormat>PMT-{0000000}</displayFormat>
+        <label>PO Misc Trans</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>PO Misc Cost Transactions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>PO_Misc_Cost_Trans_Qty_Non_Negative</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Misc Cost Transaction Qty is not a Negative or a Null Value</description>
+        <errorConditionFormula>Transaction_Qty_v2__c  &lt; 0 ||  ISNULL( Transaction_Qty_v2__c )</errorConditionFormula>
+        <errorDisplayField>Transaction_Qty_v2__c</errorDisplayField>
+        <errorMessage>The PO Misc Cost Transaction Qty cannot be a Negative or a Null Value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Status_for_Misc_Cost_Receipts</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Status = Released or In Progress for a Receipt to be Entered</description>
+        <errorConditionFormula>NOT(ISPICKVAL(  PO_Misc_Cost__r.Purchase_Order__r.Status__c  , &quot;Released&quot;) || ISPICKVAL( PO_Misc_Cost__r.Purchase_Order__r.Status__c  , &quot;In Progress&quot;))</errorConditionFormula>
+        <errorMessage>The Purchase Order must be in a Released or In Progress Status to perform a Misc Cost Receipt Transaction</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,142 @@
+<apex:page standardController="sm1e__smWork_Order__c" showHeader="false" extensions="sm1e.LookupAssetBOMController" standardStylesheets="true">
+  <apex:form >
+  <apex:pagemessages />
+  <apex:pageBlock title=" Choose Parts from : {!sm1e__smWork_Order__c.Name}">
+      <apex:pageblockSection title="Choose Bill Of Material">  
+            <apex:pageblockTable value="{!ListOfBOM}" var="bAsset">
+              <apex:column >
+                  <apex:facet name="header"> 
+                      <apex:inputCheckbox >
+                         <apex:actionSupport event="onclick" action="{!GetSelected}" onsubmit="checkAll(this)"  rerender="Selected_Parts" />
+                      </apex:inputCheckbox>
+                  </apex:facet>
+                  
+                      <apex:inputCheckbox value="{!bAsset.selected}" id="checkedone">
+                      <apex:actionSupport event="onclick" action="{!GetSelected}" rerender="Selected_Parts"/>
+                      </apex:inputCheckbox>
+                 
+                  </apex:column>
+              <apex:column headervalue="Bill Of Material" value="{!bAsset.bomAsset.Bill_of_Material__r.Name}" />
+              <apex:column headerValue="Description" value="{!bAsset.bomAsset.Bill_of_Material__r.Description__c }"/>
+             </apex:pageblockTable>
+      </apex:pageblockSection>
+  </apex:pageBlock>
+  
+  <apex:pageBlock id="Selected_Parts"  >
+  <apex:pageBlockSection Title="Choose Parts" >
+      
+      <apex:pageblock >
+      
+      <apex:actionStatus startText="Saving.." stopText="" onStop="RefreshAndClose()" id="closer"  onstart=""/>
+      <apex:pageBlockButtons id="buttons" location="top">
+
+            <apex:commandButton id="saveCommandButton"  action="{!saveToWorkOrder}" value="Add to Work Order" status="closer" rerender="buttons" onclick="" disabled="{!isDisabled}"/>
+            <apex:commandButton value="Cancel" onclick="window.top.close()" />  
+            
+            
+          
+          </apex:pageblockbuttons>
+         
+        
+      <apex:pageblocktable value="{!PartsForSelectedBOMs}" var="s">
+      
+          <apex:column >
+                  <apex:facet name="header"> 
+                      <apex:inputCheckbox >
+                      
+                         <apex:actionSupport event="onclick" onsubmit="selectAll(this)" rerender="false" />
+                      </apex:inputCheckbox>
+                  </apex:facet>
+                  
+                      <apex:inputCheckbox value="{!s.selected}" id="select">
+                     
+                      </apex:inputCheckbox>
+                 
+                  </apex:column>
+              <apex:column headervalue="Part Name" value="{!s.bomPart.Part__r.Name}" />
+              <apex:column headervalue="Part Description" value="{!s.bomPart.sm1e__Part_Description__c}" />
+              <apex:column headervalue="BOM Qty" value="{!s.bomPart.sm1e__BOM_Qty__c}"/>
+              <apex:column headervalue="Store Room" value="{!s.bomPart.Part__r.sm1e__Storeroom__c}" />
+              <apex:column headervalue="On Hand Qty" value="{!s.bomPart.Part__r.sm1e__On_Hand_Qty__c}"/>
+              <apex:column headervalue="Available Qty" value="{!s.bomPart.Part__r.sm1e__Available_Qty__c}"/>
+                        
+      </apex:pageblocktable>
+      
+         </apex:pageblock>
+      
+      
+  </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+      <script type="text/javascript">
+    function checkAll(cb)
+    {
+        
+        var inputElem = document.getElementsByTagName("input");
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("checkedone")!=-1){
+                inputElem[i].checked = cb.checked;
+            }
+         }
+
+    } 
+    
+    function selectAll(cb)
+    {
+        var inputElem = document.getElementsByTagName("input");
+        
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("select")!=-1)
+                inputElem[i].checked = cb.checked;
+                
+         }
+
+    }   
+    
+    function checkForSelect(cb)
+    {
+        alert('Inside check for select');
+        
+        var inputElem = document.getElementsByTagName("input");
+        var flag = false;
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("select")!=-1){
+                if(inputElem[i].checked){
+                    alert('checkbox is selected');
+                   flag = true;
+                   return true;
+                }
+            }
+         }
+         if(flag == false){
+             alert("Please select atleast one Part");
+             return false;
+        }
+    }
+    
+    function RefreshAndClose(){
+        //var url = "https://na7.salesforce.com" + "{!pageURL}";
+        //window.top.opener.location.href = 'https://na7.salesforce.com' + '{!pageURL}';
+        //window.top.close();
+        
+        //window.top.parent.location = url;
+        //window.top.opener.parent.location.href = url;
+        //window.top.parent.location.href = url;
+        
+        //parent.window.opener.location.reload();
+        alert("Please refresh Work Order Detail Page to view your changes");
+        
+        window.setTimeout('window.top.close();', 1000);
+        //window.top.close();
+        
+    }
+    
+
+
+</script>
+
+          
+</apex:page>

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <comment>We have overiden the Page to default the HUB value of MOT with the logged in user&apos;s HUB</comment>
+        <content>ACED_MOTRedirect</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a helptext for Affilliate</inlineHelpText>
+        <label>Affiliate</label>
+        <picklist>
+            <controllingField>HUB__c</controllingField>
+            <picklistValues>
+                <fullName>ACE</fullName>
+                <default>false</default>
+                <controllingFieldValues>ACE HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Albania</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Australia HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Austria</fullName>
+                <default>false</default>
+                <controllingFieldValues>Germany HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+                <controllingFieldValues>France HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bosnia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bulgaria</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <controllingFieldValues>Canada HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Croatia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cyprus &amp; Malta</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Czech Republic</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denmark</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estonia</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finland</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <default>false</default>
+                <controllingFieldValues>France HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <controllingFieldValues>Germany HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Greece</fullName>
+                <default>false</default>
+                <controllingFieldValues>Spain HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hungary</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Latvia</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lithuania</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Macedonia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Montengro</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+                <controllingFieldValues>France HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Norway</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Poland</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+                <controllingFieldValues>Spain HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Romania</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Serbia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slovenia</fullName>
+                <default>false</default>
+                <controllingFieldValues>Italy HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <default>false</default>
+                <controllingFieldValues>Spain HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switzerland</fullName>
+                <default>false</default>
+                <controllingFieldValues>Germany HUB</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UK</fullName>
+                <default>false</default>
+                <controllingFieldValues>UK HUB</controllingFieldValues>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Indication__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brand Indication</label>
+        <referenceTo>ACED_Brand_Indications__c</referenceTo>
+        <relationshipLabel>MOTS</relationshipLabel>
+        <relationshipName>MOTS</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Data_Load_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Load Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HUB__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a helptext for HUB</inlineHelpText>
+        <label>HUB</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ACE HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australia HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canada HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italy HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spain HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UK HUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MOT_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>MOT Description</label>
+        <length>1024</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>18</visibleLines>
+    </fields>
+    <fields>
+        <fullName>My_MOT__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT($User.ACED_HUB__c) = TEXT( HUB__c ),true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>My MOT</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>MOT</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Affiliate__c</columns>
+        <columns>HUB__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>Year__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Australia_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>Australia HUB</value>
+        </filters>
+        <label>Australia HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Canada_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>Canada HUB</value>
+        </filters>
+        <label>Canada HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>France_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>France HUB</value>
+        </filters>
+        <label>France HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Germany_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>Germany HUB</value>
+        </filters>
+        <label>Germany HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Italy_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>Italy HUB</value>
+        </filters>
+        <label>Italy HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_HUB_MOTs</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>My HUB MOTs</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Spain_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>Spain HUB</value>
+        </filters>
+        <label>Spain HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>UK_HUB</fullName>
+        <columns>NAME</columns>
+        <columns>HUB__c</columns>
+        <columns>Affiliate__c</columns>
+        <columns>Brand_Indication__c</columns>
+        <columns>MOT_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HUB__c</field>
+            <operation>equals</operation>
+            <value>UK HUB</value>
+        </filters>
+        <label>UK HUB</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>MOT Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>MOTS</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>HUB__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Affiliate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Brand_Indication__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Year__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>MOT_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Affiliate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>HUB__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>MOT_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Affiliate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>HUB__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>MOT_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATED_DATE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Affiliate__c</searchFilterFields>
+        <searchFilterFields>HUB__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchResultsAdditionalFields>Affiliate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>HUB__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MOT_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>UsersHubMatchingCheck</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND((TEXT($User.ACED_HUB__c)&lt;&gt;&apos;ACE HUB&apos;),IF(TEXT(HUB__c)&lt;&gt; TEXT($User.ACED_HUB__c),TRUE,FALSE))</errorConditionFormula>
+        <errorMessage>You cannot select Hub which you are not part of</errorMessage>
+    </validationRules>
+</CustomObject>

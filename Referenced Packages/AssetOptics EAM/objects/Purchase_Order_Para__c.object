@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Purchase Order Parameters</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AutoGenBatchSize__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines the Maximum Number of Parts that can be selected in the Auto Purchase Order Generation Batch Schedule Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the Maximum Number of Parts that can be selected in the Auto Purchase Order Generation Batch Schedule Process</inlineHelpText>
+        <label>AutoGenBatchSize</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Billing City for Purchase Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Billing City for Purchase Orders</inlineHelpText>
+        <label>Billing City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Country__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Billing Country for Purchase Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Billing Country for Purchase Orders</inlineHelpText>
+        <label>Billing Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_State_Province__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Billing State / Province for Purchase Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Billing State / Province for Purchase Orders</inlineHelpText>
+        <label>Billing State Province</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Street__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Billing Street for Purchase Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Billing Street for Purchase Orders</inlineHelpText>
+        <label>Billing Street</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ZIP_Postal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Billing ZIP / Postal Code for Purchase Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Billing ZIP / Postal Code for Purchase Orders</inlineHelpText>
+        <label>Billing ZIP Postal</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disallow_PO_Part_Over_Receipts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Disallow PO Part Over Receipts Parameter is used conjunction with PO Parts Over Receipts Validation Rule to Allow/Disallow Over Receipts (Receipt Qty &gt; Order Qty)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Disallow PO Part Over Receipts Parameter is used conjunction with PO Parts Over Receipts Validation Rule to Allow/Disallow Over Receipts (Receipt Qty &gt; Order Qty)</inlineHelpText>
+        <label>Disallow PO Part Over Receipts</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Purchase Order Parameters</label>
+    <visibility>Public</visibility>
+</CustomObject>

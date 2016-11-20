@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="text" type="String"/>
+    
+    "{!v.text}"
+	
+</aura:component>

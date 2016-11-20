@@ -1,0 +1,209 @@
+<apex:page standardController="sm1e__smPurchase_Order__c" showHeader="false" renderas="pdf" title="Purchase Order{!Id}" tabStyle="sm1e__smPurchase_Order__c" extensions="sm1e.PurchaseOrderPDFController">
+ <apex:stylesheet value="{!URLFOR($Resource.sm1e__SaaSMaintStyleSheets,'SaaSMaintStyleSheets/saasmaintStyles.css')}"/> 
+ 
+    <html>
+        <head>
+                        
+        </head> 
+        
+        <body>
+                      
+             <table width="100%" >   
+                    <tr>
+                        <td align="center"><h3> Purchase Order Number : {!sm1e__smPurchase_Order__c.Name} </h3></td>
+                    </tr>
+                    
+                    <tr>
+                        <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Overview  </td>  
+                   </tr>
+                </table>
+                <br/>
+                
+           <table width="100%" >
+               <tr>
+                   <td class="labelColumn">Purchase Order #</td><td  class="fieldCol">{!sm1e__smPurchase_Order__c.Name}</td> 
+                   <td class="labelColumn">Store Room ID </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.Name}</td> 
+               </tr>
+               
+               <tr>
+                   <td class="labelColumn">Description </td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Description__c}</td>
+                   <td class="labelColumn">Vendor</td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Vendor__r.Name}</td>
+               </tr>
+               <tr>
+                   <td class="labelColumn">Required Date </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Required_Date__c}</td> 
+                   <td class="labelColumn">Status </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Status__c}</td>   
+               </tr>
+           </table>
+       
+       <br/>
+
+        <table width="100%" >   
+           <tr>
+              <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> PO Amounts Summary  </td>  
+           </tr>
+        </table>
+       
+       <br/>
+       
+       <table width="100%" >
+               <tr>
+                   <td class="labelColumn">Total PO Amount</td><td  class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Total_PO_Amount__c}</td> 
+                   <td class="labelColumn">Total Parts Amount </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Total_Parts_Amount__c}</td> 
+               </tr>
+               
+               <tr>
+                   <td class="labelColumn">Total Misc Cost Amt </td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Total_Misc_Cost_Amt__c}</td>
+                   <td></td>
+               </tr>
+               
+           </table>
+       
+       <br/>   
+              
+      <table width="100%" >   
+           <tr>
+              <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Address Information </td>  
+           </tr>
+        </table>
+       
+       <br/>          
+       
+       <table width="100%" >
+               <tr>
+                   <td class="labelColumn">Shipping Street</td><td  class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.sm1e__Account__r.ShippingStreet}</td> 
+                   <td class="labelColumn">Billing Street </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Vendor__r.BillingStreet}</td> 
+               </tr>
+               
+               <tr>
+                   <td class="labelColumn">Shipping City </td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.sm1e__Account__r.ShippingCity}</td>
+                   <td class="labelColumn">Billing City</td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Vendor__r.BillingCity}</td>
+               </tr>
+               <tr>
+                   <td class="labelColumn">Shipping State/Province </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.sm1e__Account__r.ShippingState}</td> 
+                   <td class="labelColumn">Billing State/Province </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Vendor__r.BillingState}</td>   
+               </tr>
+               <tr>
+                   <td class="labelColumn">Shipping Zip/Postal Code </td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.sm1e__Account__r.ShippingPostalCode}</td>
+                   <td class="labelColumn">Billing Zip/Postal Code</td><td class="fieldCol">{!sm1e__smPurchase_Order__c.sm1e__Vendor__r.BillingPostalCode}</td>
+               </tr>
+               <tr>
+                   <td class="labelColumn">Shipping Country </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__r.sm1e__Account__r.ShippingCountry}</td> 
+                   <td class="labelColumn">Billing Country </td><td class="fieldCol"> {!sm1e__smPurchase_Order__c.sm1e__Vendor__r.BillingCountry}</td>   
+               </tr>
+           </table>
+       
+       <br/>       
+       
+       <div id = "POPartsDiv" style="display:{!IF(ISNULL(PoPartsRelatedList),'none','block')}; page-break-before:always;">
+     
+         <table width="100%" >
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Purchase Order Parts : {!sm1e__smPurchase_Order__c.Name}</td>  
+            </tr>
+            
+          </table>
+    <br/>   
+    
+     <apex:repeat value="{!PoPartsRelatedList}" var="wrapperPOPartList" id="thePOPartList"  > 
+            <div id="poPartTableDiv" style="{!wrapperPOPartList.partPageStyle}" >           
+                <apex:dataTable value="{!wrapperPOPartList.purchaseOrderPartPage}" var="poPart" id="thePOPartTable" headerClass="tablehead" rowClasses="odd,even" style="font-size: 90%; color:#FFFFFF; page-break-inside:avoid;" columnsWidth="100px, 100px, 250px, 75px, 75px,75px, 75px,75px, 100px"  >
+                    <apex:column style="border: 1px"> 
+                          <apex:facet name="header">Name</apex:facet>
+                          <apex:outputText value="{!poPart.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header" >Part</apex:facet>
+                          <apex:outputText value="{!poPart.sm1e__Part__r.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Description</apex:facet>
+                          <apex:outputText value="{!poPart.sm1e__Description__c}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Order Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(poPart.sm1e__Order_Qty__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Unit Cost</apex:facet>
+                          <apex:outputText value="{!poPart.sm1e__Unit_Cost__c}"/>
+                      </apex:column>
+                       <apex:column >
+                          <apex:facet name="header" >Extended Amt</apex:facet>
+                          <apex:outputText value="{!poPart.sm1e__Extended_Amt__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Received Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(poPart.sm1e__Received_Qty__c)}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Open Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(poPart.sm1e__Open_Qty__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Storeroom</apex:facet>
+                          <apex:outputText value="{!poPart.sm1e__Storeroom__c}"/>
+                      </apex:column>
+                      
+    </apex:dataTable> 
+    </div> 
+    
+    </apex:repeat> 
+    </div>   
+    
+    <br/>
+    
+    <div id = "POPartsDiv" style="display:{!IF(ISNULL(PoMiscCostRelatedList),'none','block')}">
+     
+         <table width="100%" >
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Purchase Order Misc Costs : {!sm1e__smPurchase_Order__c.Name}</td>  
+            </tr>
+            
+          </table>
+    <br/>   
+    
+     <apex:repeat value="{!PoMiscCostRelatedList}" var="wrapperPOMiscCostList" id="thePOMiscCostList"  > 
+            <div id="poMiscCostTableDiv" style="{!wrapperPOMiscCostList.costPageStyle}" >           
+                <apex:dataTable value="{!wrapperPOMiscCostList.poMiscCostPage}" var="poMiscCost" id="thePOMiscCost" headerClass="tablehead" rowClasses="odd,even" style="font-size: 90%; color:#FFFFFF; page-break-inside:avoid;" columnsWidth="200px, 300px, 75px, 75px, 75px, 75px, 75px"  >
+                    <apex:column style="border: 1px"> 
+                          <apex:facet name="header">Name</apex:facet>
+                          <apex:outputText value="{!poMiscCost.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Description</apex:facet>
+                          <apex:outputText value="{!poMiscCost.sm1e__Description__c}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Order Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(poMiscCost.sm1e__Order_Qty_v2__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Unit Cost</apex:facet>
+                          <apex:outputText value="{!poMiscCost.sm1e__Unit_Cost__c}"/>
+                      </apex:column>
+                       <apex:column >
+                          <apex:facet name="header" >Extended Amt</apex:facet>
+                          <apex:outputText value="{!poMiscCost.sm1e__Extended_Amt__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Received Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(poMiscCost.sm1e__Received_Qty__c)}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Open Amount</apex:facet>
+                          <apex:outputText value="{!poMiscCost.sm1e__Open_Amount__c}"/>
+                      </apex:column>
+                     
+                      
+    </apex:dataTable> 
+    </div> 
+    
+    </apex:repeat> 
+    </div>   
+    
+    <br/>
+       </body>
+       
+    </html>         
+ 
+</apex:page>

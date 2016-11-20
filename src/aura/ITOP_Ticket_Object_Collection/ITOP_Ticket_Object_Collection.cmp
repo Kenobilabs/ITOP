@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="input" type="sObject[]"/>
+    
+        <!-- ticket objects go here.  Width is determined by the number of objects. -->
+        <div aura:id="ticket" class="ticket-image-container">
+            <img src="{!$Resource.woodBackground}"/>
+        </div>
+        <aura:iteration items="{!v.ticketObjects}" var="object" indexVar="index">
+            <div class="ticket-object"></div>
+        </aura:iteration>
+        <div class="ticket-object-overlay">
+            <aura:iteration items="{!v.ticketObjects}" var="ticketObject" indexVar="index">
+                <c:ITOP_Ticket_Object aura:id="{!index}" input="{!ticketObject}"/>
+                
+            </aura:iteration>
+        </div>
+</aura:component>

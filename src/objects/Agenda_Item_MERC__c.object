@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <comment>Overridden to alleviate Date/Time/Time Zone confusion -JFerraro December 11, 2013</comment>
+        <content>MERC_AgendaItemNewEdit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <comment>Overridden to alleviate Date/Time/Time Zone confusion -JFerraro December 11, 2013</comment>
+        <content>MERC_AgendaItemNewEdit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to construct and store Agendas for Meetings to be distributed to HCPs or displayed on the Web Service : MERC : Created on 09/26/2013 by John Adams, Mavens Consulting</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Agenda_Builder_MERC</fullName>
+        <description>Used in Agenda Builder VF Page. Represent the columns shown in the PageBlockTable -JFerraro 11/11/2013</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Agenda_Item_Description_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Session_Type_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Room_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Start_Time_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <label>Agenda Builder</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Agenda_Builder_Non_UI_Fields_MERC</fullName>
+        <description>Used to ensure the Agenda Builder controller includes certain Agenda Item Fields</description>
+        <displayedFields>
+            <field>Cnfrm_Chg_Fnl_Agnd_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Meeting_Time_Zone_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Agenda Builder Non UI Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Agenda_Item_Date_Time_View_MERC</fullName>
+        <description>Embedded in Agenda Item Detail View (MERC_AgendaItemDateTimes.page) -JFerraro Dec 11, 2013</description>
+        <displayedFields>
+            <field>Start_Time_in_Meeting_Time_Zone_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time_in_Meeting_Time_Zone_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Agenda Item Date/Time View</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>New_Edit_Agenda_Item_Basic_Info_MERC</fullName>
+        <description>Controls the form when creating/editing an agenda item</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Meeting_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Agenda_Item_Description_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Room_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Session_Type_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Cnfrm_Chg_Fnl_Agnd_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>New/Edit Agenda Item Basic Information</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>New_Edit_Agenda_Item_Date_Time_MERC</fullName>
+        <description>Controls the form when creating/editing an agenda item</description>
+        <displayedFields>
+            <field>Start_Time_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time_MERC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <label>New/Edit Agenda Item Date/Time Information</label>
+    </fieldSets>
+    <fields>
+        <fullName>Agenda_Item_Description_MERC__c</fullName>
+        <description>Provide description for agenda item that will customer facing. Created 11/18/2013 by KLorenti, Mavens Consulting</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please provide description of this agenda item to be displayed to the customer.</inlineHelpText>
+        <label>Agenda Item Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Cnfrm_Chg_Fnl_Agnd_MERC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When Agenda Item is changed, validation rule will require this box to be checked to confirm if status &quot;Final Agenda&quot;.
+Created by John A Adams 12/19/2013</description>
+        <externalId>false</externalId>
+        <label>Confirm Change to Final Agenda</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Confirm_Web_Service_Change_MERC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to accept text based changes to information that is active on the Web Services. Exposed to CMS Cork only who make such changes : MERC : Created on 21/07/2014 by Oliver Dunford, Mavens Consulting</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by CMS Regional and Local to confirm updates to certain information once a meeting is activated on the web services.</inlineHelpText>
+        <label>Confirm Web Service Change</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>End_Time_MERC__c</fullName>
+        <description>Date and time that session will end
+Created by John A Adams 10/8/2013</description>
+        <externalId>false</externalId>
+        <label>End Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>End_Time_in_Meeting_Time_Zone_MERC__c</fullName>
+        <description>This field is read-only, stamped by Apex in the time zone of the meeting. -JFerraro Dec 19, 2013</description>
+        <externalId>false</externalId>
+        <label>End Time (Meeting Time Zone)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meeting_MERC__c</fullName>
+        <description>One to Many relationship with Meeting
+Created by John A Adams 9/30/2013</description>
+        <externalId>false</externalId>
+        <label>Meeting</label>
+        <referenceTo>Meeting_MERC__c</referenceTo>
+        <relationshipLabel>Agenda Items</relationshipLabel>
+        <relationshipName>Sessions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Meeting_Time_Zone_MERC__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Meeting_MERC__r.Meeting_Time_Zone_MERC__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Meeting Time Zone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mercury_External_Id_MERC__c</fullName>
+        <description>Generated by Workflow used for Integration with External Systems.
+Created by J Adams 12/10/2013</description>
+        <externalId>true</externalId>
+        <label>Mercury External Id</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RTI_Transaction_Id_MERC__c</fullName>
+        <description>Used by Veeva to Mercury Interface. Oliver Dunford 10th Jan.</description>
+        <externalId>false</externalId>
+        <label>RTI Transaction Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Room_MERC__c</fullName>
+        <description>Room name or number that the meeting session is to be held in
+Created by John A Adams 10/8/2013</description>
+        <externalId>false</externalId>
+        <label>Room</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Session_Type_MERC__c</fullName>
+        <description>Tracks type of session to track agenda details. Created 10/08/2013 by KLorenti.</description>
+        <externalId>false</externalId>
+        <label>Session Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>General Session</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakout Session</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Break</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Time_MERC__c</fullName>
+        <description>Start date and time of session
+Created by John A Adams 10/8/2013</description>
+        <externalId>false</externalId>
+        <label>Start Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Start_Time_in_Meeting_Time_Zone_MERC__c</fullName>
+        <description>This field is read-only, stamped by Apex in the time zone of the meeting. -JFerraro Dec 19, 2013</description>
+        <externalId>false</externalId>
+        <label>Start Time (Meeting Time Zone)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Agenda Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Meeting_MERC__c</columns>
+        <columns>Start_Time_MERC__c</columns>
+        <columns>End_Time_MERC__c</columns>
+        <columns>Session_Type_MERC__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Agenda Item Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Agenda Items</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Meeting_MERC__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Session_Type_MERC__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Time_MERC__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>End_Time_MERC__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Meeting_MERC__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Session_Type_MERC__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Time_MERC__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>End_Time_MERC__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Meeting_MERC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Session_Type_MERC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Time_MERC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Time_MERC__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MERC_Agenda_Item_Change</fullName>
+        <active>true</active>
+        <description>Confirm that the agenda item should be changed : MERC : Created on 12/19/2014 by John Adams, Mavens Consulting</description>
+        <errorConditionFormula>TEXT(Meeting_MERC__r.Agenda_Status_MERC__c) = &quot;Final&quot; &amp;&amp;  Cnfrm_Chg_Fnl_Agnd_MERC__c == false</errorConditionFormula>
+        <errorMessage>Please confirm you would like to change an item on the Final Agenda.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MERC_Ensure_End_After_Start</fullName>
+        <active>true</active>
+        <description>Rule to prevent entering an end time for a session before it starts : MERC : Created on 10/03/2013 by John Adams, Mavens Consulting</description>
+        <errorConditionFormula>CreatedDate &gt;  LastModifiedDate</errorConditionFormula>
+        <errorDisplayField>End_Time_MERC__c</errorDisplayField>
+        <errorMessage>The agenda item end time must be after the start time</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MERC_Prevent_Change_Once_on_Web_Service</fullName>
+        <active>true</active>
+        <description>Once a meeting is activated on the web service Agenda Item Name and Agenda Item Description can only be changed by CMS Cork or CMS Local: MERC : Created on 22/07/2014 by Oliver Dunford, Mavens Consulting</description>
+        <errorConditionFormula>(ISCHANGED( Name ) || ISCHANGED(  Agenda_Item_Description_MERC__c )) &amp;&amp;  Meeting_MERC__r.Expose_on_Portal_MERC__c = TRUE &amp;&amp;  Confirm_Web_Service_Change_MERC__c = FALSE &amp;&amp; AND(NOT(CONTAINS(LastModifiedBy.Username,&apos;mercuryintegration.veeva@&apos;)))</errorConditionFormula>
+        <errorMessage>Once a meeting has been published on the Web Service, only CMS Cork and CMS Local teams can change the Agenda Item Name and Agenda Item Description. Please contact a member of the CMS team to request a change to this information.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Agenda_Builder_MERC</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Agenda Builder</masterLabel>
+        <openType>sidebar</openType>
+        <page>MERC_AgendaBuilder</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

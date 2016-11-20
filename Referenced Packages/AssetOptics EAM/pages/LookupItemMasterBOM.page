@@ -1,0 +1,253 @@
+<apex:page id="thePage" standardController="sm1e__smWork_Order__c" showHeader="false" standardStylesheets="true" extensions="sm1e.LookupItemMasterBOMController">
+  
+  <apex:pagemessages id="errorMessage" />
+  
+  <apex:form id="form">
+    <apex:pageBlock id="thePageBlock">
+	<apex:pageBlockSection Title="{!$Label.Choose_From_Asset_Groups}"  columns="1">
+		<apex:pageBlock id="assetGroupDetails" rendered="{!isRendered}"> 
+	    	<apex:outputLabel value="{!$Label.Asset_Group}" for="assetGroup"/>
+		         <apex:actionRegion >
+		             <apex:inputField id="assetGroup" value="{!assetTag.sm1e__Asset_Group__c}" >  
+		                   <apex:actionSupport event="onchange" action="{!ChangeAssetGroup}"  rerender="errorMessage,Selected_BOMs, Selected_ItemMasters, Selected_StoreRooms, Selected_Parts"/> 
+		              </apex:inputField>
+		         </apex:actionRegion>
+		  </apex:pageBlock>
+ 	</apex:pageBlockSection>
+ </apex:pageBlock>
+    
+     <apex:outputPanel id="Selected_BOMs">
+        <apex:pageBlock id="Selected_BOMsPB" title=" {!$Label.BOM_Choose_Parts_From} : {!sm1e__smWork_Order__c.Name}" rendered="{!ListOfBOM != null}">
+       
+            <apex:pageblockSection title="{!$Label.BOM_Choose_Bill_Of_Material}" rendered="{!ListOfBOM != null}" columns="1"> 
+                <apex:pageblockTable value="{!ListOfBOM}" var="bom" width="80%">
+                     <apex:column width="10%">
+                         <apex:facet name="header"> 
+                              <apex:inputCheckbox >
+                                 <apex:actionSupport event="onclick" action="{!GetSelected}" onsubmit="checkAll(this)"  rerender="Selected_ItemMasters"/>
+                              </apex:inputCheckbox>
+                         </apex:facet>
+                  
+                      <apex:inputCheckbox value="{!bom.selected}" id="checkedone">
+                        <apex:actionSupport event="onclick" action="{!GetSelected}" rerender="Selected_ItemMasters"/>
+                      </apex:inputCheckbox>
+                    </apex:column>
+                    <apex:column value="{!bom.billOfMaterial.Name}" width="45%"/>
+                    <apex:column value="{!bom.billOfMaterial.sm1e__Description__c }" width="45%"/>
+                </apex:pageblockTable>                   
+            </apex:pageblockSection>
+            </apex:pageBlock>  
+       </apex:outputPanel>      
+            
+        <apex:outputPanel id="Selected_ItemMasters"> 
+            <apex:pageBlock id="Selected_ItemMastersPB"  rendered="{!RenderBOM}" >   
+             <apex:pageBlockSection Title="{!$Label.Choose_From_Product}" rendered="{!ProductsForSelectedBOMs != null}" columns="1">
+                     
+              <apex:pageblocktable value="{!ProductsForSelectedBOMs}" var="bomProductWrap" width="80%">
+                <apex:column width="10%">
+                          <apex:facet name="header"> 
+                              <apex:inputCheckbox >
+                              
+                                 <apex:actionSupport event="onclick" action="{!getSelectedBOMProducts}"  onsubmit="selectAll(this)" rerender="Selected_StoreRooms" />
+                              </apex:inputCheckbox>
+                          </apex:facet>
+                          
+                              <apex:inputCheckbox value="{!bomProductWrap.selected}" id="select">
+                                    <apex:actionSupport event="onclick" action="{!getSelectedBOMProducts}" rerender="Selected_StoreRooms"/>
+                              </apex:inputCheckbox>
+
+                         
+                          </apex:column>
+                      <apex:column value="{!bomProductWrap.bomProduct.sm1e__Product__r.Name}" width="30%"/>
+                      <apex:column value="{!bomProductWrap.bomProduct.sm1e__Short_Description__c}" width="30%"/>
+                      <apex:column value="{!bomProductWrap.bomProduct.sm1e__BOM_Qty__c}" />
+                      
+                      
+              </apex:pageblocktable>
+        </apex:pageBlockSection>
+    
+   </apex:pageBlock>
+          
+     </apex:outputPanel>  
+      
+  <apex:outputPanel id="Selected_StoreRooms" >  
+    <apex:pageBlock id="Selected_StoreRoomsPB"  rendered="{!RenderBOM}">
+            <apex:pageBlockSection Title="{!$Label.BOM_Choose_From_Store_Rooms}" rendered="{!StoreRoomsForSelectedBOMProducts != null}" columns="1">
+            
+                <apex:pageblock >
+                    
+              <apex:pageblocktable value="{!StoreRoomsForSelectedBOMProducts}" var="strRoom" width="80%">
+                <apex:column width="10%">
+                          <apex:facet name="header"> 
+                              <apex:inputCheckbox >
+                              
+                                 <apex:actionSupport event="onclick" action="{!getSelectedStoreRooms}" onsubmit="selectAllStr(this)" rerender="Selected_Parts" />
+                              </apex:inputCheckbox>
+                          </apex:facet>
+                          
+                              <apex:inputCheckbox value="{!strRoom.selected}" id="selectStr">
+                                    <apex:actionSupport event="onclick" action="{!getSelectedStoreRooms}" rerender="Selected_Parts"/>
+                              </apex:inputCheckbox> 
+
+                         
+                          </apex:column>
+                      <apex:column value="{!strRoom.storeRoom.Name}" rowspan="1" width="30%"/>
+                      <apex:column value="{!strRoom.storeRoom.sm1e__Description__c}" width="30%"/>
+                      <apex:column value="{!strRoom.storeRoom.sm1e__Storeroom_Status__c}" width="30%"/>
+                      
+                      
+              </apex:pageblocktable>
+               
+              </apex:pageblock> 
+     
+      </apex:pageBlockSection>
+    
+    </apex:pageBlock>         
+  </apex:outputPanel>
+  
+   <apex:outputPanel id="Selected_Parts">
+              
+     <apex:pageBlock id="Selected_PartsPB" rendered="{!RenderBOM}">
+          <apex:pageBlockSection Title="{!$Label.BOM_Choose_From_Parts}" rendered="{!PartsForSelectedStoreRooms != null}" columns="1">
+            
+                <apex:pageblock >
+                
+            <apex:actionStatus startText="{!$Label.Saving_Message}" stopText="" onStop="RefreshAndClose()" id="closer"  onstart=""/>
+      <apex:pageBlockButtons id="buttons" location="top">
+
+            <apex:commandButton id="saveCommandButton"  action="{!saveToWorkOrder}" value="{!$Label.BOM_Add_To_Work_Order_Button}" status="closer" rerender="buttons" onclick="checkAllParts(this)" disabled="{!isDisabled}"/>
+            <apex:commandButton value="{!$Label.Cancel_Button_Label}" onclick="window.top.close()" />  
+            
+            
+          
+          </apex:pageblockbuttons>
+          
+                    
+              <apex:pageblocktable value="{!PartsForSelectedStoreRooms}" var="selectPart" width="80%">
+                <apex:column width="10%">
+                          <apex:facet name="header"> 
+                              <apex:inputCheckbox >
+                              
+                                 <apex:actionSupport event="onclick" onsubmit="selectAllParts(this)" rerender="false" />
+                              </apex:inputCheckbox>
+                          </apex:facet>
+                          
+                              <apex:inputCheckbox value="{!selectPart.selected}" id="selectPart">
+                             
+                              </apex:inputCheckbox>
+
+                         
+                          </apex:column>
+                      <apex:column value="{!selectPart.part.Name}" width="20%"/>
+                      <apex:column value="{!selectPart.part.sm1e__Description__c}" width="20%"/>
+                      <apex:column value="{!selectPart.part.sm1e__Product__r.Name}" width="20%"/>
+                      <apex:column value="{!selectPart.part.sm1e__Storeroom__r.Name}" width="20%"/>
+                      <apex:column value="{!selectPart.part.sm1e__Storeroom_Description__c}" width="20%"/>
+                      <apex:column value="{!selectPart.part.sm1e__On_Hand_Qty__c}" width="20%"/>
+                      <apex:column headervalue="{!$Label.BOM_Qty}"  value="{!selectPart.bomQty}" width="20%"/>
+                      
+                      
+              </apex:pageblocktable>
+               
+              </apex:pageblock> 
+            
+        
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+   </apex:outputPanel>
+      
+  </apex:form>
+  
+  <script type="text/javascript">
+    function checkAll(cb)
+     {
+        var inputElem = document.getElementsByTagName("input");
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("checkedone")!=-1){
+                inputElem[i].checked = cb.checked;
+            }
+         }
+
+    } 
+    
+    function selectAll(cb)
+    {
+        var inputElem = document.getElementsByTagName("input");
+        
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("select")!=-1)
+                inputElem[i].checked = cb.checked;
+                
+         }
+
+    } 
+    
+    function selectAllStr(cb)
+    {
+        var inputElem = document.getElementsByTagName("input");
+        
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("selectStr")!=-1)
+                inputElem[i].checked = cb.checked; 
+                
+         }
+
+    } 
+    
+    function selectAllParts(cb){
+        var inputElem = document.getElementsByTagName("input");
+        
+        for(var i=0; i<inputElem.length; i++)
+         {
+            if(inputElem[i].id.indexOf("selectPart")!=-1)
+                inputElem[i].checked = cb.checked;
+                
+         }
+    }
+    
+    function checkAllParts(chkBox){
+        var inputElem = document.getElementsByTagName("input");
+        var flag = false;
+        
+        if(chkBox.checked == true){
+            flag = true;
+            //return flag;
+        }
+        for(var i=0; i<inputElem.length; i++){
+            if(inputElem[i].id.indexOf("selectPart") != -1){
+                if(inputElem[i].checked == true){
+                    flag = true;
+                    break;
+                    //return flag;
+                }
+            }
+                
+        }
+        
+        if(flag == false){
+            alert("Please select atleast one record");
+            exit;
+                
+            }
+            
+            
+        
+    }
+    
+    function RefreshAndClose(){
+        
+        //alert("Please refresh Work Order Detail Page to view your changes");
+        
+        //window.setTimeout('window.top.close();', 1000);
+        
+        window.top.close();
+    } 
+    
+    
+     
+  </script>
+</apex:page>

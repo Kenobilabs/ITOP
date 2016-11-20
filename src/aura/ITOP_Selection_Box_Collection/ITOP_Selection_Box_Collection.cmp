@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global"  controller="ITOP_Controller">
+    <aura:attribute name="objects" type="sObject[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="test" type="String" default="https://gso--InternDev--c.cs86.content.force.com/servlet/rtaImage?eid=a9C7E0000008ONO&amp;feoid=00N7E000000fUxx&amp;refid=0EM7E0000004FAQ"/>
+    
+    
+    
+    <div class="row">
+        <aura:iteration items="{!v.objects}" var="eachObject">
+        
+            <div id="newBox" class="col s12 m6 l3">
+            	<c:ITOP_Selection_Box object="{!eachObject}"/>
+            </div>
+            
+            
+        </aura:iteration>
+    </div>
+    
+    
+    
+</aura:component>

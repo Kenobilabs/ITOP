@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Equipment__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Equip_Description__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Model_Work_Order__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Model_WO_Desc__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Scheduling_Interval__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.Scheduling_Interval_UOM__c</field>
+    </columns>
+    <columns>
+        <field>smPM_Schedule__c.PM_Due_Date__c</field>
+    </columns>
+    <description>Master Listing of All PM Schedules</description>
+    <format>Tabular</format>
+    <name>PM Schedule Master List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$smPM_Schedule__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>smPM_Schedule__c.CBDD__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

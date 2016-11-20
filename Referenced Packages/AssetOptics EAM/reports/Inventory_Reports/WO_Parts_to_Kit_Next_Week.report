@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>smWork_Order__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Scheduled_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$smPart__c.Description__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Part__c.Planned_Qty__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Part__c.Open_Commit_Qty__c</field>
+    </columns>
+    <columns>
+        <field>FK_$smPart__c.Bin_Location__c</field>
+    </columns>
+    <description>Work Order Parts to Kit - WO Due Date = Next Week</description>
+    <filter>
+        <criteriaItems>
+            <column>smWO_Part__c.Open_Commit_Qty__c</column>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>WO Parts to Kit Next Week</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$smWork_Order__c$smWO_Part__c@smWO_Part__c.Part__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>smWork_Order__c.Due_Date__c</dateColumn>
+        <interval>INTERVAL_NEXTWEEK</interval>
+    </timeFrameFilter>
+</Report>

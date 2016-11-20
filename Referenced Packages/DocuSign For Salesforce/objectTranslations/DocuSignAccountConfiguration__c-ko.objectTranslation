@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DocuSign 계정 구성</value>
+    </caseValues>
+    <fields>
+        <label>계정 ID</label>
+        <name>AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Undo And Send --></label>
+        <name>ChatterActionsUndoAndSend__c</name>
+    </fields>
+    <fields>
+        <label>봉투 완료 Chatter 텍스트</label>
+        <name>ChatterEnvCompletedText__c</name>
+    </fields>
+    <fields>
+        <label>봉투 완료 Chatter</label>
+        <name>ChatterEnvCompleted__c</name>
+    </fields>
+    <fields>
+        <label>봉투 거부 Chatter 텍스트</label>
+        <name>ChatterEnvDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label>봉투 거부 Chatter</label>
+        <name>ChatterEnvDeclined__c</name>
+    </fields>
+    <fields>
+        <label>봉투 전달 Chatter 텍스트</label>
+        <name>ChatterEnvDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label>봉투 전달 Chatter</label>
+        <name>ChatterEnvDelivered__c</name>
+    </fields>
+    <fields>
+        <label>봉투 전송 Chatter 텍스트</label>
+        <name>ChatterEnvSentText__c</name>
+    </fields>
+    <fields>
+        <label>봉투 전송 Chatter</label>
+        <name>ChatterEnvSent__c</name>
+    </fields>
+    <fields>
+        <label>봉투 무효화 Chatter 텍스트</label>
+        <name>ChatterEnvVoidedText__c</name>
+    </fields>
+    <fields>
+        <label>봉투 무효화 Chatter</label>
+        <name>ChatterEnvVoided__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Envelope Signing --></label>
+        <name>ChatterEnvelopeSigning__c</name>
+    </fields>
+    <fields>
+        <label>수신인 완료 Chatter 텍스트</label>
+        <name>ChatterRecipCompletedText__c</name>
+    </fields>
+    <fields>
+        <label>수신인 완료 Chatter</label>
+        <name>ChatterRecipCompleted__c</name>
+    </fields>
+    <fields>
+        <label>수신인이 Chatter 텍스트를 거부함</label>
+        <name>ChatterRecipDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label>수신인 거부 Chatter</label>
+        <name>ChatterRecipDeclined__c</name>
+    </fields>
+    <fields>
+        <label>수신인 전달 Chatter 텍스트</label>
+        <name>ChatterRecipDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label>수신인 전달 Chatter</label>
+        <name>ChatterRecipDelivered__c</name>
+    </fields>
+    <fields>
+        <help><!-- t --></help>
+        <label>수신인 전송 Chatter 텍스트</label>
+        <name>ChatterRecipSentText__c</name>
+    </fields>
+    <fields>
+        <label>수신인 전송 Chatter</label>
+        <name>ChatterRecipSent__c</name>
+    </fields>
+    <fields>
+        <label>수신인 서명 Chatter 텍스트</label>
+        <name>ChatterRecipSignedText__c</name>
+    </fields>
+    <fields>
+        <label>수신인 서명 Chatter</label>
+        <name>ChatterRecipSigned__c</name>
+    </fields>
+    <fields>
+        <label>Chatter 설정</label>
+        <name>ChatterSetting__c</name>
+    </fields>
+    <fields>
+        <label>DS Pro SF 비밀번호</label>
+        <name>DSProSFPassword__c</name>
+    </fields>
+    <fields>
+        <label>DS Pro SF 사용자 이름</label>
+        <name>DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label>기본 만료 기간(일)</label>
+        <name>DefaultExpireNDays__c</name>
+    </fields>
+    <fields>
+        <label>기본 미리 알림 기간(일)</label>
+        <name>DefaultReminderNDays__c</name>
+    </fields>
+    <fields>
+        <label>기본 반복 미리 알림 기간(일)</label>
+        <name>DefaultRepeatReminderNDays__c</name>
+    </fields>
+    <fields>
+        <help><!-- Recipient role names that correspond with the recipient role values when sending with DocuSign. --></help>
+        <label>기본 역할 이름</label>
+        <name>DefaultRoleNames__c</name>
+    </fields>
+    <fields>
+        <help><!-- Recipient role values that correspond with the recipient role names when sending with DocuSign --></help>
+        <label>기본 역할 값</label>
+        <name>DefaultRoleValues__c</name>
+    </fields>
+    <fields>
+        <label>기본 만료 경고 기간(일)</label>
+        <name>DefaultWarnOfExpireNDays__c</name>
+    </fields>
+    <fields>
+        <help><!-- Set the DocuSign InPerson signing page to display in its own window rather than embedded inside of the Salesforce header and/or sidebar. --></help>
+        <label>자체 창에 직접 서명 표시</label>
+        <name>DisplayInPersonSigningInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <help><!-- Set the DocuSign tagger to display in its own window rather than embedded inside of the Salesforce header and/or sidebar. --></help>
+        <label>자체 창에 태거 표시</label>
+        <name>DisplayTaggerInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <label>DocuSign 기준 URL</label>
+        <name>DocuSignBaseURL__c</name>
+    </fields>
+    <fields>
+        <label>DocuSign 환경</label>
+        <name>DocuSignEnvironment__c</name>
+        <picklistValues>
+            <masterLabel>demo</masterLabel>
+            <translation><!-- demo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>preview</masterLabel>
+            <translation><!-- preview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>production</masterLabel>
+            <translation><!-- production --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>stage</masterLabel>
+            <translation><!-- stage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation><!-- test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>이메일 본문</label>
+        <name>EmailBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_de</label>
+        <name>EmailBody_de__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_es</label>
+        <name>EmailBody_es__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_fr</label>
+        <name>EmailBody_fr__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_it</label>
+        <name>EmailBody_it__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_ja</label>
+        <name>EmailBody_ja__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_ko</label>
+        <name>EmailBody_ko__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_nl</label>
+        <name>EmailBody_nl__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_pt_BR</label>
+        <name>EmailBody_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_ru</label>
+        <name>EmailBody_ru__c</name>
+    </fields>
+    <fields>
+        <help><!-- Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient. --></help>
+        <label>EmailBody_zh_CN</label>
+        <name>EmailBody_zh_CN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>이메일 제목</label>
+        <name>EmailSubject__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_de</label>
+        <name>EmailSubject_de__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_es</label>
+        <name>EmailSubject_es__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients --></help>
+        <label>EmailSubject_fr</label>
+        <name>EmailSubject_fr__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_it</label>
+        <name>EmailSubject_it__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_ja</label>
+        <name>EmailSubject_ja__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_ko</label>
+        <name>EmailSubject_ko__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_nl</label>
+        <name>EmailSubject_nl__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_pt_BR</label>
+        <name>EmailSubject_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_ru</label>
+        <name>EmailSubject_ru__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients. --></help>
+        <label>EmailSubject_zh_CN</label>
+        <name>EmailSubject_zh_CN__c</name>
+    </fields>
+    <fields>
+        <label>모바일 태그 지정 UI 활성화</label>
+        <name>EnableNewMobileTaggingUI__c</name>
+    </fields>
+    <fields>
+        <help><!-- Supports large DocuSign envelopes by sending envelopes to DocuSign without document data and allowing DocuSign to fetch document data as needed. Turn on only if sending envelopes exceeds Salesforce callout limits. --></help>
+        <label>문서 가져오기</label>
+        <name>FetchDocuments__c</name>
+    </fields>
+    <fields>
+        <label>Chatter 숨기기</label>
+        <name>HideChatter__c</name>
+    </fields>
+    <fields>
+        <label>이메일 메시지 숨기기</label>
+        <name>HideEmailMessage__c</name>
+    </fields>
+    <fields>
+        <label>이메일 제목 숨기기</label>
+        <name>HideEmailSubject__c</name>
+    </fields>
+    <fields>
+        <label>미리 알림 만료 </label>
+        <name>HideRemindExpire__c</name>
+    </fields>
+    <fields>
+        <label>지금 전송 버튼 숨기기</label>
+        <name>HideSendNowButton__c</name>
+    </fields>
+    <fields>
+        <label>태그 버튼 숨기기</label>
+        <name>HideTagButton__c</name>
+    </fields>
+    <fields>
+        <label>기본 앵커 탭 포함</label>
+        <name>IncludeDefaultAnchorTabs__c</name>
+    </fields>
+    <fields>
+        <label>사용자 조회</label>
+        <name>LookupUser__c</name>
+        <relationshipLabel>DocuSign 계정 구성</relationshipLabel>
+    </fields>
+    <fields>
+        <label>사용자 필드 관리</label>
+        <name>ManageUsersFields__c</name>
+    </fields>
+    <fields>
+        <label>조직 ID</label>
+        <name>OrganizationId__c</name>
+    </fields>
+    <fields>
+        <label>설정 완료</label>
+        <name>SetupDone__c</name>
+    </fields>
+    <fields>
+        <label>업그레이드 도우미</label>
+        <name>UpgradeHelper__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enabling Reminder and Expiration Settings allows you to specify reminder and expiration defaults in DocuSign for Salesforce. These settings override the default Reminders &amp; Expirations settings from your DocuSign account. --></help>
+        <label>계정 알림 기본값 사용</label>
+        <name>UseAccountNotificationDefaults__c</name>
+    </fields>
+    <fields>
+        <label>대신하여 전송 사용</label>
+        <name>UseSendOnBehalfOf__c</name>
+    </fields>
+    <layouts>
+        <layout>DocuSignAccountConfiguration Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>DocuSign 계정 구성</nameFieldLabel>
+</CustomObjectTranslation>

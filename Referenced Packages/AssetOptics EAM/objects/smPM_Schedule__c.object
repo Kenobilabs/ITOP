@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Preventive Maintenance Schedules</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Auto_Schedule__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Auto Release checkbox, Default = True, makes this PM Schedule available for the batch scheduling process.  Uncheck if you want to the Work Orders automatically generated and released for this PM Schedule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Auto Release checkbox, Default = True, makes this PM Schedule available for the batch scheduling process.  Uncheck if you want to the Work Orders automatically generated and released for this PM Schedule.</inlineHelpText>
+        <label>Auto Release</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CBDD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>System Calculated Calendar Based Due Date</description>
+        <externalId>false</externalId>
+        <formula>IF(  FI__c  = True,   IF(TEXT( Scheduling_Interval_UOM__c ) = &quot;Days&quot; ,   LWOCD__c    +  Scheduling_Interval__c,   LWOCD__c    +  Scheduling_Interval__c * 7)  ,   IF(TEXT( Scheduling_Interval_UOM__c ) = &quot;Days&quot;, CWODD__c  +  Scheduling_Interval__c, CWODD__c  +  Scheduling_Interval__c * 7) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>System Calculated Calendar Based Due Date</inlineHelpText>
+        <label>Calendar Based Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CWODD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Current Work Order Due Date</description>
+        <externalId>false</externalId>
+        <formula>Current_Work_Order__r.Due_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Current Work Order Due Date</inlineHelpText>
+        <label>Current WO Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Current_WO_Status_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Current Work Order Status Num (numerical cross reference to the Work Order Status).</description>
+        <externalId>false</externalId>
+        <formula>Current_Work_Order__r.Status_Num__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Current Work Order Status Num (numerical cross reference to the Work Order Status).</inlineHelpText>
+        <label>Current WO Status Num</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_WO_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Current Work Order Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Current_Work_Order__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Current Work Order Status</inlineHelpText>
+        <label>Current WO Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Current Work Order is the LAST system generated Work Order for this PM Schedule.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Work Order is the LAST system generated Work Order for this PM Schedule.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Current Work Order</label>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>PM Schedules (Current Work Order)</relationshipLabel>
+        <relationshipName>PM_Schedules_cwo</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Default_Account_Assignment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This entry specifies the Default Vendor (Account where Vendor = True) Assignment to be made on the Work Order when generated through the PM Scheduling Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This entry specifies the Default Vendor (Account where Vendor = True) Assignment to be made on the Work Order when generated through the PM Scheduling Process</inlineHelpText>
+        <label>Default Account Assignment</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smVendor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Select a Vendor to serve as the Default Assignment when the PM Schedule Process generates a Work Order. You may clear this filter to assign to ANY type of Account.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>PM Schedules</relationshipLabel>
+        <relationshipName>PM_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Default_User_Assignment_Active__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the Default User Assignment Is Active = True, then the Work Order record Owner will be reassigned to this user when system generated.  This reassignment enables you to deploy ownership based record sharing rules.</description>
+        <externalId>false</externalId>
+        <formula>Default_User_Assignment__r.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If the Default User Assignment Is Active = True, then the Work Order record Owner will be reassigned to this user when system generated.  This reassignment enables you to deploy ownership based record sharing rules.</inlineHelpText>
+        <label>Default User Assignment Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_User_Assignment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This entry specifies the Default User Assignment to be made on the Work Order when generated through the PM Scheduling Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This entry specifies the Default User Assignment to be made on the Work Order when generated through the PM Scheduling Process</inlineHelpText>
+        <label>Default User Assignment</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>PM_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Equip_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Referencing Asset Tag Description</description>
+        <externalId>false</externalId>
+        <formula>Equipment__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Referencing Asset Tag Description</inlineHelpText>
+        <label>Asset Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Equipment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset Tag ID for the PM Schedule - User Specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Tag ID for the PM Schedule - User Specified.</inlineHelpText>
+        <label>Asset Tag</label>
+        <referenceTo>smEquipment__c</referenceTo>
+        <relationshipLabel>PM Schedules</relationshipLabel>
+        <relationshipName>PM_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Exclude_Saturday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If Exclude Saturday = True, when a PM Work Order is Created and Due Date = Saturday, then the Work Order Due Date is Adjusted to Sunday (if Exclude Sunday = False) or Monday (if Exclude Sunday = True)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If Exclude Saturday = True, when a PM Work Order is Created and Due Date = Saturday, then the Work Order Due Date is Adjusted to Sunday (if Exclude Sunday = False) or Monday (if Exclude Sunday = True)</inlineHelpText>
+        <label>Exclude Saturday</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Exclude_Sunday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If Exclude Sunday = True, when a PM Work Order is Created and Due Date = Sunday, then the Work Order Due Date is Adjusted to Monday</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If Exclude Sunday = True, when a PM Work Order is Created and Due Date = Sunday, then the Work Order Due Date is Adjusted to Monday</inlineHelpText>
+        <label>Exclude Sunday</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FI__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If &quot;Floating Interval&quot; is checked, then the Calendar Based PM Due Date = Last Work Order Completion Date + Calendar Interval.  If &quot;Floating Interval&quot; is unchecked, then Calendar Based PM Due Date = Current Work Order Schedule Date + Calendar Interval</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If &quot;Floating Interval&quot; is checked, then the Calendar Based PM Due Date = Last Work Order Completion Date + Calendar Interval.
+
+If &quot;Floating Interval&quot; is unchecked, then Calendar Based PM Due Date = Current Work Order Schedule Date + Calendar Interval</inlineHelpText>
+        <label>Floating Interval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IMIPR__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Initial Meter Interval Percent Remaining is used to schedule the first work order for a meter based PM Schedule and represents the outstanding percentage of the Meter Schedule Interval</description>
+        <externalId>false</externalId>
+        <formula>IF ( MSI__c  &lt;=  0  ||  ISBLANK(IMRDV__c) , 0  ,  IF( LMRV__c &gt;  IMRDV__c , 0, ( IMRDV__c  -  LMRV__c )  /  MSI__c)  )</formula>
+        <inlineHelpText>The Initial Meter Interval Percent Remaining is used to schedule the first work order for a meter based PM Schedule and represents the outstanding percentage of the Meter Schedule Interval</inlineHelpText>
+        <label>Initial Meter Interval % Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>IMRDV__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Initial Meter Reading Due Value represents the meter reading value that must be reached for the initial work order to be due on this PM Schedule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Initial Meter Reading Due Value represents the meter reading value that must be reached for the initial work order to be due on this PM Schedule.</inlineHelpText>
+        <label>Initial Meter Reading Due Value</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_PM_WO_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Initial PM WO Due Date is used to override the PM Due Date for the initial work order that is created.  This value must be populated prior to changing the PM Status from Draft to Active.  This status change event fires the APEX code to create the initial work order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overrides the PM Due Date for the first work order</inlineHelpText>
+        <label>Initial PM WO Due Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LMRD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Last Meter Reading Date if the PM Schedule has a related Meter</description>
+        <externalId>false</externalId>
+        <formula>DATEVALUE( Meter_ID__r.Last_Reading_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Last Meter Reading Date if the PM Schedule has a related Meter</inlineHelpText>
+        <label>Last Meter Reading Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LMRVC__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Last Meter Reading Value Cumulative for the associated Meter</description>
+        <externalId>false</externalId>
+        <formula>Meter_ID__r.Cumulative_Reading_Num__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Last Meter Reading Value Cumulative for the associated Meter</inlineHelpText>
+        <label>Last Meter Read Value Cumulative</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LMRV__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Last Meter Reading Value for the associated Meter</description>
+        <externalId>false</externalId>
+        <formula>Meter_ID__r.Last_Reading_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Last Meter Reading Value for the associated Meter</inlineHelpText>
+        <label>Last Meter Reading Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LWOCD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Last Work Order Completion Date</description>
+        <externalId>false</externalId>
+        <formula>Last_WO_Completed__r.Completion_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Last Work Order Completion Date</inlineHelpText>
+        <label>Last WO Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_WO_Completed__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Last Completed Work Order for this PM Schedule.  System populated via APEX code.  Field security should be set to Read Only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Completed Work Order for this PM Schedule.  System populated via APEX code.  Field security should be set to Read Only for all user profiles.</inlineHelpText>
+        <label>Last WO Completed</label>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>PM Schedules (Last Completed Work Order)</relationshipLabel>
+        <relationshipName>PM_Schedules_lwo</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MBPDD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Projected Due Date for the PM if using Meter Based Scheduling.  Based on a linear projection using the Last Work Order Completion Date, Last Meter Read Date, and Last Meter Reading Value.</description>
+        <externalId>false</externalId>
+        <formula>IF( MIPC__c  &lt;= 0, NULL, (FLOOR( MRDD__c  /  MIPC__c )  +  LWOCD__c )  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Projected Due Date for the PM if using Meter Based Scheduling.  Based on a linear projection using the Last Work Order Completion Date, Last Meter Read Date, and Last Meter Reading Value.</inlineHelpText>
+        <label>Meter Based Projected Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MIPC__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percent of Schedule Interval Complete based on meter reading values</description>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ISBLANK(  Last_WO_Completed__c  )), ( ( LMRVC__c  -  MRAWOC__c) /  MSI__c ) , 0)</formula>
+        <inlineHelpText>Percent of Schedule Interval Complete based on meter reading values</inlineHelpText>
+        <label>Meter Interval % Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MRAWOC__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Cumulative Meter Reading at Work Order Completion</description>
+        <externalId>false</externalId>
+        <formula>Last_WO_Completed__r.CMRVAWOC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Cumulative Meter Reading at Work Order Completion</inlineHelpText>
+        <label>Cumulative Meter Reading at WO Comp</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRAWOComp__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Reading at Work Order Completion</description>
+        <externalId>false</externalId>
+        <formula>Last_WO_Completed__r.MRVAWOC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Meter Reading at Work Order Completion (differs from Cumulative Meter Reading at Work Order Completion if the Meter has been replaced)</inlineHelpText>
+        <label>Meter Reading at WO Completion</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRDD__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Reading Days Difference (MRDD) represents the number of days between the Last Meter Read Date and the Last Work Order Completion Date.  MRDD is used to calculate the Meter Based Projected Due Date.</description>
+        <externalId>false</externalId>
+        <formula>LMRD__c  -  LWOCD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Meter Reading Days Difference (MRDD) represents the number of days between the Last Meter Read Date and the Last Work Order Completion Date.  MRDD is used to calculate the Meter Based Projected Due Date.</inlineHelpText>
+        <label>Meter Reading Days Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MSI__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Represents the intervals in the Meter UOM for scheduling - User Specified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Represents the intervals in the Meter UOM for scheduling - User Specified</inlineHelpText>
+        <label>Meter Schedule Interval</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Meter ID for PM Scheduling</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter ID for PM Scheduling</inlineHelpText>
+        <label>Meter ID</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>smMeter__c.Maintenance_Asset__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Equipment__c</valueField>
+            </filterItems>
+            <infoMessage>Clear the filter to select a Meter that is associated a different maintenance asset</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>smMeter__c</referenceTo>
+        <relationshipLabel>PM Schedules</relationshipLabel>
+        <relationshipName>PM_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Meter_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Meter UOM</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Meter_ID__r.UOM__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Meter UOM</inlineHelpText>
+        <label>Meter UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Model_WO_Desc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Model Work Order Description</description>
+        <externalId>false</externalId>
+        <formula>Model_Work_Order__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Model Work Order Description</inlineHelpText>
+        <label>Model WO Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Model_Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Model Work Order that this PM is based upon</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Model Work Order that this PM is based upon</inlineHelpText>
+        <label>Model Work Order</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The Work Order selected must be a &quot;Model Work Order&quot;</errorMessage>
+            <filterItems>
+                <field>smWork_Order__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Model Work Order</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>PM Schedules</relationshipLabel>
+        <relationshipName>PM_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PMDMRV__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PM Due Meter Reading Value represents the value at which the current meter should read when the PM is due.  This accounts for meter replacements and thus offsets the cumulative value at meter replacement</description>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK( Last_WO_Completed__c ), 0, PMDMV__c  -  Meter_ID__r.CMVAR__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>PM Due Meter Reading Value represents the value at which the current meter should read when the PM is due.  This accounts for meter replacements and thus offsets the cumulative value at meter replacement</inlineHelpText>
+        <label>PM Due Meter Reading Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PMDMV__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The PM Due Cumulative Meter Value specifies the Cumulative Meter Reading Value at which the PM Schedule becomes due.</description>
+        <externalId>false</externalId>
+        <formula>IF( SBM__c = True &amp;&amp; NOT(ISBLANK( Last_WO_Completed__c )) ,  (MRAWOC__c +  MSI__c ), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The PM Due Cumulative Meter Value specifies the Cumulative Meter Reading Value at which the PM Schedule becomes due.</inlineHelpText>
+        <label>PM Due Cumulative Meter Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PM_Due_Date_Override__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The PM Due Date Override is a manually entered date that is used to explicitly specify the Due Date for the next work order generated from this PM Schedule.  This value will be cleared when the work order is created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The PM Due Date Override is a manually entered date that is used to explicitly specify the Due Date for the next work order generated from this PM Schedule.  This value will be cleared when the work order is created.</inlineHelpText>
+        <label>PM Due Date Override</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PM_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PM Due Date.  Formula reference based on Calendar/Meter Based Scheduling selection.</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( PM_Due_Date_Override__c )), PM_Due_Date_Override__c , IF( SBC__c , CBDD__c , MBPDD__c ) )</formula>
+        <inlineHelpText>PM Due Date.  Formula reference based on Calendar/Meter Based Scheduling selection.</inlineHelpText>
+        <label>PM Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PM_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PM Schedule Status - DO NOT EDIT AVAILABLE VALUES IN THIS PICKLIST!  Unexpected results will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PM Schedule Status - DO NOT EDIT AVAILABLE VALUES IN THIS PICKLIST!  Unexpected results will occur.</inlineHelpText>
+        <label>PM Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PM_Work_Order_Release_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PM Work Order Release Date = PM Due Date - Release Window.  The PM Work Order Release Date is the earliest date when the PM Schedule will meet the batch PM APEX Job selection criteria for automatic work order creation.</description>
+        <externalId>false</externalId>
+        <formula>PM_Due_Date__c  -  Release_Window__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>PM Work Order Release Date = PM Due Date - Release Window.  The PM Work Order Release Date is the earliest date when the PM Schedule will meet the batch PM APEX Job selection criteria for automatic work order creation.</inlineHelpText>
+        <label>PM Work Order Release Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Physical_Meter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Physical Meter Field has been deprecated - Do Not Use</description>
+        <externalId>false</externalId>
+        <formula>Meter_ID__r.Parent_Meter__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The Physical Meter Field has been deprecated - Do Not Use</inlineHelpText>
+        <label>Obsolete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Release_Window__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Release Window represents the number of DAYS in advance of the PM Due Date that this PM Schedule will be selected for Work Order creation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Release Window represents the number of DAYS in advance of the PM Due Date that this PM Schedule will be selected for Work Order creation.</inlineHelpText>
+        <label>Release Window</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBC__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables Calendar based PM Scheduling</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables Calendar based PM Scheduling</inlineHelpText>
+        <label>Schedule by Calendar</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables Meter Based Scheduling</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables Meter Based Scheduling</inlineHelpText>
+        <label>Schedule by Meter</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Scheduling_Interval_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PM Scheduling Interval UOM.  DO NOT EDIT VALUES IN THIS PICKLIST !  Unexpected resutls will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PM Scheduling Interval UOM.  DO NOT EDIT VALUES IN THIS PICKLIST !  Unexpected resutls will occur.</inlineHelpText>
+        <label>Calendar Interval UOM</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Scheduling_Interval__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>PM Scheduling Interval is the time between between PM Work Order Due Dates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PM Scheduling Interval is the time between between PM Work Order Due Dates.</inlineHelpText>
+        <label>Calendar Interval</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>PM Schedule</label>
+    <listViews>
+        <fullName>Daily_Checklists_N7D</fullName>
+        <columns>NAME</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>Model_Work_Order__c</columns>
+        <columns>Model_WO_Desc__c</columns>
+        <columns>PM_Due_Date__c</columns>
+        <columns>Current_Work_Order__c</columns>
+        <columns>Current_WO_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PM_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_N_DAYS:7</value>
+        </filters>
+        <label>Daily Checklists Next 7 Days</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>PM_No_Model_WO</fullName>
+        <columns>NAME</columns>
+        <columns>PM_Status__c</columns>
+        <columns>Model_Work_Order__c</columns>
+        <columns>Model_WO_Desc__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>PM_Due_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Model_Work_Order__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>PM_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Inactive</value>
+        </filters>
+        <label>PM Schedules without Model Work Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>PM_WO_FIXN30D</fullName>
+        <columns>NAME</columns>
+        <columns>Model_Work_Order__c</columns>
+        <columns>Model_WO_Desc__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>PM_Due_Date__c</columns>
+        <columns>Current_Work_Order__c</columns>
+        <columns>Current_WO_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PM_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_N_DAYS:30</value>
+        </filters>
+        <label>PM WO&apos;s Next 30 Days</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>PM_WO_FLTN45D</fullName>
+        <columns>NAME</columns>
+        <columns>Model_Work_Order__c</columns>
+        <columns>Model_WO_Desc__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>PM_Due_Date__c</columns>
+        <columns>Current_Work_Order__c</columns>
+        <columns>Current_WO_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PM_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_N_DAYS:45</value>
+        </filters>
+        <label>PM WO&apos;s To Release Next 45 Days</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>PM_WO_FLTN45_TO_180D</fullName>
+        <columns>NAME</columns>
+        <columns>Model_Work_Order__c</columns>
+        <columns>Model_WO_Desc__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>PM_Due_Date__c</columns>
+        <columns>Current_Work_Order__c</columns>
+        <columns>Current_WO_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PM_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>NEXT_N_DAYS:45</value>
+        </filters>
+        <filters>
+            <field>PM_Due_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_N_DAYS:180</value>
+        </filters>
+        <label>PM WO&apos;s Next 46-180 Days</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>PM-{000000}</displayFormat>
+        <label>PM Schedule #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>PM Schedules</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Equipment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Equip_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PM_Due_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PM_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Model_Work_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Model_WO_Desc__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Generate_PM_WO_s</listViewButtons>
+        <lookupDialogsAdditionalFields>Equipment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Equip_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PM_Status__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Equipment__c</lookupFilterFields>
+        <lookupFilterFields>Equip_Description__c</lookupFilterFields>
+        <lookupFilterFields>PM_Status__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Equipment__c</searchFilterFields>
+        <searchFilterFields>Equip_Description__c</searchFilterFields>
+        <searchFilterFields>PM_Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Equipment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Equip_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PM_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Calendar_Scheduling_Interval_Positive</fullName>
+        <active>true</active>
+        <description>Ensures that the Calendar Scheduling Interval is a Positive Value</description>
+        <errorConditionFormula>Scheduling_Interval__c  &lt;= 0</errorConditionFormula>
+        <errorDisplayField>Scheduling_Interval__c</errorDisplayField>
+        <errorMessage>The Calendar Scheduling Interval must be greater than or equal to one (1)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Initial_PMStatus_is_Draft</fullName>
+        <active>true</active>
+        <description>Ensures that the initial value of the PM Schedule Status picklist is &quot;Draft&quot;</description>
+        <errorConditionFormula>IF( ISNEW(),  IF(TEXT( PM_Status__c)  &lt;&gt;  &quot;Draft&quot;, True, False) , False)</errorConditionFormula>
+        <errorDisplayField>PM_Status__c</errorDisplayField>
+        <errorMessage>The PM Schedule must be created with an initial status of Draft.  You may create a Workflow process or manually change the status after the PM Schedule is created.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Limits_MBS_to_Floating_CBS</fullName>
+        <active>true</active>
+        <description>Limits the overlay of Meter Based Scheduling to Floating Interval Calendar Based Scheduling</description>
+        <errorConditionFormula>IF( SBC__c = True &amp;&amp;  FI__c = False &amp;&amp;  SBM__c = True, true, false)</errorConditionFormula>
+        <errorMessage>Meter Based Scheduling cannot be used in conjunction with Fixed Interval scheduling.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Meter_Scheduling_Interval_Positive</fullName>
+        <active>true</active>
+        <description>Ensures that the Meter Scheduling Interval is a positive value</description>
+        <errorConditionFormula>IF( SBM__c  = True,  MSI__c  &lt;= 0, false)</errorConditionFormula>
+        <errorDisplayField>MSI__c</errorDisplayField>
+        <errorMessage>The Meter Scheduling Interval must be greater than zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Meter_is_Selected</fullName>
+        <active>true</active>
+        <description>Ensures that a Meter ID has been input if &quot;Schedule by Meter&quot; is selected</description>
+        <errorConditionFormula>IF(( SBM__c = True) ,  ISBLANK( Meter_ID__c ) , false)</errorConditionFormula>
+        <errorDisplayField>Meter_ID__c</errorDisplayField>
+        <errorMessage>A Meter ID must be specified if Schedule by Meter is selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>One_Scheduling_Method</fullName>
+        <active>true</active>
+        <description>Ensures only one scheduling method, Calendar or Meter, is selected</description>
+        <errorConditionFormula>IF( SBC__c = True &amp;&amp;  SBM__c = True, true, false)</errorConditionFormula>
+        <errorMessage>Only one scheduling method, Calendar or Meter, can be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PM_Auto_Schedule_for_Calendar_Floating</fullName>
+        <active>false</active>
+        <description>Ensures that the Auto Schedule attribute can be set to True for ONLY Calendar based Floating Interval PM Schedules. (Obsolete - Do Not Activate)</description>
+        <errorConditionFormula>IF( Auto_Schedule__c = True  &amp;&amp; (  SBC__c  = False ||  FI__c = False), true, false)</errorConditionFormula>
+        <errorDisplayField>Auto_Schedule__c</errorDisplayField>
+        <errorMessage>Auto Schedule may be activated for only Schedule by Calendar, Floating Interval PM Schedules</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Release_Window_Non_Negative_Value</fullName>
+        <active>true</active>
+        <description>Ensures that the Release Window is a Non Negative Value</description>
+        <errorConditionFormula>Release_Window__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Release_Window__c</errorDisplayField>
+        <errorMessage>The Release Window must be Greater Than or Equal to Zero (0)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Scheduling_Method_Selected</fullName>
+        <active>true</active>
+        <description>Ensures that a Meter Scheduling Method is selected if the PM Schedule Status is Active</description>
+        <errorConditionFormula>IF(ISPICKVAL( PM_Status__c , &quot;Active&quot;) , ( SBC__c = False  &amp;&amp;  SBM__c  = False), false)</errorConditionFormula>
+        <errorDisplayField>PM_Status__c</errorDisplayField>
+        <errorMessage>Schedule by Calendar or Schedule by Meter MUST be selected for PM Schedule Status to be Active</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Valid_Meter_for_Asset</fullName>
+        <active>false</active>
+        <description>Ensures that the Meter Selected is Valid for the Asset (Obsolete - Do Not Activate)</description>
+        <errorConditionFormula>IF(  ISBLANK( Meter_ID__c ) , false, ( Equipment__c   &lt;&gt;  Meter_ID__r.Maintenance_Asset__c  ))</errorConditionFormula>
+        <errorMessage>The Meter ID and the Asset ID selected must have a valid relationship.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_PM_WO</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate PM WO</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+
+
+alert(&quot;Please wait while request is processing... &quot;); 
+var res=sforce.apex.execute(&quot;sm1e.CloneWorkOrder_v2&quot;,&quot;CloneworkorderSchedule&quot;,
+{scheduleIdList:&quot;{!smPM_Schedule__c.Id}&quot;}); 
+
+
+
+// Reload the window
+if(res==&quot;true&quot;){ 
+
+window.alert(&quot;Process Completed Succesfully......&quot;); 
+window.location.reload(); 
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_PM_WO_s</fullName>
+        <availability>online</availability>
+        <description>Custom button that will deep clone the Model workorder linked to the selected PM Schedule.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate PM WO’s</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Get the List of Schedule Ids selected by the User.
+var records= {!GETRECORDIDS($ObjectType.smPM_Schedule__c)};
+
+var len=records.length;
+
+//  Call the method if User has selected any record.
+if (len!= 0){
+           alert(&quot;Please wait while request is processing... &quot;);
+            var res=sforce.apex.execute(&quot;sm1e.CloneWorkOrder_v2&quot;,&quot;CloneworkorderSchedule&quot;,{scheduleId:records});
+      }else{
+              window.alert(&quot;At least one PM Schedule must be selected&quot;);
+     }
+
+// Reload the Window..
+
+if(res==&quot;true&quot;){
+        window.alert(&quot;PM Work Order Generation Submitted&quot;);
+        window.location.reload();
+          
+}</url>
+    </webLinks>
+</CustomObject>

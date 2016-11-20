@@ -1,0 +1,225 @@
+<apex:page standardController="sm1e__smWork_Order__c" showHeader="false" renderas="pdf" title="WorkOrder{!Id}" tabStyle="sm1e__smWork_Order__c" extensions="sm1e.WorkOrderPDFController">
+  <apex:stylesheet value="{!URLFOR($Resource.sm1e__SaaSMaintStyleSheets,'SaaSMaintStyleSheets/saasmaintStyles.css')}"/> 
+  
+     <html>
+        <head>                       
+        </head> 
+        
+            <body>
+                      
+             <table width="100%" >   
+                    <tr>
+                        <td align="center"><h3> Work Order Number : {!sm1e__smWork_Order__c.Name} </h3></td>
+                    </tr>
+                    
+                    <tr>
+                        <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Overview  </td>  
+                   </tr>
+                </table>
+                <br/>
+                <table width="100%" >
+               <tr>
+                   <td class="labelColumn">Work Order #</td><td  class="fieldCol">{!sm1e__smWork_Order__c.Name}</td> 
+                   <td class="labelColumn">Asset ID </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Equipment__r.Name}</td> 
+               </tr>
+               
+               <tr>
+                   <td class="labelColumn">Description </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Description__c}</td>
+                   <td class="labelColumn">Asset Description </td><td class="fieldCol">{!sm1e__smWork_Order__c.sm1e__Equip_Description__c}</td>
+               </tr>
+               <tr>
+                   <td class="labelColumn">Dept </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Dept__c}</td> 
+                   <td class="labelColumn">Status </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Status__c}</td>   
+               </tr>
+               <tr>
+                   <td class="labelColumn">WO Type </td><td class="fieldCol">{!sm1e__smWork_Order__c.sm1e__WO_Type__c}</td>
+                   <td class="labelColumn">PM Schedule </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__PM_Schedule__r.Name}</td>    
+               </tr> 
+ 
+       </table>
+       
+       <br/>
+              
+       <table width="100%">
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Detailed Comments </td>  
+            </tr>
+            <tr>
+                <td class="fieldCol"> <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Detailed_Comments__c}"/> </td>
+            </tr>
+       </table>
+             
+        <br/>
+           
+         <table width="100%">
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Instructions </td>  
+            </tr>
+            <tr>
+                <td class="fieldCol"> <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Instructions__c}"/> </td>
+            </tr>
+       </table> 
+       
+       <br/>
+       
+        <table width="100%">
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Planning &amp; Scheduling </td>  
+            </tr>
+            
+        </table>
+               
+       <table width="100%">
+            
+            <tr>
+                   <td class="labelColumn">Planner</td><td  class="fieldCol">{!sm1e__smWork_Order__c.sm1e__Planner__c}</td> 
+                   <td class="labelColumn">Scheduled Start Date </td><td class="fieldCol"> {!ScheduledStartDate}</td> 
+               </tr>
+               <tr>
+                   <td class="labelColumn">Assigned Contact </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Resource_Assigned__c}</td>
+                   <td class="labelColumn">Due Date </td><td class="fieldCol">{!DueDate}</td>
+               </tr>
+               <tr>
+                   <td class="labelColumn">Assigned User </td><td class="fieldCol"> {!sm1e__smWork_Order__c.sm1e__Assigned_To__c}</td> 
+               </tr> 
+       </table> 
+
+      <div id = "WorkOrderTasksDiv" style="display:{!IF(ISNULL(WorkOrderTaskLineItems),'none','block')}; page-break-before:always;">  
+       <table width="100%" >
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Work Order Tasks : {!sm1e__smWork_Order__c.Name}</td>  
+            </tr>
+       </table>
+       <br/>
+            <apex:repeat value="{!WorkOrderTaskLineItems}" var="wrapperTaskList" id="theTaskList">
+                <div id="taskTableDiv" style="{!wrapperTaskList.taskPageStyle}"> 
+              <apex:dataTable value="{!wrapperTaskList.workOrderTaskPage}" var="Task" id="theTaskTable" headerClass="tablehead" rowClasses="odd,even" style="font-size: 90%; color:#FFFFFF; page-break-inside:avoid;" columnsWidth="200px, 100px, 200px, 200px, 200px, 200"  >
+                    <apex:column style="border: 1px"> 
+                          <apex:facet name="header">WO Task ID</apex:facet>
+                          <apex:outputText value="{!Task.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header" >Planned Hrs</apex:facet>
+                          <apex:outputText value="{!Task.sm1e__Planned_Hours__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Assigned Contact</apex:facet>
+                          <apex:outputText value="{!Task.sm1e__Resource_Assigned__c}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Assigned User</apex:facet>
+                          <apex:outputText value="{!Task.sm1e__Assignment__c}"/>
+                      </apex:column> 
+                      <apex:column >
+                          <apex:facet name="header">Schedule Date</apex:facet>
+                          <apex:outputText value="{!Task.sm1e__Schedule_Date__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Comments</apex:facet>
+                          <apex:outputText value="{!Task.sm1e__Comments__c}"/>
+                      </apex:column>
+    </apex:dataTable> 
+        </div>
+                 
+       </apex:repeat>
+       </div>
+             <br/>
+
+    <div id = "WorkOrderPartsDiv" style="display:{!IF(ISNULL(WorkOrderPartLineItems),'none','block')};">         
+          <table width="100%" >
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Work Order Parts : {!sm1e__smWork_Order__c.Name}</td>  
+            </tr>
+          </table>
+       <br/>
+       <apex:repeat value="{!WorkOrderPartLineItems}" var="wrapperPartList" id="theWOPartList">
+                <div id="woPartTableDiv" style="{!wrapperPartList.partPageStyle}" > 
+              <apex:dataTable value="{!wrapperPartList.workOrderPartPage}" var="Part" id="thePartTable" headerClass="tablehead" rowClasses="odd,even" style="font-size: 90%; color:#FFFFFF; page-break-inside:avoid;" columnsWidth="100px, 100px, 75px, 75px, 75px, 75px, 100px, 100px, 100px, 250px"  >
+                    <apex:column style="border: 1px"> 
+                          <apex:facet name="header">WO Part</apex:facet>
+                          <apex:outputText value="{!Part.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header" >Part ID</apex:facet>
+                          <apex:outputText value="{!Part.sm1e__Part__r.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Part Description</apex:facet>
+                          <apex:outputText value="{!Part.sm1e__Part_Description__c}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Planned Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(Part.sm1e__Planned_Qty__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Issued Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(Part.sm1e__Issued_Qty__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Open Commit Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(Part.sm1e__Open_Commit_Qty__c)}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">On Hand Qty</apex:facet>
+                          <apex:outputText value="{!TEXT(Part.sm1e__On_Hand_Qty__c)}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Planned Part Cost</apex:facet>
+                          <apex:outputText value="{!Part.sm1e__Planned_Part_Cost__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Actual Part Cost</apex:facet>
+                          <apex:outputText value="{!Part.sm1e__Actual_Part_Cost__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Bin Location</apex:facet>
+                          <apex:outputText value="{!Part.sm1e__Bin_Location__c}"/>
+                      </apex:column>
+    </apex:dataTable>  
+    </div>
+   
+    </apex:repeat>
+     </div>
+         <br/>
+     
+                                             
+   <div id = "WorkOrderMiscCostDiv" style="display:{!IF(ISNULL(WorkOrderMiscCostLineItems),'none','block')}">
+     
+         <table width="100%" >
+            <tr>
+                 <td bgcolor="#151B54" align="left" style='color:#FFFFFF; font-weight:bold;'> Work Order Misc Costs : {!sm1e__smWork_Order__c.Name}</td>  
+            </tr>
+          </table>
+    <br/>    
+   <apex:repeat value="{!WorkOrderMiscCostLineItems}" var="wrapperCostList" id="theMiscCostList"  > 
+            <div id="miscCostTableDiv" style="{!wrapperCostList.costPageStyle}" >           
+    <apex:dataTable value="{!wrapperCostList.workOrderMiscCostPage}" var="Misc" id="theMiscCostTable" headerClass="tablehead" rowClasses="odd,even" style="font-size: 90%; color:#FFFFFF; page-break-inside:avoid;" columnsWidth="200px, 200px, 250px, 200px, 200px"  >
+                    <apex:column style="border: 1px"> 
+                          <apex:facet name="header">WO Misc Cost ID</apex:facet>
+                          <apex:outputText value="{!Misc.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header" >Vendor</apex:facet>
+                          <apex:outputText value="{!Misc.sm1e__Vendor__r.Name}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Description</apex:facet>
+                          <apex:outputText value="{!Misc.sm1e__Description__c}"/>
+                      </apex:column>   
+                      <apex:column >
+                          <apex:facet name="header">Planned Misc Cost Amount</apex:facet>
+                          <apex:outputText value="{!Misc.sm1e__Planned_Misc_Cost_Amount__c}"/>
+                      </apex:column>
+                      <apex:column >
+                          <apex:facet name="header">Actual Misc Cost Amount</apex:facet>
+                          <apex:outputText value="{!Misc.sm1e__Actual_Misc_Cost_Amount__c}"/>
+                      </apex:column>
+    </apex:dataTable> 
+    </div> 
+    
+    </apex:repeat>
+    </div>    
+            </body>
+       
+    </html>
+</apex:page>

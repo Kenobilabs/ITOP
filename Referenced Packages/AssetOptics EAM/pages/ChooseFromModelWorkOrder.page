@@ -1,0 +1,108 @@
+<apex:page standardController="sm1e__smWork_Order__c" showHeader="false" standardStylesheets="true" extensions="sm1e.ChooseFromModelWorkOrderController">
+    
+    <apex:pageMessages id="errorMessage"/>
+
+<apex:form >
+ <apex:pageBlock >
+    <apex:pageBlockSection Title="{!$Label.Choose_From_Asset_Groups}"  columns="1">
+        <apex:pageBlock id="assetGroupDetails" rendered="{!isRendered}">
+            <apex:outputLabel value="{!$Label.Asset_Group}" for="assetGroup"/>
+                 <apex:actionRegion >
+                     <apex:inputField id="assetGroup" value="{!assetTag.sm1e__Asset_Group__c}" >  
+                           <apex:actionSupport event="onchange" action="{!ChangeAssetGroup}"  reRender="errorMessage,Selected_WorkOrders"/> 
+                      </apex:inputField>
+                 </apex:actionRegion>
+          </apex:pageBlock>
+    </apex:pageBlockSection>
+ </apex:pageBlock>
+ 
+ <apex:pageBlock >
+    <apex:pageBlockSection Title="{!$Label.Choose_From_Model_WO}"  columns="1">
+    
+        <apex:pageBlock id="Selected_WorkOrders" rendered="{!WorkOrders != null}" >
+ 
+                 <apex:actionStatus startText="{!$Label.Saving_Message}" stopText="" onStop="RefreshAndClose()" id="closer"  onstart=""/>
+             <apex:pageBlockButtons id="buttons" location="top">
+                   <apex:commandButton id="saveCommandButton"  action="{!saveToWorkOrder}" value="{!$Label.BOM_Add_To_Work_Order_Button}" status="closer" rerender="buttons"  onclick="CheckAllWorkOrders(this)"/>
+                   <apex:commandButton value="{!$Label.Cancel_Button_Label}" onclick="window.top.close()" />  
+             </apex:pageblockbuttons>
+ 
+                        <apex:pageblocktable value="{!WorkOrders}" var="selectWO" width="80%" rendered="{!WorkOrders != null}">
+                                    <apex:column width="10%">
+                                         <apex:facet name="header">{!$Label.Choose_One}</apex:facet>
+                                             <apex:inputCheckbox value="{!selectWO.selected}" id="selectWOChkbox" onclick="UncheckPrevious(this)">
+                                             </apex:inputCheckbox>
+                                   </apex:column>
+                                   <apex:column value="{!selectWO.workOrder.Name}" width="25%"/>
+                                   <apex:column value="{!selectWO.workOrder.sm1e__Description__c}" width="25%"/>
+                                   <apex:column value="{!selectWO.workOrder.sm1e__Asset_Group__c}" width="25%"/>
+                        </apex:pageblocktable>
+              
+         <apex:panelGrid columns="5">
+        <apex:commandLink action="{!first}" rendered="{!hasNext}">{!$Label.Pagination_First_Label}</apex:commandlink>
+        <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">{!$Label.Pagination_Previous_Label}</apex:commandlink>
+        <apex:commandLink action="{!next}" rendered="{!hasNext}">{!$Label.Pagination_Next_Label}</apex:commandlink>
+        <apex:commandLink action="{!last}" rendered="{!hasPrevious}">{!$Label.Pagination_Last_Label}</apex:commandlink>
+        <apex:outputText value="{!$Label.Page_Label} : {!pageNumber}" />
+        </apex:panelGrid>
+              
+        </apex:pageBlock>   
+        
+        
+    
+    </apex:pageBlockSection>
+    </apex:pageBlock>   
+</apex:form>
+<script type="text/javascript">
+
+  function RefreshAndClose(){
+        window.top.close();
+    } 
+
+
+    function CheckAllWorkOrders(chkBox){
+        var inputElem = document.getElementsByTagName("input");
+        var count = 0;
+       
+        //if(chkBox.checked == true){
+            //flag = true;
+        //}
+
+        for(var i=0; i<inputElem.length; i++){
+
+            if(inputElem[i].id.indexOf("selectWOChkbox") != -1){
+
+                if(inputElem[i].checked == true){
+
+                    count++;
+                }
+                if(count > 1){
+                     alert("Please select only one record");
+                     exit; 
+                }
+            }
+        }
+
+      
+    }
+    
+    function UncheckPrevious(chkBox){
+         var inputElem = document.getElementsByTagName("input");
+         if(chkBox.checked == true){
+            for(var i=0; i<inputElem.length; i++){
+                if(inputElem[i].id.indexOf("selectWOChkbox") != -1){
+                    if(inputElem[i].checked == true){
+                        if(inputElem[i] == chkBox){
+                            continue;
+                        }
+                        inputElem[i].checked = false;
+                    }
+                }
+            }
+            
+        }
+    }
+
+  </script>
+
+</apex:page>

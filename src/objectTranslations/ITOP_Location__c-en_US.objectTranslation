@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ITOP Location</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ITOP Locations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campus Code --></label>
+        <name>Campus_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- enter entire country name --></help>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Employees --></label>
+        <name>Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image Source --></label>
+        <name>Image_Source__c</name>
+    </fields>
+    <fields>
+        <help><!-- enter IT On Point location name as campus peers would reference it.  Do not include special characters. --></help>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Request Types --></label>
+        <name>Primary_Request_Types__c</name>
+        <picklistValues>
+            <masterLabel>Application &amp; Software</masterLabel>
+            <translation><!-- Application &amp; Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device Damage</masterLabel>
+            <translation><!-- Device Damage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device Functionality</masterLabel>
+            <translation><!-- Device Functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device Location</masterLabel>
+            <translation><!-- Device Location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device Setup &amp; Update</masterLabel>
+            <translation><!-- Device Setup &amp; Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Secondary Request Types --></label>
+        <name>Secondary_Request_Types__c</name>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation><!-- Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen - Figuratively</masterLabel>
+            <translation><!-- Frozen - Figuratively --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen - Literally</masterLabel>
+            <translation><!-- Frozen - Literally --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Login | Authentication</masterLabel>
+            <translation><!-- Login | Authentication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost | Stolen</masterLabel>
+            <translation><!-- Lost | Stolen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Powering On</masterLabel>
+            <translation><!-- Not Powering On --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical Damage</masterLabel>
+            <translation><!-- Physical Damage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup/Installation</masterLabel>
+            <translation><!-- Setup/Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State/Region --></label>
+        <name>State_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Ticket Time --></label>
+        <name>Total_Ticket_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait Time --></label>
+        <name>Wait_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- isOpen --></label>
+        <name>isOpen__c</name>
+    </fields>
+    <fields>
+        <label><!-- openStatus --></label>
+        <name>openStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- status --></label>
+        <name>status__c</name>
+    </fields>
+    <layouts>
+        <layout>ITOP Location Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

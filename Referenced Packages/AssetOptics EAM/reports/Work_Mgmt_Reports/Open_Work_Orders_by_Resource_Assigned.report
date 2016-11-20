@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Description__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Equipment__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Equip_Description__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Dept__c</field>
+    </columns>
+    <description>Open Work Orders by Resource Assigned</description>
+    <filter>
+        <criteriaItems>
+            <column>smWork_Order__c.Status__c</column>
+            <operator>equals</operator>
+            <value>In Planning,In Progress,Ready to Schedule,Scheduled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>smWork_Order__c.Resource_Assigned__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open WO&apos;s by Resource Assigned</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$smWork_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>smWork_Order__c.Completion_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

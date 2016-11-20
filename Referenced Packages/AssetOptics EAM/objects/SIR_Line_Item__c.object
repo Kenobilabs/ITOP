@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Lines Items for a Stock Issue Request.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Current_AvailQty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_ID__r.Available_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current AvailQty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_OnHandQty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total On Hand Qty for the Part for ALL Bin Locations</description>
+        <externalId>false</externalId>
+        <formula>Part_ID__r.On_Hand_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total On Hand Qty for the Part for ALL Bin Locations</inlineHelpText>
+        <label>On Hand Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_From_Primary_Bin__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>ISBLANK(Secondary_Bin_Loc__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Issue From Primary Bin</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Issued_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_Trans_ID__r.Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Issued Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>(Requested_Qty__c - Issued_Qty__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Open Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Part_ID__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup Relationship with Part Object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup Relationship with Part Object.</inlineHelpText>
+        <label>Part ID</label>
+        <referenceTo>smPart__c</referenceTo>
+        <relationshipLabel>SIR Line Items</relationshipLabel>
+        <relationshipName>SIR_PartDetails</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Part_Trans_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Part Trans ID</label>
+        <referenceTo>smPart_Transaction__c</referenceTo>
+        <relationshipName>SIR_PartTransDetails</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pick_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pick Qty</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Bin_Loc_OH_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_ID__r.Primary_Bin_Loc_OH_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Bin Loc OH Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Bin_Loc__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_ID__r.Primary_Bin_Location__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Bin Loc</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requested_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Requested Qty</label>
+        <precision>7</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIR_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SIR ID</label>
+        <referenceTo>Stock_Issue_Request__c</referenceTo>
+        <relationshipName>SIR_Details</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Secondary_Bin_Loc__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Secondary Bin Loc</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Part_Bin_Location__c.Part__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Part_ID__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Part_Bin_Location__c.Primary_Bin__c</field>
+                <operation>equals</operation>
+                <value>No</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Part_Bin_Location__c</referenceTo>
+        <relationshipLabel>SIR Line Items</relationshipLabel>
+        <relationshipName>SIR_Details_SecBinLoc</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Bin_OH_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Oh Hand Qty in the Selected Secondary Bin Location</description>
+        <externalId>false</externalId>
+        <formula>Secondary_Bin_Loc__r.On_Hand_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Oh Hand Qty in the Selected Secondary Bin Location</inlineHelpText>
+        <label>Secondary Bin OH Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stock_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(Part_ID__r.Stock_UOM__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stock UOM</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storeroom__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_ID__r.Storeroom__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Storeroom</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WO_Part_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Part_Trans_ID__r.WO_Part__r.Name</formula>
+        <label>WO Part Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Work Order ID</description>
+        <externalId>false</externalId>
+        <formula>SIR_ID__r.WO_ID__c</formula>
+        <inlineHelpText>Formula Reference to Work Order ID</inlineHelpText>
+        <label>Work Order ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>SIR Line Item</label>
+    <nameField>
+        <displayFormat>SD-{0000000}</displayFormat>
+        <label>SIR Line ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SIR Line Items</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Part_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Requested_Qty__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Issued_Qty__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Open_Qty__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Part_ID__c</lookupFilterFields>
+        <lookupFilterFields>Requested_Qty__c</lookupFilterFields>
+        <lookupFilterFields>Issued_Qty__c</lookupFilterFields>
+        <lookupFilterFields>Open_Qty__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Part_ID__c</searchFilterFields>
+        <searchFilterFields>Requested_Qty__c</searchFilterFields>
+        <searchFilterFields>Issued_Qty__c</searchFilterFields>
+        <searchFilterFields>Open_Qty__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Pick_Qty_GE_Zero</fullName>
+        <active>true</active>
+        <description>Ensures the Pick Quantity is Greater Than or Equal to Zero</description>
+        <errorConditionFormula>Pick_Qty__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Pick_Qty__c</errorDisplayField>
+        <errorMessage>The Pick Qty must be Greater Than or Equal to Zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pick_Qty_Not_Editable_when_SIR_Completed</fullName>
+        <active>false</active>
+        <description>Ensures that the Pick Qty cannot be edited if the SIR Status Equals Completed</description>
+        <errorConditionFormula>ISCHANGED( Pick_Qty__c ) &amp;&amp;  ISPICKVAL( SIR_ID__r.Status__c , &quot;Completed&quot;)</errorConditionFormula>
+        <errorDisplayField>Pick_Qty__c</errorDisplayField>
+        <errorMessage>The Pick Qty cannot be edited if the Stock Issue Request Status Equals Completed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requested_Qty_GE_Zero</fullName>
+        <active>true</active>
+        <description>Ensures the Requested Quantity is Greater Than or Equal to Zero</description>
+        <errorConditionFormula>Requested_Qty__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Requested_Qty__c</errorDisplayField>
+        <errorMessage>The Requested Quantity must be Greater Than or Equal to Zero</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_SIR</fullName>
+        <availability>online</availability>
+        <description>This button will create new SIR and corresponding SIR Detail objects with Requested qty as open commit quantity from SIR Line Items</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create SIR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+
+// Get the List of Schedule Ids selected by the User. 
+var records= {!GETRECORDIDS($ObjectType.SIR_Line_Item__c)}; 
+var len=records.length; 
+
+// Call the method if User has selected any record. 
+if (len!= 0){ 
+var res=sforce.apex.execute(&quot;sm1e.GenerateSIRFromWOPartList&quot;,&quot;GenerateNewSIRForRemainingSIRDetail&quot;,{SIRLineItemId:records}); 
+
+alert(res); 
+// refresh the work order part list page 
+parent.window.location.reload(); 
+} 
+else{ 
+window.alert(&quot;At least one record should be selected before clicking the &apos;Create SIR&apos; Button.&quot;); 
+}</url>
+    </webLinks>
+</CustomObject>

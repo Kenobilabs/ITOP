@@ -1,0 +1,255 @@
+<apex:page showHeader="false"  standardController="sm1e__smEquipment__c"  extensions="sm1e.AssetTagNodeController">
+
+<!-- download the jstree from jstree.com and upload the dist directory as a static resource -->
+<link href="{!URLFOR($Resource.jsTreePlugin, 'jsTree/themes/default/style.min.css')}" rel="stylesheet" />
+<script src="{!URLFOR($Resource.jsTreePlugin, 'jsTree/libs/jquery.js')}"></script>
+<script src="{!URLFOR($Resource.jsTreePlugin, 'jsTree/jstree.min.js')}"></script>
+<script src="{!URLFOR($Resource.jsTreePlugin, 'jsTree/jstree.min.js')}"></script>
+
+
+<apex:remoteObjects >
+    <apex:remoteObjectModel jsShortHand="sfNode" name="sm1e__smEquipment__c" fields="Id,Name,sm1e__Description__c,sm1e__Hierarchy_Display__c">
+        <apex:remoteObjectField name="sm1e__Parent__c" jsShorthand="Parent" />
+        <apex:remoteObjectField name="sm1e__Hierarchy_Sort_Order__c" jsShorthand="SortOrder" />
+    </apex:remoteObjectModel>
+</apex:remoteObjects> 
+
+<script> 
+(function() {
+	
+	
+      var $j = jQuery.noConflict();
+      
+      $j(document).ready(function() {
+      
+      var currentId = '{!currentId}';
+      var topElement = '{!rootElement}';
+      var openParentId = ""; 
+      var nodesList = [];
+      nodesList = getAllNodeIdList(currentId);
+     
+      
+          $j("#jstree").jstree({
+              "plugins": ["themes", "contextmenu"],
+              "core" : {
+                  themes: {"stripes": true},
+                  check_callback : true,
+                  animation : 0,
+                  expand_selected_onload : true,
+                  data : function (node, cb) {
+                      		loadNodes(this, node, cb,currentId,topElement,nodesList);
+                      	}
+              },
+              contextmenu : {
+                 "items" : function (node) {
+                      return { 
+                          "view" : {
+                              label: "View Record",
+                              action: function(obj) {
+                                  window.open("/" + node.id);
+                              }
+                          }
+                      }
+                  }
+              }
+          });
+          
+         
+          
+
+          
+          $j("#jstree").bind("select_node.jstree", function (event, data) {
+      		var selectedNode= $j("#jstree").jstree(true).get_selected();
+      		 window.open("/" + selectedNode);
+      		 
+      		
+   		 });
+
+   		 
+         
+      });
+      
+
+
+      function loadNodes(tree, node, cb, currentId,topElement,nodesList) { 
+      	
+     	    var nodeId = node.id == "#" ? "" : node.id;
+            var assetId = currentId;
+          	var curParent;
+          
+          if(nodeId == ""){
+          
+       			var sfNode = new SObjectModel.sfNode();
+       		        sfNode.retrieve({ where: {Id: {eq: topElement}} }, function(err, records) {
+			              if (err) {
+			                  displayErr(err);
+			              } else {
+			              	  var nodes = [];
+			              	  
+			              	  records.forEach(function(record) {
+			              	  var selectedFlag = false;
+			              	  var openedFlag = true;
+			              	  var nodeString = String(record.get("Id"));
+	                  	   	  var nodeSubString = nodeString.substr(0, 15);
+	                  	   	  var description = String(record.get("sm1e__Description__c"));
+	                  	   	  var hierarchyDisplay = String(record.get("sm1e__Hierarchy_Display__c"));
+	                  	   	  
+	                  	   	  if(description == 'undefined' || description == null){
+	                  	   	  	description = ' ';
+	                  	   	  }else{
+	                  	   	  	description =  "," + description;
+	                  	   	  }
+	                  	   	  
+	                  	   	  if(hierarchyDisplay == 'undefined' || hierarchyDisplay == null){
+	                  	   	  	hierarchyDisplay = ' ';
+	                  	   	  }else{
+	                  	   	  	hierarchyDisplay = "," + hierarchyDisplay;
+	                  	   	  }
+	                  	   	  
+	                  	   	  if(nodeSubString == currentId){
+	                  			selectedFlag = true;
+	                  			openedFlag = false;
+	                  	    	 }
+	                  	    	  
+			                  nodes.push({ 
+			                          id: record.get("Id"),
+			                          Parent: record.get("sm1e__Parent__c"),
+			                          text: record.get("Name")  + description + hierarchyDisplay,
+			                           state : {
+										           opened: openedFlag,
+										           selected : selectedFlag
+										           
+									  },
+			                          children: true
+			                      });
+			                  });      
+			                  
+			                  cb.call(tree, nodes);  
+			               	  }
+			          });
+			           
+	      }
+          else{
+	         
+	          var sfNode = new SObjectModel.sfNode();
+	          sfNode.retrieve({ 
+	              where: {Parent: {eq: nodeId}}, 
+	            orderby: [{SortOrder: "ASC"}], 
+	              limit: 100 }, 
+	              function(err, records) {
+	              if (err) {
+	                  displayErr(err);
+	              } else {
+	                  var nodes = [];
+	                  for(i=0;i<records.length;i++){
+	                  
+	                  	var flagSelected = false;
+	                  	var flagOpened = false;
+	                  	
+	                  	var nodeString = String(records[i].get("Id"));
+	                  	var nodeSubString = nodeString.substr(0, 15);
+	                  	     
+	                  	     
+	                  	   for(j=0;j<nodesList.length;j++){
+	                  	   	
+	                  	   	if(records[i].get("Id") == nodesList[j]){
+	                  	   		//console.log("nodesList[j] ::: " + nodesList[j]);
+	                  	   		//console.log("records[i] ::: " + records[i].get("Id"));
+	                  	   		flagOpened = true;
+	                  	   	}
+	                  	   } 
+	                  	   
+	                  	   if(nodeSubString == currentId){
+	                  			flagSelected = true;
+	                  			flagOpened = false;
+	                  			
+	                  	     } 
+	                  	     
+	                  	     var description = String(records[i].get("sm1e__Description__c"));
+	                  	     var hierarchyDisplay = String(records[i].get("sm1e__Hierarchy_Display__c"));
+	                  	     
+	                  	   	 
+	                  	   	  if(description == 'undefined' || description == null){
+	                  	   	  	description = ' ';
+	                  	   	  }else{
+	                  	   	  	description =  "," + description;
+	                  	   	  }
+	                  	   	  
+	                  	   	  if(hierarchyDisplay == 'undefined' || hierarchyDisplay == null){
+	                  	   	  	hierarchyDisplay = ' ';
+	                  	   	  }else{
+	                  	   	  	hierarchyDisplay = "," + hierarchyDisplay;
+	                  	   	  }
+ 	     
+	                  	nodes.push({ 
+	                          id: records[i].get("Id"),
+	                          Parent: records[i].get("sm1e__Parent__c"),
+	                          text: records[i].get("Name")  + description  + hierarchyDisplay,
+	                          state : {
+										           opened: flagOpened,
+										           selected: flagSelected
+									  },
+	                          children: true
+	                      });
+	                      
+	                  }
+	                  cb.call(tree, nodes);
+
+	                }
+	          });
+	         
+         }
+      }
+      
+      
+      function getAllNodeIdList(currentId){
+      var testIdList = [];
+
+      	Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetTagNodeController.findAllAssetIds}', 
+                    	currentId,
+                   	 function(result, event){
+                         if (event.status) {
+                         	
+                           
+	                        result.forEach(function(record) {
+	                        	//console.log("Record :::: " + record);
+			                  testIdList.push(record);
+			                  //console.log("TestId List Inside ::: " + testIdList);
+			                  }); 
+	                    } else if (event.type === 'exception') {
+                             alert('An error occured while invoking Remote Action');
+                        } else {
+                             
+                        }
+                        
+                    }, 
+                    {buffer: false, escape: false}
+                );
+                
+               
+                return testIdList;
+      }
+	
+	function displayMsg(msg) {
+          $j("#msg").text(msg);
+      }
+      
+	function displayErr(err) {
+          displayMsg("Error: " + err);
+      }
+
+})();
+
+
+</script>
+
+
+<div id="msg"></div>
+<div id="path"></div>
+
+<div id="jstree">
+    <ul></ul>
+</div>
+
+</apex:page>

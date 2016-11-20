@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="object" type="sObject"/>
+    <aura:attribute name="selectionDestination" type="sObject"/>
+    <aura:attribute name="name" type="String" default="{!v.object.Name}"/>
+    <aura:attribute name="render" type="Boolean" default="true"/>
+    
+        <div aura:id="objectContainer" class="{!v.render ? 'ticket-object-content' : 'hideObject'}" >
+                <div aura:id="ticketObjectImage" class="ticket-object-image-container" onclick="{!c.select}">
+                    <aura:unescapedHtml value="{!v.object.Image_Source__c}"/>
+                    
+                </div>
+                
+                <div aura:id="ticketObjectName" class="ticket-object-name-container" onclick="{!c.select}">
+                    <h1>{!v.object.Name}</h1>
+                </div>
+                
+                <div aura:id="ticketObjectDescription" class="ticket-object-description-container" onclick="{!c.toggleDescriptionView}">
+                    <h1>Details...</h1>
+                    <p>{!v.object.Description__c}</p>
+                    <i>tap anywhere in details to close</i>
+                </div>
+        </div>
+</aura:component>

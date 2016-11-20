@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="source" type="url" default="{!$Resource.itIcon}"/>
+    
+    <img src="{!v.source}"/>
+	
+</aura:component>

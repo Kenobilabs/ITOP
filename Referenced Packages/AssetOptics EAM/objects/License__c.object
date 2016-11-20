@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The License object is used to track registrations, license grants, etc. and can be related to an Asset, a Contact, and/or a User.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Application_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Application Date - User Defined Date Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Application Date - User Defined Date Field</inlineHelpText>
+        <label>Application Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comments - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments - User Defined</inlineHelpText>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Cost - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Cost - User Defined</inlineHelpText>
+        <label>Cost</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License End Date / Expiry Date - User Defined Date Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License End Date / Expiry Date - User Defined Date Field</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>License_Authority__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Account</inlineHelpText>
+        <label>License Authority</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Licenses</relationshipLabel>
+        <relationshipName>Licenses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>License_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Description - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Description - User Defined</inlineHelpText>
+        <label>License Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>License_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Type Picklist - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Type Picklist - User Defined</inlineHelpText>
+        <label>License Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reference_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Reference ID - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Reference ID - User Defined</inlineHelpText>
+        <label>Reference ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Asset Tag for License Assignment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Asset Tag for License Assignment</inlineHelpText>
+        <label>Related Asset</label>
+        <referenceTo>smEquipment__c</referenceTo>
+        <relationshipLabel>Licenses</relationshipLabel>
+        <relationshipName>Licenses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Contact for License Assignment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Contact for License Assignment</inlineHelpText>
+        <label>Related Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Licenses</relationshipLabel>
+        <relationshipName>Licenses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to User Record for License Assignment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to User Record for License Assignment</inlineHelpText>
+        <label>Related User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Licenses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>License Start Date - User Defined Date Field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>License Start Date - User Defined Date Field</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>License</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LI-{000000}</displayFormat>
+        <label>License ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Licenses</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>License_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>License_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>License_Authority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reference_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>End_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Asset__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_User__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>License_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>License_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>License_Authority__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Reference_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>End_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Asset__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_User__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>License_Description__c</lookupFilterFields>
+        <lookupFilterFields>License_Type__c</lookupFilterFields>
+        <lookupFilterFields>License_Authority__c</lookupFilterFields>
+        <lookupFilterFields>Reference_ID__c</lookupFilterFields>
+        <lookupFilterFields>Start_Date__c</lookupFilterFields>
+        <lookupFilterFields>End_Date__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>License_Description__c</searchFilterFields>
+        <searchFilterFields>License_Type__c</searchFilterFields>
+        <searchFilterFields>License_Authority__c</searchFilterFields>
+        <searchFilterFields>Reference_ID__c</searchFilterFields>
+        <searchFilterFields>Start_Date__c</searchFilterFields>
+        <searchFilterFields>End_Date__c</searchFilterFields>
+        <searchFilterFields>Related_Asset__c</searchFilterFields>
+        <searchFilterFields>Related_Contact__c</searchFilterFields>
+        <searchFilterFields>Related_User__c</searchFilterFields>
+        <searchResultsAdditionalFields>License_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>License_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>License_Authority__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reference_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Asset__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_User__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

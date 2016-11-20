@@ -1,0 +1,6 @@
+({
+	configurePrimaryOptions : function(component) {
+		
+        
+	}
+})

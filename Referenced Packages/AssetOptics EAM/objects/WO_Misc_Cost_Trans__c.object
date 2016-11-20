@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Work Order Misc Cost Transactions</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Trans_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Transaction Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Transaction Amount</inlineHelpText>
+        <label>Actual Trans Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment</inlineHelpText>
+        <label>Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Misc_Cost_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Misc Cost ID</description>
+        <externalId>false</externalId>
+        <formula>PO_Misc_Cost_Trans_ID__r.PO_Misc_Cost__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Purchase Order Misc Cost ID</inlineHelpText>
+        <label>PO Misc Cost ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Misc_Cost_Trans_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Misc Cost Transaction ID - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Misc Cost Transaction ID - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</inlineHelpText>
+        <label>PO Misc Cost Trans ID</label>
+        <referenceTo>smPO_Misc_Cost_Transaction__c</referenceTo>
+        <relationshipLabel>WO Misc Cost Trans</relationshipLabel>
+        <relationshipName>WO_Misc_Cost_Trans</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order</description>
+        <externalId>false</externalId>
+        <formula>PO_Misc_Cost_Trans_ID__r.PO_Misc_Cost__r.Purchase_Order__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Purchase Order</inlineHelpText>
+        <label>Purchase Order</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Date</inlineHelpText>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WO_Misc_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Misc Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Misc Cost</inlineHelpText>
+        <label>WO Misc Cost</label>
+        <referenceTo>smWO_Misc_Cost__c</referenceTo>
+        <relationshipName>WO_Misc_Cost_Trans</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>WO Misc Cost Trans</label>
+    <nameField>
+        <displayFormat>MCT-{0000000}</displayFormat>
+        <label>WO Misc Cost Trans ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>WO Misc Cost Trans</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

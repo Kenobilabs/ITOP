@@ -1,0 +1,80 @@
+<apex:page standardController="sm1e__smWork_Order__c" showHeader="false" sidebar="false" title="Work Order Printout" standardStylesheets="true" tabStyle="sm1e__smWork_Order__c">
+    <apex:stylesheet value="{!URLFOR($Resource.sm1e__SaasMaintCSS, 'dstandard.css')}"/>    
+    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td align="right"><a href="javascript:window.print();">Print</a></td></tr>
+    </table>
+      
+      <apex:pageBlock title="{!sm1e__smWork_Order__c.Name}">
+      
+          <apex:pageBlockSection title="Overview" columns="2">          
+              <apex:outputField value="{!sm1e__smWork_Order__c.Name}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Equipment__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Description__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Equip_Description__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Status__c}"/>           
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__PM_Schedule__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__WO_Type__c}"/>
+
+          </apex:pageBlockSection>
+          
+          <apex:pageblockSection title="Detailed Comments" columns="1">
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Detailed_Comments__c}"/>
+          </apex:pageblockSection>
+          
+          <apex:pageBlockSection title="Instructions" columns="1">
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Instructions__c}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection columns="2" title="Planning & Scheduling">
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Planner__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Scheduled_Start_Date__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Resource_Assigned__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Due_Date__c}"/>
+              <apex:outputField value="{!sm1e__smWork_Order__c.sm1e__Assigned_To__c}"/>
+          </apex:pageBlockSection>
+          
+      </apex:pageBlock>
+            
+      <apex:pageBlock >
+          <apex:pageBlockTable value="{!sm1e__smWork_Order__c.Work_Order_Tasks__r}" var="Task">
+              <apex:column value="{!Task.Name}"/>
+              <apex:column value="{!Task.sm1e__Planned_Hours__c}"/>
+              <apex:column value="{!Task.sm1e__Resource_Assigned__c}"/>
+              <apex:column value="{!Task.sm1e__Assignment__c}"/>
+              <apex:column value="{!Task.sm1e__Schedule_Date__c}"/>
+              <apex:column value="{!Task.sm1e__Comments__c}"/>
+          </apex:pageBlockTable>
+      </apex:pageBlock>
+      
+      <apex:pageBlock >
+          <apex:pageBlockTable value="{!sm1e__smWork_Order__c.Work_Order_Parts__r}" var="Part">
+              <apex:column value="{!Part.Name}"/>
+              <apex:column value="{!Part.sm1e__Part__c}"/>
+              <apex:column value="{!Part.sm1e__Part_Description__c}"/>
+              <apex:column value="{!Part.sm1e__Planned_Qty__c}"/>
+              <apex:column value="{!Part.sm1e__Issued_Qty__c}"/>
+              <apex:column value="{!Part.sm1e__Open_Commit_Qty__c}"/>
+              <apex:column value="{!Part.sm1e__Storeroom__c}"/>
+              <apex:column value="{!Part.sm1e__Bin_Location__c}"/>
+              <apex:column value="{!Part.sm1e__On_Hand_Qty__c}"/>
+          </apex:pageBlockTable>      
+      </apex:pageBlock>
+      
+      <apex:pageBlock >
+          <apex:pageblockTable value="{!sm1e__smWork_Order__c.Misc_WO_Costs__r}" var="Misc">
+              <apex:column value="{!Misc.Name}"/>
+              <apex:column value="{!Misc.sm1e__Description__c}"/>
+              <apex:column value="{!Misc.sm1e__Vendor__c}"/>
+              <apex:column value="{!Misc.sm1e__Planned_Misc_Cost_Amount__c}"/>
+              <apex:column value="{!Misc.sm1e__Actual_Misc_Cost_Amount__c}"/>
+          </apex:pageblockTable>
+      </apex:pageBlock>
+      <br>
+      </br>
+      <br>
+      Work Order Completed by:__________________________________   Completion Date:___________________
+      </br>
+      <p>Completion Comments:</p>  
+  
+</apex:page>

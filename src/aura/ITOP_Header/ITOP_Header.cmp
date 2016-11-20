@@ -1,0 +1,8 @@
+<aura:component >
+    
+    <div >
+        <c:ITOP_image />
+        <c:ITOP_Header_Link text="Link One"/>
+    </div>  
+
+</aura:component>

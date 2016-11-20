@@ -1,0 +1,14 @@
+.THIS {
+}
+.THIS{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image:url("https://gso--interndev--c.cs86.visual.force.com/resource/1468925165000/woodBackground");
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden;
+}

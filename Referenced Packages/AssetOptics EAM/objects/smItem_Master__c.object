@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>OBSOLETE - Enterprise Item Master.  This object is no longer in use beginning with Ver 2.6.  The functionality has been replaced with the standard Product Object.  A user must have an Orders Permission License or a full Salesforce license to be granted access to the Product object.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Item Master Description - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Item Master Description - User Defined</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Item Master Number - Automatically Generated</description>
+        <displayFormat>{000000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Item Master Number - Automatically Generated</inlineHelpText>
+        <label>Item Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Item_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Item Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Item Master Manufacturer - Lookup from Account where Manufacturer = True</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Item Master Manufacturer - Lookup from Account where Manufacturer = True</inlineHelpText>
+        <label>Manufacturer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smManufacturer__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Select an Account to specify as the Item Master Manufacturer</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Item Master</relationshipLabel>
+        <relationshipName>Item_Master</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mfg_Part__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manufacturer Part Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manufacturer Part Number</inlineHelpText>
+        <label>Mfg Part #</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nameplate_Data__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Nameplate Data field allows you to enter up to 255 characters of information about the part on separate lines.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Nameplate Data field allows you to enter up to 255 characters of information about the part on separate lines.</inlineHelpText>
+        <label>Nameplate Data</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Item Master</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Item Master ID</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Item Master</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Manufacturer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Mfg_Part__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Nameplate_Data__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Manufacturer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Mfg_Part__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Nameplate_Data__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Description__c</lookupFilterFields>
+        <lookupFilterFields>Item_Num__c</lookupFilterFields>
+        <lookupFilterFields>Manufacturer__c</lookupFilterFields>
+        <lookupFilterFields>Mfg_Part__c</lookupFilterFields>
+        <lookupFilterFields>Nameplate_Data__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Manufacturer__c</searchFilterFields>
+        <searchFilterFields>Mfg_Part__c</searchFilterFields>
+        <searchFilterFields>Nameplate_Data__c</searchFilterFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Manufacturer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Mfg_Part__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Nameplate_Data__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

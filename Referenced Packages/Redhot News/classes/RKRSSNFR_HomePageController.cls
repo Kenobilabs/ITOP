@@ -1,0 +1,16 @@
+/*
+This file is generated and isn't the actual source code for this
+managed global class.
+This read-only file shows the class's global constructors,
+methods, variables, and properties.
+To enable code to compile, all methods return null.
+*/
+global class RKRSSNFR_HomePageController extends Rknews.RKRSSNFR_HomePageNewsBaseController {
+    global RKRSSNFR_HomePageController() {
+
+    }
+    @RemoteAction
+    global static Boolean processNewsFeedJSON(String recordId, String url, String jsonString) {
+        return null;
+    }
+}

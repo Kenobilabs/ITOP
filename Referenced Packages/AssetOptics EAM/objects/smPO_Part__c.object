@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Purchase Order Parts Lines</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Bin_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Primary Bin Location</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Primary_Bin_Location__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Primary Bin Location</inlineHelpText>
+        <label>Primary Bin Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PO Part Line Comments (up to 255 characters on each line)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Part Line Comments (up to 255 characters on each line)</inlineHelpText>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Part Description</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Part Description</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extended_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Part Line Extended Amount = Qty * Unit Cost</description>
+        <externalId>false</externalId>
+        <formula>Order_Qty__c *  Unit_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Purchase Order Part Line Extended Amount = Qty * Unit Cost</inlineHelpText>
+        <label>Extended Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Last_Receipt_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Receipt Date represents the last date when a PO Part Transaction with a Receipt type was performed against this PO Part Line.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Receipt Date represents the last date when a PO Part Transaction with a Receipt type was performed against this PO Part Line.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Last Receipt Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Open_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Amount = Open Qty * Unit Cost</description>
+        <externalId>false</externalId>
+        <formula>Open_Qty__c  *  Unit_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Open Amount = Open Qty * Unit Cost</inlineHelpText>
+        <label>Open Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Open_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Open Qty = Order Qty - Received Qty</description>
+        <externalId>false</externalId>
+        <formula>IF( Received_Qty__c  &gt; Order_Qty__c, 0,  ( Order_Qty__c - Received_Qty__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Open Qty = Order Qty - Received Qty</inlineHelpText>
+        <label>Open Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Part Line Order Qty.  Measured in the Purchase UOM.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Part Line Order Qty.  Measured in the Purchase UOM.</inlineHelpText>
+        <label>Order Qty</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Purchase Order Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Purchase_Order__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Purchase Order Status</inlineHelpText>
+        <label>PO Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Part__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Part ID from Part Master</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Part ID from Part Master</inlineHelpText>
+        <label>Part</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>smPart__c.Status__c</field>
+                <operation>equals</operation>
+                <value>Active</value>
+            </filterItems>
+            <infoMessage>Select an &quot;Active&quot; status Part</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>smPart__c</referenceTo>
+        <relationshipLabel>PO Parts</relationshipLabel>
+        <relationshipName>PO_Parts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PurchaseOrderStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula field represents the status of the Purchase Order. It is being added to avoid the SOQL in the trigger AddPartTransactionForAdditionalPOPart.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Purchase_Order__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula field represents the status of the Purchase Order.</inlineHelpText>
+        <label>PurchaseOrderStatus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Purchase Order ID</description>
+        <externalId>false</externalId>
+        <formula>Purchase_Order__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Purchase Order ID</inlineHelpText>
+        <label>Purchase Order ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order</inlineHelpText>
+        <label>Purchase Order</label>
+        <referenceTo>smPurchase_Order__c</referenceTo>
+        <relationshipLabel>PO Parts</relationshipLabel>
+        <relationshipName>PO_Parts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Purchase_Pack_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to the Purchase Pack Qty</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Reorder_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to the Purchase Pack Qty</inlineHelpText>
+        <label>Purchase Pack Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Purchase UOM</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Part__r.Purchase_UOM__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Purchase UOM</inlineHelpText>
+        <label>Purchase UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Receive_to_Work_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check this box to Receive Parts to Work Order (Receives to Inventory and then Automatically Issues to the Work Order using the specified Part Valuation Method)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box to Receive Parts to Work Order (Receives to Inventory and then Automatically Issues to the Work Order using the specified Part Valuation Method)</inlineHelpText>
+        <label>Receive to Work Order</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Received_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Received Amount = Summary of PO Part Transaction Received Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Received Amount = Summary of PO Part Transaction Received Amount</inlineHelpText>
+        <label>Received Amount</label>
+        <summarizedField>smPO_Part_Transaction__c.Transaction_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>smPO_Part_Transaction__c.Transaction_Type__c</field>
+            <operation>equals</operation>
+            <value>Receipt</value>
+        </summaryFilterItems>
+        <summaryForeignKey>smPO_Part_Transaction__c.PO_Part__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Received_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Received Qty measured in Purchase UOM</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Received Qty measured in Purchase UOM</inlineHelpText>
+        <label>Received Qty</label>
+        <summarizedField>smPO_Part_Transaction__c.Transaction_Qty__c</summarizedField>
+        <summaryFilterItems>
+            <field>smPO_Part_Transaction__c.Transaction_Type__c</field>
+            <operation>equals</operation>
+            <value>Receipt</value>
+        </summaryFilterItems>
+        <summaryForeignKey>smPO_Part_Transaction__c.PO_Part__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Required_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Parts Line Required Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Parts Line Required Date</inlineHelpText>
+        <label>Required Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Stock_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Stock UOM</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Part__r.Stock_UOM__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Stock UOM</inlineHelpText>
+        <label>Stock UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storeroom__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storeroom ID</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Storeroom__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Storeroom ID</inlineHelpText>
+        <label>Storeroom</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>PO Part Line Unit Cost based on Purchase UOM</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Part Line Unit Cost based on Purchase UOM</inlineHelpText>
+        <label>Unit Cost</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Part__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE( Purchase_Order__r.Vendor__c ,  Part__r.Vendor_Preferred__c ,  Part__r.Vendor_Part__c,    Part__r.Vendor_Secondary__c  ,   Part__r.Vendor_Secondary_Part__c ,  Part__r.Vendor_Tertiary__c   ,    Part__r.Vendor_Tertiary_Part__c  , Null )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vendor Part #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Receive and Automatically Issue to this Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Receive and Automatically Issue to this Work Order</inlineHelpText>
+        <label>Work Order</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Purchase Parts cannot be linked to Model Work Orders.</errorMessage>
+            <filterItems>
+                <field>smWork_Order__c.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>Model Work Order</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>PO Parts</relationshipLabel>
+        <relationshipName>PO_Parts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>PO Part</label>
+    <nameField>
+        <displayFormat>PPL-{0000000}</displayFormat>
+        <label>PO Part</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>PO Parts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Order_Qty_Non_Negative</fullName>
+        <active>true</active>
+        <description>Ensures the Order Qty is a Non Negative Value</description>
+        <errorConditionFormula>Order_Qty__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Order_Qty__c</errorDisplayField>
+        <errorMessage>The Order Qty must be Greater Than or Equal to Zero (0)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_Qty_Update_Restrictions</fullName>
+        <active>true</active>
+        <description>Ensures that the user cannot update the Order Qty to a value that is less than the Received Qty once the Purchase Order is in Released or In Progress status</description>
+        <errorConditionFormula>( ISPICKVAL( Purchase_Order__r.Status__c , &quot;Released&quot;) || ISPICKVAL( Purchase_Order__r.Status__c , &quot;In Progress&quot;) ) &amp;&amp; ISCHANGED( Order_Qty__c )  &amp;&amp;   Order_Qty__c  &lt;  Received_Qty__c</errorConditionFormula>
+        <errorDisplayField>Order_Qty__c</errorDisplayField>
+        <errorMessage>You cannot update the Order Qty field to a value that is less than the Received Qty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Part_Part_ID_Change</fullName>
+        <active>true</active>
+        <description>Ensures that Part ID on the PO Part record cannot be changed.</description>
+        <errorConditionFormula>ISCHANGED( Part__c )</errorConditionFormula>
+        <errorDisplayField>Part__c</errorDisplayField>
+        <errorMessage>The Part ID on a PO Part line cannot be changed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Part_Unit_Cost_Not_Equal_to_Null</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Part Unit Cost is Not a Null Value</description>
+        <errorConditionFormula>ISNULL( Unit_Cost__c )</errorConditionFormula>
+        <errorDisplayField>Unit_Cost__c</errorDisplayField>
+        <errorMessage>The Unit Cost on a PO Part line item cannot be a Null Value.  Enter a value of zero (0.00) and the Purchase Price will be updated from the Part record upon save.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Status_for_New_PO_Parts</fullName>
+        <active>true</active>
+        <description>Ensures that the Purchase Order Status IS NOT equal to Canceled, Completed, or Closed before a new PO Part line is added</description>
+        <errorConditionFormula>ISNEW() &amp;&amp; (ISPICKVAL( Purchase_Order__r.Status__c , &quot;Canceled&quot;) ||  ISPICKVAL( Purchase_Order__r.Status__c , &quot;Completed&quot;) ||  ISPICKVAL( Purchase_Order__r.Status__c , &quot;Closed&quot;))</errorConditionFormula>
+        <errorMessage>You cannot add new Parts to the Purchase Order if the Status is Canceled, Completed, or Closed.  Please create a separate Purchase Order.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Status_for_New_PO_Parts_Released</fullName>
+        <active>false</active>
+        <description>Ensures that the Purchase Order Status IS NOT equal to Released or In Progress before a new PO Part line is added</description>
+        <errorConditionFormula>ISNEW() &amp;&amp; (ISPICKVAL( Purchase_Order__r.Status__c , &quot;Released&quot;) ||  ISPICKVAL( Purchase_Order__r.Status__c , &quot;In Progress&quot;))</errorConditionFormula>
+        <errorMessage>You cannot add new Parts to the Purchase Order if the Status is Released or In Progress.  Please create a separate Purchase Order.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Receive_to_Work_Order</fullName>
+        <active>true</active>
+        <description>Ensures that there is a Work Order specified if Receive to Work Order is Checked</description>
+        <errorConditionFormula>IF( Receive_to_Work_Order__c = True &amp;&amp;  ISBLANK( Work_Order__c ) , True, False)</errorConditionFormula>
+        <errorDisplayField>Receive_to_Work_Order__c</errorDisplayField>
+        <errorMessage>A Work Order must be specified if you select Receive to Work Order</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Move</fullName>
+        <availability>online</availability>
+        <description>This button will move the PO Part Line from one Purchase Order to another.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Transfer PO Parts</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Get the List of PartIds selected by the User.
+var records= {!GETRECORDIDS($ObjectType.smPO_Part__c)};
+
+var len=records.length;
+var showAlert = true;
+
+if (len!= 0){
+
+ var response=sforce.apex.execute(&quot;sm1e.MovePOPartLine&quot;,&quot;movePOPartLine&quot;,{poPartIdList:records }); 
+   
+}else{
+              window.alert(&quot;Atleast one record should be selected to move PO Part to another Purchase Order.&quot;);
+              showAlert = false;
+     }
+
+if(response == &quot;true&quot;){ 
+ 
+  window.alert(&quot;PO Part Line moved successfully&quot;); 
+  parent.window.location.reload(); 
+
+}else{
+   if(showAlert)
+        window.alert(response);
+     
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Receive_Open_Qty</fullName>
+        <availability>online</availability>
+        <description>This command button will create the po part transactions of type &apos;Receipt&apos;</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Receive Open Qty</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Get the List of PartIds selected by the User.
+var records= {!GETRECORDIDS($ObjectType.smPO_Part__c)};
+
+var len=records.length;
+var showAlert = true;
+
+if (len!= 0){ 
+
+var response=sforce.apex.execute(&quot;sm1e.IssueOpenQuantityCommandButton&quot;,&quot;issueOpenQuantity&quot;,{poPartIdList:records }); 
+
+}else{ 
+window.alert(&quot;At least one record should be selected to issue quantity&quot;); 
+showAlert = false; 
+}
+
+if(response == &quot;true&quot;){ 
+
+window.alert(&quot;PO Part(s) received successfully&quot;); 
+parent.window.location.reload(); 
+
+}else{ 
+ if(showAlert) 
+   window.alert(response); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Receive_Parts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Receive Parts</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&apos;/soap/ajax/27.0/connection.js&apos;)} 
+{!requireScript(&apos;/soap/ajax/27.0/apex.js&apos;)} 
+
+var poPartId = &quot;{!smPO_Part__c.Id}&quot;;
+var poPart = sforce.connection.retrieve(&quot;sm1e__Part__c&quot;, &quot;sm1e__smPO_Part__c&quot;, [poPartId])[0];
+
+var part = sforce.connection.retrieve(&quot;Id,sm1e__Serialized__c&quot;, &quot;sm1e__smPart__c&quot;, [poPart.sm1e__Part__c])[0];
+
+var url;
+if(part.sm1e__Serialized__c == &quot;Yes&quot;){
+ url = window.location.protocol + &apos;//&apos; +   window.location.host+&apos;/apex/TestPOPart?id={!smPO_Part__c.Id}&apos;; 
+}else{
+   url = window.location.protocol + &apos;//&apos; +   window.location.host+&apos;/apex/CreatePOPartTransaction?id={!smPO_Part__c.Id}&apos;; 
+}
+var windowRef; 
+var intervalId = 0; 
+
+
+
+setTimeout(checkToOpenWindow, 2*1000); 
+
+function checkToOpenWindow(){ 
+
+windowRef = window.open(url,&apos;_self&apos;,&apos;location=1,status=1,scrollbars=1, resizable=1, height=650px, width=1000px, titlebar=yes&apos;,true); 
+
+checkWindowStatus(); 
+
+} 
+
+
+function checkWindowStatus() 
+{ 
+intervalId = setInterval(checkAndCloseWin, 5*1000); 
+} 
+
+function checkAndCloseWin() 
+{ 
+  if(windowRef.closed){ 
+    clearInterval(intervalId); 
+    window.parent.location.href = window.parent.location.href; 
+  } 
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>smEquipment__c.Description__c</field>
+    </columns>
+    <columns>
+        <field>smEquipment__c.AssetRecordType__c</field>
+    </columns>
+    <columns>
+        <field>smEquipment__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>smEquipment__c.Parent__c</field>
+    </columns>
+    <columns>
+        <field>smEquipment__c.Parent_Description__c</field>
+    </columns>
+    <description>Assets In Service by Dept</description>
+    <filter>
+        <criteriaItems>
+            <column>smEquipment__c.Status__c</column>
+            <operator>equals</operator>
+            <value>In Service</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>smEquipment__c.Dept__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Assets In Service by Dept</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$smEquipment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>smEquipment__c.In_Service_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

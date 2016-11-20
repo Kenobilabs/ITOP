@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>The PM Schedule Batch Parameters contain the user definable parameters used in the batch PM Scheduling process</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Fixed_Days__c</fullName>
+        <defaultValue>14</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Fixed Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Fixed Interval PM Schedule Work Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fixed Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Fixed Interval PM Schedule Work Orders</inlineHelpText>
+        <label>Fixed Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Floating_Days__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Floating Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Floating Interval PM Schedule Work Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Floating Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Floating Interval PM Schedule Work Orders</inlineHelpText>
+        <label>Floating Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Meter_Percent__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Initial Meter Percent is used to countdown and release the first work order on a meter based PM schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Initial Meter Percent is used to countdown and release the first work order on a meter based PM schedule</inlineHelpText>
+        <label>Initial Meter Percent</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Meter_Days__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Meter Based PM Schedule Work Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Days is a user defined parameter that specifies how many days into the future, from the current date, does the system generate and release Meter Based PM Schedule Work Orders</inlineHelpText>
+        <label>Meter Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Percent__c</fullName>
+        <defaultValue>90</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Percent is a user defined parameter that specifies the minimum percentage value that the Meter Interval Percent Complete value must reach on a Meter Based PM Schedule before that PM Schedule is selected in the batch PM Schedule release process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Percent is a user defined parameter that specifies the minimum percentage value that the Meter Interval Percent Complete value must reach on a Meter Based PM Schedule before that PM Schedule is selected in the batch PM Schedule release process</inlineHelpText>
+        <label>Meter Percent</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Release_Window_Default__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Release Window Default is the default populated on the PM Schedule Release Window field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Release Window Default is the default populated on the PM Schedule Release Window field.</inlineHelpText>
+        <label>Release Window Default</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>PM Schedule Batch Parameters</label>
+    <visibility>Public</visibility>
+</CustomObject>

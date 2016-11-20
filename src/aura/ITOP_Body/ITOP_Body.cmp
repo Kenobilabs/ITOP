@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	
+    
+    <div class="divider"></div>
+    <div class="section">
+        <c:ITOP_Selection_Box_Collection />
+    </div>
+    
+    
+    
+</aura:component>

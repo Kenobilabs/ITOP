@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Meters</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Asset_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Asset ID to which the Logical Meter is associated</description>
+        <externalId>false</externalId>
+        <formula>Maintenance_Asset__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Asset ID to which the Logical Meter is associated</inlineHelpText>
+        <label>Asset Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CMVAR__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Cumulative Value on the Meter at the time of the last meter replacement.  System populated via worklfow.  Field should be set to Read Only for all User Profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cumulative Value on the Meter at the time of the last meter replacement.  System populated via worklfow.  Field should be set to Read Only for all User Profiles.</inlineHelpText>
+        <label>Cumulative Meter Value at Replacement</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Counter_Rollup_Summary__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Rollup Summary for Display on a Counter type Meter (i.e. Production Counters, Fuel Consumption)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rollup Summary for Display on a Counter type Meter (i.e. Production Counters, Fuel Consumption)</inlineHelpText>
+        <label>Counter Rollup Summary</label>
+        <summarizedField>smMeter_Reading__c.Reading_Value_Num__c</summarizedField>
+        <summaryForeignKey>smMeter_Reading__c.Meter_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Cumulative_Reading_Num__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Cumulative Reading Value (Numerical).  System populated via workflow.  Should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Cumulative Reading Value (Numerical).  System populated via workflow.  Should be set to read only for all user profiles.</inlineHelpText>
+        <label>Cumulative Reading</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cumulative_Reading_log__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <formula>Parent_Meter__r.Cumulative_Reading_Num__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Description.  User defined.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Description.  User defined.</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unique External Meter ID used to support importing meter readings from external systems.  External ID can be used to access record via API.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique External Meter ID used to support importing meter readings from external systems.  External ID can be used to access record via API.</inlineHelpText>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ID_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter ID &amp; Description Concatenated for ease of Grouping on Reports</description>
+        <externalId>false</externalId>
+        <formula>Name &amp; &quot; &quot; &amp;  Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Meter ID &amp; Description Concatenated for ease of Grouping on Reports</inlineHelpText>
+        <label>ID &amp; Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Install_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Installation Date.  User defined.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Installation Date.  User defined.</inlineHelpText>
+        <label>Install Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Reading_Date__c</fullName>
+        <defaultValue>Now()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Last Meter Reading Date/Time.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Meter Reading Date/Time.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Last Reading Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Reading_Date_log__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <formula>Parent_Meter__r.Last_Reading_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Reading_Value__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Last Reading - Numerical.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Reading - Numerical.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Last Reading Value</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Reading_Value_log__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <formula>Parent_Meter__r.Last_Reading_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maintenance_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Related Asset Tag.  User specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Asset Tag.  User specified.</inlineHelpText>
+        <label>Asset Tag</label>
+        <referenceTo>smEquipment__c</referenceTo>
+        <relationshipLabel>Meters</relationshipLabel>
+        <relationshipName>Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Meter Manufacturer.  Lookup for Accounts where Manufacturer = True</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Manufacturer.  Lookup for Accounts where Manufacturer = True</inlineHelpText>
+        <label>Manufacturer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smManufacturer__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Meters</relationshipLabel>
+        <relationshipName>Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Model__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Model Number for Meter</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Model Number for Meter</inlineHelpText>
+        <label>Model</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <formula>Parent_Meter__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Meter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>smMeter__c.Type__c</field>
+                <operation>equals</operation>
+                <value>Continuous</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>smMeter__c</referenceTo>
+        <relationshipLabel>Child Meters &amp; Related Assets</relationshipLabel>
+        <relationshipName>Child_Meters</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revision__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Revision.  User specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Revision.  User specified.</inlineHelpText>
+        <label>Revision</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Serial__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Serial Number for Meter.  User specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Serial Number for Meter.  User specified.</inlineHelpText>
+        <label>Serial #</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Type - Only &quot;Continuous&quot; can be used on PM Schedules - DO NOT EDIT VALUES IN THIS LIST.  Unexpected Results will occur.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Type - Only &quot;Continuous&quot; can be used on PM Schedules - DO NOT EDIT VALUES IN THIS LIST.  Unexpected Results will occur.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Continuous</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gauge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attribute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Logical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Counter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Unit of Measure - User Specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Unit of Measure - User Specified.</inlineHelpText>
+        <label>UOM</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Hours</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gallons</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cycles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Degrees F</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PSI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Color</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Litres</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UOM_log__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Obsolete as of Ver 1.7</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Parent_Meter__r.UOM__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Obsolete as of Ver 1.7</inlineHelpText>
+        <label>Obsolete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Meter</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Type__c</columns>
+        <columns>Parent_Meter__c</columns>
+        <columns>Parent_Description__c</columns>
+        <columns>UOM__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>M-{000000}</displayFormat>
+        <label>Meter ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Meters</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Attribute</fullName>
+        <active>false</active>
+        <description>Attribute</description>
+        <label>Attribute</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Attribute</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UOM__c</picklist>
+            <values>
+                <fullName>Color</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Continuous</fullName>
+        <active>true</active>
+        <description>Continuous Meter (Odometer, Hour Meters, etc).  Meter readings continuously increase in value</description>
+        <label>Continuous</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Continuous</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UOM__c</picklist>
+            <values>
+                <fullName>Cycles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gallons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hours</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Miles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Counter</fullName>
+        <active>true</active>
+        <description>Counter Meter Type resets to zero each time it is read (Production Unit Counter, Fuel Consumption, etc)</description>
+        <label>Counter</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Counter</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UOM__c</picklist>
+            <values>
+                <fullName>Cycles</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Gallons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Litres</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Gauge</fullName>
+        <active>false</active>
+        <description>Gauge</description>
+        <label>Gauge</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Gauge</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UOM__c</picklist>
+            <values>
+                <fullName>Gallons</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Litres</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Logical</fullName>
+        <active>false</active>
+        <description>Logical</description>
+        <label>Logical</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Logical</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UOM__c</picklist>
+            <values>
+                <fullName>Cycles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gallons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hours</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Miles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Maintenance_Asset__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Asset_Description__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Parent_Meter__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Parent_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Maintenance_Asset__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Asset_Description__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Description__c</lookupFilterFields>
+        <lookupFilterFields>Parent_Meter__c</lookupFilterFields>
+        <lookupFilterFields>Parent_Description__c</lookupFilterFields>
+        <lookupFilterFields>Maintenance_Asset__c</lookupFilterFields>
+        <lookupFilterFields>Asset_Description__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Parent_Meter__c</searchFilterFields>
+        <searchFilterFields>Parent_Description__c</searchFilterFields>
+        <searchFilterFields>Maintenance_Asset__c</searchFilterFields>
+        <searchFilterFields>Asset_Description__c</searchFilterFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UOM__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Maintenance_Asset__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Asset_Description__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Asset_Required_on_Logical</fullName>
+        <active>false</active>
+        <description>Obsolete as of Ver 1.7</description>
+        <errorConditionFormula>IF(  ISPICKVAL ( Type__c , &quot;Logical&quot;),   ISBLANK(  Maintenance_Asset__c  )  , false)</errorConditionFormula>
+        <errorDisplayField>Maintenance_Asset__c</errorDisplayField>
+        <errorMessage>An Asset ID must be Provided</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Parent_Required_on_Logical</fullName>
+        <active>false</active>
+        <description>Obsolete as of Ver 1.7</description>
+        <errorConditionFormula>IF(  ISPICKVAL ( Type__c , &quot;Logical&quot;),   ISBLANK( Parent_Meter__c )  , false)</errorConditionFormula>
+        <errorDisplayField>Parent_Meter__c</errorDisplayField>
+        <errorMessage>A Parent Meter ID must be provided</errorMessage>
+    </validationRules>
+</CustomObject>

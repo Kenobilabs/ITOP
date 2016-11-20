@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Work Order Miscellaneous Costs</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Misc_Cost_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Actual Misc Cost Amount to be charged to the Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Misc Cost Amount in base currency to be charged to the Work Order</inlineHelpText>
+        <label>Actual Misc Cost Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Miscellaneous Cost Type Picklist - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Miscellaneous Cost Type Picklist - User Defined</inlineHelpText>
+        <label>Cost Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Type 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Type 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Miscellaneous Work Order Cost Amount Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Miscellaneous Work Order Cost Amount Description</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planned_Misc_Cost_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Planned Misc Cost Amount is a used to identify expected misc costs by Vendor during the planning process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Planned Misc Cost Amount is a used to identify expected misc costs by Vendor during the planning process.</inlineHelpText>
+        <label>Planned Misc Cost Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Vendor.  Lookup to Accounts where Vendor = True</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Vendor.  Lookup to Accounts where Vendor = True</inlineHelpText>
+        <label>Vendor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smVendor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Lookup to Accounts where Vendor = True.  Clear filter to see select any other type of Account</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Work Order Misc Costs</relationshipLabel>
+        <relationshipName>WO_Misc_Costs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Status</description>
+        <externalId>false</externalId>
+        <formula>text(Work_Order__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Work Order Status</inlineHelpText>
+        <label>Work Order Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order</inlineHelpText>
+        <label>Work Order</label>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>Work Order Misc Costs</relationshipLabel>
+        <relationshipName>Misc_WO_Costs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>WO Misc Cost</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Work_Order__c</columns>
+        <columns>Work_Order_Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Planned_Misc_Cost_Amount__c</columns>
+        <columns>Actual_Misc_Cost_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MC-{0000000}</displayFormat>
+        <label>WO Misc Cost ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>WO Misc Costs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Work_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Work_Order_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actual_Misc_Cost_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vendor__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Order_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Actual_Misc_Cost_Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Vendor__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Work_Order__c</searchFilterFields>
+        <searchFilterFields>Work_Order_Status__c</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Actual_Misc_Cost_Amount__c</searchFilterFields>
+        <searchFilterFields>Vendor__c</searchFilterFields>
+        <searchResultsAdditionalFields>Work_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Order_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Actual_Misc_Cost_Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vendor__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>smWO_Actual_Misc_Cost_Amt_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Actual Misc Cost Amount is a Non Negative Value</description>
+        <errorConditionFormula>Actual_Misc_Cost_Amount__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Actual_Misc_Cost_Amount__c</errorDisplayField>
+        <errorMessage>The Actual Miscellaneous Cost Amount must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWO_Planned_Misc_Cost_Amt_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Planned Work Order Miscellaneous Cost Amount is a Non Negative Amount</description>
+        <errorConditionFormula>Planned_Misc_Cost_Amount__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Planned_Misc_Cost_Amount__c</errorDisplayField>
+        <errorMessage>The Planned Miscellaneous Cost Amount must be greater than or equal to zero</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>WO_Task</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>WO_Task</fullName>
+        <fields>Name</fields>
+        <fields>Craft__c</fields>
+        <fields>Planned_Hours__c</fields>
+        <fields>Percent_Complete__c</fields>
+        <label>WO Task</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>WO Task defines the type and qty of a Trade needed to perform a work order.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_DT_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Doubletime Labor Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Doubletime Labor Cost</inlineHelpText>
+        <label>Actual DT Labor Cost</label>
+        <summarizedField>smWO_Task_Labor__c.Actual_Labor_Cost_Doubletime__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_DT_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Doubletime Labor Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Doubletime Labor Hours</inlineHelpText>
+        <label>Actual DT Labor Hours</label>
+        <summarizedField>smWO_Task_Labor__c.Doubletime_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_OT_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Overtime Labor Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Overtime Labor Cost</inlineHelpText>
+        <label>Actual OT Labor Cost</label>
+        <summarizedField>smWO_Task_Labor__c.Actual_Labor_Cost_Overtime__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_OT_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Overtime Labor Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Overtime Labor Hours</inlineHelpText>
+        <label>Actual OT Labor Hours</label>
+        <summarizedField>smWO_Task_Labor__c.Overtime_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Reg_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Regular Labor Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Regular Labor Cost</inlineHelpText>
+        <label>Actual Reg Labor Cost</label>
+        <summarizedField>smWO_Task_Labor__c.Actual_Labor_Cost_Regular__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Reg_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Regular Labor Hours summarized from Work Order Task Labor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Regular Labor Hours summarized from Work Order Task Labor</inlineHelpText>
+        <label>Actual Reg Labor Hours</label>
+        <summarizedField>smWO_Task_Labor__c.Regular_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task_Labor__c.WO_Task__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the Accounts Object with optional filter of Vendor = True</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Accounts Object with optional filter of Vendor = True</inlineHelpText>
+        <label>Assigned Vendor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smVendor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Account list filtered for Vendor = True</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>WO Tasks</relationshipLabel>
+        <relationshipName>WO_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assignment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Work Order Task Assignee - Lookup to User Object.  Use this assignment field when the work order resources are system users (have User ID&apos;s).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task Assignee - Lookup to User Object.  Use this assignment field when the work order resources are system users (have User ID&apos;s).</inlineHelpText>
+        <label>Assigned User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Work_Order_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Task Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task Description</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Craft__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Planned Craft for the Work Order Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned Craft for the Work Order Task</inlineHelpText>
+        <label>Craft</label>
+        <referenceTo>smCraft__c</referenceTo>
+        <relationshipLabel>WO Tasks</relationshipLabel>
+        <relationshipName>WO_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Est_Hrs_at_Completion__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Estimated Hours at Completion is based on the Total Actual Hours + Estimated Hrs to Completion</description>
+        <externalId>false</externalId>
+        <formula>Total_Actual_Labor_Hours__c + Est_Hrs_to_Complete__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Estimated Hours at Completion is based on the Total Actual Hours + Estimated Hrs to Completion</inlineHelpText>
+        <label>Est Hrs at Completion</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Est_Hrs_to_Complete__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Estimated Hours to Complete the Work Order Task</description>
+        <externalId>false</externalId>
+        <formula>Planned_Hours__c * ( 1 - Percent_Complete__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Estimated Hours to Complete the Work Order Task (derived from the remaining % and the planned hours)</inlineHelpText>
+        <label>Est Hrs to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Task Detailed Instructions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task Detailed Instructions</inlineHelpText>
+        <label>Instructions</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>People_Required__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total # of persons of this craft type for the this task that is required to safely and effectively complete the job.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total # of persons of this craft type for the this task that is required to safely and effectively complete the job.  Does not affect the Planned Hours or Remaining Hours.</inlineHelpText>
+        <label># People Required</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent_Complete__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Percentage Completion for this specific WO Task.  Used to calculate estimated hours to complete for each task. - User Specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percentage Completion for this specific WO Task.  Used to calculate estimated hours to complete for each task. - User Specified.</inlineHelpText>
+        <label>Percent Complete</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Hours__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Planned Labor Hours for this Work Order Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Planned Labor Hours for this Work Order Task</inlineHelpText>
+        <label>Planned Hrs</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planned_Hrs_Remaining__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Planned Hours - Total Actual Hours</description>
+        <externalId>false</externalId>
+        <formula>IF( Planned_Hours__c  &gt;  Total_Actual_Labor_Hours__c , Planned_Hours__c  -  Total_Actual_Labor_Hours__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Planned Hours - Total Actual Hours</inlineHelpText>
+        <label>Planned Hrs Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planned_Labor_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Planned Labor Cost = Planned Hours * Craft Labor Rate.  System populated and updated each time the Planned Hrs or Craft is changed.  If a Craft is not specified, default value comes from Custom Setting.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned Labor Cost = Planned Hours * Craft Labor Rate.  If a Craft is not specified, default value comes from Custom Setting.  System populated via Workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Planned Labor Cost</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Assigned__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Resource Assigned field is a Lookup relationship to the Contact Object using a filter with &quot;Work Order Resource = True&quot;.  Use this assignee if the work order resources are NOT system users.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Resource Assigned field is a Lookup relationship to the Contact Object using a filter with &quot;Work Order Resource = True&quot;.  Use this assignee if the work order resources are NOT system users.</inlineHelpText>
+        <label>Assigned Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Work_Order_Resource__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>The selected contact must have the &quot;work order resource&quot; checkbox set to &quot;True&quot;</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>WO Tasks Assigned</relationshipLabel>
+        <relationshipName>WO_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Schedule_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Task Schedule Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task Scheduled Date</inlineHelpText>
+        <label>Schedule Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Std_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Standard Task (from Work Order Standard Task Library)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Standard Task (from Work Order Standard Task Library)</inlineHelpText>
+        <label>Std Task</label>
+        <referenceTo>WO_Std_Task__c</referenceTo>
+        <relationshipLabel>WO Tasks</relationshipLabel>
+        <relationshipName>WO_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Step__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Step - Used to Sequence the tasks</description>
+        <externalId>false</externalId>
+        <label>Step</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Task Due Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Task Due Date</inlineHelpText>
+        <label>Task Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Work Order Task Actual Labor Cost</description>
+        <externalId>false</externalId>
+        <formula>Actual_Reg_Labor_Cost__c  +  Actual_OT_Labor_Cost__c + Actual_DT_Labor_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Work Order Task Actual Labor Cost</inlineHelpText>
+        <label>Total Actual Labor Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Labor Hours</description>
+        <externalId>false</externalId>
+        <formula>Actual_Reg_Labor_Hours__c  +  Actual_OT_Labor_Hours__c +  Actual_DT_Labor_Hours__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Actual Labor Hours</inlineHelpText>
+        <label>Total Actual Labor Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WOT_User_Picklist_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Work Order Task User Picklist 1 field is a user definable field which is copied in the custom deep clone process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Work Order Task User Picklist 1 field is a user definable field which is copied in the custom deep clone process.</inlineHelpText>
+        <label>WOT User Picklist 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WOT_User_Text_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Work Order Task User Text 1 field is a user definable field which is copied in the custom deep clone process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Work Order Task User Text 1 field is a user definable field which is copied in the custom deep clone process.</inlineHelpText>
+        <label>WOT User Text 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WO_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Description</description>
+        <externalId>false</externalId>
+        <formula>Work_Order__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WO Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WO_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Due Date</description>
+        <externalId>false</externalId>
+        <formula>Work_Order__r.Due_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Work Order Due Date</inlineHelpText>
+        <label>WO Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WO_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT( Work_Order__r.Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WO Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Record_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Record Type</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Work_Order__r.Work_Order_Record_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Work Order Record Type</inlineHelpText>
+        <label>Work Order Record Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Work Order</label>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>WO Tasks</relationshipLabel>
+        <relationshipName>Work_Order_Tasks</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>WO Task</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Work_Order__c</columns>
+        <columns>WO_Status__c</columns>
+        <columns>NAME</columns>
+        <columns>Step__c</columns>
+        <columns>Assignment__c</columns>
+        <columns>Planned_Hours__c</columns>
+        <columns>Percent_Complete__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WT-{00000000}</displayFormat>
+        <label>WO Task ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>WO Tasks</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Work_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>WO_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>WO_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assignment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Planned_Hours__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Comments__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Planned_Hours__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Craft__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Work_Order__c</lookupFilterFields>
+        <lookupFilterFields>WO_Description__c</lookupFilterFields>
+        <lookupFilterFields>WO_Status__c</lookupFilterFields>
+        <lookupFilterFields>Assignment__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Work_Order__c</searchFilterFields>
+        <searchFilterFields>WO_Description__c</searchFilterFields>
+        <searchFilterFields>WO_Status__c</searchFilterFields>
+        <searchFilterFields>Assignment__c</searchFilterFields>
+        <searchFilterFields>Planned_Hours__c</searchFilterFields>
+        <searchResultsAdditionalFields>Work_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>WO_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>WO_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assignment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Planned_Hours__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Num_People_NonNegative</fullName>
+        <active>true</active>
+        <description>Esures that the Number of People identified on a Work Order Task non-negative value</description>
+        <errorConditionFormula>People_Required__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>People_Required__c</errorDisplayField>
+        <errorMessage>The # of People on a work order task must be greater than or equal to zero (0)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Plan_Hours_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Plan Hours on a Work Order Task is a non-negative value</description>
+        <errorConditionFormula>Planned_Hours__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Planned_Hours__c</errorDisplayField>
+        <errorMessage>The Plan Hrs must be greater than or equal to zero</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>smWO_TaskPercentage_Completion</fullName>
+        <active>true</active>
+        <description>Constrains the % completion to be a non-negative value between 0 and 100</description>
+        <errorConditionFormula>Percent_Complete__c &gt; 1 ||  Percent_Complete__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Percent_Complete__c</errorDisplayField>
+        <errorMessage>The Percentage Completion must be between 0 and 100</errorMessage>
+    </validationRules>
+</CustomObject>

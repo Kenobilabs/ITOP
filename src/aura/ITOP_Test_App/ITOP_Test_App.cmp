@@ -1,0 +1,160 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="ITOP_Controller">
+    <aura:attribute name="ticketDescription" type="String"/>
+    <aura:attribute name="ticketQuestion" type="String" default="What can we help you with?"/>
+    
+    <aura:attribute name="primaryOptions" type="sObject[]"/>
+    <aura:attribute name="secondaryOptions" type="sObject[]"/>
+    <aura:attribute name="deviceTypes" type="sObject[]"/>
+    <aura:attribute name="locations" type="sObject[]"/>
+    <aura:attribute name="allLocations" type="sObject[]"/>
+    <aura:attribute name="myTickets" type="sObject[]"/>
+    
+    <aura:attribute name="selectedPrimaryOption" type="sObject"/>
+    <aura:attribute name="selectedSecondaryOption" type="sObject"/>
+    <aura:attribute name="selectedDeviceType" type="sObject"/>
+    <aura:attribute name="selectedLocation" type="sObject"/>
+    
+    <aura:handler name="change" value="{!v.selectedPrimaryOption}" action="{!c.primaryChange}"/>
+    <aura:handler name="change" value="{!v.selectedSecondaryOption}" action="{!c.secondaryChange}"/>
+    <aura:handler name="change" value="{!v.selectedDeviceType}" action="{!c.typeChange}"/>
+    <aura:handler name="change" value="{!v.selectedLocation}" action="{!c.locationChange}"/>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <nav class="dark-grey top bottom-shadow nav-bar">
+        <div class="center">
+        	<img src="{!$Resource.LillyLogoRedTransparent}"/>
+        	<h1 class="nav-header">IT On-Point </h1>
+        </div>
+        <div class="create-button-container" aura:id="createButton" onclick="{!c.createTicket}">
+        	<h1>Create a Ticket</h1>
+            <img src="{!$Resource.otherTicketIcon}"/>
+        </div>
+    </nav>
+    
+    
+    
+    <div class="header">
+        <div class="image-container">
+            <img src="{!$Resource.ITOP_welcome_image}"/>
+        </div>
+        <div  class="text-container">
+            <h1>Welcome to IT On-Point!</h1>
+        </div>
+    </div>
+    
+    
+    <div class="dark-grey top-shadow body">
+        
+        <div aura:id="locations" class="content-container">
+        	<div class="content-header">
+            	<h1>IT On-Point Locations:</h1>
+                <h1 class="underlined" onclick="refreshLocations" >Refresh</h1>
+                <div class=" underlined create-button-container"  onclick="{!c.createTicket}">
+        			<h1>Create a Ticket</h1>
+            		<img src="{!$Resource.otherTicketIcon}"/>
+        		</div>
+            </div>
+            <div class="locations-content">
+                <aura:iteration items="{!v.allLocations}" var="each">
+                    <div class="location">
+                        <div class="location-header">
+                            <h1>{!each.Name}</h1>
+                            <h2>{!each.Description__c}</h2>                    
+                        </div>
+                        <div class="location-image">
+                            <aura:unescapedHtml value="{!each.Image_Source__c}"/>
+                        </div>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        
+        
+        
+   		<div aura:id="ticketBody" class="hidden-invisible">
+            <div aura:id="ticketSelections" class="content-container">
+        		<div class="content-header">
+            		<h1>{!v.ticketQuestion}</h1>
+                    <h1 class="start-over-button" onclick="{!c.cancel}" >Cancel</h1>
+                	<h1 class="start-over-button" onclick="{!c.resetTicket}">Start Over</h1>
+            	</div>
+                <div class="carousel-container">
+                    <div class="carousel" aura:id="primaryCarousel">
+                    	<aura:iteration items="{!v.primaryOptions}" var="eachPrimaryOption">
+                            <c:ITOP_Ticket_Object render="true" object="{!eachPrimaryOption}" selectionDestination="{!v.selectedPrimaryOption}"/>
+                        </aura:iteration>
+                    </div>
+                    <div class="hidden carousel" aura:id="secondaryCarousel">
+                    	<aura:iteration items="{!v.secondaryOptions}" var="each">
+                            <c:ITOP_Ticket_Object render="{! v.selectedPrimaryOption.Id==each.Primary_Descriptor__c ? true : false}" object="{!each}" selectionDestination="{!v.selectedSecondaryOption}"/>
+                        </aura:iteration>
+                    </div>
+                    <div class="hidden carousel" aura:id="typeCarousel">
+                    	<aura:iteration items="{!v.deviceTypes}" var="each">
+                            <c:ITOP_Ticket_Object render="true" object="{!each}" selectionDestination="{!v.selectedDeviceType}"/>
+                        </aura:iteration>
+                    </div>
+                    <div class="hidden carousel" aura:id="locationCarousel">
+                    	<aura:iteration items="{!v.locations}" var="each">
+                            <c:ITOP_Ticket_Object render="true" object="{!each}" selectionDestination="{!v.selectedLocation}"/>
+                        </aura:iteration>
+                    </div>
+            	</div>
+            </div>
+            <div aura:id="ticketSummary" class="hidden-invisible content-container">
+            	<div class="content-header">
+            		<h1>Ticket Details:</h1>
+                	<h1 class="start-over-button" onclick="{!c.resetTicket}">Reset</h1>
+            	</div>
+                <div class="flex selection-area">
+                    <table>
+                        <tr class="ticket-summary-row">
+                            <td>What can we help you with?</td>
+                            <td class="ticket-summary-input" >{!v.selectedPrimaryOption.Name}</td>
+                        </tr>
+                        <tr class="ticket-summary-row">
+                            <td>Specific Problem:</td>
+                            <td class="ticket-summary-input" >{!v.selectedSecondaryOption.Name}</td>
+                        </tr>
+                        <tr class="ticket-summary-row">
+                            <td>Device Type:</td>
+                            <td class="ticket-summary-input" >{!v.selectedDeviceType.Name}</td>
+                        </tr>
+                        <tr class="ticket-summary-row">
+                            <td>IT On Point Location:</td>
+                            <td class="ticket-summary-input">{!v.selectedLocation.Name}
+                            </td> 
+                        </tr>
+                        <tr class="ticket-summary-row">
+                            <td>Additional Comments:</td>
+                            <td><ui:inputText aura:id="descriptionInput" class="ticket-summary-input" placeholder="Additional Description..." value="{!v.ticketDescription}" required="true"/></td>
+                        </tr>
+                        <tr class="ticket-summary-row">
+                            <td></td>
+                            <td  onclick="{!c.submit}"><h1 class="submit-button" >Submit Ticket</h1></td>
+                        </tr>
+                    </table>  
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+ 
+        
+        
+      
+        
+    </div>
+</aura:component>

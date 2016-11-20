@@ -1,0 +1,11 @@
+.THIS {
+    width:3em;
+    height:auto;
+    opacity:.80;
+    margin:1em;
+    text-align:center;
+}
+.THIS:hover{
+	opacity:1;
+    transform:scale(1.05);
+}

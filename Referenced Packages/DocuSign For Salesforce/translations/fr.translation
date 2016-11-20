@@ -1,0 +1,2480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label>DocuSign for Salesforce</label>
+        <name>DocuSign_For_Salesforce</name>
+    </customApplications>
+    <customLabels>
+        <label>Code d’accès</label>
+        <name>AccessCode</name>
+    </customLabels>
+    <customLabels>
+        <label>Compte</label>
+        <name>Account</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant de compte</label>
+        <name>AccountID</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du compte</label>
+        <name>AccountInfoAccountName</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign n&apos;a pas encore été configuré pour ce compte.</label>
+        <name>AccountInfoNotConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre compte DocuSign doit être configuré.</label>
+        <name>AccountMustBeConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre compte DocuSign n&apos;est pas encore configuré.</label>
+        <name>AccountNotConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>Compte suspendu</label>
+        <name>AccountSuspended</name>
+    </customLabels>
+    <customLabels>
+        <label>Les paramètres du compte indiquent que le destinataire doit être un utilisateur DocuSign actif.</label>
+        <name>Account_settings_indicate_the_recipient_must_be_an_active_DocuSign_user</name>
+    </customLabels>
+    <customLabels>
+        <label>Action</label>
+        <name>Action</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;utilisateur que vous essayez d&apos;ajouter possède une licence utilisateur dont les droits et autorisations d&apos;accès ne sont pas suffisants pour DocuSign for Salesforce. Pour ajouter cet utilisateur, assignez une licence utilisateur appropriée.</label>
+        <name>ActivateMembersError</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez vérifier que l&apos;accès à DocuSign vous a été accordé, que vos paramètres de compte sont corrects et que vous avez répondu à tous les e-mails d&apos;activation.</label>
+        <name>ActivationMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter</label>
+        <name>Add</name>
+    </customLabels>
+    <customLabels>
+        <label>Action ou bouton ajouter</label>
+        <name>AddActionOrButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter des utilisateurs admin</label>
+        <name>AddAdminUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>AJOUTER UTILISATEURS ADMIN = Ajouter le package DocuSign pour les
+			utilisateurs sélectionnés et les désigner comme administrateurs du compte DocuSign</label>
+        <name>AddAdminUsersAddTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter une pièce jointe</label>
+        <name>AddAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label>Bouton ajouter</label>
+        <name>AddButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter des boutons</label>
+        <name>AddButtons</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter les boutons DocuSign aux mises en page Salesforce</label>
+        <name>AddDSButtonsToSF</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter DocuSign comme réseau de confiance dans Salesforce</label>
+        <name>AddDSTrusted</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter un document</label>
+        <name>AddDoc</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter des fonctionnalités DocuSign à la mise en page Salesforce</label>
+        <name>AddDocuSignButtonsToSalesforceLayout</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter le package DocuSign pour les utilisateurs sélectionnés.</label>
+        <name>AddDocuSignPackageForSelectedUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>M&apos;ajouter</label>
+        <name>AddMe</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter un destinataire</label>
+        <name>AddRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter un site distant</label>
+        <name>AddRemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajoutez les champs disponibles sélectionnés à la liste « Champs sélectionnés »</label>
+        <name>AddSelectedAvailableFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter des utilisateurs</label>
+        <name>AddUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>AJOUTER DES UTILISATEURS = Ajouter le package DocuSign pour les utilisateurs sélectionnés</label>
+        <name>AddUsersAddTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter le bouton « Vérifier avec D&amp;B » sur les mises en page Opportunité et Compte.</label>
+        <name>AddVerifyWithDNButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter le package DocuSign pour les utilisateurs sélectionnés et les désigner comme administrateurs du compte DocuSign</label>
+        <name>AdddocuSignPackageMakeUsersAdministrators</name>
+    </customLabels>
+    <customLabels>
+        <label>Les champs Adresse 1, Ville, Pays, et Zip sont obligatoires</label>
+        <name>Address1citystateandZip</name>
+    </customLabels>
+    <customLabels>
+        <label>Destinataires</label>
+        <name>AddressRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>Avancé</label>
+        <name>Advanced</name>
+    </customLabels>
+    <customLabels>
+        <label>Tout</label>
+        <name>All</name>
+    </customLabels>
+    <customLabels>
+        <label>Autoriser le signataire à modifier les champs personnalisés.</label>
+        <name>AllowSenderToEditCustomFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Autoriser à répondre à Salesforce</label>
+        <name>AllowWritebackToSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>Il existe déjà un compte correspondant à cet e-mail/nom.</label>
+        <name>AnAccountAlreadyExists</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur est survenue pendant la connexion à DocuSign.  Vérifiez que votre adhésion DocuSign est correctement configurée.</label>
+        <name>AnErrorOccurredConnectingToDocusign</name>
+    </customLabels>
+    <customLabels>
+        <label>Ancrage</label>
+        <name>Anchor</name>
+    </customLabels>
+    <customLabels>
+        <label>Texte d&apos;ancrage</label>
+        <name>AnchorText</name>
+    </customLabels>
+    <customLabels>
+        <label>Appliquer l&apos;action sélectionnée aux utilisateurs sélectionnés</label>
+        <name>ApplySelectedActionToSelectedUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>Approuver</label>
+        <name>Approve</name>
+    </customLabels>
+    <customLabels>
+        <label>Êtes-vous sûr de vouloir annuler cette enveloppe ?</label>
+        <name>AreYouSureVoidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Au moins un document est requis.</label>
+        <name>AtLeastOneDocumentIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Au moins un (1) destinataire comprend une erreur</label>
+        <name>AtLeastOneRecipientHasError</name>
+    </customLabels>
+    <customLabels>
+        <label>Au moins un destinataire est requis.</label>
+        <name>AtLeastOneRecipientRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Pièce jointe</label>
+        <name>Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 1</label>
+        <name>AutoSetupStep1</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 10</label>
+        <name>AutoSetupStep10</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 11</label>
+        <name>AutoSetupStep11</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 12</label>
+        <name>AutoSetupStep12</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 13</label>
+        <name>AutoSetupStep13</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 14</label>
+        <name>AutoSetupStep14</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 2</label>
+        <name>AutoSetupStep2</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 3</label>
+        <name>AutoSetupStep3</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 4</label>
+        <name>AutoSetupStep4</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 5</label>
+        <name>AutoSetupStep5</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 6</label>
+        <name>AutoSetupStep6</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 7</label>
+        <name>AutoSetupStep7</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 8</label>
+        <name>AutoSetupStep8</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter la plage d&apos;adresses IP 9</label>
+        <name>AutoSetupStep9</name>
+    </customLabels>
+    <customLabels>
+        <label>Ancrage automatique du texte et des balises</label>
+        <name>AutomaticAnchorTextandTags</name>
+    </customLabels>
+    <customLabels>
+        <label>Champs disponibles</label>
+        <name>AvailableFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Retour</label>
+        <name>Back</name>
+    </customLabels>
+    <customLabels>
+        <label>Noir</label>
+        <name>Black</name>
+    </customLabels>
+    <customLabels>
+        <label>Bleu vif</label>
+        <name>BrightBlue</name>
+    </customLabels>
+    <customLabels>
+        <label>Rouge vif</label>
+        <name>BrightRed</name>
+    </customLabels>
+    <customLabels>
+        <label>Annuler</label>
+        <name>Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne pouvez pas retirer votre nom de la liste des utilisateurs DocuSign actifs. Si vous procédez néanmoins à cette opération, vous ne serez plus administrateur DocuSign for Salesforce.</label>
+        <name>CannotRemoveYourselfFromActiveDocuSignUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>c.c.</label>
+        <name>CarbonCopy</name>
+    </customLabels>
+    <customLabels>
+        <label>Livraison certifiée</label>
+        <name>CertifiedDelivery</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier</label>
+        <name>ChangeRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Caractères par ligne</label>
+        <name>CharactersPerLine</name>
+    </customLabels>
+    <customLabels>
+        <label>200 caractères restants</label>
+        <name>CharactersRemaining200</name>
+    </customLabels>
+    <customLabels>
+        <label>Chatter sur ces événements d&apos;enveloppe</label>
+        <name>ChatterOnTheseEnvelopeEvents</name>
+    </customLabels>
+    <customLabels>
+        <label>Chatter sur ces événements de destinataire</label>
+        <name>ChatterOnTheseRecipientEvents</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres Chatter</label>
+        <name>ChatterSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez vérifier les plages d&apos;adresses IP DocuSign et ajouter les adresses IP DocuSign à la liste du réseau de confiance.</label>
+        <name>CheckIPRanges</name>
+    </customLabels>
+    <customLabels>
+        <label>Case à cocher</label>
+        <name>Checkbox</name>
+    </customLabels>
+    <customLabels>
+        <label>Chinois (simplifié)</label>
+        <name>ChineseSimplified</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner les champs</label>
+        <name>ChooseFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner l&apos;option de filtrage pour</label>
+        <name>ChooseFilterOption</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner le nombre de lignes à afficher par page</label>
+        <name>ChooseNumberOfRows</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner les champs à afficher dans le tableau utilisateur ci-dessous</label>
+        <name>ChooseTheFieldsToDisplay</name>
+    </customLabels>
+    <customLabels>
+        <label>Ville</label>
+        <name>City</name>
+    </customLabels>
+    <customLabels>
+        <label>Cliquez sur les boutons ci-après pour ajouter toutes les plages d&apos;adresses IP. N&apos;oubliez pas d&apos;enregistrer et de fermer chaque fenêtre après avoir configuré une plage d&apos;adresses IP.</label>
+        <name>ClickButtonsToAddIPRanges</name>
+    </customLabels>
+    <customLabels>
+        <label>Cliquer ici</label>
+        <name>ClickHere2</name>
+    </customLabels>
+    <customLabels>
+        <label>Cliquez ici pour vous reconnecter</label>
+        <name>ClickHereToReconnect</name>
+    </customLabels>
+    <customLabels>
+        <label>(fermez la fenêtre contextuelle quand vous avez terminé)</label>
+        <name>ClosePopUpAfterComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Fermer cette fenêtre</label>
+        <name>CloseWindow</name>
+    </customLabels>
+    <customLabels>
+        <label>Entreprise</label>
+        <name>Company</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom de la société</label>
+        <name>CompanyName</name>
+    </customLabels>
+    <customLabels>
+        <label>Signée</label>
+        <name>Completed</name>
+    </customLabels>
+    <customLabels>
+        <label>Configuration balisage</label>
+        <name>ConfigTagger</name>
+    </customLabels>
+    <customLabels>
+        <label>Connexion</label>
+        <name>Connect</name>
+    </customLabels>
+    <customLabels>
+        <label>Connecter DocuSign à Salesforce</label>
+        <name>ConnectDSToSF</name>
+    </customLabels>
+    <customLabels>
+        <label>Contact</label>
+        <name>Contact</name>
+    </customLabels>
+    <customLabels>
+        <label>Si votre compte n&apos;est toujours pas configuré correctement, veuillez contacter votre administrateur système.</label>
+        <name>ContactAdminForConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez contacter l&apos;assistance DocuSign à</label>
+        <name>ContactSupport</name>
+    </customLabels>
+    <customLabels>
+        <label>Contacts</label>
+        <name>Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label>contient</label>
+        <name>Contains</name>
+    </customLabels>
+    <customLabels>
+        <label>Continuer d&apos;envoyer des rappels tous/toutes les</label>
+        <name>ContinueToSendRemindersEvery</name>
+    </customLabels>
+    <customLabels>
+        <label>Contrat</label>
+        <name>Contract</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;autorisation de correction doit être activée et l&apos;enveloppe doit être configurée sur l&apos;état \&apos;Envoyé\&apos; ou \&apos;Livré\&apos; pour que les corrections soient prises en charge.</label>
+        <name>CorrectionPermissionMustBe</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;identifier l&apos;utilisateur pour l&apos;envoi dans DocuSign</label>
+        <name>CouldNotAuthenticateUser</name>
+    </customLabels>
+    <customLabels>
+        <label>inactivable -</label>
+        <name>CoultNotBeActivatedDash</name>
+    </customLabels>
+    <customLabels>
+        <label>Pays</label>
+        <name>Country</name>
+    </customLabels>
+    <customLabels>
+        <label>Le champ Pays de votre profil utilisateur Salesforce n&apos;est pas correct. Accédez à vos paramètres d&apos;informations personnelles Salesforce et effacez le contenu du champ Pays.</label>
+        <name>CountryFieldNotCorrect</name>
+    </customLabels>
+    <customLabels>
+        <label>Créer un nouvel affichage utilisateur</label>
+        <name>CreateANewUserView</name>
+    </customLabels>
+    <customLabels>
+        <label>S&apos;inscrire</label>
+        <name>CreateAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>Créer une balise personnalisée.</label>
+        <name>CreateCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre compte d&apos;essai gratuit est presque prêt. Consultez votre messagerie et recherchez un e-mail d&apos;activation. Revenez ensuite sur cette page pour vous connecter.</label>
+        <name>CreateMemberStatusMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Créer un nouvel affichage</label>
+        <name>CreateNewView</name>
+    </customLabels>
+    <customLabels>
+        <label>Date de fin période de facturation actuelle</label>
+        <name>CurrentBillingPeriodEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label>Date de début période de facturation actuelle</label>
+        <name>CurrentBillingPeriodStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label>--- Paramètres actuels ---</label>
+        <name>CurrentChatterLanguageSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Utilisateur Salesforce actuel</label>
+        <name>CurrentSalesforceUser</name>
+    </customLabels>
+    <customLabels>
+        <label>Autre serveur</label>
+        <name>Custom</name>
+    </customLabels>
+    <customLabels>
+        <label>Personnaliser le nom de la balise</label>
+        <name>CustomTagName</name>
+    </customLabels>
+    <customLabels>
+        <label>Astuce</label>
+        <name>CustomTagToolTip</name>
+    </customLabels>
+    <customLabels>
+        <label>Balises personnalisées</label>
+        <name>CustomTags</name>
+    </customLabels>
+    <customLabels>
+        <label>Validation</label>
+        <name>CustomTagsValidation</name>
+    </customLabels>
+    <customLabels>
+        <label>Compte DocuSign configuré</label>
+        <name>DSAccountConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>AUTHENTIFICATION_UTILISATEUR_IMPOSSIBLE : Le nom d&apos;utilisateur et/ou le mot de passe ne sont pas valides.</label>
+        <name>DSClientAuthenticationException</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur a été trouvée lors de la récupération de la liste de destinataires depuis l&apos;API DocuSign</label>
+        <name>DSClientGetRecipientListError</name>
+    </customLabels>
+    <customLabels>
+        <label>AUTHENTIFICATION_UTILISATEUR_IMPOSSIBLE</label>
+        <name>DSClient_USER_AUTHENTICATION_FAILED</name>
+    </customLabels>
+    <customLabels>
+        <label>Enveloppe DocuSign</label>
+        <name>DSEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse e-mail du destinataire DocuSign</label>
+        <name>DSRecipientEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du destinataire DocuSign</label>
+        <name>DSRecipientName</name>
+    </customLabels>
+    <customLabels>
+        <label>Résultat du renvoi de l&apos;e-mail</label>
+        <name>DSResendResult</name>
+    </customLabels>
+    <customLabels>
+        <label>Résultat du statut DocuSign</label>
+        <name>DSStatusResult</name>
+    </customLabels>
+    <customLabels>
+        <label>conditions d’utilisation de DocuSign</label>
+        <name>DSTermsConditions</name>
+    </customLabels>
+    <customLabels>
+        <label>Transfert DocuSign- Salesforce terminé</label>
+        <name>DSToSFComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Vert foncé</label>
+        <name>DarkGreen</name>
+    </customLabels>
+    <customLabels>
+        <label>Rouge foncé</label>
+        <name>DarkRed</name>
+    </customLabels>
+    <customLabels>
+        <label>Date</label>
+        <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label>Date de la signature</label>
+        <name>DateSigned</name>
+    </customLabels>
+    <customLabels>
+        <label>jour(s) après réception</label>
+        <name>DaysAfterReceipt</name>
+    </customLabels>
+    <customLabels>
+        <label>jour(s) avant expiration</label>
+        <name>DaysBeforeExpiration</name>
+    </customLabels>
+    <customLabels>
+        <label>jour(s) avant expiration de la demande</label>
+        <name>DaysBeforeRequestExpires</name>
+    </customLabels>
+    <customLabels>
+        <label>Refuser</label>
+        <name>Decline</name>
+    </customLabels>
+    <customLabels>
+        <label>Refusé</label>
+        <name>Declined</name>
+    </customLabels>
+    <customLabels>
+        <label>Par défaut</label>
+        <name>Default</name>
+    </customLabels>
+    <customLabels>
+        <label>E-mail par défaut</label>
+        <name>DefaultEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Objet d&apos;e-mail par défaut</label>
+        <name>DefaultEmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>Êtes-vous sûr de vouloir supprimer cette balise personnalisée ?</label>
+        <name>DeleteConfirmationMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Supprimer</label>
+        <name>DeleteUppercase</name>
+    </customLabels>
+    <customLabels>
+        <label>Livrée</label>
+        <name>Delivered</name>
+    </customLabels>
+    <customLabels>
+        <label>Démonstration</label>
+        <name>Demo</name>
+    </customLabels>
+    <customLabels>
+        <label>Boutons du Bureau</label>
+        <name>Desktop</name>
+    </customLabels>
+    <customLabels>
+        <label>Désactiver la modification d&apos;e-mail par l&apos;utilisateur</label>
+        <name>DisableUserEmailMessageEditing</name>
+    </customLabels>
+    <customLabels>
+        <label> Désactiver la modification d&apos;objet d&apos;e-mail par l&apos;utilisateur</label>
+        <name>DisableUserEmailSubjectEditing</name>
+    </customLabels>
+    <customLabels>
+        <label>Désactivé</label>
+        <name>Disabled</name>
+    </customLabels>
+    <customLabels>
+        <label>Ignorer les modifications apportées à la liste « Champs sélectionnés »</label>
+        <name>DiscardTheChangesToSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher des lignes</label>
+        <name>DisplayRowsWhere</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la page de signature en personne DocuSign dans une nouvelle fenêtre</label>
+        <name>DisplayTheDocuSignInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la page de balisage DocuSign dans une nouvelle fenêtre</label>
+        <name>DisplayTheDocuSignTaggerPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Affichage de la page</label>
+        <name>DisplayingPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Pièces jointes</label>
+        <name>DocTypeAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label>Documents</label>
+        <name>DocTypeDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>Éléments de flux</label>
+        <name>DocTypeFeedItems</name>
+    </customLabels>
+    <customLabels>
+        <label>Bibliothèques</label>
+        <name>DocTypeLibraryItems</name>
+    </customLabels>
+    <customLabels>
+        <label>Modèles</label>
+        <name>DocTypeTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign</label>
+        <name>DocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label>API DocuSign erronée</label>
+        <name>DocuSignAPIGetRecipientViewError</name>
+    </customLabels>
+    <customLabels>
+        <label>Vos informations de compte DocuSign sont déjà configurées.</label>
+        <name>DocuSignAccountAlreadyConfigured</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations de compte DocuSign</label>
+        <name>DocuSignAccountInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>Un compte DocuSign existe déjà, mais il doit être activé. L&apos;utilisateur devrait recevoir un message par e-mail contenant le lien d&apos;activation. Une fois l&apos;activation validée, l&apos;utilisateur doit cliquer sur l&apos;onglet d&apos;administration DocuSign, puis saisir le mot de passe.</label>
+        <name>DocuSignAccountRequiresActivation</name>
+    </customLabels>
+    <customLabels>
+        <label>Admin DocuSign</label>
+        <name>DocuSignAdmin</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucun renvoi de statut par DocuSign pour l&apos;opération de renvoi de cette enveloppe.</label>
+        <name>DocuSignDidNotReturnStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>Je vous envoie cette demande pour obtenir votre signature électronique. Veuillez passer en revue le document et le signer électroniquement en cliquant sur le lien ci-dessous.</label>
+        <name>DocuSignEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Documents pour votre signature DocuSign</label>
+        <name>DocuSignEmailSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>Enveloppe DocuSign annulée</label>
+        <name>DocuSignEnvelopeCancelled</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;enveloppe DocuSign n&apos;est pas en statut \&apos;Envoyée\&apos; ou\&apos;Livrée\&apos;, ou\&apos;Enveloppe correcte\&apos; n&apos;est pas activée sur le compte DocuSign  Aucun e-mail envoyé.</label>
+        <name>DocuSignEnvelopeNotSentOrDeilivered</name>
+    </customLabels>
+    <customLabels>
+        <label>Enveloppe DocuSign enregistrée</label>
+        <name>DocuSignEnvelopeSaved</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign, Inc.</label>
+        <name>DocuSignInc</name>
+    </customLabels>
+    <customLabels>
+        <label>Listes connexes du statut du destinataire DocuSign</label>
+        <name>DocuSignRecipientStatusRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label>Documents envoyés</label>
+        <name>DocuSignSendingCompleted</name>
+    </customLabels>
+    <customLabels>
+        <label>Listes connexes du statut DocuSign</label>
+        <name>DocuSignStatusRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant d&apos;utilisateur expéditeur système DocuSign</label>
+        <name>DocuSignSystemSenderUserId</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations concernant l&apos;utilisateur expéditeur système DocuSign</label>
+        <name>DocuSignSystemSenderUserInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>Modèle DocuSign</label>
+        <name>DocuSignTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;e-mail et le nom d&apos;utilisateur DocuSign et Salesforce doivent être identiques.</label>
+        <name>DocuSignandSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>Document</label>
+        <name>Document</name>
+    </customLabels>
+    <customLabels>
+        <label>Le document n&apos;a pas de nom</label>
+        <name>DocumentIsMissingName</name>
+    </customLabels>
+    <customLabels>
+        <label>Documents</label>
+        <name>Documents</name>
+    </customLabels>
+    <customLabels>
+        <label>Connexion au compte DocuSign réussie</label>
+        <name>DocusignAccountLoginSuccessful</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign for Salesforce (DfS) a détecté un problème avec un ou plusieurs paramètres de votre compte DocuSign.  L&apos;utilisateur dont les identifiants sont utilisés pour activer l&apos;intégration entre DfS et DocuSign (parfois appelé utilisateur SOBO) doit posséder toutes les autorisations suivantes (indicateurs sélectionnés) : « Peut gérer le compte », « Peut envoyer une enveloppe », « Peut envoyer au nom de » et « Accès à l&apos;échelle du compte API ».  Tous ces paramètres sont accessibles en se connectant directement à DocuSign. Cliquez sur Préférences et sélectionnez la zone Autorisations de la console d&apos;administration.  L&apos;intégration ne fonctionnera pas correctement si tous ces paramètres ne sont pas activés.  Vous devez commencer par contrôler ces paramètres même si le problème peut avoir une autre cause. Contactez votre administrateur DocuSign pour contrôler si des paramètres ont été modifiés dans DocuSign dernièrement.</label>
+        <name>DocusignForSalesforceHasDetected</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign for Salesforce n&apos;est pas configuré.  Contactez un administrateur Salesforce pour terminer la configuration de DocuSign for Salesforce.  Erreur :</label>
+        <name>DocusignForSalesforceHasNot</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign a été lancé avec succès dans une nouvelle fenêtre.</label>
+        <name>DocusignLaunchedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label>Terminé</label>
+        <name>Done</name>
+    </customLabels>
+    <customLabels>
+        <label>Liste déroulante</label>
+        <name>DropDown</name>
+    </customLabels>
+    <customLabels>
+        <label>LIST_MISSING_ITEMS : DSCustomField de type LIST_FIELD requis au niveau d&apos;au moins un élément de la collecte.</label>
+        <name>DscustomfieldOfTypeListField</name>
+    </customLabels>
+    <customLabels>
+        <label>DSSignatureRequest requis dans au moins un document lorsque docSource=DOCUMENT</label>
+        <name>DssignaturerequestRequires</name>
+    </customLabels>
+    <customLabels>
+        <label>NÉERLANDAIS</label>
+        <name>Dutch</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier</label>
+        <name>Edit</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier la balise personnalisée</label>
+        <name>EditCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier le destinataire</label>
+        <name>EditRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier l&apos;affichage utilisateur</label>
+        <name>EditTheUserView</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse e-mail</label>
+        <name>Email</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse e-mail</label>
+        <name>EmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;adresse e-mail est obligatoire</label>
+        <name>EmailAddressIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucune adresse e-mail.</label>
+        <name>EmailAddressMissing</name>
+    </customLabels>
+    <customLabels>
+        <label>Le corps de l&apos;e-mail est limité à 2 000 caractères.</label>
+        <name>EmailBodyLimitedTwoThousand</name>
+    </customLabels>
+    <customLabels>
+        <label>E-mail non envoyé.</label>
+        <name>EmailNotSent</name>
+    </customLabels>
+    <customLabels>
+        <label>E-mail envoyé</label>
+        <name>EmailSent</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres e-mail</label>
+        <name>EmailSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Un objet de message est requis.</label>
+        <name>EmailSubjectNotBeBlank</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer les mises à jour de statut Chatter</label>
+        <name>EnableChatterUpdates</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer l&apos;application mobile DocuSign marquée pour Salesforce1 (Bêta)</label>
+        <name>EnableNewMobileTaggingUI</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer les paramètres de rappel et d&apos;expiration</label>
+        <name>EnableReminderExpiration</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer compensation pour la limite d&apos;appels Salesforce</label>
+        <name>EnableSalesforceCalloutLimit</name>
+    </customLabels>
+    <customLabels>
+        <label>Toujours activé</label>
+        <name>EnabledAlwaysOn</name>
+    </customLabels>
+    <customLabels>
+        <label>Désactivé par défaut</label>
+        <name>EnabledOffByDefault</name>
+    </customLabels>
+    <customLabels>
+        <label>Activé par défaut</label>
+        <name>EnabledOnByDefault</name>
+    </customLabels>
+    <customLabels>
+        <label>se termine par</label>
+        <name>EndsWith</name>
+    </customLabels>
+    <customLabels>
+        <label>ANGLAIS</label>
+        <name>English</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez vous assurer que l&apos;option de signature en cours de session est activée pour le compte DocuSign.</label>
+        <name>EnsureDocuSignAccountHasSession</name>
+    </customLabels>
+    <customLabels>
+        <label>Enveloppe</label>
+        <name>Envelope</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;enveloppe ne peut être renvoyée. Elle n&apos;est pas en statut \&apos;Envoyée\&apos; ou \&apos;Livrée\&apos;.</label>
+        <name>EnvelopeCannotBeResent</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;enveloppe ne peut pas être créée.</label>
+        <name>EnvelopeCouldNotBeCreated</name>
+    </customLabels>
+    <customLabels>
+        <label>Champ(s) personnalisé(s)</label>
+        <name>EnvelopeCustomFields</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;e-mail de l&apos;enveloppe ne peut être renvoyée. Aucun destinataire sélectionné pour cette enveloppe.</label>
+        <name>EnvelopeEmaillCannotBeResent</name>
+    </customLabels>
+    <customLabels>
+        <label>E-mail(s) d&apos;enveloppe non renvoyé(s). Aucun destinataire sélectionné avec statut d&apos;enveloppe \&apos;Envoyée\&apos; ou \&apos;Livrée\&apos;.</label>
+        <name>EnvelopeEmailsNotResent</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant de l’enveloppe</label>
+        <name>EnvelopeID</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant d’enveloppe :</label>
+        <name>EnvelopeIDColon</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations de l&apos;enveloppe DocuSign</label>
+        <name>EnvelopeInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre enveloppe a été envoyée avec succès.</label>
+        <name>EnvelopeSent</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer les actions Chatter pour la signature des enveloppes</label>
+        <name>EnvelopeSigning</name>
+    </customLabels>
+    <customLabels>
+        <label>Environnement</label>
+        <name>Environment</name>
+    </customLabels>
+    <customLabels>
+        <label>équivaut à</label>
+        <name>Equals</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur d&apos;ajout de membres au compte :</label>
+        <name>ErrorAddingMembersToAccountColon</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur :</label>
+        <name>ErrorColon</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de désactivation des comptes DocuSign.</label>
+        <name>ErrorDeactivatingDocuSignAccounts</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de désactivation du compte DocuSign :</label>
+        <name>ErrorDeactivingDocuSignAccountColon</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de supprimer la balise personnalisée. Veuillez réessayer.</label>
+        <name>ErrorDeletingCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur =</label>
+        <name>ErrorEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur a été trouvée en recueillant les informations nécessaires pour D&amp;B. Veuillez réessayer.</label>
+        <name>ErrorGatheringDnBInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur - Accès insuffisant à l&apos;objet User</label>
+        <name>ErrorInsufficientAccessToUserObject</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur d&apos;obtention du mot de passe chiffré de DocuSign</label>
+        <name>ErrorObtainingEncryptedPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de traitement de la liste de destinataires personnalisée</label>
+        <name>ErrorProcessingCustomRecipientList</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de traitement de la réponse d&apos;appel Web.</label>
+        <name>ErrorProcessingWebCalloutResponse</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de lecture de la mise en page.</label>
+        <name>ErrorReadingLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de demande d&apos;activation.</label>
+        <name>ErrorRequestingActivation</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de demande d&apos;activation. Droits insuffisants pour sélectionner des fiches.</label>
+        <name>ErrorRequestingActivationInsufficient</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur de récupération des paramètres de compte.</label>
+        <name>ErrorRetrievingAccountSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;enregistrer la balise personnalisée. Veuillez réessayer.</label>
+        <name>ErrorSavingCustomTag</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur d&apos;envoi</label>
+        <name>ErrorSending</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur : Impossible d&apos;envoyer l&apos;enveloppe. L&apos;enveloppe n&apos;existe pas.</label>
+        <name>ErrorUnableToSendEvenlopeNotExist</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur lors de la configuration du compte DocuSign</label>
+        <name>ErrorWhileProvisioningDocusign</name>
+    </customLabels>
+    <customLabels>
+        <label>Faire expirer l’enveloppe</label>
+        <name>ExpireEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Faire expirer l’enveloppe</label>
+        <name>ExpireRequestIn</name>
+    </customLabels>
+    <customLabels>
+        <label>Mise à jour de la mise en page impossible. Veuillez réessayer.</label>
+        <name>FailedToUpdateLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>Fax</label>
+        <name>Fax</name>
+    </customLabels>
+    <customLabels>
+        <label>Flux de pièces jointes</label>
+        <name>FeedAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label>Champ obligatoire</label>
+        <name>FieldRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Champs qui s&apos;afficheront dans la liste ci-dessous</label>
+        <name>FieldsThatWillBeDisplayed</name>
+    </customLabels>
+    <customLabels>
+        <label>Dernières étapes</label>
+        <name>FinalSteps</name>
+    </customLabels>
+    <customLabels>
+        <label>Prénom</label>
+        <name>FirstName</name>
+    </customLabels>
+    <customLabels>
+        <label>Taille fixe</label>
+        <name>FixedSize</name>
+    </customLabels>
+    <customLabels>
+        <label>Mot de passe oublié ?</label>
+        <name>ForgotPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>Formatage</label>
+        <name>Formatting</name>
+    </customLabels>
+    <customLabels>
+        <label>Formule</label>
+        <name>Formula</name>
+    </customLabels>
+    <customLabels>
+        <label>FRANÇAIS</label>
+        <name>French</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom complet</label>
+        <name>FullName</name>
+    </customLabels>
+    <customLabels>
+        <label>ALLEMAND</label>
+        <name>German</name>
+    </customLabels>
+    <customLabels>
+        <label>Pour confirmer que vous êtes bien l&apos;hôte de cette session de signature, vos nom d&apos;utilisateur et adresse e-mail Salesforce doivent correspondre à ceux de DocuSign.  Veuillez contacter votre administrateur afin que vos identifiants DocuSign soient modifiés de façon à correspondre à vos identifiants Salesforce, ou vice-versa.</label>
+        <name>GetSigningURLRedirectErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Doré</label>
+        <name>Gold</name>
+    </customLabels>
+    <customLabels>
+        <label>Vert</label>
+        <name>Green</name>
+    </customLabels>
+    <customLabels>
+        <label>Hauteur</label>
+        <name>Height</name>
+    </customLabels>
+    <customLabels>
+        <label>Masquer le texte par des astérisques</label>
+        <name>HideTextWithAsterisks</name>
+    </customLabels>
+    <customLabels>
+        <label>Masquer le bouton Suivant</label>
+        <name>HideTheNextButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Masquer les paramètres de rappel et d&apos;expiration</label>
+        <name>HideTheRemindAndExpireSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Masquer le bouton Envoyer</label>
+        <name>HideTheSendNowButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Accueil</label>
+        <name>Home</name>
+    </customLabels>
+    <customLabels>
+        <label>Héberger en personne</label>
+        <name>HostInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>Héberger en personne - Signer</label>
+        <name>HostInPersonDashSignNow</name>
+    </customLabels>
+    <customLabels>
+        <label>J&apos;accepte d&apos;ajouter le site distant et l&apos;accès au réseau requis pour communiquer avec DocuSign.</label>
+        <name>IAgreeAddRemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>J’accepte les</label>
+        <name>IAgreeToThe</name>
+    </customLabels>
+    <customLabels>
+        <label>Si vous voyez l&apos;écran de connexion DocuSign</label>
+        <name>IfYouSeeTheDocuSignLoginScreen</name>
+    </customLabels>
+    <customLabels>
+        <label>Inclure une remarque dans l&apos;e-mail</label>
+        <name>IncludeNoteInEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>Paraphe ici</label>
+        <name>InitialHere</name>
+    </customLabels>
+    <customLabels>
+        <label>Paraphe ici (facultatif)</label>
+        <name>InitialHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label>Valeur initiale</label>
+        <name>InitialValue</name>
+    </customLabels>
+    <customLabels>
+        <label>Limite d&apos;entrée</label>
+        <name>InputLimit</name>
+    </customLabels>
+    <customLabels>
+        <label>Installation terminée ! Sélectionnez layoutsLink pour ajouter les boutons et listes DocuSign for Salesforce à la mise en page des pages. Sélectionnez usersLink pour autoriser l&apos;accès à DocuSign.</label>
+        <name>InstallationComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations d&apos;accès insuffisantes</label>
+        <name>InsufficientAccessInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>Accès insuffisant à</label>
+        <name>InsufficientAccessTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Accès insuffisant à l&apos;objet DocuSignAccountConfiguration</label>
+        <name>InsufficientAccessToConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;obtenir les informations du contact. Accès insuffisant à l&apos;objet Contact</label>
+        <name>InsufficientAccessToContact</name>
+    </customLabels>
+    <customLabels>
+        <label>Accès insuffisant à l&apos;objet DocuSignAccountConfiguration. Contactez un administrateur Salesforce pour obtenir un droit d&apos;accès au package DocuSign for Salesforce.</label>
+        <name>InsufficientAccessToDocusignaccountconfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;obtenir les informations du contact. Accès insuffisant à l&apos;objet Lead.</label>
+        <name>InsufficientAccessToLead</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;obtenir les informations du contact. Accès insuffisant à l&apos;objet User.</label>
+        <name>InsufficientAccessToUser</name>
+    </customLabels>
+    <customLabels>
+        <label>Accès insuffisant à l&apos;objet DocuSign_Envelope_Recipient__c.</label>
+        <name>InsufficientDocuSignEnvelopeRecipientc</name>
+    </customLabels>
+    <customLabels>
+        <label>Droits insuffisants pour sélectionner des fiches.</label>
+        <name>InsufficientPriviliegesSelectUserRecords</name>
+    </customLabels>
+    <customLabels>
+        <label>Autorisations de lecture insuffisantes</label>
+        <name>InsufficientReadPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse e-mail ou mot de passe DocuSign non valide.</label>
+        <name>InvalidDocuSignEmailPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>ID de compte DocuSign non valide.</label>
+        <name>InvalidDocusignAccountId</name>
+    </customLabels>
+    <customLabels>
+        <label>Mot de passe ou nom d&apos;utilisateur Salesforce non valide.</label>
+        <name>InvalidSalesforceusername</name>
+    </customLabels>
+    <customLabels>
+        <label>La valeur SourceID de ce bouton DocuSign personnalisé n&apos;est pas valide. Demandez à votre administrateur Salesforce de corriger la configuration du bouton personnalisé. Consultez le guide de l&apos;administrateur DocuSign for Salesforce pour en savoir plus.</label>
+        <name>InvalidSourceId</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant de modèle non valide -</label>
+        <name>InvalidTemplateIdDash</name>
+    </customLabels>
+    <customLabels>
+        <label>ITALIEN</label>
+        <name>Italian</name>
+    </customLabels>
+    <customLabels>
+        <label>JAPONAIS</label>
+        <name>Japanese</name>
+    </customLabels>
+    <customLabels>
+        <label>CORÉEN</label>
+        <name>Korean</name>
+    </customLabels>
+    <customLabels>
+        <label>Langue</label>
+        <name>Language</name>
+    </customLabels>
+    <customLabels>
+        <label>Dernière modification</label>
+        <name>LastModified</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom</label>
+        <name>LastName</name>
+    </customLabels>
+    <customLabels>
+        <label>Mise en page</label>
+        <name>Layouts</name>
+    </customLabels>
+    <customLabels>
+        <label>Utilisez les liens rapides ci-après pour ajouter les boutons DocuSign aux mises en page de Salesforce ou les actions DocuSign aux mises en page mobiles de Salesforce1.</label>
+        <name>LayoutsQuickLinks</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;onglet Mise en page permet aux administrateurs d&apos;ajouter les fonctionnalités DocuSign à la mise en page de cette organisation. Cet onglet utilise l&apos;API de métadonnées Salesforce pour lire et mettre à jour la mise en page qui nécessite le site distant illustré ci-après. Cliquez sur le bouton ajouter un site distant pour activer cet onglet.</label>
+        <name>LayoutsTabAllowsAdmin</name>
+    </customLabels>
+    <customLabels>
+        <label>Mise en page mise à jour.</label>
+        <name>LayoutsUpdated</name>
+    </customLabels>
+    <customLabels>
+        <label>Direction</label>
+        <name>Lead</name>
+    </customLabels>
+    <customLabels>
+        <label>Directions</label>
+        <name>Leads</name>
+    </customLabels>
+    <customLabels>
+        <label>Bibliothèques</label>
+        <name>Libraries</name>
+    </customLabels>
+    <customLabels>
+        <label>Il est probable qu&apos;il manque une extension à l&apos;un des fichiers en cours d&apos;envoi, ou que son extension ne soit pas reconnue par DocuSign.</label>
+        <name>LikelyFileMissingFileExtension</name>
+    </customLabels>
+    <customLabels>
+        <label>Lignes</label>
+        <name>Lines</name>
+    </customLabels>
+    <customLabels>
+        <label>Lier votre compte DocuSign</label>
+        <name>LinkDSAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>Connexion</label>
+        <name>LogIn</name>
+    </customLabels>
+    <customLabels>
+        <label>Se connecter à votre compte DocuSign</label>
+        <name>LogInToYourDocuSignAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse postale - Ville</label>
+        <name>MailingCity</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse postale - Rue</label>
+        <name>MailingStreet</name>
+    </customLabels>
+    <customLabels>
+        <label>&gt; Aide concernant la gestion des utilisateurs DocuSign</label>
+        <name>ManageDocuSignUsersHelp</name>
+    </customLabels>
+    <customLabels>
+        <label>Gérer l&apos;enveloppe</label>
+        <name>ManageEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Caractères max.</label>
+        <name>MaxCharacters</name>
+    </customLabels>
+    <customLabels>
+        <label>Cet e-mail de membre est interdit. L&apos;e-mail appartient à un domaine restreint.</label>
+        <name>MemberEmailNotAllowed</name>
+    </customLabels>
+    <customLabels>
+        <label>La réponse au mot de passe oublié du membre est obligatoire</label>
+        <name>MemberForgottenPassword</name>
+    </customLabels>
+    <customLabels>
+        <label>La liste des membres renvoyée par DocuSign est différente de celle envoyée à l&apos;origine.</label>
+        <name>MemberListFromDocuSignNotSameLengthList</name>
+    </customLabels>
+    <customLabels>
+        <label>Message</label>
+        <name>Message</name>
+    </customLabels>
+    <customLabels>
+        <label>Contenu du message</label>
+        <name>MessageContent</name>
+    </customLabels>
+    <customLabels>
+        <label>message =</label>
+        <name>MessageEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>Objet du message</label>
+        <name>MessageSubject</name>
+    </customLabels>
+    <customLabels>
+        <label>Message à tous les destinataires</label>
+        <name>MessagetoAllRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>DSDocument manquant</label>
+        <name>MissingADsdocument</name>
+    </customLabels>
+    <customLabels>
+        <label>DSRecipient manquant</label>
+        <name>MissingADsrecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>DSTemplateRole manquant</label>
+        <name>MissingADstemplaterole</name>
+    </customLabels>
+    <customLabels>
+        <label>emailBlurb manquant</label>
+        <name>MissingEmailblurb</name>
+    </customLabels>
+    <customLabels>
+        <label>emailSubject manquant</label>
+        <name>MissingEmailsubject</name>
+    </customLabels>
+    <customLabels>
+        <label>Un problème existe avec vos paramètres de compte DocuSign. Toutes les autorisations suivantes doivent être activées : « Gérer le compte », « Envoyer des enveloppes », « Envoyer au nom de » et « Accès au compte API ». Pour mettre ces paramètres à jour, connectez-vous à DocuSign, puis sélectionnez Préférences, puis Autorisations.</label>
+        <name>MissingSettingToBePrimaryAccountSFDC</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres manquants</label>
+        <name>MissingSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>templateId manquant</label>
+        <name>MissingTemplateid</name>
+    </customLabels>
+    <customLabels>
+        <label>Actions mobiles</label>
+        <name>Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier la configuration du compte</label>
+        <name>ModifyAccountConfig</name>
+    </customLabels>
+    <customLabels>
+        <label>Déplacer vers le bas</label>
+        <name>MoveDown</name>
+    </customLabels>
+    <customLabels>
+        <label>Déplacer le champ sélectionné d&apos;une place vers le bas</label>
+        <name>MoveTheSelectedFieldDown</name>
+    </customLabels>
+    <customLabels>
+        <label>Déplacer le champ sélectionné d&apos;une place vers le haut</label>
+        <name>MoveTheSelectedFieldUp</name>
+    </customLabels>
+    <customLabels>
+        <label>Redéplacer les champs sélectionnés vers la liste « Champs
+			disponibles »</label>
+        <name>MoveTheSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Déplacer vers le haut</label>
+        <name>MoveUp</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez disposer des autorisations d&apos;administration pour effectuer cette opération</label>
+        <name>MustHaveAdminPermissionsPerformOperation</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez disposer des autorisations d&apos;administration DocuSign pour effectuer cette opération</label>
+        <name>MustHaveDocuSignAdminPermissionsPerformOperation</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez disposer des autorisations d&apos;administration pour effectuer cette opération</label>
+        <name>MustHavePermissionsToPerformOperations</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom de la société requis.</label>
+        <name>MustSpecifyCompanyName</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom complet requis.</label>
+        <name>MustSpecifyName</name>
+    </customLabels>
+    <customLabels>
+        <label>Mon contenu personnel</label>
+        <name>MyPersonalContent</name>
+    </customLabels>
+    <customLabels>
+        <label>Mes documents personnels</label>
+        <name>MyPersonalDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom</label>
+        <name>Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Bleu marine</label>
+        <name>NavyBlue</name>
+    </customLabels>
+    <customLabels>
+        <label>Nouveau</label>
+        <name>New</name>
+    </customLabels>
+    <customLabels>
+        <label>Suivant</label>
+        <name>Next</name>
+    </customLabels>
+    <customLabels>
+        <label>Non</label>
+        <name>No</name>
+    </customLabels>
+    <customLabels>
+        <label>Désolé, vous n&apos;avez pas accès à cette page.</label>
+        <name>NoAccessToPage</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;action DocuSign est conçue pour prendre en charge les fichiers de type Notes, Pièces jointes et Chatter.  Aucun document n&apos;étant lié à ce dossier, l&apos;action DocuSign ne sera pas disponible.  Ajoutez un document à cet objet et réessayez.</label>
+        <name>NoDocuments</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucune pièce jointe ne figure dans le dossier Salesforce utilisé pour l&apos;envoi. Ajoutez une ou plusieurs pièces jointes à ce dossier et réessayez.</label>
+        <name>NoDocumentsDesktop</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucun e-mail et/ou après correction, validez le nom de signature via la fonction Modifier</label>
+        <name>NoEmailAndorOnce</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucun résultat trouvé</label>
+        <name>NoMatchFound</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne disposez pas des autorisations requises pour accéder aux objets DocuSign personnalisés</label>
+        <name>NoPermissionCustomObj</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;action DocuSign est utilisable avec les destinataires à partir de vos Contacts. Aucun contact n&apos;étant lié à ce dossier, l&apos;action DocuSign ne sera pas disponible. Ajoutez un contact à cet objet et réessayez.</label>
+        <name>NoRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucun contact ne figure dans le dossier Salesforce utilisé pour l&apos;envoi. Ajoutez un ou plusieurs contacts à ce dossier et réessayez.</label>
+        <name>NoRecipientsDesktop</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucune réponse n&apos;a été retournée.</label>
+        <name>NoResponseWasReturned</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucune ligne à afficher.</label>
+        <name>NoRowsToDisplay</name>
+    </customLabels>
+    <customLabels>
+        <label>Cette organisation ne prend pas en charge l&apos;API de métadonnées Salesforce. Les liens rapides ci-après vous permettent d&apos;utiliser l&apos;éditeur de mise en page Salesforce pour ajouter les fonctionnalités DocuSign.</label>
+        <name>NoSupportToMetadataAPI</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucune validation</label>
+        <name>NoValidation</name>
+    </customLabels>
+    <customLabels>
+        <label>--Aucun--</label>
+        <name>None</name>
+    </customLabels>
+    <customLabels>
+        <label>N&apos;est pas le propriétaire de l&apos;enveloppe</label>
+        <name>NotEnvelopeOwner</name>
+    </customLabels>
+    <customLabels>
+        <label>différent de</label>
+        <name>NotEqualTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne disposez pas des autorisations requises pour mettre à jour les
+			fiches Salesforce avec des informations d&apos;utilisateurs DocuSign.</label>
+        <name>NotHavePermissionsToUpdateSalesforceUserRecords</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne disposez pas de l&apos;autorisation requise pour renvoyer cette enveloppe. Aucun e-mail envoyé.</label>
+        <name>NotHaveSufficientPermissionResend</name>
+    </customLabels>
+    <customLabels>
+        <label>Cette page DocuSign for Salesforce est réservée à l&apos;utilisation du système uniquement et ne sera pas affichée. Demandez à votre administrateur Salesforce de supprimer cette page. Cliquez sur le bouton Retour de votre navigateur pour revenir à Salesforce.</label>
+        <name>NotSupposedToBeShown</name>
+    </customLabels>
+    <customLabels>
+        <label>Note</label>
+        <name>Note</name>
+    </customLabels>
+    <customLabels>
+        <label>Note pour le destinataire</label>
+        <name>NoteForRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre</label>
+        <name>Number</name>
+    </customLabels>
+    <customLabels>
+        <label>objet</label>
+        <name>Object</name>
+    </customLabels>
+    <customLabels>
+        <label>de</label>
+        <name>Of</name>
+    </customLabels>
+    <customLabels>
+        <label>Seules les enveloppes des statuts \&apos;Envoyées\&apos; ou \&apos;Livrées\&apos; peuvent être corrigées</label>
+        <name>OnlyEnvelopeInSentOrDelivered</name>
+    </customLabels>
+    <customLabels>
+        <label>Opportunité</label>
+        <name>Opportunity</name>
+    </customLabels>
+    <customLabels>
+        <label>Options (liste des éléments délimitée par des points-virgules)</label>
+        <name>Options</name>
+    </customLabels>
+    <customLabels>
+        <label>Ou</label>
+        <name>Or</name>
+    </customLabels>
+    <customLabels>
+        <label>Ordre</label>
+        <name>Order</name>
+    </customLabels>
+    <customLabels>
+        <label>Cette organisation ne prend pas en charge l&apos;API de métadonnées Salesforce. Ajoutez les adresses IP de DocuSign à la liste des réseaux de confiance.</label>
+        <name>OrgDoesNotSupportMetadataAPI</name>
+    </customLabels>
+    <customLabels>
+        <label>OrgId n&apos;est pas défini</label>
+        <name>OrgidIsNotSet</name>
+    </customLabels>
+    <customLabels>
+        <label>Autre</label>
+        <name>Other</name>
+    </customLabels>
+    <customLabels>
+        <label>Autre environnement</label>
+        <name>OtherEnvironment</name>
+    </customLabels>
+    <customLabels>
+        <label>Page</label>
+        <name>Page</name>
+    </customLabels>
+    <customLabels>
+        <label>Mot de passe</label>
+        <name>Password</name>
+    </customLabels>
+    <customLabels>
+        <label>Les champs Mot de passe et Confirmation du mot de passe doivent être renseignés et correspondre</label>
+        <name>PasswordAndPasswordConfirmation</name>
+    </customLabels>
+    <customLabels>
+        <label>Message personnel</label>
+        <name>PersonalMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Téléphone</label>
+        <name>Phone</name>
+    </customLabels>
+    <customLabels>
+        <label>Numéro de téléphone</label>
+        <name>PhoneNumber</name>
+    </customLabels>
+    <customLabels>
+        <label>Date de fin du programme</label>
+        <name>PlanEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant du programme</label>
+        <name>PlanID</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du programme</label>
+        <name>PlanName</name>
+    </customLabels>
+    <customLabels>
+        <label>Date de début du programme</label>
+        <name>PlanStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez contacter l&apos;assistance DocuSign. Envoyez un e-mail à service@docusign.com.</label>
+        <name>PleaseContactDocuSignSupportTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Contactez l&apos;assistance clients DocuSign pour mettre à jour les paramètres de votre compte.</label>
+        <name>PleaseContactDocusignCustomerSupport</name>
+    </customLabels>
+    <customLabels>
+        <label>« Veuillez contacter votre administrateur Salesforce pour qu&apos;il vous accorde
+			les droits de modification des champs d&apos;objet utilisateur suivants : »</label>
+        <name>PleaseContactYourSalesforceAdministratorToBeGranted</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez saisir un mot-clé de recherche</label>
+        <name>PleaseEnterSearchKeyword</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre motif ne doit pas dépasser 200 caractères.</label>
+        <name>PleaseLimitYourReason</name>
+    </customLabels>
+    <customLabels>
+        <label>Indiquez un motif d&apos;annulation de l&apos;enveloppe.</label>
+        <name>PleaseProvideAReason</name>
+    </customLabels>
+    <customLabels>
+        <label>PORTUGAIS (BRÉSIL)</label>
+        <name>PortugueseBrazilian</name>
+    </customLabels>
+    <customLabels>
+        <label>Conditions d&apos;erreurs possibles</label>
+        <name>PossibleErrorConditions</name>
+    </customLabels>
+    <customLabels>
+        <label>Code postal</label>
+        <name>PostCode</name>
+    </customLabels>
+    <customLabels>
+        <label>Précédent</label>
+        <name>Previous</name>
+    </customLabels>
+    <customLabels>
+        <label>Transaction impossible</label>
+        <name>ProblemWithTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label>Production</label>
+        <name>Production</name>
+    </customLabels>
+    <customLabels>
+        <label>Violet</label>
+        <name>Purple</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajout rapide</label>
+        <name>QuickAdd</name>
+    </customLabels>
+    <customLabels>
+        <label>Bouton radio</label>
+        <name>RadioButton</name>
+    </customLabels>
+    <customLabels>
+        <label>Nous évaluer</label>
+        <name>RateUs</name>
+    </customLabels>
+    <customLabels>
+        <label>Lecture seule</label>
+        <name>ReadOnly</name>
+    </customLabels>
+    <customLabels>
+        <label>Destinataire</label>
+        <name>Recipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Le destinataire doit disposer d&apos;une adresse e-mail.</label>
+        <name>RecipientMustHaveEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du destinataire</label>
+        <name>RecipientName</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres du rôle de destinataire</label>
+        <name>RecipientRoleSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Type de destinataire</label>
+        <name>RecipientType</name>
+    </customLabels>
+    <customLabels>
+        <label>Destinataires</label>
+        <name>Recipients</name>
+    </customLabels>
+    <customLabels>
+        <label>Les destinataires ont été informés par e-mail de toute annulation d&apos;enveloppe.</label>
+        <name>RecipientsHaveNeenNotifiedEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>Les destinataires n&apos;ayant pas signé l&apos;enveloppe ne pourront plus
+			la consulter.</label>
+        <name>RecipientsWhoHaveNotSigned</name>
+    </customLabels>
+    <customLabels>
+        <label>Les destinataires ne pourront plus signer l&apos;enveloppe.</label>
+        <name>RecipientsWillNoLongerAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>Modèle RegEx</label>
+        <name>RegExPattern</name>
+    </customLabels>
+    <customLabels>
+        <label>Associer le champ à Salesforce</label>
+        <name>RelateFieldToSalesforce</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoyer un rappel aux signataires par e-mail</label>
+        <name>RemindSignersviaEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>Les valeurs attribuées au rappel et aux expirations doivent être des chiffres.</label>
+        <name>ReminderExpirationsMustBeNumbers</name>
+    </customLabels>
+    <customLabels>
+        <label>Site distant :</label>
+        <name>RemoteSite</name>
+    </customLabels>
+    <customLabels>
+        <label>Retirer</label>
+        <name>Remove</name>
+    </customLabels>
+    <customLabels>
+        <label>Retirer et fermer utilisateurs</label>
+        <name>RemoveAndCloseUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>RETIRER ET FERMER UTILISATEURS = Retirer le package DocuSign pour les
+			utilisateurs sélectionnés et fermer leur compte DocuSign</label>
+        <name>RemoveAndCloseUsersDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>Retirer le package DocuSign pour les utilisateurs sélectionnés, mais leur permettre de conserver leur compte DocuSign.</label>
+        <name>RemoveDocuSignPackageSelectedUsersKeepAccount</name>
+    </customLabels>
+    <customLabels>
+        <label>Retirer le package DocuSign pour les utilisateurs sélectionnés et fermer leur compte DocuSign via le compte DocuSign</label>
+        <name>RemoveDocuSignPackageSelectedUsrsClose</name>
+    </customLabels>
+    <customLabels>
+        <label>Retirer utilisateurs</label>
+        <name>RemoveUsers</name>
+    </customLabels>
+    <customLabels>
+        <label>RETIRER UTILISATEURS = Retirer le package DocuSign pour les utilisateurs
+			sélectionnés</label>
+        <name>RemoveUsersRemoveTheDocuSignPackage</name>
+    </customLabels>
+    <customLabels>
+        <label>Champ obligatoire</label>
+        <name>RequiredField</name>
+    </customLabels>
+    <customLabels>
+        <label>Les champs personnalisés ne sont pas configurés correctement pour votre compte : une liste obligatoire ne contient aucune option. Veuillez contacter votre administrateur Docusign afin de corriger la configuration du champ personnalisé. </label>
+        <name>Required_Empty_List</name>
+    </customLabels>
+    <customLabels>
+        <label>Le(s) champ(s) personnalisé(s) n&apos;est pas fourni</label>
+        <name>Required_custom_label_is_not_provided</name>
+    </customLabels>
+    <customLabels>
+        <label>Renvoyer e-mail pour les enveloppes DocuSign</label>
+        <name>ResendEmails</name>
+    </customLabels>
+    <customLabels>
+        <label>Renvoi des e-mails DocuSign effectué</label>
+        <name>ResendEmailsComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Retour</label>
+        <name>Return</name>
+    </customLabels>
+    <customLabels>
+        <label>Retour à</label>
+        <name>ReturnTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Retour à l&apos;enveloppe DocuSign</label>
+        <name>ReturnToEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Rôle</label>
+        <name>Role</name>
+    </customLabels>
+    <customLabels>
+        <label>Noms de rôle</label>
+        <name>RoleNames</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du rôle ou du destinataire obligatoire.</label>
+        <name>RoleOrRecipientNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Les rôles servent à assigner à un destinataire des balises d&apos;ancrage par défaut de vos documents lors de l&apos;envoi avec DocuSign. Chaque nom de rôle doit être saisi sur une ligne différente. L&apos;ordre des rôles détermine l&apos;ensemble des balises d&apos;ancrage à assigner. Le premier rôle de la liste sera assigné aux onglets « 1 » du document, le deuxième aux onglets « 2 », etc. Exemple : si le premier rôle est « Client », le destinataire lié	au rôle sera assigné aux onglets \s1\, \i1\ des documents. En savoir plus :</label>
+        <name>Rolesareusedto</name>
+    </customLabels>
+    <customLabels>
+        <label>Lignes affichées par page</label>
+        <name>RowsDisplayedPerPage</name>
+    </customLabels>
+    <customLabels>
+        <label>RUSSE</label>
+        <name>Russian</name>
+    </customLabels>
+    <customLabels>
+        <label>Numéro de sécurité sociale</label>
+        <name>SSN</name>
+    </customLabels>
+    <customLabels>
+        <label>Environnement Salesforce</label>
+        <name>SalesforceEnv</name>
+    </customLabels>
+    <customLabels>
+        <label>La limite de stockage de cette organisation Salesforce est dépassée. Contactez votre administrateur système.</label>
+        <name>SalesforceOrgStorageLimitExceeded</name>
+    </customLabels>
+    <customLabels>
+        <label>Mot de passe Salesforce</label>
+        <name>SalesforcePass</name>
+    </customLabels>
+    <customLabels>
+        <label>Mot de passe Salesforce</label>
+        <name>SalesforcePassword</name>
+    </customLabels>
+    <customLabels>
+        <label>Jeton Salesforce</label>
+        <name>SalesforceToken</name>
+    </customLabels>
+    <customLabels>
+        <label>Utilisateur Salesforce</label>
+        <name>SalesforceUser</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne pouvez pas signer l&apos;enveloppe car vous n&apos;en êtes pas un destinataire</label>
+        <name>SalesforceUserSigningPageErrorWrongIdentity</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètre non valide sur la page URL</label>
+        <name>SalesforceUserSigningPageErrorWrongParameter</name>
+    </customLabels>
+    <customLabels>
+        <label>Une exception est survenue : </label>
+        <name>SalesforceUserSigningPageException</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom d&apos;utilisateur Salesforce</label>
+        <name>SalesforceUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>Sandbox</label>
+        <name>Sandbox</name>
+    </customLabels>
+    <customLabels>
+        <label>Enregistrer</label>
+        <name>Save</name>
+    </customLabels>
+    <customLabels>
+        <label>Enregistrer les modifications apportées à la liste « Champs sélectionnés »</label>
+        <name>SaveTheChangesToTheSelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Rechercher</label>
+        <name>Search</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner tous les utilisateurs sur cette page à activer ou désactiver dans
+			DocuSign</label>
+        <name>SelectAllUsersOnThisPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez sélectionner au moins un utilisateur activé pour DocuSign (DSProSFUsername est configuré), afin de permettre cette action.</label>
+        <name>SelectAtLeastOneUserActivatedDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez sélectionner au moins un utilisateur n&apos;ayant pas encore été activé pour DocuSign (DSProSFUsername n&apos;est pas configuré), afin de permettre cette action.</label>
+        <name>SelectAtLeastOneUserDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner un en-tête de colonne pour trier les contenus de tableau.</label>
+        <name>SelectColumnHeaderToSort</name>
+    </customLabels>
+    <customLabels>
+        <label>-- Sélectionner --</label>
+        <name>SelectDashed</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner dans la liste ci-dessous les champs à afficher</label>
+        <name>SelectFieldsToDisplayInList</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner un filtre à appliquer à la liste d&apos;utilisateurs ci-dessous.</label>
+        <name>SelectFilterToApply</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous disposez de plusieurs comptes DocuSign associés à cette adresse e-mail. Sélectionnez le compte à utiliser pour Salesforce.</label>
+        <name>SelectOneEmailForSFDC</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez sélectionner uniquement les utilisateurs ayant l&apos;autorisation de gérer des utilisateurs dans Salesforce et n&apos;ayant pas encore été activés pour DocuSign (DSProSFUsername n&apos;est pas configuré), afin de permettre cette action.</label>
+        <name>SelectOnlyUsersHavePermissionDSProSFUsername</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner</label>
+        <name>SelectRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionner l&apos;utilisateur à ajouter/retirer au/du package DocuSign</label>
+        <name>SelectUserToBeAdded</name>
+    </customLabels>
+    <customLabels>
+        <label>Sélectionnez l&apos;emplacement d&apos;ajout des fonctionnalités DocuSign.</label>
+        <name>SelectWhereDocuSignButtonsAdded</name>
+    </customLabels>
+    <customLabels>
+        <label>Champs sélectionnés</label>
+        <name>SelectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label>Cochez la case de mise à jour automatique des paramètres d&apos;accès réseau Salesforce avec les plages d&apos;IP DocuSign requises.</label>
+        <name>Selectthecheckbox</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoi impossible</label>
+        <name>SendFailed</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoyer maintenant</label>
+        <name>SendNow</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres d&apos;envoi</label>
+        <name>SendSettings</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoyer avec DocuSign</label>
+        <name>SendWithDS</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoyer les rappels automatiquement</label>
+        <name>Sendautomaticreminders</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoi de l&apos;enveloppe</label>
+        <name>SendingEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Envoyé</label>
+        <name>Sent</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres</label>
+        <name>Settings</name>
+    </customLabels>
+    <customLabels>
+        <label>Paramètres enregistrés avec succès.</label>
+        <name>SettingsSavedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label>Configuration non terminée.</label>
+        <name>SetupNotComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Partagez votre expérience avec la communauté AppExchange.</label>
+        <name>ShareExperienceWithCommunity</name>
+    </customLabels>
+    <customLabels>
+        <label>Partagé</label>
+        <name>Shared</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la première page</label>
+        <name>ShowTheFirstPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la dernière page</label>
+        <name>ShowTheLastPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la page suivante</label>
+        <name>ShowTheNextPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher la page précédente</label>
+        <name>ShowThePreviousPage</name>
+    </customLabels>
+    <customLabels>
+        <label>Signer ici</label>
+        <name>SignHere</name>
+    </customLabels>
+    <customLabels>
+        <label>Signer ici (facultatif)</label>
+        <name>SignHereOptional</name>
+    </customLabels>
+    <customLabels>
+        <label>Signature en personne</label>
+        <name>SignInPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>Pour compléter la procédure de signature immédiate, il est possible de se connecter à l&apos;adresse e-mail identifiée par le destinataire de l&apos;enveloppe.</label>
+        <name>SignNowProcess</name>
+    </customLabels>
+    <customLabels>
+        <label>S&apos;inscrire à un essai gratuit DocuSign</label>
+        <name>SignUpFreeDSTrial</name>
+    </customLabels>
+    <customLabels>
+        <label>Signature</label>
+        <name>Signature</name>
+    </customLabels>
+    <customLabels>
+        <label>Signé</label>
+        <name>Signed</name>
+    </customLabels>
+    <customLabels>
+        <label>Signataire</label>
+        <name>Signer</name>
+    </customLabels>
+    <customLabels>
+        <label>Pièce jointe du signataire</label>
+        <name>SignerAttachment</name>
+    </customLabels>
+    <customLabels>
+        <label>Signataire - Signer</label>
+        <name>SignerDashSignNow</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du signataire</label>
+        <name>SignerName</name>
+    </customLabels>
+    <customLabels>
+        <label>Rôle de signataire</label>
+        <name>SignerRole</name>
+    </customLabels>
+    <customLabels>
+        <label>Les signataires devant se conformer à la règlementation 21 CFR Part 11 doivent disposer d’au moins un onglet de signature ou de paraphe obligatoire et non conditionnel.</label>
+        <name>Signers_that_are_required_to_meet_21_CFR_part_11</name>
+    </customLabels>
+    <customLabels>
+        <label>ESPAGNOL</label>
+        <name>Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur : L&apos;enveloppe spécifiée n&apos;existe plus dans DocuSign.</label>
+        <name>SpecifiedEnvelopeNoLonerExist</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;utilisateur spécifié n&apos;est pas destinataire de l&apos;enveloppe spécifiée</label>
+        <name>SpecifiedUserNotRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>commence par</label>
+        <name>StartsWith</name>
+    </customLabels>
+    <customLabels>
+        <label>État ou Province</label>
+        <name>StateOrProvince</name>
+    </customLabels>
+    <customLabels>
+        <label>État / Province</label>
+        <name>StateProvince</name>
+    </customLabels>
+    <customLabels>
+        <label>Statut</label>
+        <name>Status</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;option de correction est uniquement disponible si l&apos;enveloppe est en statut Envoyée ou Livrée.</label>
+        <name>StatusCorrectInDocuSignErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;option de renvoi d&apos;e-mail DocuSign est uniquement disponible si l&apos;enveloppe est en statut Envoyée ou Livrée.</label>
+        <name>StatusVoidEnvelopeError</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;option d&apos;annulation est uniquement disponible si l&apos;enveloppe est en statut Envoyée ou Livrée.</label>
+        <name>StatusVoidEnvelopeErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Étape 1 :</label>
+        <name>Step1</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse</label>
+        <name>StreetAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>Objet</label>
+        <name>Subject</name>
+    </customLabels>
+    <customLabels>
+        <label>Fonction</label>
+        <name>TagTitle</name>
+    </customLabels>
+    <customLabels>
+        <label>Type</label>
+        <name>TagType</name>
+    </customLabels>
+    <customLabels>
+        <label>Champ de texte</label>
+        <name>TextField</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;adresse e-mail n&apos;est pas valide</label>
+        <name>TheEmailAddressIsInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label>L&apos;enveloppe spécifiée n&apos;existe pas ou vous ne disposez pas des droits appropriés.</label>
+        <name>TheEnvelopeSpecifiedEither</name>
+    </customLabels>
+    <customLabels>
+        <label>Une erreur est survenue lors de la mise à jour des paramètres du compte.</label>
+        <name>ThereWasAnErrorWhenUpdating</name>
+    </customLabels>
+    <customLabels>
+        <label>Cet utilisateur n&apos;est pas l&apos;expéditeur de l&apos;enveloppe. Seul l&apos;expéditeur de l&apos;enveloppe peut exécuter l&apos;opération demandée.</label>
+        <name>ThisUserIsNotTheSender</name>
+    </customLabels>
+    <customLabels>
+        <label>Pour lier le compte, sélectionnez Retour, puis « Se connecter à DocuSign »</label>
+        <name>ToLinkTheAccountPleaseSelect</name>
+    </customLabels>
+    <customLabels>
+        <label>Pour lier le compte, sélectionnez « Se connecter à DocuSign »</label>
+        <name>ToLinkTheAccountPleaseUse</name>
+    </customLabels>
+    <customLabels>
+        <label>Pour annuler cette enveloppe, veuillez préciser la raison de l&apos;annulation
+			ci-dessous, puis cliquer sur « Annuler enveloppe ». Un e-mail sera envoyé aux destinataires
+			ayant déjà signé, pour les informer que cette enveloppe et vos
+			commentaires ont été annulés.</label>
+        <name>ToVoidThisEnvelopeProvideReason</name>
+    </customLabels>
+    <customLabels>
+        <label>Lignes totales</label>
+        <name>TotalRow</name>
+    </customLabels>
+    <customLabels>
+        <label>Transaction impossible.</label>
+        <name>TransactionProblem</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations de transaction.</label>
+        <name>TransctionInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>Réseau de confiance</label>
+        <name>TrustedNetwork</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter la pièce jointe.  Accès insuffisant à l&apos;objet Attachment.</label>
+        <name>UnableAddAttachmentInsufficientAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter le contenu connexe.  Accès insuffisant à l&apos;objet ContentVersion.</label>
+        <name>UnableAddContentInsufficientAccessContentVersion</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter ou de mettre à jour les documents.</label>
+        <name>UnableAddUpdateDocument</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter ou de mettre à jour les enveloppes DocuSign.</label>
+        <name>UnableAddUpdateEnvelopes</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter ou de mettre à jour les destinataires.</label>
+        <name>UnableAddUpdateRecipients</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de trouver l&apos;enveloppe correspondant à l&apos;identifiant =</label>
+        <name>UnableFindEvenlopeWithIdEquals</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;accéder aux informations relatives au contenu.  Accès insuffisant à l&apos;objet ContentWorkspace.</label>
+        <name>UnableGetContentInformationInsufficientContentWorkspace</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de charger les informations relatives aux documents.  Accès insuffisant à l&apos;objet Attachment.</label>
+        <name>UnableGetDocumentInformationInsufficientAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de charger les informations relatives aux documents.  Accès insuffisant à l&apos;objet ContentVersion.</label>
+        <name>UnableGetDocumentInformationInsufficientAccessContentVersion</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;initialiser la configuration DocuSign.  Accès insuffisant à l&apos;objet DocuSignAccountConfiguration.</label>
+        <name>UnableInitializeDocuSignAccountConfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de charger les informations de provisioning à partir de DocuSign. Vérifier que UserName, Password et IntegratorKey sont valides.</label>
+        <name>UnableLoadProvisioningInformation</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible de renseigner la liste des dossiers.  Accès insuffisant à l&apos;objet Folder.</label>
+        <name>UnablePopulateFolderList</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;afficher cette enveloppe car l&apos;utilisateur ne dispose pas d&apos;un accès suffisant ou l&apos;enveloppe n&apos;existe pas.</label>
+        <name>UnableSendEvelopeNotExist</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;ajouter le document</label>
+        <name>UnableToAddDocument</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;authentifier l&apos;utilisateur avec DocuSign</label>
+        <name>UnableToAuthenticateTheUser</name>
+    </customLabels>
+    <customLabels>
+        <label>Impossible d&apos;obtenir les objets personnalisés</label>
+        <name>UnableToGetCustomObjects</name>
+    </customLabels>
+    <customLabels>
+        <label>Activer les actions Chatter pour Annuler et Renvoyer</label>
+        <name>UndoAndSend</name>
+    </customLabels>
+    <customLabels>
+        <label>Inconnu(e)(s)</label>
+        <name>Unknown</name>
+    </customLabels>
+    <customLabels>
+        <label>Le destinataire que vous avez identifié n&apos;est pas le destinataire valide de l&apos;enveloppe spécifiée.</label>
+        <name>UnknownEnvelopeRecipient</name>
+    </customLabels>
+    <customLabels>
+        <label>Code de langage non reconnu.</label>
+        <name>UnrecognizedLangaugeCode</name>
+    </customLabels>
+    <customLabels>
+        <label>Enregistrer</label>
+        <name>UpdateLayouts</name>
+    </customLabels>
+    <customLabels>
+        <label>Utilisateur</label>
+        <name>User</name>
+    </customLabels>
+    <customLabels>
+        <label>Cet utilisateur ne dispose pas de droits suffisants.</label>
+        <name>UserLacksSufficientPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label>Un nom d&apos;utilisateur Salesforce doit être fourni.</label>
+        <name>UserMustBeProvided</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom d&apos;utilisateur obligatoire</label>
+        <name>UserNameIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Utilisateurs</label>
+        <name>Users</name>
+    </customLabels>
+    <customLabels>
+        <label>utilisateurs.</label>
+        <name>UsersPeriod</name>
+    </customLabels>
+    <customLabels>
+        <label>Validation</label>
+        <name>Validation</name>
+    </customLabels>
+    <customLabels>
+        <label>Message d&apos;erreur</label>
+        <name>ValidationErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Vérifier avec D&amp;B</label>
+        <name>VerifyWithDNB</name>
+    </customLabels>
+    <customLabels>
+        <label>Bénéficiez d&apos;un accès intégré à l&apos;app de détection des risques lors de la phase pré-contractuelle de Dun &amp; Bradstreet pour vérifier l&apos;identité d&apos;une entreprise ou vérifier les risques financiers d&apos;une entreprise.</label>
+        <name>VerifyWithDNBDescription</name>
+    </customLabels>
+    <customLabels>
+        <label>Affichage :</label>
+        <name>ViewColon</name>
+    </customLabels>
+    <customLabels>
+        <label>Afficher le statut DocuSign</label>
+        <name>ViewDocuSignStatus</name>
+    </customLabels>
+    <customLabels>
+        <label>Annuler enveloppe</label>
+        <name>VoidEnvelope</name>
+    </customLabels>
+    <customLabels>
+        <label>Annulation enveloppe terminée</label>
+        <name>VoidEnvelopeComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>Annulé</label>
+        <name>Voided</name>
+    </customLabels>
+    <customLabels>
+        <label>Si vous annulez une enveloppe, vos destinataires ne pourront
+			plus y accéder. Une fois l&apos;enveloppe annulée, ils ne pourront plus la consulter ni
+			la signer.</label>
+        <name>VoidingEnvelopeWillRemoveAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>Avertir les signataires</label>
+        <name>WarnSigners</name>
+    </customLabels>
+    <customLabels>
+        <label>Qu&apos;est-ce que c&apos;est ?</label>
+        <name>Whatisthis</name>
+    </customLabels>
+    <customLabels>
+        <label>Blanc</label>
+        <name>White</name>
+    </customLabels>
+    <customLabels>
+        <label>Largeur (pixels)</label>
+        <name>WidthInPixels</name>
+    </customLabels>
+    <customLabels>
+        <label>La fenêtre DocuSign a été bloquée par votre navigateur. Autoriser les pop-ups pour afficher la nouvelle fenêtre.</label>
+        <name>WindowBlockedByBrowser</name>
+    </customLabels>
+    <customLabels>
+        <label>Écrire un avis</label>
+        <name>WriteAReview</name>
+    </customLabels>
+    <customLabels>
+        <label>Oui</label>
+        <name>Yes</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous tentez d&apos;accéder à une page dans DocuSign for Salesforce mais cette action est refusée car l&apos;utilisateur ne possède pas d&apos;accès en lecture à DSProSFUsername__c.  Il s&apos;agit d&apos;un paramètre de Salesforce, non de DocuSign. Vous devez contacter votre administrateur Salesforce pour vous assurer que vous avez octroyé l&apos;accès en lecture à votre utilisateur.</label>
+        <name>YouAreAttemptingToAccess</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous ne pouvez pas sélectionner plus de</label>
+        <name>YouCannotSelectMoreThan</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous devez accepter les Conditions d&apos;utilisation de DocuSign.</label>
+        <name>YouMustAgreeToTheDocusignTerms</name>
+    </customLabels>
+    <customLabels>
+        <label>Vous recevrez une copie du document terminé par e-mail.</label>
+        <name>YourDocEmailedInPdf</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre compte DocuSign n&apos;a pas été activé ou n&apos;est pas correctement configuré.</label>
+        <name>YourDocusignAccountHasNotBeen</name>
+    </customLabels>
+    <customLabels>
+        <label>Votre compte DocuSign n&apos;a pas été activé ou n&apos;est pas correctement configuré.</label>
+        <name>YourDocusignAccountHasNotBeenActivated</name>
+    </customLabels>
+    <customLabels>
+        <label>Code postal</label>
+        <name>Zip</name>
+    </customLabels>
+    <customLabels>
+        <label>Code zip/postal</label>
+        <name>ZipPostalCode</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter un signataire</label>
+        <name>m_Add_Signer</name>
+    </customLabels>
+    <customLabels>
+        <label>Annuler</label>
+        <name>m_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>DOCUMENTS</label>
+        <name>m_DOCUMENTS</name>
+    </customLabels>
+    <customLabels>
+        <label>DocuSign</label>
+        <name>m_DocuSign</name>
+    </customLabels>
+    <customLabels>
+        <label>Terminé</label>
+        <name>m_Done</name>
+    </customLabels>
+    <customLabels>
+        <label>http://goo.gl/ji8PzU</label>
+        <name>m_Download_DocuSign_Android_Url</name>
+    </customLabels>
+    <customLabels>
+        <label>Télécharger la version mobile de DocuSign</label>
+        <name>m_Download_DocuSign_Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>https://itunes.apple.com/us/app/docusign-ink/id474990205?mt=8</label>
+        <name>m_Download_DocuSign_iOS_Url</name>
+    </customLabels>
+    <customLabels>
+        <label>Téléchargez l&apos;application mobile de DocuSign, puis essayez à nouveau d&apos;envoyer votre document.</label>
+        <name>m_Download_the_DocuSign_mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>Adresse e-mail</label>
+        <name>m_EmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>Seul le premier signataire est sélectionnable sous « En personne »</label>
+        <name>m_Error_InPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom complet</label>
+        <name>m_FullName</name>
+    </customLabels>
+    <customLabels>
+        <label>Obtenir la version mobile de DocuSign</label>
+        <name>m_Get_DocuSign_Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>En personne</label>
+        <name>m_InPerson</name>
+    </customLabels>
+    <customLabels>
+        <label>E-mail non valide</label>
+        <name>m_InvalidEmailError</name>
+    </customLabels>
+    <customLabels>
+        <label>Nouvelle commande</label>
+        <name>m_Reorder</name>
+    </customLabels>
+    <customLabels>
+        <label>SIGNATAIRES</label>
+        <name>m_SIGNERS</name>
+    </customLabels>
+    <customLabels>
+        <label>Par e-mail</label>
+        <name>m_ViaEmail</name>
+    </customLabels>
+    <customLabels>
+        <label>Expression régulière</label>
+        <name>regex</name>
+    </customLabels>
+    <customLabels>
+        <label>Code postal 5-4</label>
+        <name>zip5dash4</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label>Admin DocuSign</label>
+        <name>DocuSignAdminLink</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label>Admin DocuSign</label>
+        <name>DocuSign_Admin</name>
+    </customTabs>
+    <customTabs>
+        <label>Démonstration DocuSign</label>
+        <name>DocuSign_Partner_Demo</name>
+    </customTabs>
+</Translations>

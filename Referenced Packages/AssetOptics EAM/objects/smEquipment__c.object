@@ -1,0 +1,2621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The smEquipment object is used for all assets to include Vehicles, Equipment, Locations, and Components</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Asset_Hierarchy</fullName>
+        <availableFields>
+            <field>AssetRecordType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Asset_Class__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Asset_SubClass__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Dept__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>External_Asset_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Serial_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Service_Location__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set will be used in the Asset Hierarchy Page.</description>
+        <displayedFields>
+            <field>Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Asset_Group__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Asset Hierarchy</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Account - Used to track the ownership of assignment of an Asset Tag.  This Account ID is automatically copied to the Work Order Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Account - Used to track the ownership of assignment of an Asset Tag.  This Account ID is automatically copied to the Work Order Account.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Asset Tags (Account)</relationshipLabel>
+        <relationshipName>Maintenance_Assets_Acct</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetRecordType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DO NOT EDIT THIS PICKLIST.  System populated via workflow.  Field security should be set to read only for all user profiles.  If you configure additional Recordtypes on the Asset Tag object, enter the Name of the recordtype as a value in this picklist, set as the only available and default value for the recordtype.  This will enable you to configure validation rules and other platform features not otherwise available on a recordtype.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Tag Recordtype - Read Only</inlineHelpText>
+        <label>Asset Tag RecordType</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Component</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Class used in Class/SubClass for categorization - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Class used in Class/SubClass for categorization - User Defined</inlineHelpText>
+        <label>Asset Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Air Conditioner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Air Dryer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Baler</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fleet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water System</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Air Handler</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Packaging Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Agitator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset Group</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Group</inlineHelpText>
+        <label>Asset Group</label>
+        <referenceTo>Asset_Group__c</referenceTo>
+        <relationshipLabel>Asset Tags</relationshipLabel>
+        <relationshipName>Asset_Tags</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Number - System Generated Unique Number for each Maintenance Asset Record.  Can be used in conjunction with Auto Asset ID Numbering</description>
+        <displayFormat>{000000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Number - System Generated Unique Number for each Maintenance Asset Record.  Can be used in conjunction with Auto Asset ID Numbering</inlineHelpText>
+        <label>Asset Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Priority - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Priority - User Defined</inlineHelpText>
+        <label>Asset Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Asset_SubClass__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Dependent Picklist Asset SubClass in Class/SubClass categorization - User Defined.  SubClass Values controlled by Class Values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Dependent Picklist Asset SubClass in Class/SubClass categorization - User Defined.  SubClass Values controlled by Class Values</inlineHelpText>
+        <label>Asset SubClass</label>
+        <picklist>
+            <controllingField>Asset_Class__c</controllingField>
+            <picklistValues>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+                <controllingFieldValues>Building</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car</fullName>
+                <default>false</default>
+                <controllingFieldValues>Fleet</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Truck</fullName>
+                <default>false</default>
+                <controllingFieldValues>Fleet</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trailer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Fleet</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Motorcycle</fullName>
+                <default>false</default>
+                <controllingFieldValues>Fleet</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lift Station</fullName>
+                <default>false</default>
+                <controllingFieldValues>Water System</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Storm Water Drain</fullName>
+                <default>false</default>
+                <controllingFieldValues>Water System</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manhole</fullName>
+                <default>false</default>
+                <controllingFieldValues>Water System</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Freon</fullName>
+                <default>false</default>
+                <controllingFieldValues>Air Conditioner</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City field for Asset Tag Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>City field for Asset Tag Address</inlineHelpText>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Part__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Component Part is a direct reference to a Part ID.  A Component is a unique type of Asset Tag which may be moved in and out of inventory.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Component Part is a direct reference to a Part ID.  A Component is a unique type of Asset Tag which may be moved in and out of inventory.</inlineHelpText>
+        <label>Component Part</label>
+        <referenceTo>smPart__c</referenceTo>
+        <relationshipLabel>Asset Tags</relationshipLabel>
+        <relationshipName>Maintenance_Asset</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Country field for Asset Tag Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country field for Asset Tag Address</inlineHelpText>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Planner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Default Planner for the Asset Tag (Lookup to User and for reference purposes only)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Planner for the Asset Tag (Lookup to User and for reference purposes only)</inlineHelpText>
+        <label>Default Planner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Maintenance_Asset</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dept__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Tag Department - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Tag Department - User Defined</inlineHelpText>
+        <label>Dept</label>
+        <picklist>
+            <picklistValues>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Component Mfg.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compudose Mfg.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Component Pkg.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compudose Pkg.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description of Asset - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of Asset - User Defined</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Doors__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of Doors for Vehicle - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Doors for Vehicle - User Defined</inlineHelpText>
+        <label>Number of Doors</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Engine__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Engine Information for a Vehicle Asset Tag type.  User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engine Information for a Vehicle Asset Tag type.  User Defined</inlineHelpText>
+        <label>Engine</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Asset_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique External ID which can be used to access the Asset Tag record thru the API</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique External ID which can be used to access the Asset Tag record thru the API</inlineHelpText>
+        <label>External Asset ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Fuel_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fuel Type - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fuel Type - User Defined</inlineHelpText>
+        <label>Fuel Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Gasoline</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flex Fuel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electric</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hybrid-Gas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LPG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Geolocation represents the latitude and longitude for the AssetTag</description>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>The Geolocation represents the latitude and longitude for the AssetTag</inlineHelpText>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>8</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Vehicle_Weight__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Gross Vehicle Weight (GVW) - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gross Vehicle Weight (GVW) - User Defined</inlineHelpText>
+        <label>Gross Vehicle Weight</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Display__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field Displayed on the Asset Hierarchy.  Can be manually edited or updated with Field Update Workflows capturing values from other fields thereby enabling the display text to be customer specific.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field Displayed on the Asset Hierarchy.  Can be manually edited or updated with Field Update Workflows capturing values from other fields thereby enabling the display text to be customer specific.</inlineHelpText>
+        <label>Hierarchy Display</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Sort_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the sort order for an asset position within a node on the Asset Hierarchy Visualforce page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls the sort order for an asset position within a node on the Asset Hierarchy Visualforce page.</inlineHelpText>
+        <label>Hierarchy Sort Order</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ID_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset ID &amp; Description (concatenated)</description>
+        <externalId>false</externalId>
+        <formula>Name &amp; &quot;  &quot; &amp;  Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Asset ID &amp; Description (concatenated - used for easy grouping on Reports)</inlineHelpText>
+        <label>ID &amp; Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>In_Service_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date that Asset was placed into service - User defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date that Asset was placed into service - User defined</inlineHelpText>
+        <label>In Service Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Latitude__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Latitude</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Longitude__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Longitude</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manufacturer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Manufacturer of Asset - Lookup to Accounts where &quot;Manufacturer&quot; flag is checked</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manufacturer of Asset - Lookup to Accounts where &quot;Manufacturer&quot; flag is checked</inlineHelpText>
+        <label>Manufacturer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smManufacturer__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Asset Tags (Manufacturer)</relationshipLabel>
+        <relationshipName>Maintenance_Assets_Mfg</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mfg_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date the Asset was manufactured - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the Asset was manufactured - User Defined</inlineHelpText>
+        <label>Mfg Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Mfg_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manufacturer Year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manufacturer Year</inlineHelpText>
+        <label>Mfg Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Model_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Model Number - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Model Number - User Defined</inlineHelpText>
+        <label>Model Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nameplate_Data__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Nameplate Data.  Multi-Line Text Field - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nameplate Data.  Multi-Line Text Field - User Defined</inlineHelpText>
+        <label>Nameplate Data</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Number Relating to Asset Purchase - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Number Relating to Asset Purchase - User Defined</inlineHelpText>
+        <label>PO Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula referencing the Parent Asset Description</description>
+        <externalId>false</externalId>
+        <formula>Parent__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula referencing the Parent Asset Description</inlineHelpText>
+        <label>Parent Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Parent Asset Tag in the physical/logical parent-child heirarchy</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Asset Tag in the physical/logical parent-child heirarchy</inlineHelpText>
+        <label>Parent Asset ID</label>
+        <referenceTo>smEquipment__c</referenceTo>
+        <relationshipLabel>Child Asset Tags</relationshipLabel>
+        <relationshipName>Children</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Part_Bin_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field will contain the bin location of the serialized part.  (Future Functionality - DO NOT USE)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will contain the bin location of the serialized part.</inlineHelpText>
+        <label>Part Bin Location</label>
+        <referenceTo>Part_Bin_Location__c</referenceTo>
+        <relationshipLabel>Asset Tags</relationshipLabel>
+        <relationshipName>Asset_Tags</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parts_Expense_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parts Expense Account - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Parts Expense Account is a free format text field.  This value will be automatically copied to the Work Order when a work order for a specific asset is created.</inlineHelpText>
+        <label>Parts Expense Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Passenger_Seats__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of Passenger Seats for Vehicle - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Passenger Seats for Vehicle - User Defined</inlineHelpText>
+        <label>Number of Passenger Seats</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to standard Product (Future Functionality - DO NOT USE)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to standard Product</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Asset Tags</relationshipLabel>
+        <relationshipName>Asset_Tags</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Purchase Date - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Purchase Date - User Defined</inlineHelpText>
+        <label>Purchase Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Tag Serial Number - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Tag Serial Number - User Defined</inlineHelpText>
+        <label>Serial Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Service Location serves as a physical location of an Asset Tag.  This can be used in a complementary fashion with a &quot;Location&quot; which is a Maintenance Asset Record Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Location serves as a physical location of an Asset Tag.  This can be used in a complementary fashion with a &quot;Location&quot; which is a Maintenance Asset Record Type</inlineHelpText>
+        <label>Service Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bond Street</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Barton Street</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lakeview Ave.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>State_Province__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State/Province for Asset Tag Address - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State/Province for Asset Tag Address - User Defined</inlineHelpText>
+        <label>State/Province</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the status of the asset in its lifecycle - User Defined (Do not remove &quot;Disposed&quot; status).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the status of the asset in its lifecycle - User Defined</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stored</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disposed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Transit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out of Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street Address for Asset Tag</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Street Address for Asset Tag</inlineHelpText>
+        <label>Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Top_Level__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Optional Attribute that can be used to define an asset as being the top level of a hierarchy.  Does not keep you from adding children to the asset.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional Attribute that can be used to define an asset as being the top level of a hierarchy.  Does not keep you from adding children to the asset.</inlineHelpText>
+        <label>Top Level</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Transmission__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transmission Type for Vehicle - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transmission Type for Vehicle - User Defined</inlineHelpText>
+        <label>Transmission</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Type is for categorization purposes - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Type is for categorization purposes - User Defined</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Furnishings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT/Computing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VIN__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Seventeen digits in total.  The first three digits (1, 2, 3) indicating the World Manufacturer Identifier or the company which made the car. The next six (4, 5, 6, 7, 8, 9) digits indicate the vehicle characteristics or CarsDirect description. The next number (10) indicates the Model year of the car you have chosen. The next number (11) indicates the plant code where the car was made. The 12th, 13th and 14th number indicates the manufacturer identifier, and 15th, 16th and 17th number indicating the sequential numbers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Vehicle Identification Number</inlineHelpText>
+        <label>VIN</label>
+        <length>17</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Warranty_Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Warranty Expiration Date - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Warranty Expiration Date - User Defined</inlineHelpText>
+        <label>Warranty Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Warranty__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Designates if a Warranty applies to an Asset - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Designates if a Warranty applies to an Asset - User Defined</inlineHelpText>
+        <label>Warranty</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Wheel_Drive__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Wheel Drive</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Wheel Drive</inlineHelpText>
+        <label>Wheel Drive</label>
+        <picklist>
+            <picklistValues>
+                <fullName>FWD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RWD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AWD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4WD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Zip_Postal_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Zip/Postal Code Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Zip/Postal Code Address</inlineHelpText>
+        <label>Zip/Postal Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Asset Tag</label>
+    <listViews>
+        <fullName>All_Components</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Parent__c</columns>
+        <columns>Parent_Description__c</columns>
+        <columns>Component_Part__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smEquipment__c.Component</value>
+        </filters>
+        <label>All Components</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Equipment</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Parent__c</columns>
+        <columns>Parent_Description__c</columns>
+        <columns>Default_Planner__c</columns>
+        <columns>Latitude__c</columns>
+        <columns>Longitude__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smEquipment__c.Equipment</value>
+        </filters>
+        <label>All Equipment</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Locations</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Parent__c</columns>
+        <columns>Parent_Description__c</columns>
+        <columns>Default_Planner__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smEquipment__c.Location</value>
+        </filters>
+        <label>All Locations</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Records</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dept__c</columns>
+        <columns>Parent__c</columns>
+        <columns>Parent_Description__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Records</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Top_Level_Locations</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Parent__c</columns>
+        <columns>Parent_Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smEquipment__c.Location</value>
+        </filters>
+        <filters>
+            <field>Top_Level__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Top Level Locations</label>
+    </listViews>
+    <listViews>
+        <fullName>Vehicles</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>VIN__c</columns>
+        <columns>Warranty_Expiration_Date__c</columns>
+        <columns>Manufacturer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Model_Number__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smEquipment__c.Vehicle</value>
+        </filters>
+        <label>Vehicles</label>
+    </listViews>
+    <nameField>
+        <label>Asset ID</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Asset Tags</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Building</fullName>
+        <active>true</active>
+        <description>Building</description>
+        <label>Building</label>
+        <picklistValues>
+            <picklist>AssetRecordType__c</picklist>
+            <values>
+                <fullName>Building</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Class__c</picklist>
+            <values>
+                <fullName>Air Handler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Packaging Equipment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Priority__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_SubClass__c</picklist>
+            <values>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dept__c</picklist>
+            <values>
+                <fullName>Component Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Component Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Doors__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fuel_Type__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Barton Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bond Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lakeview Ave%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Out of Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transmission__c</picklist>
+            <values>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wheel_Drive__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Component</fullName>
+        <active>false</active>
+        <description>Component</description>
+        <label>Component</label>
+        <picklistValues>
+            <picklist>AssetRecordType__c</picklist>
+            <values>
+                <fullName>Component</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Class__c</picklist>
+            <values>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Priority__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_SubClass__c</picklist>
+            <values>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dept__c</picklist>
+            <values>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Doors__c</picklist>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fuel_Type__c</picklist>
+            <values>
+                <fullName>CNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flex Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gasoline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid-Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Disposed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Transit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stored</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transmission__c</picklist>
+            <values>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>IT%2FComputing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wheel_Drive__c</picklist>
+            <values>
+                <fullName>4WD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RWD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Equipment</fullName>
+        <active>true</active>
+        <description>Equipment</description>
+        <label>Equipment</label>
+        <picklistValues>
+            <picklist>AssetRecordType__c</picklist>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Class__c</picklist>
+            <values>
+                <fullName>Air Conditioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Dryer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Handler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Packaging Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water System</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Priority__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_SubClass__c</picklist>
+            <values>
+                <fullName>Freon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lift Station</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manhole</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Storm Water Drain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dept__c</picklist>
+            <values>
+                <fullName>Component Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Component Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Doors__c</picklist>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fuel_Type__c</picklist>
+            <values>
+                <fullName>CNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flex Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gasoline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid-Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Barton Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bond Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lakeview Ave%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>CIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disposed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Transit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stored</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transmission__c</picklist>
+            <values>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furnishings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT%2FComputing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wheel_Drive__c</picklist>
+            <values>
+                <fullName>4WD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RWD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Location</fullName>
+        <active>true</active>
+        <description>Location</description>
+        <label>Location</label>
+        <picklistValues>
+            <picklist>AssetRecordType__c</picklist>
+            <values>
+                <fullName>Location</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Class__c</picklist>
+            <values>
+                <fullName>Air Handler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Packaging Equipment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Priority__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_SubClass__c</picklist>
+            <values>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dept__c</picklist>
+            <values>
+                <fullName>Component Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Component Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Mfg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compudose Pkg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Doors__c</picklist>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fuel_Type__c</picklist>
+            <values>
+                <fullName>CNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flex Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gasoline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid-Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Barton Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bond Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lakeview Ave%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Out of Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transmission__c</picklist>
+            <values>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>IT%2FComputing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wheel_Drive__c</picklist>
+            <values>
+                <fullName>4WD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RWD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Vehicle</fullName>
+        <active>false</active>
+        <description>Vehicle</description>
+        <label>Vehicle</label>
+        <picklistValues>
+            <picklist>AssetRecordType__c</picklist>
+            <values>
+                <fullName>Vehicle</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Class__c</picklist>
+            <values>
+                <fullName>Air Conditioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Dryer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fleet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Priority__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP - Non Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GMP-Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-GMP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_SubClass__c</picklist>
+            <values>
+                <fullName>Car</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorcycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub Class 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Truck</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dept__c</picklist>
+            <values>
+                <fullName>QC Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Doors__c</picklist>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fuel_Type__c</picklist>
+            <values>
+                <fullName>CNG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flex Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gasoline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid-Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Barton Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bond Street</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lakeview Ave%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>CIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disposed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Service</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Transit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stored</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Transmission__c</picklist>
+            <values>
+                <fullName>Automatic 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automatic 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CVT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 3 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 4 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 5 Speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual 6 Speed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furnishings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT%2FComputing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wheel_Drive__c</picklist>
+            <values>
+                <fullName>4WD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FWD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RWD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Asset_Group__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Asset_Group__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Description__c</lookupFilterFields>
+        <lookupFilterFields>Asset_Group__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>RECORDTYPE</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Description__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Asset_Group__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Asset_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>View_Map</fullName>
+        <availability>online</availability>
+        <description>This Map will display the selected Maintenance Assets on the google map.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View Map</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+
+// Get the List of Asset Ids selected by the User.
+
+var records= {!GETRECORDIDS($ObjectType.smEquipment__c)};
+
+
+var len=records.length;
+
+
+//  Call the method if User has selected any record.
+if (len!= 0){
+
+             
+ //var result = sforce.connection.query(&quot;SELECT Id, sm1e__Latitude__c, sm1e__Longitude__c FROM sm1e__smEquipment__c //where  Id IN records and sm1e__Latitude__c &lt;&gt; null and sm1e__Longitude__c &lt;&gt; null &quot;);
+
+window.open(&quot;/apex/MaintenanceAssetMap?records=&quot; +records);
+               }else{
+              window.alert(&quot;Atleast one record should be selected before viewing the Asset Map......&quot;);
+       }</url>
+    </webLinks>
+</CustomObject>

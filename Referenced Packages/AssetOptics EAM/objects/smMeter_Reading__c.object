@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Meter Readings</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Meter_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter ID</inlineHelpText>
+        <label>Meter ID</label>
+        <referenceTo>smMeter__c</referenceTo>
+        <relationshipLabel>Meter Readings</relationshipLabel>
+        <relationshipName>Meter_Readings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Reading_Date__c</fullName>
+        <defaultValue>Now()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Reading Date/Time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Reading Date/Time</inlineHelpText>
+        <label>Reading Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Reading_Value_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Meter Reading Value (Numerical)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Reading Value (Numerical)</inlineHelpText>
+        <label>Reading Value</label>
+        <precision>14</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula referencing Meter UOM</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Meter_ID__r.UOM__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula referencing Meter UOM</inlineHelpText>
+        <label>UOM</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Meter Reading</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>MR-{000000000}</displayFormat>
+        <label>Meter Reading ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Meter Readings</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Meter_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reading_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reading_Value_Num__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UOM__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Meter_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Reading_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Reading_Value_Num__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UOM__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Meter_ID__c</lookupFilterFields>
+        <lookupFilterFields>Reading_Date__c</lookupFilterFields>
+        <lookupFilterFields>Reading_Value_Num__c</lookupFilterFields>
+        <lookupFilterFields>UOM__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Meter_ID__c</searchFilterFields>
+        <searchFilterFields>Reading_Date__c</searchFilterFields>
+        <searchFilterFields>Reading_Value_Num__c</searchFilterFields>
+        <searchFilterFields>UOM__c</searchFilterFields>
+        <searchResultsAdditionalFields>Meter_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reading_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reading_Value_Num__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UOM__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Meter_Type_NE_Virtual</fullName>
+        <active>true</active>
+        <description>Ensures that you cannot enter Readings Values for a Logical Meter Type</description>
+        <errorConditionFormula>ISPICKVAL( Meter_ID__r.Type__c , &quot;Logical&quot;)</errorConditionFormula>
+        <errorMessage>Meter Readings may not be directly entered for Logical meter types.  The meter reading for a Logical meter is inherited from its Parent Meter</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reading_Value_LE_Last_Value</fullName>
+        <active>true</active>
+        <description>This validation rule tests to ensure that the current meter reading value is not less than the last meter reading value unless it is being reset to zero.</description>
+        <errorConditionFormula>IF( Reading_Date__c  &gt;  Meter_ID__r.Last_Reading_Date__c , IF( ISPICKVAL(Meter_ID__r.Type__c, &quot;Continuous&quot;)  &amp;&amp;  Reading_Value_Num__c  &lt;&gt; 0 , ( Reading_Value_Num__c   &lt;   Meter_ID__r.Last_Reading_Value__c ), false), false)</errorConditionFormula>
+        <errorDisplayField>Reading_Value_Num__c</errorDisplayField>
+        <errorMessage>The current meter reading value cannot be less than the last meter reading value unless you are Resetting the current meter reading value to zero (0).</errorMessage>
+    </validationRules>
+</CustomObject>

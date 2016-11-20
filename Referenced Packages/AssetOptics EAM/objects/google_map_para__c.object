@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Contains parameters to setup Google Maps integration</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Asset_ID_on_Work_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This parameter contains the Field Id of the Asset Id on Work Order</description>
+        <externalId>false</externalId>
+        <label>Asset ID on Work Order</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Google Map Parameters</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,4681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Work Orders</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Account field may be used to represent a Customer Account.  This value will be automatically populated from the Account on the Asset Tag.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Account field may be used to represent a Customer Account.  This value will be automatically populated from the Account on the Asset Tag.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Work Orders (Account)</relationshipLabel>
+        <relationshipName>Work_Orders_Acct</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Action_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Action Code:  Used with Failure, Cause and Action Codes for reliability analysis - User Defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Action Code:  Used with Failure, Cause and Action Codes for reliability analysis - User Defined</inlineHelpText>
+        <label>Action Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repair/Modify</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CalibrateAdjust</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual Start Date for the Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Start Date for the Work Order</inlineHelpText>
+        <label>Actual Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Default_Planner__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Asset Default Planner</description>
+        <externalId>false</externalId>
+        <formula>Equipment__r.Default_Planner__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Asset Default Planner</inlineHelpText>
+        <label>Asset Default Planner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asset_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset Group (Used to Reference &amp; Organize Model Work Orders by Asset Group)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Group (Used to Reference &amp; Organize Model Work Orders by Asset Group)</inlineHelpText>
+        <label>Asset Group</label>
+        <referenceTo>Asset_Group__c</referenceTo>
+        <relationshipLabel>Model Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Work Order Assignee - Lookup to User.  Work Orders can also be assigned at the Work Order Task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Assignee - Lookup to User.  Work Orders can also be assigned at the Work Order Task.</inlineHelpText>
+        <label>Assigned User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Work_Orders_Assignment</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Assigned Vendor is a Lookup Reference to the Account where Vendor = True</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Assigned Vendor is a Lookup Reference to the Account where Vendor = True</inlineHelpText>
+        <label>Assigned Vendor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smVendor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Select a Vendor to Assign.  You may clear this filter to assign to ANY type of Account.</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Assigned Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CMRVAWOC__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Cumulative Meter Reading Value at Work Order Completion.  System populated via workflow.  Field Security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cumulative Meter Reading Value at Work Order Completion.  System populated via workflow.  Field Security should be set to read only for all profiles.</inlineHelpText>
+        <label>Cum Meter Reading at WO Comp</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cause_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Cause Code:  Used with Failure, Cause and Action Codes for reliability analysis</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cause Code:  Used with Failure, Cause and Action Codes for reliability analysis</inlineHelpText>
+        <label>Cause Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>C1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Operator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal Wear</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Cause found</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Class</inlineHelpText>
+        <label>Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building Major Repair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment Replacement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Filter Clean/Replace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General Plant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Insurance Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lubrication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Related</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Minor Adjustments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSHA Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repair in Place</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rework of Previous</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Roof Major Repair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Startup/Standby</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Close Date - Populated via Workflow.  Can be manually overridden.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Close Date - Populated via Workflow.  Can be manually overridden.</inlineHelpText>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Completion_Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Completion Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Completion Comments</inlineHelpText>
+        <label>Completion Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Completion_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Completion Date.  This date is automatically populated with the User&apos;s current system Date when the Work Order Status is updated to Completed.  Can be overwritten with user specified Date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Completion Date.  This date is automatically populated with the User&apos;s current system Date when the Work Order Status is updated to Completed.  Can be overwritten with user specified Date.</inlineHelpText>
+        <label>Completion Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Completion_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Completion Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Completion Notes</inlineHelpText>
+        <label>Completion Notes</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Created_by_Email_Service__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Created by Email Service is a Set to True via APEX code is the Work Order was created using the createWorkOrder APEX class.  Used to initiate workflow processes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Created by Email Service is a Set to True via APEX code is the Work Order was created using the createWorkOrder APEX class.  Used to initiate workflow processes.</inlineHelpText>
+        <label>Created by Email Service</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Delay_SubType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Delay Sub Type (dependent on Delay Type)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delay Sub Type (dependent on Delay Type)</inlineHelpText>
+        <label>Delay SubType</label>
+        <picklist>
+            <controllingField>Delay_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Permit</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JSA</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSDS</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lock Out - Tag Out</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fall Protection</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+                <controllingFieldValues>Safety</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Late</fullName>
+                <default>false</default>
+                <controllingFieldValues>Equipment</controllingFieldValues>
+                <controllingFieldValues>Tools</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Working</fullName>
+                <default>false</default>
+                <controllingFieldValues>Tools</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wrong Type</fullName>
+                <default>false</default>
+                <controllingFieldValues>Tools</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drawings Missing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Job Plan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drawings Wrong</fullName>
+                <default>false</default>
+                <controllingFieldValues>Job Plan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parts List Needed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Job Plan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+                <controllingFieldValues>Materials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missing Parts</fullName>
+                <default>false</default>
+                <controllingFieldValues>Materials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wrong Parts</fullName>
+                <default>false</default>
+                <controllingFieldValues>Materials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+                <controllingFieldValues>Materials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parts Not Available</fullName>
+                <default>false</default>
+                <controllingFieldValues>Materials</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Running</fullName>
+                <default>false</default>
+                <controllingFieldValues>Equipment</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+                <controllingFieldValues>Equipment</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scope Change</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interrupted</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>End of Shift</fullName>
+                <default>false</default>
+                <controllingFieldValues>Misc</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>true</default>
+                <controllingFieldValues>No Delays</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Delay_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Delay Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delay Type</inlineHelpText>
+        <label>Delay Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Job Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Materials</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Delays</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tools</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Dept__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference from Dept on Maintenance Asset</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Equipment__r.Dept__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference from Dept on Maintenance Asset</inlineHelpText>
+        <label>Dept</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Description</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Detailed_Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Problem Description / Scope of Work</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Problem Description / Scope of Work</inlineHelpText>
+        <label>Problem Description / Scope of Work</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Downtime_hrs__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hours of Downtime Incurred</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hours of Downtime Incurred</inlineHelpText>
+        <label>Downtime Hours</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Due_Date_Day_of_Week__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE( MOD(  Due_Date__c  - DATE(1900, 1, 7), 7), 0, &quot;Sunday&quot;, 1, &quot;Monday&quot;, 2, &quot;Tuesday&quot;, 3,
+&quot;Wednesday&quot;, 4, &quot;Thursday&quot;, 5, &quot;Friday&quot;, 6, &quot;Saturday&quot;,&quot;Due Date not Specified&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Due Date Day of Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Due Date is the original planned and/or scheduled completion date is used for schedule compliance measurement.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Due Date is the original planned and/or scheduled completion date is used for schedule compliance measurement.</inlineHelpText>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Equip_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Maintenance Asset Description</description>
+        <externalId>false</externalId>
+        <formula>Equipment__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Maintenance Asset Description</inlineHelpText>
+        <label>Asset Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Equipment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset ID</inlineHelpText>
+        <label>Asset ID</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>smEquipment__c.Status__c</field>
+                <operation>notEqual</operation>
+                <value>Disposed</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>smEquipment__c</referenceTo>
+        <relationshipLabel>Work Order History</relationshipLabel>
+        <relationshipName>smWork_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expense_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Expense Types used to categorize work orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expense Types used to categorize work orders</inlineHelpText>
+        <label>Expense Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Routine Mechanical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Routine Electrical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Failure_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Failure Code:  Used with Failure, Cause and Action Codes for reliability analysis</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Failure Code:  Used with Failure, Cause and Action Codes for reliability analysis</inlineHelpText>
+        <label>Failure Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>F1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Geolocation represents the latitude and longitude for the Work Order</description>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>The Geolocation represents the latitude and longitude for the Work Order</inlineHelpText>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>8</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>ID_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order ID &amp; Description Concatenated for ease of Grouping on Reports</description>
+        <externalId>false</externalId>
+        <formula>Name &amp; &quot; &quot; &amp;  Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Work Order ID &amp; Description Concatenated for ease of Grouping on Reports</inlineHelpText>
+        <label>ID &amp; Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Est_Hours__c</fullName>
+        <defaultValue>(IF(ISNULL( $Setup.Work_Order_Install_Para__c.Initial_Est_Hrs__c ), 0.00, $Setup.Work_Order_Install_Para__c.Initial_Est_Hrs__c))</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Initial estimated hours to assign to assign on the WO_Task during the autocreate WO_Task trigger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated hours to assign to the initial Work Order Task upon Work Order Creation</inlineHelpText>
+        <label>Initial Est Hours</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Instructions - Rich Text Format</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Instructions - Rich Text Format</inlineHelpText>
+        <label>Instructions</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Latitude__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Latitude</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_Work_Order_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to Capture Historical Work Order ID during a data migration</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to Capture Historical Work Order ID during a data migration</inlineHelpText>
+        <label>Legacy Work Order ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Longitude__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Longitude</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRVAWOC__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Meter Reading at Work Order Completion.  System populated via workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Reading at Work Order Completion.  System populated via workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Meter Reading at WO Completion</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Meter Description if the Work Order was created from a Meter Based PM Schedule</description>
+        <externalId>false</externalId>
+        <formula>PM_Schedule__r.Meter_ID__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Meter Description if the Work Order was created from a Meter Based PM Schedule</inlineHelpText>
+        <label>Meter Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Meter ID if the Work Order was created from a meter based PM Schedule</description>
+        <externalId>false</externalId>
+        <formula>PM_Schedule__r.Meter_ID__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Meter ID if the Work Order was created from a meter based PM Schedule</inlineHelpText>
+        <label>Meter ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to Meter Unit of Measure</description>
+        <externalId>false</externalId>
+        <formula>TEXT(PM_Schedule__r.Meter_ID__r.UOM__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to Meter Unit of Measure</inlineHelpText>
+        <label>Meter UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PM_Schedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>PM Schedule used to create work order.  System populated via Workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PM Schedule used to create work order.  System populated via Workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>PM Schedule</label>
+        <referenceTo>smPM_Schedule__c</referenceTo>
+        <relationshipLabel>Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parts_Expense_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parts Expense Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parts Expense Account</inlineHelpText>
+        <label>Parts Expense Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Work Order Planner - Lookup to User</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Planner - Lookup to User</inlineHelpText>
+        <label>Planner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Work_Orders_Planner</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Priority - User defined values</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Priority - User defined values</inlineHelpText>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stopping Production</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unsafe situation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Need attention</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nice to have</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Completion_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Requested Completion Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Requested Completion Date</inlineHelpText>
+        <label>Requested Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RequesterEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Requester Email is populated from the senders address through the email services.  System populated via Workflow.  Field security should be set to read only for all profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Requester Email is populated from the senders address through the email services.  System populated via Workflow.  Field security should be set to read only for all profiles.</inlineHelpText>
+        <label>Requester Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resource_Assigned__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Resource Assigned field is a Lookup relationship to the Contact Object using a filter with &quot;Work Order Resource = True&quot;.  Use this assignee if the work order resources are NOT system users.  Labor resource assignments can also be done at the work order task level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Resource Assigned field is a Lookup relationship to the Contact Object using a filter with &quot;Work Order Resource = True&quot;.  Labor resource assignments can also be done at the work order task level.</inlineHelpText>
+        <label>Assigned Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Work_Order_Resource__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Assigned Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Safety_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Safety Related Work Order - User specified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Safety Related Work Order - User specified</inlineHelpText>
+        <label>Safety Request</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Completion_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Scheduled Completion Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Scheduled Completion Date</inlineHelpText>
+        <label>Scheduled Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Scheduled Start Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Scheduled Start Date</inlineHelpText>
+        <label>Scheduled Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Status numerical value.</description>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( Status__c ) , &quot;Approved&quot;, 1, &quot;Canceled&quot;, 2, &quot;Closed&quot;, 3, &quot;Completed&quot;, 4, &quot;In Planning&quot;, 5, &quot;In Progress&quot;, 6, &quot;Rejected&quot;, 7, &quot;Request&quot;, 8, &quot;Scheduled&quot;, 9, &quot;Waiting Approval&quot;, 10, &quot;Hold&quot;, 11, &quot;Ready to Schedule&quot;, 12,13)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Work Order Status numerical value.</inlineHelpText>
+        <label>Status_Num</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Status - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST!  Unexpected results will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Status - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST!  Unexpected results will occur.</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready to Schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting Approval</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Sub Class Dependent Upon Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Sub Class Dependent Upon Class</inlineHelpText>
+        <label>Sub Class</label>
+        <picklist>
+            <controllingField>Class__c</controllingField>
+            <picklistValues>
+                <fullName>Day Maintenance</fullName>
+                <default>false</default>
+                <controllingFieldValues>Minor Adjustments</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+                <controllingFieldValues>Building Major Repair</controllingFieldValues>
+                <controllingFieldValues>Equipment Replacement</controllingFieldValues>
+                <controllingFieldValues>Insurance Requirement</controllingFieldValues>
+                <controllingFieldValues>Maintenance Related</controllingFieldValues>
+                <controllingFieldValues>New Equipment</controllingFieldValues>
+                <controllingFieldValues>OSHA Requirement</controllingFieldValues>
+                <controllingFieldValues>Repair in Place</controllingFieldValues>
+                <controllingFieldValues>Replacement</controllingFieldValues>
+                <controllingFieldValues>Rework of Previous</controllingFieldValues>
+                <controllingFieldValues>Roof Major Repair</controllingFieldValues>
+                <controllingFieldValues>Safety Improvement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Informational Meetings</fullName>
+                <default>false</default>
+                <controllingFieldValues>Administration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Line Shutdown</fullName>
+                <default>false</default>
+                <controllingFieldValues>Startup/Standby</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Safety</fullName>
+                <default>false</default>
+                <controllingFieldValues>Training</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Shops</fullName>
+                <default>false</default>
+                <controllingFieldValues>Housekeeping</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance Skills</fullName>
+                <default>false</default>
+                <controllingFieldValues>Training</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oil Analysis</fullName>
+                <default>false</default>
+                <controllingFieldValues>Analysis</controllingFieldValues>
+                <controllingFieldValues>Measurement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plant/Grounds General</fullName>
+                <default>false</default>
+                <controllingFieldValues>Housekeeping</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Areas</fullName>
+                <default>false</default>
+                <controllingFieldValues>Housekeeping</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Output</fullName>
+                <default>false</default>
+                <controllingFieldValues>Building Major Repair</controllingFieldValues>
+                <controllingFieldValues>Equipment Replacement</controllingFieldValues>
+                <controllingFieldValues>Insurance Requirement</controllingFieldValues>
+                <controllingFieldValues>Maintenance Related</controllingFieldValues>
+                <controllingFieldValues>New Equipment</controllingFieldValues>
+                <controllingFieldValues>OSHA Requirement</controllingFieldValues>
+                <controllingFieldValues>Repair in Place</controllingFieldValues>
+                <controllingFieldValues>Replacement</controllingFieldValues>
+                <controllingFieldValues>Rework of Previous</controllingFieldValues>
+                <controllingFieldValues>Roof Major Repair</controllingFieldValues>
+                <controllingFieldValues>Safety Improvement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Request</fullName>
+                <default>false</default>
+                <controllingFieldValues>General Plant</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Safety</fullName>
+                <default>false</default>
+                <controllingFieldValues>Training</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production Skills</fullName>
+                <default>false</default>
+                <controllingFieldValues>Training</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <controllingFieldValues>Building Major Repair</controllingFieldValues>
+                <controllingFieldValues>Equipment Replacement</controllingFieldValues>
+                <controllingFieldValues>Insurance Requirement</controllingFieldValues>
+                <controllingFieldValues>Maintenance Related</controllingFieldValues>
+                <controllingFieldValues>New Equipment</controllingFieldValues>
+                <controllingFieldValues>OSHA Requirement</controllingFieldValues>
+                <controllingFieldValues>Repair in Place</controllingFieldValues>
+                <controllingFieldValues>Replacement</controllingFieldValues>
+                <controllingFieldValues>Rework of Previous</controllingFieldValues>
+                <controllingFieldValues>Roof Major Repair</controllingFieldValues>
+                <controllingFieldValues>Safety Improvement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+                <controllingFieldValues>Inspection</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reliability</fullName>
+                <default>false</default>
+                <controllingFieldValues>Inspection</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Safety</fullName>
+                <default>false</default>
+                <controllingFieldValues>Building Major Repair</controllingFieldValues>
+                <controllingFieldValues>Equipment Replacement</controllingFieldValues>
+                <controllingFieldValues>Inspection</controllingFieldValues>
+                <controllingFieldValues>Insurance Requirement</controllingFieldValues>
+                <controllingFieldValues>Maintenance Related</controllingFieldValues>
+                <controllingFieldValues>New Equipment</controllingFieldValues>
+                <controllingFieldValues>OSHA Requirement</controllingFieldValues>
+                <controllingFieldValues>Repair in Place</controllingFieldValues>
+                <controllingFieldValues>Replacement</controllingFieldValues>
+                <controllingFieldValues>Rework of Previous</controllingFieldValues>
+                <controllingFieldValues>Roof Major Repair</controllingFieldValues>
+                <controllingFieldValues>Safety Improvement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shift Maintenance</fullName>
+                <default>false</default>
+                <controllingFieldValues>Minor Adjustments</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Presentations</fullName>
+                <default>false</default>
+                <controllingFieldValues>Administration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stores Request</fullName>
+                <default>false</default>
+                <controllingFieldValues>General Plant</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thermography</fullName>
+                <default>false</default>
+                <controllingFieldValues>Analysis</controllingFieldValues>
+                <controllingFieldValues>Measurement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Total Plant Shutdown</fullName>
+                <default>false</default>
+                <controllingFieldValues>Startup/Standby</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ultasonic Testing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Measurement</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vibration Analysis</fullName>
+                <default>false</default>
+                <controllingFieldValues>Analysis</controllingFieldValues>
+                <controllingFieldValues>Measurement</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Sub Type dependent upon Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Sub Type dependent upon Type</inlineHelpText>
+        <label>Sub Type</label>
+        <picklist>
+            <controllingField>WO_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>From Preventive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>From Predictive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>From Operator Driven Reliability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fabricate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test &amp; Calibrate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Predictive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Operator Driven Reliability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standing General</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standing Maintenance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expense Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Work Order Labor Cost (summarized from Work Order Tasks Labor Cost)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Actual Work Order Labor Cost (summarized from Work Order Tasks Labor Cost)</inlineHelpText>
+        <label>Total Actual Labor Cost</label>
+        <summarizedField>smWO_Task__c.Total_Actual_Labor_Cost__c</summarizedField>
+        <summaryForeignKey>smWO_Task__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Labor Hours</description>
+        <externalId>false</externalId>
+        <formula>Total_Actual_Reg_Labor_Hours__c  +  Total_Actual_OT_Labor_Hours__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Actual Labor Hours</inlineHelpText>
+        <label>Total Actual Labor Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_OT_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Overtime Labor Hours (summarized from Work Order Tasks)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Actual Overtime Labor Hours (summarized from Work Order Tasks)</inlineHelpText>
+        <label>Total Actual OT Labor Hours</label>
+        <summarizedField>smWO_Task__c.Actual_OT_Labor_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Part_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Part Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Actual Part Cost</inlineHelpText>
+        <label>Total Actual Part Cost</label>
+        <summarizedField>smWO_Part__c.Actual_Part_Cost__c</summarizedField>
+        <summaryForeignKey>smWO_Part__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Reg_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Regular Labor Hours (summarized from Work Order Tasks)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Actual Regular Labor Hours (summarized from Work Order Tasks)</inlineHelpText>
+        <label>Total Actual Reg Labor Hours</label>
+        <summarizedField>smWO_Task__c.Actual_Reg_Labor_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_WO_Misc_Costs__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Work Order Miscellaneous Costs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Actual Work Order Miscellaneous Costs</inlineHelpText>
+        <label>Total Actual WO Misc Costs</label>
+        <summarizedField>smWO_Misc_Cost__c.Actual_Misc_Cost_Amount__c</summarizedField>
+        <summaryForeignKey>smWO_Misc_Cost__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Work_Order_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Actual Work Order Cost</description>
+        <externalId>false</externalId>
+        <formula>Total_Actual_Labor_Cost__c  +  Total_Actual_Part_Cost__c  +  Total_Actual_WO_Misc_Costs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Actual Work Order Cost</inlineHelpText>
+        <label>Total Actual Work Order Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Planned_Labor_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Planned Labor Cost (summarized from the Planned Labor Cost on the Work Order Task)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Planned Labor Cost (summarized from the Planned Labor Cost on the Work Order Task)</inlineHelpText>
+        <label>Total Planned Labor Cost</label>
+        <summarizedField>smWO_Task__c.Planned_Labor_Cost__c</summarizedField>
+        <summaryForeignKey>smWO_Task__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Planned_Labor_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Planned Labor Hours (summarized from the Planned Labor Hours on Work Order Tasks)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Planned Labor Hours (summarized from the Planned Labor Hours on Work Order Tasks)</inlineHelpText>
+        <label>Total Planned Labor Hours</label>
+        <summarizedField>smWO_Task__c.Planned_Hours__c</summarizedField>
+        <summaryForeignKey>smWO_Task__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Planned_Part_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Planned Part Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Planned Part Cost</inlineHelpText>
+        <label>Total Planned Part Cost</label>
+        <summarizedField>smWO_Part__c.Planned_Part_Cost__c</summarizedField>
+        <summaryForeignKey>smWO_Part__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Planned_WO_Misc_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Planned Work Order Misc Cost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Planned Work Order Misc Cost</inlineHelpText>
+        <label>Total Planned WO Misc Cost</label>
+        <summarizedField>smWO_Misc_Cost__c.Planned_Misc_Cost_Amount__c</summarizedField>
+        <summaryForeignKey>smWO_Misc_Cost__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Work_Order_Planned_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Planned Work Order Cost</description>
+        <externalId>false</externalId>
+        <formula>Total_Planned_Part_Cost__c  +  Total_Planned_WO_Misc_Cost__c +  Total_Planned_Labor_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Planned Work Order Cost</inlineHelpText>
+        <label>Total Work Order Planned Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>WO_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Types are used to categorize Work Orders.  User specified list of values.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Types are used to categorize Work Orders.  User specified list of values.</inlineHelpText>
+        <label>WO Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Changeover</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Corrective</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repairable Spare</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WO_User_Picklist_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Work Order User Picklist 1 field is a user definable field which is copied in the custom deep clone process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Work Order User Picklist 1 field is a user definable field which is copied in the custom deep clone process.</inlineHelpText>
+        <label>WO User Picklist 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WO_User_Text_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Work Order User Text 1 field is a user definable field which is copied in the custom deep clone process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Work Order User Text 1 field is a user definable field which is copied in the custom deep clone process.</inlineHelpText>
+        <label>WO User Text 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Record_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DO NOT EDIT THIS PICKLIST. System populated via workflow. Field security should be set to read only for all user profiles. If you configure additional Recordtypes on the Work Order object, enter the Name of the recordtype as a value in this picklist, set as the only available and default value for the recordtype. This will enable you to configure validation rules and other platform features not otherwise available on a recordtype.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Recordtype - Read Only</inlineHelpText>
+        <label>Work Order Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Work Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Model Work Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Work Order</label>
+    <listViews>
+        <fullName>All_Model_Work_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>PM_Schedule__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Dept__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Model_Work_Order</value>
+        </filters>
+        <label>All Model Work Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Work_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>PM_Schedule__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Status__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Dept__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <label>All Work Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Work_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Request</value>
+        </filters>
+        <label>All Work Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Work_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Canceled,Closed,Completed,Request</value>
+        </filters>
+        <label>My Open Work Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Order_Open_Released</fullName>
+        <columns>NAME</columns>
+        <columns>Completion_Comments__c</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>In Progress,Ready to Schedule,Scheduled</value>
+        </filters>
+        <label>Work Orders - Open Released</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_Hold</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Hold</value>
+        </filters>
+        <label>Work Orders - Hold</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_InPlanning</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>Asset_Group__c</columns>
+        <columns>Planner__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>In Planning</value>
+        </filters>
+        <label>Work Orders - In Planning</label>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_InProgress</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>Work Orders - In Progress</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_Ready</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Ready to Schedule</value>
+        </filters>
+        <label>Work Orders - Ready to Schedule</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_Scheduled</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Completion_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>WO_Type__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smWork_Order__c.Work_Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Scheduled</value>
+        </filters>
+        <label>Work Orders - Scheduled</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Work_Orders_Scheduled_for_Today</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Equipment__c</columns>
+        <columns>Equip_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Work_Order_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>Work Order</value>
+        </filters>
+        <filters>
+            <field>Due_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Work Orders Scheduled for Today</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WO-{0000000}</displayFormat>
+        <label>Work Order</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Work Orders</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Emergency</fullName>
+        <active>false</active>
+        <description>Emergency Work Order</description>
+        <label>Emergency</label>
+        <picklistValues>
+            <picklist>Action_Code__c</picklist>
+            <values>
+                <fullName>A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cause_Code__c</picklist>
+            <values>
+                <fullName>C1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class__c</picklist>
+            <values>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filter Clean%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lubrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Related</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor Adjustments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHA Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair in Place</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rework of Previous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roof Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup%2FStandby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_SubType__c</picklist>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Wrong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End of Shift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interrupted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lock Out - Tag Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Running</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts List Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts Not Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Type</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_Type__c</picklist>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Delays</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tools</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expense_Type__c</picklist>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Electrical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Mechanical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Failure_Code__c</picklist>
+            <values>
+                <fullName>F1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Schedule</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Class__c</picklist>
+            <values>
+                <fullName>Day Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informational Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Shops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant%2FGrounds General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Areas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Output</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shift Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Presentations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stores Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thermography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Plant Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultasonic Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vibration Analysis</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expense Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fabricate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test %26 Calibrate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_Type__c</picklist>
+            <values>
+                <fullName>Changeover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_User_Picklist_1__c</picklist>
+            <values>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Order_Record_Type__c</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Model_Work_Order</fullName>
+        <active>true</active>
+        <description>PM Work Order Template</description>
+        <label>Model Work Order</label>
+        <picklistValues>
+            <picklist>Action_Code__c</picklist>
+            <values>
+                <fullName>A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CalibrateAdjust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair%2FModify</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cause_Code__c</picklist>
+            <values>
+                <fullName>C1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Cause found</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal Wear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class__c</picklist>
+            <values>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filter Clean%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lubrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Related</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor Adjustments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHA Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair in Place</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rework of Previous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roof Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup%2FStandby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_SubType__c</picklist>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Wrong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End of Shift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interrupted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lock Out - Tag Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Running</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts List Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts Not Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Type</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_Type__c</picklist>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Delays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tools</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expense_Type__c</picklist>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Electrical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Mechanical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Failure_Code__c</picklist>
+            <values>
+                <fullName>F1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Need attention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nice to have</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stopping Production</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsafe situation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Planning</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Class__c</picklist>
+            <values>
+                <fullName>Day Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informational Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Shops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant%2FGrounds General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Areas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Output</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shift Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Presentations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stores Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thermography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Plant Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultasonic Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vibration Analysis</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expense Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fabricate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test %26 Calibrate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_Type__c</picklist>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changeover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repairable Spare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_User_Picklist_1__c</picklist>
+            <values>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Order_Record_Type__c</picklist>
+            <values>
+                <fullName>Model Work Order</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Work_Order</fullName>
+        <active>true</active>
+        <description>Standard Work Order</description>
+        <label>Work Order</label>
+        <picklistValues>
+            <picklist>Action_Code__c</picklist>
+            <values>
+                <fullName>A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CalibrateAdjust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair%2FModify</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cause_Code__c</picklist>
+            <values>
+                <fullName>C1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Cause found</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal Wear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class__c</picklist>
+            <values>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filter Clean%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lubrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Related</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor Adjustments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHA Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair in Place</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rework of Previous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roof Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup%2FStandby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_SubType__c</picklist>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Wrong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End of Shift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interrupted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lock Out - Tag Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Running</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts List Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts Not Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Type</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_Type__c</picklist>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Delays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tools</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expense_Type__c</picklist>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Electrical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Mechanical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Failure_Code__c</picklist>
+            <values>
+                <fullName>F1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Need attention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nice to have</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stopping Production</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsafe situation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Class__c</picklist>
+            <values>
+                <fullName>Day Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informational Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Shops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant%2FGrounds General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Areas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Output</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shift Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Presentations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stores Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thermography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Plant Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultasonic Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vibration Analysis</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expense Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fabricate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test %26 Calibrate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_Type__c</picklist>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changeover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repairable Spare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_User_Picklist_1__c</picklist>
+            <values>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Order_Record_Type__c</picklist>
+            <values>
+                <fullName>Work Order</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Work_Request</fullName>
+        <active>true</active>
+        <description>Work Request</description>
+        <label>Work Request</label>
+        <picklistValues>
+            <picklist>Action_Code__c</picklist>
+            <values>
+                <fullName>A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CalibrateAdjust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair%2FModify</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Train</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Cause_Code__c</picklist>
+            <values>
+                <fullName>C1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Cause found</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal Wear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class__c</picklist>
+            <values>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filter Clean%2FReplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lubrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Related</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor Adjustments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHA Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair in Place</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rework of Previous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roof Major Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup%2FStandby</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_SubType__c</picklist>
+            <values>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawings Wrong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>End of Shift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fall Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interrupted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lock Out - Tag Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSDS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Running</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts List Needed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parts Not Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Type</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Delay_Type__c</picklist>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Delays</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tools</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expense_Type__c</picklist>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Electrical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Routine Mechanical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Failure_Code__c</picklist>
+            <values>
+                <fullName>F1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Need attention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nice to have</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety Improvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stopping Production</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsafe situation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Class__c</picklist>
+            <values>
+                <fullName>Day Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informational Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Shops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plant%2FGrounds General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Areas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Output</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Skills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shift Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Presentations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stores Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thermography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Total Plant Shutdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ultasonic Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vibration Analysis</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expense Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fabricate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>From Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operator Driven Reliability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Predictive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preventive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rebuild</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standing Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test %26 Calibrate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_Type__c</picklist>
+            <values>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changeover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corrective</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WO_User_Picklist_1__c</picklist>
+            <values>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Order_Record_Type__c</picklist>
+            <values>
+                <fullName>Work Request</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Equipment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Equip_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Equipment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Equip_Description__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Description__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>Equipment__c</lookupFilterFields>
+        <lookupFilterFields>Equip_Description__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Equipment__c</searchFilterFields>
+        <searchFilterFields>Equip_Description__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Equipment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Equip_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Downtime_Hours_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Downtime Hours entered is a non-negative value</description>
+        <errorConditionFormula>Downtime_hrs__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Downtime_hrs__c</errorDisplayField>
+        <errorMessage>The Downtime Hours entered must be greater than or equal to zero (0)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Initial_Est_Hours_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that the Initial Estimate Hours is a non-negative value</description>
+        <errorConditionFormula>Initial_Est_Hours__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Initial_Est_Hours__c</errorDisplayField>
+        <errorMessage>The Initial Est Hours must be greater than or equal to zero (0)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WO_VST_Comp_to_Comp</fullName>
+        <active>true</active>
+        <description>Ensures that a work order Status of Closed can only be set from a previous status of Completed.</description>
+        <errorConditionFormula>IF( ISPICKVAL(Status__c , &quot;Closed&quot;) &amp;&amp;  ISCHANGED(Status__c) &amp;&amp;  TEXT(PRIORVALUE( Status__c )) &lt;&gt; &quot;Completed&quot; , true, false)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A work order status of Closed can only be set from a prior status of Completed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Work_Order_Completion_Date_Not_In_Future</fullName>
+        <active>true</active>
+        <description>Prohibits the work order completion date from being updated to a future date</description>
+        <errorConditionFormula>IF( Completion_Date__c &gt;  TODAY() , True, False)</errorConditionFormula>
+        <errorDisplayField>Completion_Date__c</errorDisplayField>
+        <errorMessage>The Work Order Completion Date cannot be set to a future date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Asset_BOM</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bills of Materials</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&apos;/soap/ajax/27.0/connection.js&apos;)} 
+
+var windowRef; 
+var intervalId = 0; 
+
+var url = window.location.protocol + &apos;//&apos; + window.location.host+&apos;/apex/sm1e__LookupItemMasterBOM?id={!smWork_Order__c.Id}&apos;;
+ 
+setTimeout(checkToOpenWindow, 2*1000); 
+
+function checkToOpenWindow(){ 
+
+windowRef = window.open(url,&apos;_blank&apos;,&apos;location=1,status=1,scrollbars=1, resizable=1, height=650px, width=1000px, titlebar=yes&apos;,true);
+ 
+checkWindowStatus(); 
+
+} 
+
+
+function checkWindowStatus() 
+{ 
+intervalId = setInterval(checkAndCloseWin, 5*1000); 
+} 
+
+function checkAndCloseWin() 
+{ 
+if(windowRef.closed) 
+{ 
+clearInterval(intervalId); 
+window.parent.location.href = window.parent.location.href; 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Copy_Work_Order</fullName>
+        <availability>online</availability>
+        <description>The custom button to deep clone the Work Order Object and related smWO_Task, smWO_Part and Notes &amp; Attachments.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Copy Work Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Call the method for cloning
+var context=&apos;workOrder&apos;;
+
+var returnId=sforce.apex.execute(&quot;sm1e.CloneWorkOrder_v2&quot;,&quot;CloneWorkOrder&quot;,{workOrderId:&quot;{!smWork_Order__c.Id}&quot;, contextType:&quot;context&quot;,pmScheduleIds:&quot;{!smWork_Order__c.PM_ScheduleId__c}&quot;});
+
+// Form the url for Work Order Edit Page
+var id=returnId[0].Id;
+var nextUrl = window.location.protocol + &apos;//&apos; + window.location.host +&apos;/&apos;+id+&quot;/e?retURL=%2F&quot;+id; 
+
+// Open the Work Order Edit Page in a new window.
+var windowEdit=window.open(nextUrl ,&apos;_self&apos;,&apos;location=1,status=1,scrollbars=1, resizable=1, height=800px, width=1000px, titlebar=yes&apos;,true);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Work_Order</fullName>
+        <availability>online</availability>
+        <description>Create a work order of  record type &apos;Work Order&apos; based on selected Model work order.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Work Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+// Call the method for cloning
+var context=&apos;workOrder&apos;;
+
+var returnId=sforce.apex.execute(&quot;sm1e.CloneWorkOrder_v2&quot;,&quot;CloneWorkOrder&quot;,{workOrderId:&quot;{!smWork_Order__c.Id}&quot;, contextType:&quot;context&quot;,pmScheduleIds:&quot;{!smWork_Order__c.PM_ScheduleId__c}&quot;});
+
+// Form the url for Work Order Edit Page
+var id=returnId[0].Id;
+var nextUrl = window.location.protocol + &apos;//&apos; + window.location.host +&apos;/&apos;+id+&quot;/e?retURL=%2F&quot;+id; 
+
+// Open the Work Order Edit Page in a new window.
+var windowEdit=window.open(nextUrl ,&apos;_self&apos;,&apos;location=1,status=1,scrollbars=1, resizable=1, height=800px, width=1000px, titlebar=yes&apos;,true);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LookupAssetBOM</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>400</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Asset BOM</masterLabel>
+        <openType>newWindow</openType>
+        <page>LookupAssetBOM</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <width>650</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Model_Work_Orders</fullName>
+        <availability>online</availability>
+        <description>Opens the Visualforce Page presenting the Model Work Orders by Asset Group</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Model Work Orders</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&apos;/soap/ajax/27.0/connection.js&apos;)} 
+
+var windowRef; 
+var intervalId = 0; 
+
+var url = window.location.protocol + &apos;//&apos; + window.location.host+&apos;/apex/sm1e__ChooseFromModelWorkOrder?id={!smWork_Order__c.Id}&apos;; 
+
+setTimeout(checkToOpenWindow, 2*1000); 
+
+function checkToOpenWindow(){ 
+
+windowRef = window.open(url,&apos;_blank&apos;,&apos;location=1,status=1,scrollbars=1, resizable=1, height=650px, width=1000px, titlebar=yes&apos;,true); 
+
+checkWindowStatus(); 
+
+} 
+
+
+function checkWindowStatus() 
+{ 
+intervalId = setInterval(checkAndCloseWin, 5*1000); 
+} 
+
+function checkAndCloseWin() 
+{ 
+if(windowRef.closed) 
+{ 
+clearInterval(intervalId); 
+window.parent.location.href = window.parent.location.href; 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Print</fullName>
+        <availability>online</availability>
+        <description>Print a PDF of the Work Order using the AssetOptics CSS</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Print PDF</masterLabel>
+        <openType>newWindow</openType>
+        <page>WorkOrderPdfPrint</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+    <webLinks>
+        <fullName>Print_Work_Order</fullName>
+        <availability>online</availability>
+        <description>This Button generates a Visualforce Page with Work Order Details.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Print Page</masterLabel>
+        <openType>newWindow</openType>
+        <page>Work_Order_V2</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Map</fullName>
+        <availability>online</availability>
+        <description>This Map will display the selected Maintenance Assets on the google map.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View Map</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+
+// Get the List of Work Order Ids selected by the User. 
+
+var records= {!GETRECORDIDS($ObjectType.smWork_Order__c)}; 
+
+
+var len=records.length; 
+
+
+// Call the method if User has selected any record. 
+if (len!= 0){ 
+
+window.open(&quot;/apex/WorkOrdersMapView?records=&quot; +records); 
+}else{ 
+window.alert(&quot;Atleast one record should be selected before viewing the Asset Map......&quot;); 
+}</url>
+    </webLinks>
+</CustomObject>

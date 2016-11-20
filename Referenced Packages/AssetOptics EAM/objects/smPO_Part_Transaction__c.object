@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Purchase Order Part Line Transactions</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment</inlineHelpText>
+        <label>Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Part_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to PO Part Name (for SOQL purposes)</description>
+        <externalId>false</externalId>
+        <formula>PO_Part__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to PO Part Name (for SOQL purposes)</inlineHelpText>
+        <label>PO Part Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Part__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Part Line ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Part Line ID</inlineHelpText>
+        <label>PO Part</label>
+        <referenceTo>smPO_Part__c</referenceTo>
+        <relationshipLabel>PO Part Transactions</relationshipLabel>
+        <relationshipName>PO_Part_Transactions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Purchase Order ID</description>
+        <externalId>false</externalId>
+        <formula>PO_Part__r.Purchase_Order__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Purchase Order ID</inlineHelpText>
+        <label>Purchase Order Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Pack_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Purchase Pack Qty for Part</description>
+        <externalId>false</externalId>
+        <formula>PO_Part__r.Purchase_Pack_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to Purchase Pack Qty for Part</inlineHelpText>
+        <label>Purchase Pack Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to the Purchase UOM for the PO Part Line Item</description>
+        <externalId>false</externalId>
+        <formula>PO_Part__r.Purchase_UOM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to the Purchase UOM for the PO Part Line Item</inlineHelpText>
+        <label>Purchase UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stock_UOM_Transaction_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stock UOM Transaction Qty = Transaction Qty * Purchase Pack Qty.  Representation of the PO Part Transaction Qty when based on the Stock UOM.</description>
+        <externalId>false</externalId>
+        <formula>Transaction_Qty__c  *  PO_Part__r.Purchase_Pack_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Stock UOM Transaction Qty = Transaction Qty * Purchase Pack Qty.  Representation of the PO Part Transaction Qty when based on the Stock UOM.</inlineHelpText>
+        <label>Stock UOM Transaction Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stock_UOM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to the Stock UOM for the PO Part Line Item</description>
+        <externalId>false</externalId>
+        <formula>PO_Part__r.Stock_UOM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference to the Stock UOM for the PO Part Line Item</inlineHelpText>
+        <label>Stock UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transaction Amount = Transaction Qty * Unit Cost</description>
+        <externalId>false</externalId>
+        <formula>Unit_Cost__c  *  Transaction_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Transaction Amount = Transaction Qty * Unit Cost</inlineHelpText>
+        <label>Transaction Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Date</inlineHelpText>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Qty measured in Purchase UOM</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Qty measured in Purchase UOM</inlineHelpText>
+        <label>Transaction Qty</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>PO Part Line Transaction Type - DO NOT EDIT THE VALUES IN THIS LIST.  Unexpected Results will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Part Line Transaction Type - DO NOT EDIT THE VALUES IN THIS LIST.  Unexpected Results will occur.</inlineHelpText>
+        <label>Transaction Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Receipt</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Unit Cost of PO Part at time of PO Part Transaction entry.  Updated via workflow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit Cost of PO Part at time of PO Part Transaction entry.  Updated via workflow.</inlineHelpText>
+        <label>Unit Cost</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>PO Part Transaction</label>
+    <nameField>
+        <displayFormat>PPT-{0000000}</displayFormat>
+        <label>PO Part Trans</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>PO Part Transactions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Disallow_Over_Receipts</fullName>
+        <active>true</active>
+        <description>Disallow Over Receipts validation rule is used in conjunction with the Disallow Receipts custom setting to allow/disallow over receipts Receipts Qty &gt; Open Qty</description>
+        <errorConditionFormula>IF( $Setup.Purchase_Order_Para__c.Disallow_PO_Part_Over_Receipts__c ,  Transaction_Qty__c  &gt;  PO_Part__r.Open_Qty__c , false)</errorConditionFormula>
+        <errorDisplayField>Transaction_Qty__c</errorDisplayField>
+        <errorMessage>You do not have the User rights to receive a quantity on a PO Part line that is greater than the Open Qty.  Please reduce the Receipt Qty and contact your system admin for further guidance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Part_Transaction_Qty_GT_Zero</fullName>
+        <active>true</active>
+        <description>Ensures that the PO Part Transaction Qty is Greater Than Zero</description>
+        <errorConditionFormula>IF( ISPICKVAL( Transaction_Type__c , &quot;Receipt&quot;) , Transaction_Qty__c  &lt;= 0, false)</errorConditionFormula>
+        <errorDisplayField>Transaction_Qty__c</errorDisplayField>
+        <errorMessage>The PO Part Transaction Qty must be Greater Than Zero for a Receipt Type Transaction.  Please adjust the Transaction Qty accordingly.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_Status_for_Receipts</fullName>
+        <active>true</active>
+        <description>Ensures that the PO is in a Released or In Progress Status before a PO Part Transaction Record with Type = Receipt is entered.</description>
+        <errorConditionFormula>NOT(ISPICKVAL( PO_Part__r.Purchase_Order__r.Status__c , &quot;Released&quot;) || ISPICKVAL( PO_Part__r.Purchase_Order__r.Status__c , &quot;In Progress&quot;))</errorConditionFormula>
+        <errorMessage>The Purchase Order Status must be Released or In Progress to enter a PO Part Transaction</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Primary_Bin_Not_Blank_During_Receipt</fullName>
+        <active>true</active>
+        <description>Ensures that the Primary Bin Location on the Part is NOT Blank during a PO Part Transaction of Type Receipt.  The receipt qty is applied to the Primary Bin Location.</description>
+        <errorConditionFormula>ISBLANK( PO_Part__r.Part__r.Primary_Bin_Location__c )</errorConditionFormula>
+        <errorMessage>The Primary Bin Location for the Part being received cannot be Blank.  Please update the Primary Bin Location.</errorMessage>
+    </validationRules>
+</CustomObject>

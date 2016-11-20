@@ -1,0 +1,79 @@
+<apex:page standardController="sm1e__smPart__c"  showheader="false" sidebar="false" standardStylesheets="true" extensions="sm1e.TransferPartsAmongBinsController">
+    <apex:form >
+    	<apex:pageMessages id="errorMessage" ></apex:pageMessages> 
+    	<apex:outputPanel id="jspanel"> 
+  			<script>  
+ 				 function onControllerReturn() {
+    				if('{!message}' == "success"){
+     					alert("Bin to Bin Transfer Successful. Kindly refresh Part Detail Page.");
+     					window.setTimeout('window.top.close();', 1000);
+					} else{    
+						// do nothing
+					}
+ 				 }
+  			</script>
+  		</apex:outputPanel>
+ 
+  <apex:actionFunction name="doControllerSave" action="{!transferToDestBin}" rerender="errorMessage,jspanel"  status="closer"/>
+  <apex:actionFunction name="doControllerSave2" action="{!transferToDestBin}" rerender="errorMessage,jspanel"  status="update-closer"/>
+    
+    	 <apex:pageBlock title="Transfer Parts" rendered="{!BinLocations.size > 1}"> 
+               
+                 <apex:pageBlockButtons id="topButtons" location="top">
+                     <apex:commandButton id="topButton"  value="Bin-to-Bin Transfer" onclick="doControllerSave();" rerender="errorMessage" disabled="{!isDisabled}" oncomplete="onControllerReturn()"/>
+                     <apex:commandButton value="Cancel" onclick="window.top.close()" />  
+                     <apex:actionStatus id="closer" startText="Transferring..." stopText="" onStop=""  onstart=""/>
+                 </apex:pageBlockButtons>
+                 
+                  <apex:pageblockSection title="Choose Bin Locations" >
+                     
+                        <apex:outputLabel value="Choose Source Bin Location" for="SourceBinLocation" rendered="{!BinLocations.size > 1}">
+                            <apex:outputLabel >&nbsp;&nbsp;</apex:outputLabel>
+                            <apex:selectList id="sourceBin" size="1" value="{!SourceBinLocation}" multiselect="false" >
+                                <apex:selectOption itemValue="Select" itemLabel="-- Select --"/>
+                                <apex:selectOptions value="{!BinLocations}"/>
+                            </apex:selectList> 
+                        </apex:outputLabel>
+                        
+                    <apex:outputLabel value="Choose Destination Bin Location" for="destinationBinLocation" rendered="{!BinLocations.size > 1}">
+                            <apex:outputLabel >&nbsp;&nbsp;</apex:outputLabel>
+                            <apex:selectList id="destBin" size="1" value="{!destinationBinLocation}" multiselect="false" >
+                                <apex:selectOption itemValue="Select" itemLabel="-- Select --"/>
+                                <apex:selectOptions value="{!BinLocations}"/>
+                            </apex:selectList> 
+                        </apex:outputLabel>
+                      
+                        
+                        <apex:outputLabel value="Choose Qty to Transfer" for="qtyTransfer">
+                            <apex:outputLabel >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</apex:outputLabel>
+                             <apex:inputText value="{!QtyToIssue}" id="issueQty" style="width:75px; "/>
+                        </apex:outputLabel>
+                  </apex:pageblocksection>
+                  
+                  <apex:pageBlockButtons id="bottomButtons" location="bottom">
+                  
+                  	 <apex:commandButton id="botttomButton" onclick="doControllerSave2();" value="Bin-to-Bin Transfer"  rerender="errorMessage"   disabled="{!isDisabled}" oncomplete="onControllerReturn()"/>
+                     <apex:commandButton value="Cancel" onclick="window.top.close()" />  
+                     <apex:actionStatus id="update-closer" startText="Transferring..." stopText="" onStop=""  onstart=""/>
+                    </apex:pageBlockButtons>
+             </apex:pageBlock>
+             
+             
+         </apex:form> 
+         
+ <script language="JavaScript" type="text/javascript">
+ 
+  function RefreshAndClose(){
+     	alert("Inside Refresh And Close" + {!isSuccess});
+     	if({!isSuccess}){
+     		alert("Please refresh Part Page to view your changes");
+     		window.setTimeout('window.top.close();', 1000);
+		} else{    
+			// do nothing
+			alert("do nothing");
+		
+      }
+      
+    }
+ </script>
+</apex:page>

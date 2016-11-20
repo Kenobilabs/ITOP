@@ -1,0 +1,283 @@
+.THIS *{
+    margin:0;
+    padding:0;
+    font-family:DIN, Futura, Arial, Arial Rounded MT Bold;
+    box-sizing:border-box;
+}
+
+
+.THIS.navigation-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+    border-bottom:solid #d52b1e 3px;
+}
+.THIS.navigation-bar .nav-button{
+    background-color:#303030;
+    color:white;
+    margin:0;
+    padding:0 10px;
+    border:none;
+    font-size:30px;
+    border-right:solid 1px white;
+    border-left:solid 1px white;
+}
+.THIS.navigation-bar .nav-button:disabled{
+    opacity:.5;
+}
+.THIS.navigation-bar .nav-header{
+    font-size:40px;
+    color:white;
+    display:inline;
+    margin-right:50px;
+}
+.THIS.navigation-bar .nav-header strong{
+    color:#d52b1e;
+    font-weight:bold;
+}
+
+.THIS.header{
+    width:100%;
+    height:35%;    
+    transition:height .3s;
+    position:relative;
+}
+/*Necessary to overlay text*/
+.THIS.header .header-container{
+    padding-top:60px;
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+}
+.THIS.header .header-container .image{
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+    position:relative;
+}
+.THIS.header .header-container .image img{
+ 	flex-shrink:0;
+    min-width:100%;
+    min-height:100%;
+    opacity:.65;    
+}
+.THIS.header .header-container .text{
+	width:100%;
+    height:100%;
+    display:flex;
+    padding-top:60px;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:0;
+    left:0; 
+}
+.THIS.header .header-container .text h1{
+    color:white;
+    display:inline-block;
+    padding:5px 10px;
+    font-size:55px;
+    font-weight:bold;
+    background-color:rgba(0,0,0,.65); 
+    transition:opacity .3s;
+}
+
+
+.THIS.body{
+    height:65%;
+    width:100%;
+    box-sizing:border-box;
+    padding-top:10px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:0;
+	text-align:center;
+    overflow:hidden;
+    transition:height .3s;
+}
+.THIS .ticket-header{
+    border-top: solid 3px #d52b1e;
+    width:90%;
+    margin:0;
+    padding:5px 0px;
+    padding-bottom:15px;
+    text-align:left;
+    margin-left:5%;
+    
+}
+.THIS .ticket-header p{
+    font-size:30px;
+}
+
+
+.THIS .ticket-container{
+    height:330px;
+    position:relative;    
+    
+    overflow:scroll;
+	box-shadow: 0px 50px 89px 8px rgba(0,0,0,0.75);
+}
+.THIS .ticket-image-container{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+}
+
+.THIS .ticket-object-overlay{
+ 	width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    margin:auto;
+    padding-top:10px;
+}
+
+.THIS{
+    position:absolute;
+    min-width:100%;
+    top:0;
+    left:0;
+    height:100%;
+    margin:auto;
+    padding:10px;
+    display:inline-block;
+    white-space:nowrap;
+}
+
+
+
+.THIS .ticket-object{
+    box-sizing:border-box;
+    width:250px;
+    height:280px;
+    border-radius:10px;
+    display:inline-block;
+    margin:10px;
+    z-index:9999;
+box-shadow: 0px 0px 169px -17px rgba(0,0,0,0.1);
+}
+.THIS .ticket-object-image{
+    width:100px;
+	height:auto;
+    width:auto;
+    padding:30px;
+    padding-bottom:0;
+}
+.THIS .ticket-object-image img{
+    width:100px;
+    height:auto;
+}
+
+.THIS .ticket-object-title{
+	max-width:100%;
+    padding:10px;
+}
+.THIS .ticket-object-title p{
+    font-size:20px;
+    color:#303030;
+    word-wrap:normal;
+}
+.THIS .kiosk{
+    height:50%;
+    min-height:150px;
+    width:100%;
+    background-color:#d52b1e;
+    color:#424242;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.THIS.layer-one, .THIS .layer-one{
+    background-color: #303030 ;
+    color:white;
+	box-shadow: 0px 0px 54px 10px rgba(0,0,0,1),
+        		0px -4px 54px 10px rgba(0,0,0,1 );
+}
+.THIS .layer-two{
+	background-color: #212121 ;
+    box-shadow: 0px 0px 216px 20px rgba(0,0,0,0.75);
+
+}
+.THIS .layer-three{
+    background-color:#f44336;
+    color:black;
+}
+
+
+/*Start transitions - only enabled/toggled on button press*/
+.THIS.collapsed, .THIS .collapsed{
+    height:0;
+    transition:height .3s;
+}
+.THIS.expanded, .THIS .expanded{
+    height:100%;
+    padding-top:70px;
+	background-color:#424242;
+    transition:height .3s, padding-top .3s;
+}
+.THIS.expanded-tile, .THIS .expanded-tile{
+    width:75%;
+box-shadow: 20px 0px 150px 0px rgba(0,0,0,1.0);
+    transition:width .3s, box-shadow .3s;
+}
+.THIS.collapsed-tile, .THIS .collapsed-tile{
+    width:0;
+    height:0;
+    opacity:0;
+    margin:0;
+    transition: width .3s, height .3s, opacity .3s;
+}
+.THIS.disabled, .THIS .disabled{
+    background-color:red;
+    
+}
+
+.THIS .expandedTicket{
+    width:100%;
+    height:100%;
+    white-space:normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.THIS.test, .THIS .test{
+    background-color:blue;
+}

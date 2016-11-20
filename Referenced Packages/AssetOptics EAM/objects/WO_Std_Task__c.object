@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Work Order Standard Task Library</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Asset_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Asset Group - Used to Categorize Work Order Standard Tasks</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Asset Group - Used to Categorize Work Order Standard Tasks</inlineHelpText>
+        <label>Asset Group</label>
+        <referenceTo>Asset_Group__c</referenceTo>
+        <relationshipLabel>WO Standard Tasks</relationshipLabel>
+        <relationshipName>WO_Task_Library</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Standard Task Description.  Copied to WO Task Comment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Standard Task Description.  Copied to WO Task Comment.</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimated_Hours__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Estimated Hours to Perform Standard Task.  Copied to WO Task Planned Hours.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated Hours to Perform Standard Task.  Copied to WO Task Planned Hours.</inlineHelpText>
+        <label>Est Hrs</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Standard Task Instructions.  Copied to WO Task Instructions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Standard Task Instructions.  Copied to WO Task Instructions.</inlineHelpText>
+        <label>Instructions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Std_Task_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work Order Standard Task Number.  To be used to auto-number Standard Task Name.</description>
+        <displayFormat>{000000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Standard Task Number.  To be used to auto-number Standard Task Name.</inlineHelpText>
+        <label>Std Task Number</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <label>WO Standard Task</label>
+    <listViews>
+        <fullName>All_Standard_Tasks</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Asset_Group__c</columns>
+        <columns>Estimated_Hours__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Standard Tasks</label>
+    </listViews>
+    <nameField>
+        <label>Std Task ID</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>WO Standard Tasks</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Asset_Group__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Estimated_Hours__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Asset_Group__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Estimated_Hours__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Asset_Group__c</lookupFilterFields>
+        <lookupFilterFields>Description__c</lookupFilterFields>
+        <lookupFilterFields>Estimated_Hours__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Asset_Group__c</searchFilterFields>
+        <searchFilterFields>Description__c</searchFilterFields>
+        <searchFilterFields>Estimated_Hours__c</searchFilterFields>
+        <searchResultsAdditionalFields>Asset_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Estimated_Hours__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Est_Hrs_GE_Zero</fullName>
+        <active>true</active>
+        <description>Ensures that the Estimated Hours are Greater Than or Equal to Zero</description>
+        <errorConditionFormula>Estimated_Hours__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Estimated_Hours__c</errorDisplayField>
+        <errorMessage>The Estimated Hours must be Greater Than or Equal to Zero (0)</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Update_Open_WO_Tasks</fullName>
+        <availability>online</availability>
+        <description>Update all of the WO Tasks with the Standard Task for all Work Orders in a Status Equal to In Planning, Ready to Schedule, Scheduled, In Progress.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Update Open WO Tasks</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var response = sforce.apex.execute(&quot;sm1e.UpdateWOTasksFromStandardTaskButton&quot;,&quot;updateOpenWOTasks&quot;,{WOStandardTaskId:&quot;{!WO_Std_Task__c.Id}&quot;});
+
+if(response){
+window.alert(response); 
+}</url>
+    </webLinks>
+</CustomObject>

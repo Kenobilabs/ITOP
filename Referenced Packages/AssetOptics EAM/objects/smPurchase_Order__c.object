@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Purchase Order Header</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Billing_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Billing Address</description>
+        <externalId>false</externalId>
+        <formula>Billing_Street__c  &amp; BR() &amp; 
+ Billing_City__c  &amp; &quot;, &quot; &amp; 
+ Billing_State_Province__c  &amp; &quot; &quot; &amp; 
+ Billing_Zip_Postal_Code__c  &amp; BR() &amp; 
+ Billing_Country__c</formula>
+        <inlineHelpText>Billing Address</inlineHelpText>
+        <label>Billing Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_City__c</fullName>
+        <defaultValue>$Setup.Purchase_Order_Para__c.Billing_City__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Billing City</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing City</inlineHelpText>
+        <label>Billing City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Country__c</fullName>
+        <defaultValue>$Setup.Purchase_Order_Para__c.Billing_Country__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Billing Country</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Country</inlineHelpText>
+        <label>Billing Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_State_Province__c</fullName>
+        <defaultValue>$Setup.Purchase_Order_Para__c.Billing_State_Province__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Billing State / Province</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing State / Province</inlineHelpText>
+        <label>Billing State/Province</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Street__c</fullName>
+        <defaultValue>$Setup.Purchase_Order_Para__c.Billing_Street__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Billing Street Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Street Address</inlineHelpText>
+        <label>Billing Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Zip_Postal_Code__c</fullName>
+        <defaultValue>$Setup.Purchase_Order_Para__c.Billing_ZIP_Postal__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Billing Zip / Postal Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Zip / Postal Code</inlineHelpText>
+        <label>Billing Zip/Postal Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buyer_Full_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Buyer__r.FirstName &amp; &quot; &quot; &amp;  Buyer__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Buyer Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buyer_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Buyer Phone Number from User Personal Information</description>
+        <externalId>false</externalId>
+        <formula>Buyer__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Buyer Phone Number from User Personal Information</inlineHelpText>
+        <label>Buyer Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buyer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Buyer (Lookup to User)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Buyer (Lookup to User)</inlineHelpText>
+        <label>Buyer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Purchase_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Comments (up to 255 characters on each line)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Comments (up to 255 characters on each line)</inlineHelpText>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Consolidated_PO__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Target Purchase Order to Consolidate PO Lines.  Used in conjunction with the &quot;Transfer PO Parts&quot; command button.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Target Purchase Order to Consolidate PO Lines.  Used in conjunction with the &quot;Transfer PO Parts&quot; command button.</inlineHelpText>
+        <label>Consolidated PO Target</label>
+        <referenceTo>smPurchase_Order__c</referenceTo>
+        <relationshipLabel>Purchase Orders</relationshipLabel>
+        <relationshipName>Purchase_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Description</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FOB__c</fullName>
+        <deprecated>false</deprecated>
+        <description>FOB (Free on Board)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>FOB (Free on Board)</inlineHelpText>
+        <label>FOB</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Shipping Point</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Destination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Freight_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Freight Terms</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Freight Terms</inlineHelpText>
+        <label>Freight Terms</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prepaid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Order_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Date</inlineHelpText>
+        <label>Order Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PO_Record_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Work around to reference the record type in a formula - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST. Unexpected results will occur. This field is updated via workflow. Should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work around to reference the record type in a formula - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST. Unexpected results will occur. This field is updated via workflow. Should be set to read only for all user profiles.</inlineHelpText>
+        <label>PO Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Purchase Requisition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchase Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request for Quotation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Parts_Open_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Rollup Summary of Open Qty on PO Parts - If this value is &gt; 0, then you cannot change the status of the Purchase Order to Canceled, Completed, or Closed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rollup Summary of Open Qty on PO Parts - If this value is &gt; 0, then you cannot change the status of the Purchase Order to Canceled, Completed, or Closed.</inlineHelpText>
+        <label>Parts Open Qty</label>
+        <summarizedField>smPO_Part__c.Open_Qty__c</summarizedField>
+        <summaryForeignKey>smPO_Part__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Payment Terms</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Terms</inlineHelpText>
+        <label>Payment Terms</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Upon Receipt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15 Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45 Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Required_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Required Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Required Date</inlineHelpText>
+        <label>Required Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ship_Via__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Ship Via - User Defined Picklist</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Ship Via - User Defined Picklist</inlineHelpText>
+        <label>Ship Via</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Best Way</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shipping_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to all PO Shipping Address Lines</description>
+        <externalId>false</externalId>
+        <formula>Shipping_Street__c  &amp; BR() &amp;
+   Shipping_City__c   &amp; &quot;, &quot; &amp;
+   Shipping_State_Province__c  &amp; &quot;  &quot; &amp;
+   Shipping_Zip_Postal_Code__c  &amp; BR() &amp;
+   Shipping_Country__c</formula>
+        <inlineHelpText>Formula Reference to all PO Shipping Address Lines</inlineHelpText>
+        <label>Shipping Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shipping City - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipping City - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</inlineHelpText>
+        <label>Shipping City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_Country__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shipping Country - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipping Country - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</inlineHelpText>
+        <label>Shipping Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_State_Province__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shipping State / Province - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipping State / Province - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</inlineHelpText>
+        <label>Shipping State/Province</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_Street__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shipping Street Address - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipping Street Address - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</inlineHelpText>
+        <label>Shipping Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Shipping_Zip_Postal_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shipping Zip / Postal Code - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shipping Zip / Postal Code - Initially populated via field update workflow using address from Storeroom.  Value may be manually updated.</inlineHelpText>
+        <label>Shipping Zip/Postal Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Purchase Order Status - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST! Unexpected results will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Status - DO NOT EDIT THE AVAILABLE VALUES IN THIS LIST! Unexpected results will occur.</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready to Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Released</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Storeroom_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference to Storeroom Description</description>
+        <externalId>false</externalId>
+        <formula>Storeroom_ID__r.Description__c</formula>
+        <inlineHelpText>Formula Reference to Storeroom Description</inlineHelpText>
+        <label>Storeroom Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Storeroom_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Storeroom ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Storeroom ID</inlineHelpText>
+        <label>Storeroom ID</label>
+        <referenceTo>smStoreroom__c</referenceTo>
+        <relationshipLabel>Purchase Orders</relationshipLabel>
+        <relationshipName>Purchase_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Misc_Cost_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Purchase Order Misc Cost Lines Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Purchase Order Misc Cost Lines Amount</inlineHelpText>
+        <label>Total Misc Cost Amt</label>
+        <summarizedField>smPO_Misc_Cost__c.Extended_Amt__c</summarizedField>
+        <summaryForeignKey>smPO_Misc_Cost__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Misc_Cost_Open_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Open Amount on PO Misc Cost Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Open Amount on PO Misc Cost Lines</inlineHelpText>
+        <label>Total Misc Cost Open Amount</label>
+        <summarizedField>smPO_Misc_Cost__c.Open_Amount__c</summarizedField>
+        <summaryForeignKey>smPO_Misc_Cost__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Misc_Cost_Received_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Received Amount on PO Misc Cost Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Received Amount on PO Misc Cost Lines</inlineHelpText>
+        <label>Total Misc Cost Received Amount</label>
+        <summarizedField>smPO_Misc_Cost__c.Received_Amt__c</summarizedField>
+        <summaryForeignKey>smPO_Misc_Cost__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_PO_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Purchase Order Amount</description>
+        <externalId>false</externalId>
+        <formula>Total_Misc_Cost_Amt__c  +  Total_Parts_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Purchase Order Amount</inlineHelpText>
+        <label>Total PO Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_PO_Open_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Open Amount on Purchase Order</description>
+        <externalId>false</externalId>
+        <formula>Total_Misc_Cost_Open_Amount__c  +  Total_Parts_Open_Amt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Open Amount on Purchase Order</inlineHelpText>
+        <label>Total PO Open Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_PO_Received_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Amount Received on the Purchase Order</description>
+        <externalId>false</externalId>
+        <formula>Total_Parts_Received_Amt__c  +  Total_Misc_Cost_Received_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Amount Received on the Purchase Order</inlineHelpText>
+        <label>Total PO Received Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Parts_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total of Extended Amount on PO Part Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of Extended Amount on PO Part Lines</inlineHelpText>
+        <label>Total Parts Amount</label>
+        <summarizedField>smPO_Part__c.Extended_Amt__c</summarizedField>
+        <summaryForeignKey>smPO_Part__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Parts_Open_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total of Open Amount on PO Part Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of Open Amount on PO Part Lines</inlineHelpText>
+        <label>Total Parts Open Amt</label>
+        <summarizedField>smPO_Part__c.Open_Amt__c</summarizedField>
+        <summaryForeignKey>smPO_Part__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Parts_Received_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total of Received Amount on PO Part Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of Received Amount on PO Part Lines</inlineHelpText>
+        <label>Total Parts Received Amt</label>
+        <summarizedField>smPO_Part__c.Received_Amount__c</summarizedField>
+        <summaryForeignKey>smPO_Part__c.Purchase_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Accounts with Vendor checkbox selected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Accounts with Vendor checkbox selected</inlineHelpText>
+        <label>Vendor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.smVendor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <infoMessage>Vendors are Accounts with the &quot;Vendor&quot; Checkbox Selected.  You may optionally remove this filter to select any Account</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Purchase Orders</relationshipLabel>
+        <relationshipName>Purchase_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Related Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Work Order (do not populate at the Header if the PO Detail Lines are for different Work Orders)</inlineHelpText>
+        <label>Work Order</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Cannot associate a Purchase Order with a Model Work Order</errorMessage>
+            <filterItems>
+                <field>smWork_Order__c.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>Model Work Order</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>Purchase Orders</relationshipLabel>
+        <relationshipName>Purchase_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Purchase Order</label>
+    <listViews>
+        <fullName>All_Purchase_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Total_PO_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Order</value>
+        </filters>
+        <label>All Purchase Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Purchase_Requisitions</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Status__c</columns>
+        <columns>Total_PO_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Requisition</value>
+        </filters>
+        <label>All Purchase Requisitions</label>
+    </listViews>
+    <listViews>
+        <fullName>Purchase_Order_with_Waiting_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>PO_Record_Type__c</columns>
+        <columns>Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Approval</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Requisition</value>
+        </filters>
+        <label>Purchase Reqs Waiting Approval</label>
+    </listViews>
+    <listViews>
+        <fullName>Purchase_Orders_Approved</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Total_PO_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <label>Purchase Orders Approved</label>
+    </listViews>
+    <listViews>
+        <fullName>Purchase_Orders_Completed</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Total_PO_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Purchase Orders Completed</label>
+    </listViews>
+    <listViews>
+        <fullName>Purchase_Orders_Released</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Total_PO_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>smPurchase_Order__c.Order</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Released</value>
+        </filters>
+        <label>Purchase Orders Released</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PO-{0000000}</displayFormat>
+        <label>PO #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Purchase Orders</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Order</fullName>
+        <active>true</active>
+        <description>Purchase Order Record Type</description>
+        <label>Order</label>
+        <picklistValues>
+            <picklist>FOB__c</picklist>
+            <values>
+                <fullName>Destination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Point</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Freight_Terms__c</picklist>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prepaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PO_Record_Type__c</picklist>
+            <values>
+                <fullName>Purchase Order</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>15 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upon Receipt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ship_Via__c</picklist>
+            <values>
+                <fullName>Best Way</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting Approval</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Quote</fullName>
+        <active>false</active>
+        <description>Request for Quotation Record Type</description>
+        <label>Quote</label>
+        <picklistValues>
+            <picklist>FOB__c</picklist>
+            <values>
+                <fullName>Destination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Point</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Freight_Terms__c</picklist>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prepaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PO_Record_Type__c</picklist>
+            <values>
+                <fullName>Request for Quotation</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>15 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upon Receipt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ship_Via__c</picklist>
+            <values>
+                <fullName>Best Way</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requisition</fullName>
+        <active>true</active>
+        <description>Purchase Requisition Record Type</description>
+        <label>Requisition</label>
+        <picklistValues>
+            <picklist>FOB__c</picklist>
+            <values>
+                <fullName>Destination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Point</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Freight_Terms__c</picklist>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prepaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PO_Record_Type__c</picklist>
+            <values>
+                <fullName>Purchase Requisition</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>15 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upon Receipt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ship_Via__c</picklist>
+            <values>
+                <fullName>Best Way</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Vendor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_PO_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_PO_Open_Amount__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Vendor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_PO_Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_PO_Open_Amount__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Vendor__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>RECORDTYPE</lookupFilterFields>
+        <lookupFilterFields>Total_PO_Amount__c</lookupFilterFields>
+        <lookupFilterFields>Total_PO_Open_Amount__c</lookupFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Vendor__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Total_PO_Amount__c</searchFilterFields>
+        <searchFilterFields>Total_PO_Open_Amount__c</searchFilterFields>
+        <searchResultsAdditionalFields>Vendor__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_PO_Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_PO_Open_Amount__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>New_Record_Entry_Status</fullName>
+        <active>true</active>
+        <description>Controls the valid statuses for entering a new Purchase Order</description>
+        <errorConditionFormula>ISNEW() &amp;&amp; NOT(( ISPICKVAL( Status__c , &quot;Request&quot;) || ISPICKVAL( Status__c , &quot;Waiting Approval&quot;) || ISPICKVAL( Status__c , &quot;Approved&quot;)))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>The initial status for a Purchase Order must be set to Request, Waiting Approval, or Approved</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Open_Part_Qty_Status_Change</fullName>
+        <active>true</active>
+        <description>Ensures that the Purchase Order Status cannot be updated to Canceled, Completed, Closed if the Open Qty on any PO Part line &gt; 0</description>
+        <errorConditionFormula>(ISPICKVAL( Status__c , &quot;Canceled&quot;) || ISPICKVAL( Status__c , &quot;Completed&quot;) || ISPICKVAL( Status__c , &quot;Closed&quot;)) &amp;&amp;  Parts_Open_Qty__c &gt;0</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>The Purchase Order Status cannot be updated to Canceled, Completed, or Closed if there is an Open Qty on any PO Part line.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Approved</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Approved</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Approved&quot;) &amp;&amp; NOT(TEXT(PRIORVALUE( Status__c )) = &quot;Waiting Approval&quot;) &amp;&amp; NOT(ISNEW()) &amp;&amp;  ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Approved only from a previous Status of Waiting Approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Canceled</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Canceled</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Canceled&quot;) &amp;&amp; NOT((TEXT(PRIORVALUE( Status__c )) = &quot;In Progress&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Released&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Ready to Release&quot;)) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Canceled only from a previous Status of Ready to Release, Released, or In Progress</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Closed</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Closed</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Closed&quot;) &amp;&amp; NOT(TEXT(PRIORVALUE( Status__c )) = &quot;Completed&quot;) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Closed only from a previous Status of Completed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Completed</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Completed</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Completed&quot;) &amp;&amp; NOT((TEXT(PRIORVALUE( Status__c )) = &quot;In Progress&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Released&quot;)) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Completed only from a previous Status of Released or In Progress</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_In_Progress</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to In Progress</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;In Progress&quot;) &amp;&amp; NOT(TEXT(PRIORVALUE( Status__c )) = &quot;Released&quot;) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to In Progress only from a previous Status of Released</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Ready_to_Release</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Ready to Release</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Ready to Release&quot;) &amp;&amp; NOT(TEXT(PRIORVALUE( Status__c )) = &quot;Approved&quot;) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Ready to Release only from a previous Status of Approved</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Rejected</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Rejected</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Rejected&quot;) &amp;&amp; NOT((TEXT(PRIORVALUE( Status__c )) = &quot;Approved&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Waiting Approval&quot;)) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Rejected only from a previous Status of Approved or Waiting Approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Released</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Released</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Released&quot;) &amp;&amp; NOT((TEXT(PRIORVALUE( Status__c )) = &quot;Approved&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Ready to Release&quot;)) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Released only from a previous Status of Approved or Ready to Release</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PO_VST_to_Waiting_Approval</fullName>
+        <active>true</active>
+        <description>Controls the Valid PO Status Transition to Waiting Approval</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Waiting Approval&quot;) &amp;&amp; NOT((TEXT(PRIORVALUE( Status__c )) = &quot;Request&quot; || TEXT(PRIORVALUE( Status__c )) = &quot;Rejected&quot;)) &amp;&amp; NOT(ISNEW()) &amp;&amp; ISCHANGED(Status__c)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>A Purchase Order Status can be updated to Waiting Approval only from a previous Status of Request or Rejected</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Print_Purchase_Order</fullName>
+        <availability>online</availability>
+        <description>This button will print the purchase order</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Print</masterLabel>
+        <openType>newWindow</openType>
+        <page>purchaseOrderPdfPrint</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+</CustomObject>

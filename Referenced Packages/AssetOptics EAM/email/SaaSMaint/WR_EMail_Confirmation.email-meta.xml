@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template Used to Notify EMail Requester that WR Received</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>smWO_Letterhead</letterhead>
+    <name>WR EMail Confirmation</name>
+    <style>freeForm</style>
+    <subject>Work Request # {!smWork_Order__c.Name} was received by Email</subject>
+    <textOnly>{!smWork_Order__c.RequesterEmail__c},
+
+Work Request # {!smWork_Order__c.Name} was received by Email.
+
+Description:  {!smWork_Order__c.Description__c}
+
+The Work Request will be reviewed for approval.  Should additional information be required, you will be contact you by email or phone.
+
+Thank you.</textOnly>
+    <type>html</type>
+</EmailTemplate>

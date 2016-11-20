@@ -1,0 +1,57 @@
+<aura:component controller="ITOP_Ticket_Manager_Controller" access="global">
+    <aura:attribute name="input" type="sObject"/>
+    <aura:attribute name="destination" type="sObject"/> 
+    <aura:attribute name="inputLocations" type="sObject[]"/>
+    
+    <div aura:id="container" id="container" class="ticketContainer" >
+        <div class="top" onclick="{!c.select}" >
+            <h1>{!v.input.Name}. {!v.input.CreatedBy.Name}</h1>
+            <h1>{!v.input.Status__c}</h1>
+        </div>
+        <div aura:id="bottom" class="bottom">
+        	<h1>TicketDetails</h1>
+            <div class="ticket-table">
+                <table >
+                    <tr>
+                        <td>Customer Name:</td>
+                        <td class="centered"><em>{!v.input.CreatedBy.Name}</em></td>
+                        <td><button class="ticket-button" onclick="{!c.openTicket}">Open Ticket</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Problem Type:</td>
+                        <td class="centered"><em>{!v.input.Request__r.Related_Primary__r.Name}</em></td>
+                        <td><button class="ticket-button" onclick="{!c.closeTicket}" >Close Ticket</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>Problem:</td>
+                        <td class="centered"><em>{!v.input.Request__r.Related_Secondary__r.Name}</em></td>
+                        <td><button class="ticket-button" onclick="{!c.transferTicket}">Transfer Ticket</button></td>
+
+                    </tr>
+                    <tr>
+                        <td>Customer Comments:</td>
+                        <td class="centered"><em><i>{!v.input.Request__r.Description__c}</i></em></td>
+                        <td>                            
+                            <ui:inputSelect aura:id="transferLocation">
+                            	<aura:iteration items="{!v.inputLocations}" var="eachLocation"  >
+                                    <aura:if isTrue="{!equals(v.input.Location__c, eachLocation.Id) ? false : true}">
+                    					<ui:inputSelectOption text="{!eachLocation.Name}" label="{!eachLocation.Name}"  />
+                					</aura:if>
+                                </aura:iteration>
+                            </ui:inputSelect></td>
+                    </tr>
+                    <tr>
+                    	<td>Employee Notes</td>
+                        <td class="centered"><ui:inputTextArea rows="3" cols="50" aura:id="comments" value="{!v.input.Notes__c}" change="{!c.changeNotes}" placeholder="enter store comments here"/></td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+</aura:component>

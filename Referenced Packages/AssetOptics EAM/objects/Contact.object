@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Labor_Rate_Doubletime__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Labor Rate Doubletime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Labor Rate Doubletime</inlineHelpText>
+        <label>Labor Rate Doubletime</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Labor_Rate_Overtime__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Overtime Labor Rate to be applied to a Work Order Task when booking Overtime Hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overtime Labor Rate to be applied to a Work Order Task when booking Overtime Hours</inlineHelpText>
+        <label>Labor Rate Overtime</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Labor_Rate_Regular__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Regular Hourly Labor Rate to be used for this Work Order Labor Resource when charging time to a Work Order Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Regular Hourly Labor Rate - Used for Actual Costs when charging Regular Time to a Work Order</inlineHelpText>
+        <label>Labor Rate Regular</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Resource__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checkbox to indicate Contact can be a Resource to assign to a Work Order, Work Order Task, or Work Order Task Labor in SaaSMaint</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checkbox to indicate Contact can be a Resource to assign to a Work Order, Work Order Task, or Work Order Task Labor in SaaSMaint</inlineHelpText>
+        <label>Work Order Resource</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

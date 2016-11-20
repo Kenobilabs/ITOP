@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable" >
+    <aura:attribute name="items" type="sObject[]"/>
+    <aura:attribute name="output" type="sObject"/>
+    <aura:attribute name="other" type="sObject"/>
+    <aura:attribute name="otherDest" type="sObject"/>
+    <aura:attribute name="debugTicketObject" type="String" default="testing string"/>
+
+    
+        <div class="ticket-object-carousel">
+            <aura:iteration items="{!v.items}" var="each">
+                <c:ITOP_Ticket_Object object="{!each}" selectionDestination="{!v.output}"/>
+            </aura:iteration> 
+            
+            <c:ITOP_Ticket_Object object="{!v.other}" selectionDestination="{!v.otherDest}"/>
+        </div>
+</aura:component>

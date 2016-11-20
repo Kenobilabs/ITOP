@@ -1,0 +1,71 @@
+<apex:page standardController="sm1e__smPurchase_Order__c" extensions="sm1e.PrintPurchaseOrder"  showHeader="false" sidebar="false" title="Purchase Order Printout" standardStylesheets="true" tabStyle="sm1e__smPurchase_Order__c">
+    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+    <tr><td><apex:image url="{!$Resource.sm1e__saasmaintLogo}"/></td>
+    <td align="right"><a href="javascript:window.print();">Print</a></td></tr>
+    </table>
+      
+      <apex:pageBlock title="{!sm1e__smPurchase_Order__c.Name}">
+        <apex:pageBlockSection title="Overview" columns="2">          
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Name}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Storeroom_ID__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Description__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Vendor__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Required_Date__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Status__c}"/> 
+                        
+               
+          </apex:pageBlockSection>
+          
+      <apex:pageblockSection title="PO Amounts Summary" columns="2">
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Total_PO_Amount__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Total_Parts_Amount__c}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.sm1e__Total_Misc_Cost_Amt__c}"/>
+      </apex:pageblockSection>
+      
+      <apex:pageblockSection title="Address Information" columns="2">
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Storeroom_ID__r.Account__r.ShippingStreet}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Vendor__r.BillingStreet}" /> 
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Storeroom_ID__r.Account__r.ShippingCity}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Vendor__r.BillingCity}" /> 
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Storeroom_ID__r.Account__r.ShippingState}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Vendor__r.BillingState}" /> 
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Storeroom_ID__r.Account__r.ShippingPostalCode}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Vendor__r.BillingPostalCode}" /> 
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Storeroom_ID__r.Account__r.ShippingCountry}"/>
+              <apex:outputField value="{!sm1e__smPurchase_Order__c.Vendor__r.BillingCountry}" /> 
+      </apex:pageblockSection>
+      
+      <apex:outputPanel >
+           <apex:pageblocksection title="PO Parts" rendered="{!PoPartsRelatedList.size > 0}">
+                <apex:pageBlockTable value="{!sm1e__smPurchase_Order__c.PO_Parts__r}" var="poPart" >
+                      <apex:column headervalue="Name"><apex:outputLink value="/{!poPart.id}">{!poPart.name}</apex:outputLink></apex:column>
+                      <apex:column value="{!poPart.sm1e__Part__c}"/>
+                      <apex:column value="{!poPart.sm1e__Description__c}"/>
+                      <apex:column value="{!poPart.sm1e__Order_Qty__c}"/>
+                      <apex:column value="{!poPart.sm1e__Unit_Cost__c}"/>
+                      <apex:column value="{!poPart.sm1e__Extended_Amt__c}"/>
+                      <apex:column value="{!poPart.sm1e__Received_Qty__c}"/>
+                      <apex:column value="{!poPart.sm1e__Open_Qty__c}"/>
+                      <apex:column value="{!poPart.sm1e__Storeroom__c}"/>
+                 </apex:pageBlockTable>
+          </apex:pageblocksection>
+      </apex:outputPanel>
+      
+      <apex:outputPanel rendered="{!PoMiscCostRelatedList.size > 0}">
+          <apex:pageblocksection title="PO Misc Cost">
+                <apex:pageBlockTable value="{!sm1e__smPurchase_Order__c.PO_Misc_Cost__r}" var="poMiscCost"  >
+                      <apex:column headervalue="Name"><apex:outputLink value="/{!poMiscCost.id}">{!poMiscCost.name}</apex:outputLink></apex:column>
+                      <apex:column value="{!poMiscCost.sm1e__Description__c}"/>
+                      <apex:column value="{!poMiscCost.sm1e__Order_Qty_v2__c}"/>
+                      <apex:column value="{!poMiscCost.sm1e__Unit_Cost__c}"/>
+                      <apex:column value="{!poMiscCost.sm1e__Extended_Amt__c}"/>
+                      <apex:column value="{!poMiscCost.sm1e__Received_Qty__c}"/>
+                      <apex:column value="{!poMiscCost.sm1e__Open_Amount__c}"/>
+                 </apex:pageBlockTable>
+          </apex:pageblocksection>
+      </apex:outputPanel>
+         
+  </apex:pageblock>
+    
+
+</apex:page>

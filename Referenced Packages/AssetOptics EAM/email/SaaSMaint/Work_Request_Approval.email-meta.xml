@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Template for Approval of a Work Request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>smWO_Letterhead</letterhead>
+    <name>Work Request Approval</name>
+    <style>freeForm</style>
+    <subject>Work Request {!smfe1__smWork_Order__c.Name} has been submitted for your approval</subject>
+    <textOnly>Work Request # {!smWork_Order__c.Name}  has been submitted and your approval is required.  Please review the details and approve/reject accordingly.
+
+Work Order #   {!smWork_Order__c.Name}
+Description:     {!smWork_Order__c.Description__c}
+
+Asset ID:          {!smWork_Order__c.Equipment__c}
+Description:     {!smWork_Order__c.Equip_Description__c}
+
+Requested Completion Date:  {!smWork_Order__c.Requested_Completion_Date__c}
+
+Created by:  {!smWork_Order__c.CreatedBy}
+Requester email:  {!smWork_Order__c.RequesterEmail__c}
+
+If email approval is enabled, you may approve this request by replying &quot;Approved&quot; to this email.
+
+Thank you.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Labor_Rate_Doubletime__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Labor Rate Doubletime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Labor Rate Doubletime</inlineHelpText>
+        <label>Labor Rate Doubletime</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Labor_Rate_Overtime__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Labor Rate Overtime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Labor Rate Overtime</inlineHelpText>
+        <label>Labor Rate Overtime</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Labor_Rate_Regular__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default Labor Rate used to calculate work order labor costs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Labor Rate used to calculate work order labor costs</inlineHelpText>
+        <label>Labor Rate Regular</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <validationRules>
+        <fullName>Labor_Rate_Overtime_Non_Negative</fullName>
+        <active>false</active>
+        <description>Ensures that the Labor Rate Overtime is a Non-Negative Value</description>
+        <errorConditionFormula>False</errorConditionFormula>
+        <errorDisplayField>Labor_Rate_Overtime__c</errorDisplayField>
+        <errorMessage>The Overtime Labor Rate must be a non-negative value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Labor_Rate_Regular_Non_Negative</fullName>
+        <active>false</active>
+        <description>Ensures that the Labor Rate Regular is a non-negative value</description>
+        <errorConditionFormula>False</errorConditionFormula>
+        <errorDisplayField>Labor_Rate_Regular__c</errorDisplayField>
+        <errorMessage>The Regular Labor Rate must be a non-negative value</errorMessage>
+    </validationRules>
+</CustomObject>

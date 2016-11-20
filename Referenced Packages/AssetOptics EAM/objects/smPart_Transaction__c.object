@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Contains all the records for part transactions.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Credit_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Credit Account Typically Associated with Issue, Gain, or Shrink Inventory Transactions.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Credit Account Typically Associated with Issue, Gain, or Shrink Inventory Transactions.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Credit Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Debit_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Debit Account Representing Expense Account Associated with Part Issues, Shrink, or Gain Transactions.  System populated via workflow.  Field security should be set to read only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Debit Account Representing Expense Account Associated with Part Issues, Shrink, or Gain Transactions.  System populated via workflow.  Field security should be set to read only for all user profiles.</inlineHelpText>
+        <label>Debit Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Part_Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>PO Part Transaction ID - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Part Transaction ID - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</inlineHelpText>
+        <label>PO Part Transaction</label>
+        <referenceTo>smPO_Part_Transaction__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PO_Part__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>PO Part - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PO Part - Populated via APEX Code.  Field security should be set to Read Only for all user profiles.</inlineHelpText>
+        <label>PO Part</label>
+        <referenceTo>smPO_Part__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Part_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula reference to the Part Description</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula reference to the Part Description</inlineHelpText>
+        <label>Part Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Part__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Part ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Part ID</inlineHelpText>
+        <label>Part</label>
+        <referenceTo>smPart__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Purchase Order # - Populated via APEX Code. Field security should be set to Read Only for all user profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order # - Populated via APEX Code. Field security should be set to Read Only for all user profiles.</inlineHelpText>
+        <label>Purchase Order</label>
+        <referenceTo>smPurchase_Order__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Qty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Transaction Qty measured in the Stock UOM.  Only non-negative integer values (whole numbers) are valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction Qty measured in the Stock UOM.  Only non-negative integer values (whole numbers) are valid.</inlineHelpText>
+        <label>Qty</label>
+        <precision>7</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIR_Detail_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SIR Detail ID</label>
+        <referenceTo>SIR_Line_Item__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions_SIR_Detail</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Secondary_Bin_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Used to Select the Secondary Bin Location. If Null, the On Hand Qty Adjustments only affect the Primary Bin Location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Secondary Bin Location. If left empty, the Part Transaction will default to the Primary Bin Location</inlineHelpText>
+        <label>Secondary Bin Location</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Part_Bin_Location__c.Part__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Part__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Part_Bin_Location__c.Primary_Bin__c</field>
+                <operation>equals</operation>
+                <value>No</value>
+            </filterItems>
+            <infoMessage>Select the Secondary Bin Location</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Part_Bin_Location__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Storeroom__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Storeroom</description>
+        <externalId>false</externalId>
+        <formula>Part__r.Storeroom__r.Name</formula>
+        <inlineHelpText>Storeroom</inlineHelpText>
+        <label>Storeroom</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trans_Type_Num__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula Reference for a Transaction Type.  Gain = 1, Issue = 2, Receipt = 3, Order = 4, Shrink = 5</description>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( Trans_Type__c ) , &quot;Gain&quot;, 1, &quot;Issue&quot;, 2, &quot;Receipt&quot;, 3, &quot;Order&quot;, 4, &quot;Shrink&quot;, 5, 6)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula Reference for a Transaction Type.  Gain = 1, Issue = 2, Receipt = 3, Order = 4, Shrink = 5</inlineHelpText>
+        <label>Trans_Type_Num</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trans_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transaction types used to support calculation of all part qty&apos;s - DO NOT ADD TO or DELETE FROM this picklist.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transaction types used to support calculation of all part qty&apos;s - DO NOT ADD TO or DELETE FROM this picklist.</inlineHelpText>
+        <label>Trans Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Gain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Issue</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Receipt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shrink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Transaction Value = Part Unit Value * Transaction Qty</description>
+        <externalId>false</externalId>
+        <formula>Unit_Value__c  *  Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Transaction Value = Part Unit Value * Transaction Qty</inlineHelpText>
+        <label>Transaction Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date of Transaction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of Transaction</inlineHelpText>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Value__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Part Unit Value for this transaction.  Automatically populated via workflow or APEX code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Part Unit Value for this transaction.  Automatically populated via workflow or APEX code.</inlineHelpText>
+        <label>Unit Value</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>WO_Part__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Work Order Part relating to this issue.  Is used to update the Issued Qty on the WO Part record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Work Order Part relating to this issue.  Is used to update the Issued Qty on the WO Part record.</inlineHelpText>
+        <label>WO Part</label>
+        <lookupFilter>
+            <active>false</active>
+            <errorMessage>The Work Order Part record selected must be related to the previously selected Work Order</errorMessage>
+            <filterItems>
+                <field>smWO_Part__c.Work_Order__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Work_Order__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWO_Part__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Work Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Work Order</inlineHelpText>
+        <label>Work Order</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>You may not issue to a Model Work Order</errorMessage>
+            <filterItems>
+                <field>smWork_Order__c.Work_Order_Record_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Model Work Order</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>smWork_Order__c</referenceTo>
+        <relationshipLabel>Part Transactions</relationshipLabel>
+        <relationshipName>Part_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Part Transaction</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Trans_Type__c</columns>
+        <columns>Trans_Type_Num__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>Work_Order__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Gain_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Trans_Type__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Trans_Type_Num__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Gain Adjustments</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Issue_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Trans_Type__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>Work_Order__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Trans_Type_Num__c</field>
+            <operation>equals</operation>
+            <value>2</value>
+        </filters>
+        <label>All Issue Adjustments</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Unit_Value__c</columns>
+        <columns>Purchase_Order__c</columns>
+        <columns>PO_Part__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Trans_Type_Num__c</field>
+            <operation>equals</operation>
+            <value>4</value>
+        </filters>
+        <label>All Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Receipt_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Trans_Type__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>Unit_Value__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Trans_Type_Num__c</field>
+            <operation>equals</operation>
+            <value>3</value>
+        </filters>
+        <label>All Receipt Adjustments</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Shrink_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Trans_Type__c</columns>
+        <columns>Qty__c</columns>
+        <columns>Part__c</columns>
+        <columns>Part_Description__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Trans_Type_Num__c</field>
+            <operation>equals</operation>
+            <value>5</value>
+        </filters>
+        <label>All Shrink Adjustments</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PT-{0000000}</displayFormat>
+        <label>Part Trans ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Part Transactions</pluralLabel>
+    <recordTypes>
+        <fullName>Inventory</fullName>
+        <active>true</active>
+        <description>Inventory Transactions</description>
+        <label>Inventory</label>
+        <picklistValues>
+            <picklist>Trans_Type__c</picklist>
+            <values>
+                <fullName>Gain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Shrink</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Trans_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Part__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Part_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Qty__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Part__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Part_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Trans_Type__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Trans_Type__c</searchFilterFields>
+        <searchFilterFields>Part__c</searchFilterFields>
+        <searchFilterFields>Part_Description__c</searchFilterFields>
+        <searchFilterFields>Qty__c</searchFilterFields>
+        <searchFilterFields>Unit_Value__c</searchFilterFields>
+        <searchFilterFields>Work_Order__c</searchFilterFields>
+        <searchFilterFields>WO_Part__c</searchFilterFields>
+        <searchResultsAdditionalFields>Trans_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Part__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Part_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Qty__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Unit_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>WO_Part__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Cannot_Update_Qty_during_Edit</fullName>
+        <active>true</active>
+        <description>Ensures that the Qty value is NOT changed during an edit</description>
+        <errorConditionFormula>IF(ISNEW(), false,   PRIORVALUE( Qty__c )   &lt;&gt;  Qty__c )</errorConditionFormula>
+        <errorDisplayField>Qty__c</errorDisplayField>
+        <errorMessage>The transaction Qty cannot be edited once the record is created.  Please create a second entry.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Issue_Shrink_LE_Primary_Bin_Qty</fullName>
+        <active>true</active>
+        <description>Ensures that Part Transaction Qty for an Issue or Shrink Transaction does not exceed the On Hand Qty in that Part Bin Location</description>
+        <errorConditionFormula>ISBLANK( Secondary_Bin_Location__c)  &amp;&amp; ( TEXT(  Trans_Type__c  ) = &quot;Issue&quot; || TEXT( Trans_Type__c ) = &quot;Shrink&quot; ) &amp;&amp;  Qty__c  &gt;  Part__r.Primary_Bin_Loc_OH_Qty__c</errorConditionFormula>
+        <errorMessage>The Issue or Shrink Transaction Qty cannot exceed the On Hand Qty in the Primary Bin Location.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Issue_Shrink_LE_Secondary_Bin_Qty</fullName>
+        <active>true</active>
+        <description>Ensures that Part Transaction Qty for an Issue or Shrink Transaction does not exceed the On Hand Qty in the Secondary Part Bin Location</description>
+        <errorConditionFormula>NOT(ISBLANK(Secondary_Bin_Location__c)) &amp;&amp; ( TEXT( Trans_Type__c ) = &quot;Issue&quot; || TEXT( Trans_Type__c ) = &quot;Shrink&quot; ) &amp;&amp; Qty__c &gt;  Secondary_Bin_Location__r.On_Hand_Qty__c</errorConditionFormula>
+        <errorMessage>The Issue or Shrink Transaction Qty cannot exceed the On Hand Qty in the selected Secondary Bin Location.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OH_Qty_NonNegative</fullName>
+        <active>true</active>
+        <description>Ensures that no transactions result in a negative OH Qty</description>
+        <errorConditionFormula>IF( ISNEW() , IF( Trans_Type_Num__c = 2 || Trans_Type_Num__c = 5,  Qty__c   &gt;   Part__r.On_Hand_Qty__c , False), false)</errorConditionFormula>
+        <errorDisplayField>Qty__c</errorDisplayField>
+        <errorMessage>The Transaction Qty is greater than the On Hand Qty and is attempting to result in a negative On Hand Qty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Part_Transaction_Qty_is_positive</fullName>
+        <active>true</active>
+        <description>Ensures that the Transacton Qty is a positive number</description>
+        <errorConditionFormula>IF( (Trans_Type_Num__c = 4 || Trans_Type_Num__c = 2) , false, Qty__c &lt;= 0)</errorConditionFormula>
+        <errorDisplayField>Qty__c</errorDisplayField>
+        <errorMessage>All Transaction Qty&apos;s must be positive values with the exception of an Issue Type transaction which represents a return to stock or an Order Type which represents a Cancellation of Current On Order Qty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Part_Transaction_Value_is_non_negative</fullName>
+        <active>true</active>
+        <description>Ensures that the Unit Value for the Part on this transaction is a non-negative value</description>
+        <errorConditionFormula>Unit_Value__c  &lt; 0</errorConditionFormula>
+        <errorDisplayField>Unit_Value__c</errorDisplayField>
+        <errorMessage>Unit Value cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Part_and_WO_Part_Match</fullName>
+        <active>false</active>
+        <description>This validation rule ensures that the Part entered matches the Part on WO Part when WO Part number is entered (Obsolete)</description>
+        <errorConditionFormula>FALSE</errorConditionFormula>
+        <errorDisplayField>WO_Part__c</errorDisplayField>
+        <errorMessage>The WO Part line selected must match the Part being issued</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Primary_Bin_Not_Null</fullName>
+        <active>true</active>
+        <description>Ensures that the Primary Bin Location on a Part record is NOT Blank on all Transaction Types except Order when a Secondary Bin Location is NOT selected.</description>
+        <errorConditionFormula>ISBLANK( Part__r.Primary_Bin_Location__c ) &amp;&amp;  ISBLANK( Secondary_Bin_Location__c )  &amp;&amp; NOT( ISPICKVAL( Trans_Type__c , &quot;Order&quot;) )</errorConditionFormula>
+        <errorMessage>The Primary Bin Location for the Part record cannot be BLANK during any Part Transaction record entry UNLESS you select a Secondary Bin Location.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WorkOrderRequiredForIssue</fullName>
+        <active>false</active>
+        <description>a validation to smPart_Transaction such that if the Transaction Type = Issue , then the user must provide a Work Order #</description>
+        <errorConditionFormula>AND(ISPICKVAL(Trans_Type__c,&quot;Issue&quot;) ,
+      OR( ISBLANK(Work_Order__c  ), ISNULL( Work_Order__c  ))
+)</errorConditionFormula>
+        <errorDisplayField>Work_Order__c</errorDisplayField>
+        <errorMessage>A Work Order # must be provided to Issue a Part</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Web Tab to AssetOptics Online Help</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>AssetOptics Help</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom78: Map</motif>
+    <url>https://assetoptics.com/help/</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

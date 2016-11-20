@@ -1,0 +1,8 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font class="Apple-style-span" face="arial" size="3">Work Order Approval Notice</font><br><br><font class="Apple-style-span" face="arial" size="3">Work Order:&nbsp; {!smWork_Order__c.Name}</font><br><font class="Apple-style-span" face="arial" size="3">Description:&nbsp; {!smWork_Order__c.Description__c}
+</font><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; "><br></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; ">Asset ID: &nbsp; &nbsp;&nbsp;&nbsp; {!smWork_Order__c.Equipment__c}</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; ">Description:&nbsp; {!smWork_Order__c.Equip_Description__c}</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; "><br></p><font class="Apple-style-span" face="arial" size="3">Please click the following link to review the work order details (sign in required)</font><div><font class="Apple-style-span" face="arial">{!smWork_Order__c.Link}</font><br><font class="Apple-style-span" face="arial" size="3">&nbsp;
+</font><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; ">Thank you.&nbsp;</p></div>]]></td>
+</tr>
+</table>

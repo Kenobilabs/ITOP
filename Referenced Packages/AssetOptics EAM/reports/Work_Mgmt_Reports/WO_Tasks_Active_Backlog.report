@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>smWork_Order__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.Planned_Hours__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.Total_Actual_Labor_Hours__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.Percent_Complete__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>smWO_Task__c.Est_Hrs_to_Complete__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.Schedule_Date__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.Task_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>smWO_Task__c.WO_Due_Date__c</field>
+    </columns>
+    <description>Work Order Tasks in the Active Backlog.  Status = Ready to Schedule, Scheduled, or In Progess</description>
+    <filter>
+        <criteriaItems>
+            <column>smWork_Order__c.Status__c</column>
+            <operator>equals</operator>
+            <value>In Progress,Ready to Schedule,Scheduled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>WO Tasks Active Backlog</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$smWork_Order__c$smWO_Task__c@smWO_Task__c.Craft__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>smWO_Task__c.Est_Hrs_to_Complete__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>smWork_Order__c.Completion_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

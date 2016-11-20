@@ -1,0 +1,98 @@
+<apex:page id="assetTagMap" standardController="sm1e__smEquipment__c" extensions="sm1e.AssetTagEquipGeolocationMapController" showheader="false" doctype="html-5.0" standardStylesheets="false">
+<html>
+<head>
+    <title>Asset Tag Geo Location</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    
+    <!-- jQuery + jQuery Mobile files -->
+    <apex:includeScript value="{!$Resource.sm1e__jquery_1_11_1_min_js}"/>
+    <apex:includeScript value="{!URLFOR($Resource.sm1e__jquery_mobile_1_4, 'jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.sm1e__jquery_mobile_1_4, 'jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css')}" /> 
+
+    <!-- Google Maps -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    
+    <style>
+        body, html {
+            height: 100%;   
+            width: 100%;
+        }
+        #geoLocationPage, .ui-content, #map_canvas { 
+            width: 100%; 
+            height: 100%; 
+            padding: 0; 
+        }
+    </style>
+    
+    <script>
+        var map;
+		var lat = {!assetTag.Geolocation__Latitude__s};
+		var lng = {!assetTag.Geolocation__Longitude__s};
+		var assetTagName = "{!assetTag.Name}";
+       
+       $(document).on("pageshow", "#geoLocationPage", function() {
+        	console.log(':::: Inside Pageshow now.. calling initGmap()');
+        	 
+            initGmap();
+        });
+        
+        function initGmap() {
+        	console.log(':::: Inside initGmap with lat..' + lat);
+        	console.log(':::: Inside initGmap with lng..' + lng);
+			var latlng = new google.maps.LatLng(lat, lng);
+			
+			var mapOptions = {
+				center: latlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				zoom: 13,
+			
+				// The following options are added to optimize for mobile screens. 
+				mapTypeControl: false,
+				streetViewControl: false, 
+				scaleControl: false,
+				rotateControl: false,
+				panControl: false,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.SMALL,
+					position: google.maps.ControlPosition.LEFT_TOP
+		        }
+			};
+			
+			map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+		
+			createMarkerAndInfoWindow(assetTagName, latlng);
+		}
+
+        
+        function createMarkerAndInfoWindow(assetTagName, latlng) {
+			var marker = new google.maps.Marker({
+				position: latlng,
+				title: assetTagName, 
+				map: map
+			});
+			
+			var infoWindow = new google.maps.InfoWindow({
+				content: '<b>' + assetTagName + '</b>'
+			});
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infoWindow.open(map, marker);
+			});
+		}
+		
+
+    </script>
+</head>
+<body>
+    <div data-role="page" id="geoLocationPage">
+        <div data-role="header" data-position="fixed">
+           
+        </div>
+        <div data-role="content">
+            <div id="map_canvas"></div> 
+        </div>
+    </div>
+</body>
+</html>
+</apex:page>

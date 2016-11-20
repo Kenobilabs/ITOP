@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Asset_Group</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Asset Group</shortDescription>
+        <value>Asset Group</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Add_To_Work_Order_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Add To Work Order Button</shortDescription>
+        <value>Add To Work Order</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Choose_Bill_Of_Material</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Choose Bill Of Material</shortDescription>
+        <value>Choose Bill Of Material</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Choose_From_Item_Master</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Choose From Item Master</shortDescription>
+        <value>Choose From Item Master</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Choose_From_Parts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Choose From Parts</shortDescription>
+        <value>Choose From Parts</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Choose_From_Store_Rooms</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Choose From Store Rooms</shortDescription>
+        <value>Choose From Store Rooms</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Choose_Parts_From</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Choose Parts From</shortDescription>
+        <value>Choose Parts From</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Not_Available_For</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Not Available For</shortDescription>
+        <value>Bill of Materials Not Available For</value>
+    </labels>
+    <labels>
+        <fullName>BOM_Qty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOM Qty</shortDescription>
+        <value>BOM Qty</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel Button Label</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Choose_From_Asset_Groups</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Choose From Asset Groups</shortDescription>
+        <value>Choose From Asset Groups</value>
+    </labels>
+    <labels>
+        <fullName>Choose_From_Model_WO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Choose From Model WO</shortDescription>
+        <value>Choose From Model Work Order(s)</value>
+    </labels>
+    <labels>
+        <fullName>Choose_From_Product</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Choose From Product</shortDescription>
+        <value>Choose From Product</value>
+    </labels>
+    <labels>
+        <fullName>Choose_One</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Choose One</shortDescription>
+        <value>Choose One</value>
+    </labels>
+    <labels>
+        <fullName>Consolidated_PO_Error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Consolidated PO Error</shortDescription>
+        <value>Please choose Consolidated PO above to move PO Part Line to</value>
+    </labels>
+    <labels>
+        <fullName>Issue_More_Than_On_Hand</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Issue More Than On Hand</shortDescription>
+        <value>Some of the records have Qty to Issue&gt; On Hand Qty. Please check your entries</value>
+    </labels>
+    <labels>
+        <fullName>Issue_Successful</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Issue Successful</shortDescription>
+        <value>Issue Successful</value>
+    </labels>
+    <labels>
+        <fullName>NoBinSetup</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoBinSetup</shortDescription>
+        <value>Kindly setup Primary and Secondary Bins to initiate Transfers.</value>
+    </labels>
+    <labels>
+        <fullName>NoSecondaryBin</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoSecondaryBin</shortDescription>
+        <value>There is no Secondary Bin Setup. Kindly create one more Part Bin Location to initiate Transfer.</value>
+    </labels>
+    <labels>
+        <fullName>No_Associated_Asset_Group</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Associated Asset Group</shortDescription>
+        <value>There is no Asset Group associated with Asset Tag :</value>
+    </labels>
+    <labels>
+        <fullName>No_Associated_Asset_Tag_With_Work_Order</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Associated Asset Tag With Work Order</shortDescription>
+        <value>There is no Asset Tag associated with Work Order :</value>
+    </labels>
+    <labels>
+        <fullName>Non_Zero_Open_Qty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Non Zero Open Qty</shortDescription>
+        <value>Open Qty for the selected record(s) should not be 0</value>
+    </labels>
+    <labels>
+        <fullName>Null_Or_Zero_Qty_Issued_Not_Processed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Null Or Zero Qty Issued Not Processed</shortDescription>
+        <value>The records with Qty to Issue as 0 or null are not processed</value>
+    </labels>
+    <labels>
+        <fullName>OneOfBinNotSelected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OneOfBinNotSelected</shortDescription>
+        <value>Either Source or Destination Bin is not selected</value>
+    </labels>
+    <labels>
+        <fullName>Open_Commit_More_Than_On_Hand</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Open Commit More Than On Hand</shortDescription>
+        <value>Some of the records have Open Commit Qty&gt; On Hand Qty. Please check your entries</value>
+    </labels>
+    <labels>
+        <fullName>Page_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Page Label</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>Pagination_First_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pagination First Label</shortDescription>
+        <value>First</value>
+    </labels>
+    <labels>
+        <fullName>Pagination_Last_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pagination Last Label</shortDescription>
+        <value>Last</value>
+    </labels>
+    <labels>
+        <fullName>Pagination_Next_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pagination Next Label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>Pagination_Previous_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pagination Previous Label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>Purchase_Order_Must_Be_Approved</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Purchase Order Must Be Approved</shortDescription>
+        <value>Purchase Order must be Approved before moving PO Part Line</value>
+    </labels>
+    <labels>
+        <fullName>SameSourceDestBins</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SameSourceDestBins</shortDescription>
+        <value>Source and Destination bins are Same. Kindly choose different bins.</value>
+    </labels>
+    <labels>
+        <fullName>Saving_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Saving Message</shortDescription>
+        <value>Saving...</value>
+    </labels>
+    <labels>
+        <fullName>Select_Asset_Group</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Asset Group</shortDescription>
+        <value>Please Select Asset Group to Choose Model Work Order From</value>
+    </labels>
+    <labels>
+        <fullName>SourceOHLessOrZero</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SourceOHLessOrZero</shortDescription>
+        <value>The Source Bin Quantity is less than the Quantity to be transferred.</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Task_Button_Failure_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Standard Task Button Failure Message</shortDescription>
+        <value>System is not able to pass WO Standard Task Id</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Task_Button_Success_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Standard Task Button Success Message</shortDescription>
+        <value>All WO Tasks with Status - InPlanning, Ready to Schedule, Scheduled and InProgress have been updated</value>
+    </labels>
+    <labels>
+        <fullName>Stock_Issue_Request_Failure_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Stock Issue Request Failure Message</shortDescription>
+        <value>Stock Issue Request cannot be generated because Open Commit qty is 0</value>
+    </labels>
+    <labels>
+        <fullName>Stock_Issue_Request_Success_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Stock Issue Request Success Message</shortDescription>
+        <value>Stock Issue Request Created successfully</value>
+    </labels>
+    <labels>
+        <fullName>ZeroOrNegativeTransferQty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ZeroOrNegativeTransferQty</shortDescription>
+        <value>The Quantity to be transferred is either Zero or Negative.</value>
+    </labels>
+    <labels>
+        <fullName>Zero_Or_Null_Open_Commit_Qty</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Zero Or Null Open Commit Qty</shortDescription>
+        <value>The records with Open Commit Qty as 0 or null are not processed.</value>
+    </labels>
+</CustomLabels>
